@@ -1,0 +1,30 @@
+{
+    "name"      : "me.laniewski.qilin",
+    "main"      : "client/index.html",
+
+    "version"   : "0.0.1",
+    "private"   : true,
+
+    "chromium-args"     : "--mixed-context",
+    "inject_js_start"   : "./client/scripts/injectables/StartInjectable.js",
+    "inject_js_end"     : "./client/scripts/injectables/EndInjectable.js",
+
+    "dependencies" : {
+        "babel-register"        : "latest",
+        "babel-preset-react"    : "latest",
+        "babel-preset-es2015"   : "latest",
+        "babel-preset-stage-0"  : "latest",
+
+        "classnames"            : "latest",
+        "react-dom"             : "latest",
+        "react"                 : "latest"
+    },
+
+    "maintainers" : [
+        {
+            "name"  : "Bartosz Łaniewski",
+            "email" : "laniewski.bartozzz@gmail.com",
+            "web"   : "http://www.laniewski.me"
+        }
+    ]
+}
