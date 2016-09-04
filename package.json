@@ -9,6 +9,12 @@
     "inject_js_start"   : "./client/scripts/injectables/StartInjectable.js",
     "inject_js_end"     : "./client/scripts/injectables/EndInjectable.js",
 
+    "window" : {
+        "min_height"    : 600,
+        "min_width"     : 1000,
+        "frame"         : false
+    },
+
     "dependencies" : {
         "babel-register"                    : "latest",
         "babel-preset-react"                : "latest",
