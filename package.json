@@ -5,6 +5,9 @@
     "version"   : "0.0.1",
     "private"   : true,
 
+    "author"    : "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
+    "license"   : "MIT",
+
     "chromium-args"     : "--mixed-context",
     "inject_js_start"   : "./client/scripts/injectables/StartInjectable.js",
     "inject_js_end"     : "./client/scripts/injectables/EndInjectable.js",
