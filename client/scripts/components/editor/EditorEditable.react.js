@@ -48,18 +48,32 @@ class EditorEditable extends Component {
     }
 
     componentDidMount() {
+        EditorStore.addChangeListener( () => this.forceUpdate() );
+
         // Add non-standard attributes on input:
         findDOMNode( this.refs.saveFile ).setAttribute( "nwsaveas", "qilin.md" );
 
+        this.refs.openFile.addEventListener( "change", event => {
+            EditorActions.handleOpenFile( event.target.value );
+            event.target.value = "";
+        }, false );
+
+        this.refs.saveFile.addEventListener( "change", event => {
+            EditorActions.handleSaveFile( event.target.value );
+            event.target.value = "";
+        }, false );
+
         this.addGlobalEventListener( EditorConstants.EDITOR_OPEN_FILE_REQUEST, () => {
-            this.refs.openFile.addEventListener( "change", event => EditorActions.handleOpenFile( event.target.value ), false );
             this.refs.openFile.click();
         } );
 
         this.addGlobalEventListener( EditorConstants.EDITOR_SAVE_FILE_REQUEST, () => {
-            this.refs.saveFile.addEventListener( "change", event => EditorActions.handleSaveFile( event.target.value ), false );
             this.refs.saveFile.click();
         } );
+    }
+
+    componentWillUnmount() {
+        EditorStore.removeChangeListener( this.forceUpdate );
     }
 
     render() {
