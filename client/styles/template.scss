@@ -2,6 +2,8 @@
 
 @import "resets/normalize";
 
+@import "states/isHidden";
+
 @import "vendor/codeMirror",
         "../../node_modules/codemirror/lib/codemirror.css",
         "../../node_modules/codemirror/addon/fold/foldgutter.css",
