@@ -1,0 +1,23 @@
+// main : ../template.scss
+
+.app-content {
+    display: flex;
+    flex: 1;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .app-content-left,
+    .app-content-right {
+         flex: 0 0 20rem;
+    }
+
+    .app-content-left {
+        // Put the block on the left:
+        order: -1;
+    }
+
+    .app-content-main {
+        flex: 1;
+    }
+}

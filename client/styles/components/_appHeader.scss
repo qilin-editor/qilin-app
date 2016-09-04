@@ -1,0 +1,13 @@
+// main : ../template.scss
+
+.app-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+
+    height: 60px;
+    width: 100vw;
+
+    -webkit-app-region: drag;
+}

@@ -1,0 +1,40 @@
+// main : ../template.scss
+
+.controls-container {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 20px;
+
+    .control-close,
+    .control-maximize,
+    .control-minimize {
+        width: 14px;
+        height: 14px;
+
+        margin-right: 10px;
+
+        background-color: #333333;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(black, .1);
+        border-radius: 100%;
+
+        transition: all 100ms ease;
+
+        content: "";
+    }
+
+    .control-close:hover {
+        background-color: #fc615d;
+    }
+
+    .control-maximize:hover {
+        background-color: #33c74a;
+    }
+
+    .control-minimize:hover {
+        background-color: #fcbd41;
+    }
+}

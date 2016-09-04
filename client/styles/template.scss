@@ -1,0 +1,31 @@
+// compileCompressed
+
+@import "resets/normalize";
+
+@import "vendor/codeMirror",
+        "../../node_modules/codemirror/lib/codemirror.css",
+        "../../node_modules/codemirror/addon/fold/foldgutter.css",
+        "../../node_modules/codemirror/addon/scroll/simplescrollbars.css";
+
+@import "components/app",
+        "components/appContent",
+        "components/appHeader",
+        "components/controls",
+        "components/editor";
+
+body {
+    background-color: #101010;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}

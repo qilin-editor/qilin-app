@@ -1,0 +1,19 @@
+// main : ../template.scss
+
+.app {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    max-width: 100vw;
+
+    background-color: #101010;
+    color: #444444;
+
+    font-family: "Montserrat", sans-serif;
+
+    ::selection {
+        background-color: black;
+        color: white;
+    }
+}
