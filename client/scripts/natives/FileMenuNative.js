@@ -1,3 +1,7 @@
+import EditorConstants  from "../constants/EditorConstants";
+import EditorActions    from "../actions/EditorActions";
+import EditorStore      from "../stores/EditorStore";
+
 export default MainMenu => {
     const { Menu, MenuItem } = nw;
     const FileMenu           = new Menu();
@@ -11,7 +15,7 @@ export default MainMenu => {
 
     FileMenu.append( new MenuItem( {
         label       : "Open file",
-        click       : () => { },
+        click       : () => EditorActions.requestOpenFile(),
         key         : "o",
         modifiers   : "cmd"
     } ) );
