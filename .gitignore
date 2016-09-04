@@ -1,6 +1,12 @@
+# Node stuff:
 node_modules
-nwjs.app
+
+# NW.js stuff:
+*.app
 chromedriver
 minidump_stackwalk
 nwjc
 payload
+
+# OS Stuff:
+.DS_Store
