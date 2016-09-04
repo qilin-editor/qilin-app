@@ -10,14 +10,18 @@
     "inject_js_end"     : "./client/scripts/injectables/EndInjectable.js",
 
     "dependencies" : {
-        "babel-register"        : "latest",
-        "babel-preset-react"    : "latest",
-        "babel-preset-es2015"   : "latest",
-        "babel-preset-stage-0"  : "latest",
+        "babel-register"                    : "latest",
+        "babel-preset-react"                : "latest",
+        "babel-preset-es2015"               : "latest",
+        "babel-preset-stage-0"              : "latest",
+        "babel-plugin-add-module-exports"   : "latest",
 
-        "classnames"            : "latest",
-        "react-dom"             : "latest",
-        "react"                 : "latest"
+        "classnames"                        : "latest",
+        "react"                             : "latest",
+        "react-dom"                         : "latest",
+        "react-codemirror"                  : "latest",
+
+        "flux"                              : "latest"
     },
 
     "maintainers" : [
