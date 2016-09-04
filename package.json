@@ -27,7 +27,8 @@
         "react-dom"                         : "latest",
         "react-codemirror"                  : "latest",
 
-        "flux"                              : "latest"
+        "flux"                              : "latest",
+        "keymirror"                         : "latest"
     },
 
     "maintainers" : [
