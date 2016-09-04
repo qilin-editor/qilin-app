@@ -19,19 +19,20 @@
     },
 
     "dependencies" : {
-        "babel-register"                    : "latest",
-        "babel-preset-react"                : "latest",
-        "babel-preset-es2015"               : "latest",
-        "babel-preset-stage-0"              : "latest",
-        "babel-plugin-add-module-exports"   : "latest",
+        "babel-register"                            : "latest",
+        "babel-preset-react"                        : "latest",
+        "babel-preset-es2015"                       : "latest",
+        "babel-preset-stage-0"                      : "latest",
+        "babel-plugin-add-module-exports"           : "latest",
+        "babel-plugin-transform-decorators-legacy"  : "latest",
 
-        "classnames"                        : "latest",
-        "react"                             : "latest",
-        "react-dom"                         : "latest",
-        "react-codemirror"                  : "latest",
+        "classnames"                                : "latest",
+        "react"                                     : "latest",
+        "react-dom"                                 : "latest",
+        "react-codemirror"                          : "latest",
 
-        "flux"                              : "latest",
-        "keymirror"                         : "latest"
+        "flux"                                      : "latest",
+        "keymirror"                                 : "latest"
     },
 
     "maintainers" : [
