@@ -22,7 +22,7 @@ export default MainMenu => {
 
     FileMenu.append( new MenuItem( {
         label       : "Save file",
-        click       : () => { },
+        click       : () => EditorActions.requestSaveFile(),
         key         : "s",
         modifiers   : "cmd"
     } ) );

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { findDOMNode }      from "react-dom";
 import CodeMirrorComponent  from "react-codemirror";
 import CodeMirror           from "codemirror";
 
@@ -20,10 +21,6 @@ import EditorStore      from "../../stores/EditorStore";
 @EmitterDecorator
 class EditorEditable extends Component {
     state = {
-        path    : null,
-        error   : null,
-        content : null,
-
         options : {
             mode    : "markdown",
             theme   : "dark",
@@ -47,29 +44,21 @@ class EditorEditable extends Component {
     }
 
     onChange = value => {
-        this.setState( {
-            content : value
-        } );
+        EditorStore.content = value;
     }
 
     componentDidMount() {
-        EditorStore.addChangeListener( () => this.onEditorChange() );
+        // Add non-standard attributes on input:
+        findDOMNode( this.refs.saveFile ).setAttribute( "nwsaveas", "qilin.md" );
 
         this.addGlobalEventListener( EditorConstants.EDITOR_OPEN_FILE_REQUEST, () => {
             this.refs.openFile.addEventListener( "change", event => EditorActions.handleOpenFile( event.target.value ), false );
             this.refs.openFile.click();
         } );
-    }
 
-    componentWillUnmount() {
-        EditorStore.removeChangeListener( this.onEditorChange );
-    }
-
-    onEditorChange() {
-        this.setState( {
-            path    : EditorStore.path,
-            error   : EditorStore.error,
-            content : EditorStore.content
+        this.addGlobalEventListener( EditorConstants.EDITOR_SAVE_FILE_REQUEST, () => {
+            this.refs.saveFile.addEventListener( "change", event => EditorActions.handleSaveFile( event.target.value ), false );
+            this.refs.saveFile.click();
         } );
     }
 
@@ -77,9 +66,10 @@ class EditorEditable extends Component {
         return (
             <div className="editor-container">
                 <input className="is-hidden" ref="openFile" type="file" />
+                <input className="is-hidden" ref="saveFile" type="file" />
 
                 <CodeMirrorComponent
-                    value={this.state.content}
+                    value={EditorStore.content}
                     options={this.state.options}
                     onChange={this.onChange}
                 />

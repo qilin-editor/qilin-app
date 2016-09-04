@@ -7,6 +7,7 @@ class EditorStore extends BaseStore {
 
         this.path    = null;
         this.error   = null;
+        this.success = null;
         this.content = null;
 
         this.subscribe( action => {
@@ -27,6 +28,26 @@ class EditorStore extends BaseStore {
                     this.path       = action.path;
                     this.error      = action.error;
                     this.content    = null;
+
+                    this.emitChange();
+                    break;
+
+                case EditorConstants.EDITOR_SAVE_FILE_SUCCESS:
+                    console.info( `File ${action.path} saved` );
+
+                    this.path       = action.path;
+                    this.error      = null;
+                    this.success    = action.success;
+
+                    this.emitChange();
+                    break;
+
+                case EditorConstants.EDITOR_SAVE_FILE_FAILURE:
+                    console.error( `Could not save file ${action.path}!` );
+
+                    this.path       = action.path;
+                    this.error      = action.error;
+                    this.success    = null;
 
                     this.emitChange();
                     break;
