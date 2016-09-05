@@ -9,7 +9,8 @@
         "../../node_modules/codemirror/addon/fold/foldgutter.css",
         "../../node_modules/codemirror/addon/scroll/simplescrollbars.css";
 
-@import "components/app",
+@import "components/alerts",
+        "components/app",
         "components/appContent",
         "components/appHeader",
         "components/controls",

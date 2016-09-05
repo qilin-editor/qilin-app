@@ -1,4 +1,5 @@
 import fs               from "fs";
+import path             from "path";
 import { dispatch }     from "../dispatchers/AppDispatcher";
 import AppConstants     from "../constants/AppConstants";
 import EditorConstants  from "../constants/EditorConstants";
@@ -11,17 +12,19 @@ class EditorActions {
         this.emitGlobalEvent( EditorConstants.EDITOR_OPEN_FILE_REQUEST );
     }
 
-    handleOpenFile( path ) {
-        fs.readFile( path, "utf8", ( error, data ) => {
+    handleOpenFile( file ) {
+        fs.readFile( file, "utf8", ( error, data ) => {
             if ( error ) {
                 dispatch( EditorConstants.EDITOR_OPEN_FILE_FAILURE, {
-                    path    : path,
-                    error   : error
+                    path    : file,
+                    content : null,
+                    message : error
                 } );
             } else {
                 dispatch( EditorConstants.EDITOR_OPEN_FILE_SUCCESS, {
-                    path    : path,
-                    content : data
+                    path    : file,
+                    content : data,
+                    message : `File ${path.basename( file )} opened`
                 } );
             }
         } );
@@ -31,17 +34,17 @@ class EditorActions {
         this.emitGlobalEvent( EditorConstants.EDITOR_SAVE_FILE_REQUEST );
     }
 
-    handleSaveFile( path ) {
-        fs.writeFile( path, EditorStore.content, error => {
+    handleSaveFile( file ) {
+        fs.writeFile( file, EditorStore.content, error => {
             if ( error ) {
                 dispatch( EditorConstants.EDITOR_SAVE_FILE_FAILURE, {
-                    path    : path,
-                    error   : error
+                    path    : file,
+                    message : error
                 } );
             } else {
                 dispatch( EditorConstants.EDITOR_SAVE_FILE_SUCCESS, {
-                    path    : path,
-                    success : `File ${path} saved`
+                    path    : file,
+                    message : `File saved as ${file}`
                 } );
             }
         } );

@@ -5,6 +5,7 @@ import CodeMirror           from "codemirror";
 
 require( "codemirror/mode/markdown/markdown" );
 require( "codemirror/addon/edit/closebrackets" )
+require( "codemirror/addon/scroll/scrollpastend" );
 require( "codemirror/addon/scroll/simplescrollbars" );
 require( "codemirror/addon/search/searchcursor" );
 require( "codemirror/addon/search/search" );
@@ -30,6 +31,7 @@ class EditorEditable extends Component {
             lineWrapping    : true,
             autofocus: true,
             scrollbarStyle: 'overlay',
+            scrollPastEnd : true,
 
             tabSize         : 4,
             indentUnit      : 4,
