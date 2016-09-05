@@ -21,7 +21,7 @@ export default MainMenu => {
     } ) );
 
     FileMenu.append( new MenuItem( {
-        label       : "Save file",
+        label       : "Save file as...",
         click       : () => EditorActions.requestSaveFile(),
         key         : "s",
         modifiers   : "cmd"
