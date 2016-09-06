@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactTransitionGroup from "react-addons-css-transition-group";
 
 import AlertInfo            from "./AlertsInfo.react";
 import AlertFailure         from "./AlertsFailure.react";
@@ -51,11 +52,16 @@ export default class Alerts extends Component {
 
     render() {
         return (
-            <div className="alerts">
+            <ReactTransitionGroup
+                className="alerts"
+                transitionName="fade"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}
+            >
                 {this.renderInfo()}
                 {this.renderFailure()}
                 {this.renderSuccess()}
-            </div>
+            </ReactTransitionGroup>
         );
     }
 }

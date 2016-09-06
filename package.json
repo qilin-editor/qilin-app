@@ -30,6 +30,7 @@
         "react"                                     : "latest",
         "react-dom"                                 : "latest",
         "react-codemirror"                          : "latest",
+        "react-addons-css-transition-group"         : "latest",
 
         "flux"                                      : "latest",
         "keymirror"                                 : "latest"
