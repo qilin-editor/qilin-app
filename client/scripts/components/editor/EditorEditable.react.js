@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { findDOMNode }      from "react-dom";
 import CodeMirrorComponent  from "react-codemirror";
-import CodeMirror           from "codemirror";
 
 require( "codemirror/mode/markdown/markdown" );
 require( "codemirror/addon/edit/closebrackets" )
@@ -14,7 +13,6 @@ require( "codemirror/addon/dialog/dialog" );
 require( "codemirror/keymap/sublime" );
 
 import EmitterDecorator from "../../decorators/EmitterDecorator";
-
 import EditorConstants  from "../../constants/EditorConstants";
 import EditorActions    from "../../actions/EditorActions";
 import EditorStore      from "../../stores/EditorStore";
@@ -23,25 +21,156 @@ import EditorStore      from "../../stores/EditorStore";
 class EditorEditable extends Component {
     state = {
         options : {
-            mode    : "markdown",
-            theme   : "dark",
+            mode                : "markdown",
+            theme               : "dark",
 
-            styleActiveLine : true,
-            lineNumbers     : false,
-            lineWrapping    : true,
-            autofocus: true,
-            scrollbarStyle: 'overlay',
-            scrollPastEnd : true,
+            styleActiveLine     : true,
+            lineNumbers         : false,
+            lineWrapping        : true,
 
-            tabSize         : 4,
-            indentUnit      : 4,
-            indentWithTabs  : true,
+            autofocus           : true,
+            scrollbarStyle      : "overlay",
+            scrollPastEnd       : true,
 
-            foldGutter      : false,
+            tabSize             : 4,
+            indentUnit          : 4,
+            indentWithTabs      : true,
 
-            autoCloseBrackets : true,
+            autoCloseBrackets   : true,
 
-            extraKeys: {"Alt-F": "findPersistent"}
+            extraKeys : {
+                "Alt-F" : "findPersistent",
+                "Cmd-B" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "****", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 2
+                    } );
+                },
+                "Cmd-I" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "**", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 1
+                    } );
+                },
+                "Cmd-1" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "# ", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 2
+                    } );
+                },
+                "Cmd-2" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "## ", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 3
+                    } );
+                },
+                "Cmd-3" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "### ", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 4
+                    } );
+                },
+                "Cmd-4" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "#### ", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 5
+                    } );
+                },
+                "Cmd-5" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "##### ", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 6
+                    } );
+                },
+                "Cmd-6" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "###### ", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 7
+                    } );
+                },
+                "Cmd-K" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "[]()", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 1
+                    } );
+                },
+                "Cmd-Alt-K" : cm => {
+                    const cursor = cm.getCursor();
+
+                    cm.replaceRange( "![]()", {
+                        line : cursor.line,
+                        ch   : cursor.ch
+                    } );
+
+                    cm.setCursor( {
+                        line : cursor.line,
+                        ch   : cursor.ch + 2
+                    } );
+                },
+            }
         }
     }
 
