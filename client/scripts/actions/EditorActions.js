@@ -8,6 +8,10 @@ import EmitterDecorator from "../decorators/EmitterDecorator";
 
 @EmitterDecorator
 class EditorActions {
+    requestEditorShortcut( shortcut ) {
+        this.emitGlobalEvent( shortcut );
+    }
+
     requestOpenFile() {
         this.emitGlobalEvent( EditorConstants.EDITOR_OPEN_FILE_REQUEST );
     }

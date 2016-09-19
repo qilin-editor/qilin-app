@@ -1,69 +1,51 @@
-import EditorConstants  from "../constants/EditorConstants";
-import EditorActions    from "../actions/EditorActions";
-import EditorStore      from "../stores/EditorStore";
+import MarkdownConstants    from "../constants/MarkdownConstants";
+import EditorConstants      from "../constants/EditorConstants";
+import EditorActions        from "../actions/EditorActions";
 
 export default MainMenu => {
     const { Menu, MenuItem } = nw;
-    const FormatMenu           = new Menu();
+    const FormatMenu         = new Menu();
 
     FormatMenu.append( new MenuItem( {
-        label       : "Header 1",
-        click       : () => { },
-        key         : "1",
-        modifiers   : "cmd"
+        label     : "Header 1",
+        key       : "1",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_HEADER_1 ) }
     } ) );
 
     FormatMenu.append( new MenuItem( {
-        label       : "Header 2",
-        click       : () => { },
-        key         : "2",
-        modifiers   : "cmd"
+        label     : "Header 2",
+        key       : "2",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_HEADER_2 ) }
     } ) );
 
     FormatMenu.append( new MenuItem( {
-        label       : "Header 3",
-        click       : () => { },
-        key         : "3",
-        modifiers   : "cmd"
+        label     : "Header 3",
+        key       : "3",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_HEADER_3 ) }
     } ) );
 
     FormatMenu.append( new MenuItem( {
-        label       : "Header 4",
-        click       : () => { },
-        key         : "4",
-        modifiers   : "cmd"
+        label     : "Header 4",
+        key       : "4",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_HEADER_4 ) }
     } ) );
 
     FormatMenu.append( new MenuItem( {
-        label       : "Header 5",
-        click       : () => { },
-        key         : "5",
-        modifiers   : "cmd"
+        label     : "Header 5",
+        key       : "5",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_HEADER_5 ) }
     } ) );
 
     FormatMenu.append( new MenuItem( {
-        label       : "Header 6",
-        click       : () => { },
-        key         : "6",
-        modifiers   : "cmd"
-    } ) );
-
-    FormatMenu.append( new MenuItem( {
-        type : "separator"
-    } ) );
-
-    FormatMenu.append( new MenuItem( {
-        label       : "Bold",
-        click       : () => { },
-        key         : "B",
-        modifiers   : "cmd"
-    } ) );
-
-    FormatMenu.append( new MenuItem( {
-        label       : "Italic",
-        click       : () => { },
-        key         : "I",
-        modifiers   : "cmd"
+        label     : "Header 6",
+        key       : "6",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_HEADER_6 ) }
     } ) );
 
     FormatMenu.append( new MenuItem( {
@@ -71,17 +53,35 @@ export default MainMenu => {
     } ) );
 
     FormatMenu.append( new MenuItem( {
-        label       : "Link",
-        click       : () => { },
-        key         : "K",
-        modifiers   : "cmd"
+        label     : "Bold",
+        key       : "B",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_BOLD ) }
     } ) );
 
     FormatMenu.append( new MenuItem( {
-        label       : "Image",
-        click       : () => { },
-        key         : "K",
-        modifiers   : "cmd-alt"
+        label     : "Italic",
+        key       : "I",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_ITALIC ) }
+    } ) );
+
+    FormatMenu.append( new MenuItem( {
+        type : "separator"
+    } ) );
+
+    FormatMenu.append( new MenuItem( {
+        label     : "Link",
+        key       : "K",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_LINK ) }
+    } ) );
+
+    FormatMenu.append( new MenuItem( {
+        label     : "Image",
+        key       : "K",
+        modifiers : "cmd-alt",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_IMAGE ) }
     } ) );
 
     MainMenu.append( new MenuItem( { label : "Format", submenu : FormatMenu } ) );

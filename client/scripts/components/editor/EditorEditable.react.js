@@ -12,10 +12,11 @@ require( "codemirror/addon/selection/active-line" );
 require( "codemirror/addon/dialog/dialog" );
 require( "codemirror/keymap/sublime" );
 
-import EmitterDecorator from "../../decorators/EmitterDecorator";
-import EditorConstants  from "../../constants/EditorConstants";
-import EditorActions    from "../../actions/EditorActions";
-import EditorStore      from "../../stores/EditorStore";
+import EmitterDecorator     from "../../decorators/EmitterDecorator";
+import MarkdownConstants    from "../../constants/MarkdownConstants";
+import EditorConstants      from "../../constants/EditorConstants";
+import EditorActions        from "../../actions/EditorActions";
+import EditorStore          from "../../stores/EditorStore";
 
 @EmitterDecorator
 class EditorEditable extends Component {
@@ -40,136 +41,6 @@ class EditorEditable extends Component {
 
             extraKeys : {
                 "Alt-F" : "findPersistent",
-                "Cmd-B" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "****", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 2
-                    } );
-                },
-                "Cmd-I" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "**", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 1
-                    } );
-                },
-                "Cmd-1" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "# ", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 2
-                    } );
-                },
-                "Cmd-2" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "## ", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 3
-                    } );
-                },
-                "Cmd-3" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "### ", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 4
-                    } );
-                },
-                "Cmd-4" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "#### ", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 5
-                    } );
-                },
-                "Cmd-5" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "##### ", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 6
-                    } );
-                },
-                "Cmd-6" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "###### ", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 7
-                    } );
-                },
-                "Cmd-K" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "[]()", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 1
-                    } );
-                },
-                "Cmd-Alt-K" : cm => {
-                    const cursor = cm.getCursor();
-
-                    cm.replaceRange( "![]()", {
-                        line : cursor.line,
-                        ch   : cursor.ch
-                    } );
-
-                    cm.setCursor( {
-                        line : cursor.line,
-                        ch   : cursor.ch + 2
-                    } );
-                },
             }
         }
     }
@@ -179,6 +50,8 @@ class EditorEditable extends Component {
     }
 
     componentDidMount() {
+        this.editorDidMount();
+
         EditorStore.addChangeListener( () => this.forceUpdate() );
 
         // Add non-standard attributes on input:
@@ -207,6 +80,150 @@ class EditorEditable extends Component {
         EditorStore.removeChangeListener( this.forceUpdate );
     }
 
+    editorDidMount() {
+        let CodeMirror = this.refs.editor.getCodeMirror();
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_BOLD, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "****", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 2
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_ITALIC, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "**", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 1
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_1, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "# ", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 2
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_2, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "## ", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 3
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_3, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "### ", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 4
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_4, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "#### ", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 5
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_5, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "##### ", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 6
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_6, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "###### ", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 7
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_LINK, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "[]()", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 1
+            } );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_LINK, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "![]()", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 2
+            } );
+        } );
+    }
+
     render() {
         return (
             <div className="editor-container">
@@ -214,6 +231,7 @@ class EditorEditable extends Component {
                 <input className="is-hidden" ref="saveFile" type="file" />
 
                 <CodeMirrorComponent
+                    ref="editor"
                     value={EditorStore.content}
                     options={this.state.options}
                     onChange={this.onChange}
