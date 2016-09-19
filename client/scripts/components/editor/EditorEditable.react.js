@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { findDOMNode }      from "react-dom";
 import CodeMirrorComponent  from "react-codemirror";
 
-require( "codemirror/mode/markdown/markdown" );
+require( "codemirror/mode/gfm/gfm" );
 require( "codemirror/addon/edit/closebrackets" )
 require( "codemirror/addon/scroll/scrollpastend" );
 require( "codemirror/addon/scroll/simplescrollbars" );
@@ -22,7 +22,7 @@ import EditorStore          from "../../stores/EditorStore";
 class EditorEditable extends Component {
     state = {
         options : {
-            mode                : "markdown",
+            mode                : "gfm",
             theme               : "dark",
 
             styleActiveLine     : true,
