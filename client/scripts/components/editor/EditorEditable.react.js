@@ -14,6 +14,7 @@ require( "codemirror/keymap/sublime" );
 
 import EmitterDecorator     from "../../decorators/EmitterDecorator";
 import MarkdownConstants    from "../../constants/MarkdownConstants";
+import ShortcutActions      from "../../actions/ShortcutActions";
 import EditorConstants      from "../../constants/EditorConstants";
 import EditorActions        from "../../actions/EditorActions";
 import EditorStore          from "../../stores/EditorStore";
@@ -45,15 +46,70 @@ class EditorEditable extends Component {
         }
     }
 
-    onChange = value => {
+    componentDidMount() {
+        this.editorDidMount();
+        this.finderDidMount();
+
+        EditorStore.addChangeListener( () => this.forceUpdate() );
+    }
+
+    componentWillUnmount() {
+        EditorStore.removeChangeListener( this.forceUpdate );
+    }
+
+    editorDidMount() {
+        let CodeMirror = this.refs.editor.getCodeMirror();
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_BOLD, () => {
+            ShortcutActions.requestBold( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_ITALIC, () => {
+            ShortcutActions.requestItalic( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_STRIKETHROUGH, () => {
+            ShortcutActions.requestStrikethrought( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_1, () => {
+            ShortcutActions.requestHeader1( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_2, () => {
+            ShortcutActions.requestHeader2( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_3, () => {
+            ShortcutActions.requestHeader3( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_4, () => {
+            ShortcutActions.requestHeader4( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_5, () => {
+            ShortcutActions.requestHeader5( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_6, () => {
+            ShortcutActions.requestHeader6( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_LINK, () => {
+            ShortcutActions.requestLink( CodeMirror );
+        } );
+
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_IMAGE, () => {
+            ShortcutActions.requestImage( CodeMirror );
+        } );
+    }
+
+    editorDidChange = value => {
         EditorStore.content = value;
     }
 
-    componentDidMount() {
-        this.editorDidMount();
-
-        EditorStore.addChangeListener( () => this.forceUpdate() );
-
+    finderDidMount() {
         // Add non-standard attributes on input:
         findDOMNode( this.refs.saveFile ).setAttribute( "nwsaveas", "qilin.md" );
 
@@ -76,168 +132,6 @@ class EditorEditable extends Component {
         } );
     }
 
-    componentWillUnmount() {
-        EditorStore.removeChangeListener( this.forceUpdate );
-    }
-
-    editorDidMount() {
-        let CodeMirror = this.refs.editor.getCodeMirror();
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_BOLD, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "****", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 2
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_ITALIC, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "**", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 1
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_STRIKETHROUGH, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "~~~~", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 2
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_1, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "# ", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 2
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_2, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "## ", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 3
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_3, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "### ", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 4
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_4, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "#### ", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 5
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_5, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "##### ", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 6
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_6, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "###### ", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 7
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_LINK, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "[]()", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 1
-            } );
-        } );
-
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_IMAGE, () => {
-            const cursor = CodeMirror.getCursor();
-
-            CodeMirror.replaceRange( "![]()", {
-                line : cursor.line,
-                ch   : cursor.ch
-            } );
-
-            CodeMirror.setCursor( {
-                line : cursor.line,
-                ch   : cursor.ch + 2
-            } );
-        } );
-    }
-
     render() {
         return (
             <div className="editor-container">
@@ -248,7 +142,7 @@ class EditorEditable extends Component {
                     ref="editor"
                     value={EditorStore.content}
                     options={this.state.options}
-                    onChange={this.onChange}
+                    onChange={this.editorDidChange}
                 />
             </div>
         );
