@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
 
-    margin: 0 20px;
+    margin: 0 18px;
 
     .control-close,
     .control-maximize,
@@ -14,11 +14,7 @@
 
         margin-right: 10px;
 
-        background-color: #333333;
-
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgba(black, .1);
+        background-color: $color-text-dark;
         border-radius: 100%;
 
         transition: all 100ms ease;
@@ -27,14 +23,14 @@
     }
 
     .control-close:hover {
-        background-color: #fc615d;
+        background-color: $color-red;
     }
 
     .control-maximize:hover {
-        background-color: #33c74a;
+        background-color: $color-green;
     }
 
     .control-minimize:hover {
-        background-color: #fcbd41;
+        background-color: $color-yellow;
     }
 }

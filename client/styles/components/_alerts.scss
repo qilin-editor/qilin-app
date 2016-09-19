@@ -13,7 +13,7 @@
     height: 40px;
     width: 100%;
 
-    background-color: #101010;
+    background-color: $color-background;
 }
 
 .alert-info,
@@ -49,13 +49,13 @@
 }
 
 .alert-info .alert-icon {
-    color: #5959ff;
+    color: $color-blue;
 }
 
 .alert-success .alert-icon {
-    color: #33c74a;
+    color: $color-green;
 }
 
 .alert-failure .alert-icon {
-    color: #fc615d;
+    color: $color-red;
 }

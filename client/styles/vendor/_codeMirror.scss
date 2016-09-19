@@ -2,8 +2,8 @@
 
 .cm-s-dark {
     &.CodeMirror {
-        background-color: #101010;
-        color: #666666;
+        background-color: $color-background;
+        color: $color-text-light;
 
         height: 100%;
         height: calc(100vh - 60px)
@@ -32,7 +32,7 @@
     }
 
     .CodeMirror-overlayscroll-vertical div {
-        background-color: #444444;
+        background-color: $color-text-dark;
         border-radius: 10px;
 
         transition: all 300ms ease;
@@ -43,23 +43,23 @@
     }
 
     .cm-searching {
-        background-color: rgba(#ffff59, .5);
-        color: rgba(white, .75);
+        background-color: rgba($color-yellow, .75);
+        color: rgba(white, .5) !important;
 
         border-radius: 3px;
     }
 
     .cm-header {
-        color: rgba(#5959ff, .5);
+        color: rgba($color-green, .5);
     }
 
     .cm-url {
-        color: rgba(#4088c9, .5);
+        color: rgba($color-blue, .5);
     }
 
     .cm-em,
     .cm-strong {
-        color: rgba(#ff5959, .5);
+        color: rgba($color-red, .5);
     }
 
     .cm-hr,
@@ -67,7 +67,7 @@
     .cm-quote,
     .cm-image,
     .cm-comment {
-        color: #333333;
+        color: $color-text-dark;
     }
 
     .cm-quote:before {
@@ -77,12 +77,9 @@
         width: .5rem;
         height: 100%;
 
-        background-color: #333333;
+        background-color: $color-text-dark;
 
         content: "";
         z-index: 1;
     }
-
-    .cm-header-1 { font-size: 120%; }
-    .cm-header-2 { font-size: 110%; }
 }

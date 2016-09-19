@@ -18,15 +18,11 @@
         height: 40px;
         width: 100%;
 
-        background-color: #101010;
+        background-color: $color-background;
 
         font-family: "Montserrat", sans-serif;
         font-size: .5rem;
         text-transform: uppercase;
-
-        border-top-width: 1px;
-        border-top-style: solid;
-        border-top-color: #1e1e1e;
 
         .CodeMirror-search-field,
         button {

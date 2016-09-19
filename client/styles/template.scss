@@ -1,5 +1,7 @@
 // compileCompressed
 
+@import "configuration/colors";
+
 @import "resets/normalize";
 
 @import "animations/fade";
@@ -19,7 +21,7 @@
         "components/editor";
 
 body {
-    background-color: #101010;
+    background-color: $color-background;
 
     overflow-x: hidden;
     overflow-y: hidden;
