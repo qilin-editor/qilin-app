@@ -67,6 +67,13 @@ export default MainMenu => {
     } ) );
 
     FormatMenu.append( new MenuItem( {
+        label     : "Strikethrought",
+        key       : "T",
+        modifiers : "cmd",
+        click     : () => { EditorActions.requestEditorShortcut( MarkdownConstants.MARKDOWN_STRIKETHROUGH ) }
+    } ) );
+
+    FormatMenu.append( new MenuItem( {
         type : "separator"
     } ) );
 

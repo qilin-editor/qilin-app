@@ -111,6 +111,20 @@ class EditorEditable extends Component {
             } );
         } );
 
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_STRIKETHROUGH, () => {
+            const cursor = CodeMirror.getCursor();
+
+            CodeMirror.replaceRange( "~~~~", {
+                line : cursor.line,
+                ch   : cursor.ch
+            } );
+
+            CodeMirror.setCursor( {
+                line : cursor.line,
+                ch   : cursor.ch + 2
+            } );
+        } );
+
         this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_1, () => {
             const cursor = CodeMirror.getCursor();
 
