@@ -209,7 +209,7 @@ class EditorEditable extends Component {
             } );
         } );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_LINK, () => {
+        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_IMAGE, () => {
             const cursor = CodeMirror.getCursor();
 
             CodeMirror.replaceRange( "![]()", {
