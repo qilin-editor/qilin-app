@@ -82,4 +82,12 @@
         content: "";
         z-index: 1;
     }
+
+    .cm-variable-2 {
+        color: $color-text-light;
+    }
+
+    .cm-property {
+        color: rgba($color-yellow, .75);
+    }
 }
