@@ -1,5 +1,5 @@
 class ShortcutActions {
-    requestBold( CodeEditor ) {
+    requestBold( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "****", {
@@ -13,7 +13,7 @@ class ShortcutActions {
         } );
     }
 
-    requestItalic( CodeEditor ) {
+    requestItalic( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "**", {
@@ -27,7 +27,7 @@ class ShortcutActions {
         } );
     }
 
-    requestStrikethrought( CodeEditor ) {
+    requestStrikethrought( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "~~~~", {
@@ -41,7 +41,7 @@ class ShortcutActions {
         } );
     }
 
-    requestHeader1( CodeEditor ) {
+    requestHeader1( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "# ", {
@@ -55,7 +55,7 @@ class ShortcutActions {
         } );
     }
 
-    requestHeader2( CodeEditor ) {
+    requestHeader2( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "## ", {
@@ -69,7 +69,7 @@ class ShortcutActions {
         } );
     }
 
-    requestHeader3( CodeEditor ) {
+    requestHeader3( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "### ", {
@@ -83,7 +83,7 @@ class ShortcutActions {
         } );
     }
 
-    requestHeader4( CodeEditor ) {
+    requestHeader4( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "#### ", {
@@ -97,7 +97,7 @@ class ShortcutActions {
         } );
     }
 
-    requestHeader5( CodeEditor ) {
+    requestHeader5( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "##### ", {
@@ -111,7 +111,7 @@ class ShortcutActions {
         } );
     }
 
-    requestHeader6( CodeEditor ) {
+    requestHeader6( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "###### ", {
@@ -125,7 +125,7 @@ class ShortcutActions {
         } );
     }
 
-    requestLink( CodeEditor ) {
+    requestLink( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "[]()", {
@@ -139,7 +139,7 @@ class ShortcutActions {
         } );
     }
 
-    requestImage( CodeEditor ) {
+    requestImage( CodeMirror ) {
         const cursor = CodeMirror.getCursor();
 
         CodeMirror.replaceRange( "![]()", {

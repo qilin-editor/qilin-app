@@ -8,7 +8,7 @@ import EmitterDecorator from "../decorators/EmitterDecorator";
 
 @EmitterDecorator
 class EditorActions {
-    requestEditorShortcut( shortcut ) {
+    requestShortcut( shortcut ) {
         this.emitGlobalEvent( shortcut );
     }
 
