@@ -14,14 +14,14 @@ export default class EditorPreview extends Component {
     componentDidMount() {
         this.textDidMount();
 
-        EditorStore.addChangeListener( () => this.textDidChange() );
+        EditorStore.addChangeListener( this.textDidChange );
     }
 
     componentWillUnmount() {
         EditorStore.removeChangeListener( this.textDidChange );
     }
 
-    textDidMount() {
+    textDidMount = () => {
         marked.setOptions( {
             breaks      : true,
             sanitize    : true,
@@ -29,7 +29,7 @@ export default class EditorPreview extends Component {
         } );
     }
 
-    textDidChange() {
+    textDidChange = () => {
         this.setState( {
             content : EditorStore.content
         } );

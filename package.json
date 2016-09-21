@@ -29,6 +29,7 @@
         "classnames"                                : "latest",
         "react"                                     : "latest",
         "react-dom"                                 : "latest",
+        "react-svg"                                 : "latest",
         "react-codemirror"                          : "latest",
         "react-split-pane"                          : "latest",
         "react-addons-css-transition-group"         : "latest",

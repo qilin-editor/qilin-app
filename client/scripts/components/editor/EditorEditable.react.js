@@ -50,14 +50,18 @@ class EditorEditable extends Component {
         this.editorDidMount();
         this.finderDidMount();
 
-        EditorStore.addChangeListener( () => this.forceUpdate() );
+        EditorStore.addChangeListener( this.editorDidUpdate );
     }
 
     componentWillUnmount() {
-        EditorStore.removeChangeListener( this.forceUpdate );
+        EditorStore.removeChangeListener( this.editorDidUpdate );
     }
 
-    editorDidMount() {
+    editorDidUpdate = () => {
+        this.forceUpdate();
+    }
+
+    editorDidMount = () => {
         let CodeMirror = this.refs.editor.getCodeMirror();
 
         this.addGlobalEventListener( MarkdownConstants.MARKDOWN_BOLD, () => {
@@ -109,7 +113,7 @@ class EditorEditable extends Component {
         EditorActions.requestContentChange( value );
     }
 
-    finderDidMount() {
+    finderDidMount = () => {
         // Add non-standard attributes on input:
         findDOMNode( this.refs.saveFile ).setAttribute( "nwsaveas", "qilin.md" );
 

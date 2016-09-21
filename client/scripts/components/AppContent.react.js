@@ -5,14 +5,24 @@ import EditorEditable   from "./editor/EditorEditable.react";
 import EditorPreview    from "./editor/EditorPreview.react";
 
 export default class AppContent extends Component {
+    renderSplitPane() {
+        if ( ! this.props.isPreviewVisible ) {
+            return <EditorEditable />;
+        }
+
+        return (
+            <SplitPane split="vertical" minSize={50} defaultSize="50%" primary="second">
+                <EditorEditable />
+                <EditorPreview />
+            </SplitPane>
+        )
+    }
+
     render() {
         return (
             <div className="app-content">
                 <div className="app-content-main">
-                    <SplitPane split="vertical" minSize={50} defaultSize="50%" primary="second">
-                        <EditorEditable />
-                        <EditorPreview />
-                    </SplitPane>
+                    {this.renderSplitPane()}
                 </div>
             </div>
         );

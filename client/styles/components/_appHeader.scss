@@ -3,6 +3,7 @@
 .app-header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-content: center;
     align-items: center;
 
@@ -14,4 +15,33 @@
     border-bottom-color: $color-border-dark;
 
     -webkit-app-region: drag;
+
+    .app-header-buttons {
+        display: flex;
+        flex-direction: row;
+
+        margin: 0 18px;
+        padding: 0;
+
+        .app-header-button {
+            width: 26px;
+            height: 20px;
+
+            margin-left: 14px;
+            padding: 0;
+
+            background-color: $color-text-dark;
+            border-radius: 4px;
+
+            text-align: center;
+            cursor: pointer;
+
+            .icon {
+                vertical-align: middle;
+
+                fill: white;
+                height: 14px;
+            }
+        }
+    }
 }
