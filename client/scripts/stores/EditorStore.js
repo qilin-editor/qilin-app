@@ -16,6 +16,12 @@ class EditorStore extends BaseStore {
 
                     this.emitChange();
                     break;
+
+                case EditorConstants.EDITOR_CONTENT_CHANGE:
+                    this.content = action.content;
+
+                    this.emitChange();
+                    break;
             }
         } );
     }

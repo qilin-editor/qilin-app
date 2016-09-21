@@ -1,6 +1,8 @@
 import keyMirror from "keymirror";
 
 export default keyMirror( {
+    EDITOR_CONTENT_CHANGE           : null,
+
     EDITOR_UPDATE_REQUEST           : null,
     EDITOR_UPDATE_SUCCESS           : null,
     EDITOR_UPDATE_FAILURE           : null,

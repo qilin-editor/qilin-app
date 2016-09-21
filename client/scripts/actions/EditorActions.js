@@ -8,6 +8,12 @@ import EmitterDecorator from "../decorators/EmitterDecorator";
 
 @EmitterDecorator
 class EditorActions {
+    requestContentChange( content ) {
+        dispatch( EditorConstants.EDITOR_CONTENT_CHANGE, {
+            content : content
+        } );
+    }
+
     requestShortcut( shortcut ) {
         this.emitGlobalEvent( shortcut );
     }

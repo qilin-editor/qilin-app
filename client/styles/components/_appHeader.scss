@@ -9,5 +9,9 @@
     height: 50px;
     width: 100vw;
 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $color-border-dark;
+
     -webkit-app-region: drag;
 }

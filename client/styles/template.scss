@@ -9,6 +9,8 @@
 @import "states/isHidden";
 
 @import "vendor/codeMirror",
+        "vendor/splitPane",
+        "vendor/typeset",
         "../../node_modules/codemirror/lib/codemirror.css",
         "../../node_modules/codemirror/addon/fold/foldgutter.css",
         "../../node_modules/codemirror/addon/scroll/simplescrollbars.css";
@@ -18,7 +20,8 @@
         "components/appContent",
         "components/appHeader",
         "components/controls",
-        "components/editor";
+        "components/editorEditable",
+        "components/editorPreview";
 
 body {
     background-color: $color-background;

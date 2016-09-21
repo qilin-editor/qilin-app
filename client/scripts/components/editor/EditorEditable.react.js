@@ -106,7 +106,7 @@ class EditorEditable extends Component {
     }
 
     editorDidChange = value => {
-        EditorStore.content = value;
+        EditorActions.requestContentChange( value );
     }
 
     finderDidMount() {
@@ -134,7 +134,7 @@ class EditorEditable extends Component {
 
     render() {
         return (
-            <div className="editor-container">
+            <div className="editor-editable">
                 <input className="is-hidden" ref="openFile" type="file" />
                 <input className="is-hidden" ref="saveFile" type="file" />
 

@@ -6,7 +6,7 @@
         color: $color-text-light;
 
         height: 100%;
-        height: calc(100vh - 60px)
+        height: calc(100vh - 90px)
     }
 
     .CodeMirror-selected {
@@ -14,11 +14,15 @@
         color: white !important;
     }
 
+    .CodeMirror-lines {
+        padding: 0;
+    }
+
     .CodeMirror-line {
         line-height: 1.35rem;
 
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
     }
 
     .CodeMirror-cursor {
@@ -28,7 +32,7 @@
     }
 
     .CodeMirror-activeline-background {
-        background-color: rgba(white, .025);
+        background-color: #161618;
     }
 
     .CodeMirror-overlayscroll-vertical div {
@@ -72,7 +76,7 @@
 
     .cm-quote:before {
         position: absolute;
-        left: 4rem;
+        left: 5%;
 
         width: .5rem;
         height: 100%;

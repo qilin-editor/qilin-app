@@ -1,8 +1,8 @@
 // main : ../template.scss
 
-.editor-container {
+.editor-editable {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 40px);
 
     .CodeMirror-dialog {
         display: flex;
