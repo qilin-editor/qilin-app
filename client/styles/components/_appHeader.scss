@@ -36,11 +36,20 @@
             text-align: center;
             cursor: pointer;
 
+            &.is-active {
+                .icon {
+                    fill: white;
+                }
+            }
+
             .icon {
                 vertical-align: middle;
+                fill: rgba(white, .5);
 
-                fill: white;
                 height: 14px;
+                width: auto;
+
+                transition: all 300ms ease;
             }
         }
     }

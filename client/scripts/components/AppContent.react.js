@@ -8,7 +8,7 @@ import EditorPreview    from "./editor/EditorPreview.react";
 export default class AppContent extends Component {
     render() {
         const splitPaneClasses = className( "app-content-pane", {
-            "is-preview-hidden" : ! this.props.isPreviewVisible
+            "is-preview-hidden" : ! this.props.isPreviewToggled
         } );
 
         return (
