@@ -5,8 +5,8 @@ class EditorStore extends BaseStore {
     constructor() {
         super();
 
-        this.path    = null;
-        this.content = null;
+        this.path    = "";
+        this.content = "";
 
         this.subscribe( action => {
             switch ( action.type ) {

@@ -6,13 +6,13 @@ import Alerts               from "./alerts/Alerts.react";
 
 export default class App extends Component {
     state = {
-        isPreviewVisible : false,
+        isPreviewVisible : false
     }
 
     togglePreview = () => {
         this.setState( {
             isPreviewVisible : ! this.state.isPreviewVisible
-        } )
+        } );
     }
 
     render() {

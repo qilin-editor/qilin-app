@@ -21,8 +21,8 @@
     .CodeMirror-line {
         line-height: 1.35rem;
 
-        padding-left: 7.5%;
-        padding-right: 7.5%;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .CodeMirror-cursor {
@@ -76,7 +76,7 @@
 
     .cm-quote:before {
         position: absolute;
-        left: 5%;
+        left: 1rem;
 
         width: .5rem;
         height: 100%;

@@ -19,5 +19,15 @@
 
     .app-content-main {
         flex: 1;
+
+        .is-preview-hidden {
+            .Pane1 {
+                width: 100vw !important;
+            }
+
+            .Pane2 {
+                width: 0 !important;
+            }
+        }
     }
 }
