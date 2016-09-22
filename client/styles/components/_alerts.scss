@@ -37,30 +37,19 @@
     .alert-icon {
         margin-right: 1rem;
 
-        font-size: 1rem;
-        font-weight: 900;
+        width: 16px;
+        height: 16px;
     }
-
-    //padding: 0 1rem;
-
-    //height: auto;
-    //width: 400px;
-
-    //border-radius: 3px;
-    //opacity: .5;
-
-    //font-size: 14px;
-    //font-weight: normal;
 }
 
 .alert-info .alert-icon {
-    color: $color-blue;
+    fill: $color-blue;
 }
 
 .alert-success .alert-icon {
-    color: $color-green;
+    fill: $color-green;
 }
 
 .alert-failure .alert-icon {
-    color: $color-red;
+    fill: $color-red;
 }
