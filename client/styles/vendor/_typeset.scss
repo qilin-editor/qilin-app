@@ -3,7 +3,7 @@
 .typeset {
     -webkit-text-size-adjust: 100%;
 
-    font-family: "Montserrat", Helvetica, sans-serif;
+    font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -47,7 +47,7 @@
 
     p {
         font-feature-settings: "kern", "onum", "liga";
-        font-family: "Montserrat", Helvetica, sans-serif;
+        font-family: "Raleway", Helvetica, sans-serif;
         color: rgba($color-text-light, .7);
 
         margin-bottom: 1.35rem;
@@ -56,7 +56,7 @@
 
     h1, h2, h3, h4, h5, h6 {
         font-feature-settings: "dlig", "liga", "lnum", "kern";
-        font-family: "Raleway", Helvetica, sans-serif;
+        font-family: "Montserrat", Helvetica, sans-serif;
         font-weight: 700;
         font-style: normal;
     }
