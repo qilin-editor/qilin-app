@@ -53,7 +53,7 @@ export default class Alerts extends Component {
     render() {
         return (
             <ReactTransitionGroup
-                className="alerts"
+                className="alerts qilin-panel"
                 transitionName="fade"
                 transitionEnterTimeout={500}
                 transitionLeaveTimeout={500}

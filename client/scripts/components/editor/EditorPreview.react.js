@@ -43,7 +43,7 @@ export default class EditorPreview extends Component {
 
     render() {
         return (
-            <div className="editor-preview typeset" dangerouslySetInnerHTML={{ __html : this.state.markdown.render( this.state.content || "" ) }} />
+            <div className="editor-preview qilin-panel" dangerouslySetInnerHTML={{ __html : this.state.markdown.render( this.state.content || "" ) }} />
         );
     }
 }

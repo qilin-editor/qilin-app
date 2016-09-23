@@ -10,11 +10,14 @@
 
 @import "vendor/codeMirror",
         "vendor/splitPane",
-        "vendor/typeset",
         "vendor/katex",
         "../../node_modules/codemirror/lib/codemirror.css",
         "../../node_modules/codemirror/addon/fold/foldgutter.css",
         "../../node_modules/codemirror/addon/scroll/simplescrollbars.css";
+
+@import "components/qilin/button",
+        "components/qilin/icon",
+        "components/qilin/reset";
 
 @import "components/alerts",
         "components/app",
@@ -23,20 +26,3 @@
         "components/controls",
         "components/editorEditable",
         "components/editorPreview";
-
-body {
-    background-color: $color-background;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    -webkit-overflow-scrolling: touch;
-    -webkit-user-select: none;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
-
-    margin: 0;
-    padding: 0;
-}

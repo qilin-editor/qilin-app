@@ -1,7 +1,6 @@
 // main : ../template.scss
 
 .Resizer {
-    background-color: $color-border-dark;
     background-clip: padding-box;
 
     z-index: 1;
@@ -14,7 +13,6 @@
 
         border-width: 0 5px;
         border-style: solid;
-        border-color: rgba(white, 0);
 
         cursor: col-resize;
     }

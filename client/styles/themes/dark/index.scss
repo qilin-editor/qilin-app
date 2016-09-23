@@ -1,0 +1,49 @@
+@import "./colors";
+@import "./syntax";
+
+.Resizer {
+    background-color: $color-border-dark;
+    border-color: transparent;
+}
+
+.CodeMirror,
+.qilin-panel {
+    background-color: $color-background;
+    border-color: $color-border-dark;
+    color: $color-text-light;
+}
+
+.qilin-button,
+.control-close,
+.control-maximize,
+.control-minimize {
+    background-color: $color-text-dark;
+}
+
+.qilin-icon {
+    color: rgba(white, .5);
+    fill: rgba(white, .5);
+
+    &.is-active {
+        color: white;
+        fill: white;
+    }
+}
+
+.editor-preview {
+    color: $color-text-light;
+
+    hr {
+        background-color: $color-text-dark;
+    }
+
+    p {
+        color: rgba($color-text-light, .7);
+    }
+}
+
+::selection,
+.CodeMirror-selected {
+    background-color: rgba(white, .05) !important;
+    color: white !important;
+}

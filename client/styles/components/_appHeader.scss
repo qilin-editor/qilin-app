@@ -12,7 +12,6 @@
 
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: $color-border-dark;
 
     -webkit-app-region: drag;
 
@@ -22,35 +21,5 @@
 
         margin: 0 18px;
         padding: 0;
-
-        .app-header-button {
-            width: 26px;
-            height: 20px;
-
-            margin-left: 14px;
-            padding: 0;
-
-            background-color: $color-text-dark;
-            border-radius: 4px;
-
-            text-align: center;
-            cursor: pointer;
-
-            &.is-active {
-                .icon {
-                    fill: white;
-                }
-            }
-
-            .icon {
-                vertical-align: middle;
-                fill: rgba(white, .5);
-
-                height: 14px;
-                width: auto;
-
-                transition: all 300ms ease;
-            }
-        }
     }
 }

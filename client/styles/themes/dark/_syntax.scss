@@ -1,0 +1,57 @@
+// main : ./index.scss
+
+@import "./colors";
+
+.CodeMirror-cursor {
+    border-left-color: white;
+}
+
+.CodeMirror-activeline-background {
+    background-color: $color-border-light;
+}
+
+.CodeMirror-overlayscroll-vertical div {
+    background-color: $color-text-dark;
+}
+
+.cm-searching {
+    color: rgba(white, .5) !important;
+}
+
+.cm-searching {
+    background-color: rgba($color-yellow, .75);
+    border-radius: 3px;
+}
+
+.cm-header {
+    color: rgba($color-green, .5);
+}
+
+.cm-url {
+    color: rgba($color-blue, .5);
+}
+
+.cm-em,
+.cm-strong {
+    color: rgba($color-red, .5);
+}
+
+.cm-hr,
+.cm-link,
+.cm-quote,
+.cm-image,
+.cm-comment {
+    color: $color-text-dark;
+}
+
+.cm-quote:before {
+    background-color: $color-text-dark;
+}
+
+.cm-variable-2 {
+    color: $color-text-light;
+}
+
+.cm-property {
+    color: rgba($color-yellow, .75);
+}

@@ -12,8 +12,8 @@ export default class AppContent extends Component {
         } );
 
         return (
-            <div className="app-content">
-                <div className="app-content-main">
+            <div className="app-content qilin-panel">
+                <div className="app-content-main qilin-panel">
                     <SplitPane
                         split="vertical"
                         minSize={300}

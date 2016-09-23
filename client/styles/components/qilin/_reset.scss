@@ -1,0 +1,16 @@
+// main : ../../template.scss
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}

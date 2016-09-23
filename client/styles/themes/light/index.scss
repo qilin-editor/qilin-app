@@ -1,0 +1,54 @@
+@import "./colors";
+@import "./syntax";
+
+.CodeMirror-overlayscroll-vertical div {
+    background-color: $color-border-dark;
+}
+
+.Resizer {
+    background-color: $color-border-light;
+    border-color: transparent;
+}
+
+.CodeMirror,
+.qilin-panel {
+    background-color: $color-background;
+    border-color: $color-border-light;
+    color: $color-text;
+}
+
+.qilin-button,
+.control-close,
+.control-maximize,
+.control-minimize {
+    background-color: $color-border-dark;
+    color: $color-text;
+}
+
+.qilin-icon {
+    color: rgba($color-text, .5);
+    fill: rgba($color-text, .5);
+
+    &.is-active {
+        color: $color-text;
+        fill: $color-text;
+    }
+}
+
+.editor-preview {
+    color: $color-text;
+
+    hr {
+        background-color: $color-text;
+    }
+
+    p {
+        color: rgba($color-text, .7);
+    }
+}
+
+::selection,
+.CodeMirror-selected {
+    background-color: rgba(black, .05) !important;
+    color: black !important;
+}

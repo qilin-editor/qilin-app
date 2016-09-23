@@ -1,5 +1,5 @@
 # Minimized stuff:
-template.min.css
+*.min.css
 
 # Node stuff:
 node_modules

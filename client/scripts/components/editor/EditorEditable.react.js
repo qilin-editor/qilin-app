@@ -138,7 +138,7 @@ class EditorEditable extends Component {
 
     render() {
         return (
-            <div className="editor-editable">
+            <div className="editor-editable qilin-panel">
                 <input className="is-hidden" ref="openFile" type="file" />
                 <input className="is-hidden" ref="saveFile" type="file" />
 
