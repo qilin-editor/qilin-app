@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import marked               from "marked";
+import Markdown             from "markdown-it";
+import MarkdownEmoji        from "markdown-it-emoji";
+import MarkdownMaths        from "markdown-it-asciimath";
+import MarkdownAnchor       from "markdown-it-anchor";
+import MarkdownTOC          from "markdown-it-table-of-contents";
+
+require( "markdown-it-asciimath/ASCIIMathTeXImg" );
 
 import ShortcutActions      from "../../actions/ShortcutActions";
 import EditorConstants      from "../../constants/EditorConstants";
@@ -8,7 +14,8 @@ import EditorStore          from "../../stores/EditorStore";
 
 export default class EditorPreview extends Component {
     state = {
-        content : EditorStore.content
+        markdown : new Markdown,
+        content  : EditorStore.content
     }
 
     componentDidMount() {
@@ -22,11 +29,10 @@ export default class EditorPreview extends Component {
     }
 
     textDidMount = () => {
-        marked.setOptions( {
-            breaks      : true,
-            sanitize    : true,
-            smartypants : true
-        } );
+        this.state.markdown.use( MarkdownEmoji );
+        this.state.markdown.use( MarkdownMaths );
+        //this.state.markdown.use( MarkdownAnchor );
+        this.state.markdown.use( MarkdownTOC );
     }
 
     textDidChange = () => {
@@ -37,7 +43,7 @@ export default class EditorPreview extends Component {
 
     render() {
         return (
-            <div className="editor-preview typeset" dangerouslySetInnerHTML={{ __html : marked( this.state.content || "" ) }} />
+            <div className="editor-preview typeset" dangerouslySetInnerHTML={{ __html : this.state.markdown.render( this.state.content || "" ) }} />
         );
     }
 }

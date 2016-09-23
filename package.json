@@ -35,8 +35,13 @@
         "react-addons-css-transition-group"         : "latest",
 
         "flux"                                      : "latest",
-        "marked"                                    : "latest",
-        "keymirror"                                 : "latest"
+        "keymirror"                                 : "latest",
+
+        "markdown-it"                               : "latest",
+        "markdown-it-emoji"                         : "latest",
+        "markdown-it-anchor"                        : "latest",
+        "markdown-it-asciimath"                     : "latest",
+        "markdown-it-table-of-contents"             : "latest"
     },
 
     "maintainers" : [
