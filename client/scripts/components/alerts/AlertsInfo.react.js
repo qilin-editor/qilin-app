@@ -9,8 +9,8 @@ export default class AlertsError extends Component {
 
     render() {
         return (
-            <div className="alert-info" style={ { zIndex : this.props.index } }>
-                <ReactSVG path="images/icons/alerts/help.svg" className="alert-icon" />
+            <div className="alert-info qilin-panel" style={ { zIndex : this.props.index } }>
+                <ReactSVG path="images/icons/alerts/help.svg" className="alert-icon qilin-icon" />
 
                 <div className="alert-message">{this.props.message}</div>
             </div>
