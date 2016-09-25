@@ -17,10 +17,7 @@
     color: $color-text;
 }
 
-.qilin-button,
-.control-close,
-.control-maximize,
-.control-minimize {
+.qilin-button {
     background-color: $color-border-dark;
     color: $color-text;
 }
@@ -52,3 +49,11 @@
     background-color: rgba(black, .05) !important;
     color: black !important;
 }
+
+.control-close    { background-color: $color-red; }
+.control-maximize { background-color: $color-green; }
+.control-minimize { background-color: $color-yellow; }
+
+.control-close:hover    { background-color: darken($color-red, 10%) !important; }
+.control-maximize:hover { background-color: darken($color-green, 10%) !important; }
+.control-minimize:hover { background-color: darken($color-yellow, 10%) !important; }
