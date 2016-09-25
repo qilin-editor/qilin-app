@@ -3,6 +3,7 @@
 
 # Node stuff:
 node_modules
+*.log
 
 # NW.js stuff:
 *.app
