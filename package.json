@@ -44,6 +44,12 @@
         "markdown-it-table-of-contents"             : "latest"
     },
 
+    "devDependencies" : {
+        "babel-eslint"          : "latest",
+        "eslint"                : "latest",
+        "eslint-plugin-react"   : "latest"
+    },
+
     "maintainers" : [
         {
             "name"  : "Bartosz Łaniewski",

@@ -17,13 +17,13 @@ class AlertStore extends BaseStore {
             switch ( action.type ) {
                 case EditorConstants.EDITOR_SAVE_FILE_FAILURE:
                 case EditorConstants.EDITOR_OPEN_FILE_FAILURE:
-                    console.error( `Editor error - ${action.path}` );
-                    console.error( action.message );
+                    // console.error( `Editor error - ${action.path}` );
+                    // console.error( action.message );
 
                     this.failure.push( {
                         message : action.message,
                         created : currentDate,
-                        expires : expiredDate
+                        expires : expiredDate,
                     } );
 
                     this.emitChange();
@@ -31,13 +31,13 @@ class AlertStore extends BaseStore {
 
                 case EditorConstants.EDITOR_SAVE_FILE_SUCCESS:
                 case EditorConstants.EDITOR_OPEN_FILE_SUCCESS:
-                    console.info( `Editor success - ${action.path}\n` );
-                    console.info( action.message );
+                    // console.info( `Editor success - ${action.path}\n` );
+                    // console.info( action.message );
 
                     this.success.push( {
                         message : action.message,
                         created : currentDate,
-                        expires : expiredDate
+                        expires : expiredDate,
                     } );
 
                     this.emitChange();
@@ -50,21 +50,21 @@ class AlertStore extends BaseStore {
         setInterval( () => {
             const isExpired = expire => new Date > expire;
 
-            for ( let id in this.info ) {
+            for ( const id in this.info ) {
                 if ( isExpired( this.info[ id ].expires ) ) {
                     this.info.splice( id, 1 );
                     this.emitChange();
                 }
             }
 
-            for ( let id in this.failure ) {
+            for ( const id in this.failure ) {
                 if ( isExpired( this.failure[ id ].expires ) ) {
                     this.failure.splice( id, 1 );
                     this.emitChange();
                 }
             }
 
-            for ( let id in this.success ) {
+            for ( const id in this.success ) {
                 if ( isExpired( this.success[ id ].expires ) ) {
                     this.success.splice( id, 1 );
                     this.emitChange();
@@ -72,6 +72,6 @@ class AlertStore extends BaseStore {
             }
         }, 5000 );
     }
-};
+}
 
 export default new AlertStore();

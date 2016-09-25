@@ -1,41 +1,39 @@
-import EditorConstants  from "../constants/EditorConstants";
-import EditorActions    from "../actions/EditorActions";
-import EditorStore      from "../stores/EditorStore";
+import EditorActions from "../actions/EditorActions";
 
 export default MainMenu => {
     const { Menu, MenuItem } = nw;
     const FileMenu           = new Menu();
 
     FileMenu.append( new MenuItem( {
-        label       : "New file",
-        click       : () => { },
-        key         : "n",
-        modifiers   : "cmd"
+        label     : "New file",
+        click     : () => { /* To implement */ },
+        key       : "n",
+        modifiers : "cmd",
     } ) );
 
     FileMenu.append( new MenuItem( {
-        label       : "Open file",
-        click       : () => EditorActions.requestOpenFile(),
-        key         : "o",
-        modifiers   : "cmd"
+        label     : "Open file",
+        click     : () => EditorActions.requestOpenFile(),
+        key       : "o",
+        modifiers : "cmd",
     } ) );
 
     FileMenu.append( new MenuItem( {
-        label       : "Save file as...",
-        click       : () => EditorActions.requestSaveFile(),
-        key         : "s",
-        modifiers   : "cmd"
+        label     : "Save file as...",
+        click     : () => EditorActions.requestSaveFile(),
+        key       : "s",
+        modifiers : "cmd",
     } ) );
 
     FileMenu.append( new MenuItem( {
-        type : "separator"
+        type : "separator",
     } ) );
 
     FileMenu.append( new MenuItem( {
-        label       : "Find in file",
-        click       : () => { },
-        key         : "f",
-        modifiers   : "cmd"
+        label     : "Find in file",
+        click     : () => { /* To implement */ },
+        key       : "f",
+        modifiers : "cmd",
     } ) );
 
     MainMenu.append( new MenuItem( { label : "File", submenu : FileMenu } ) );

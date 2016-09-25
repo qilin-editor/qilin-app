@@ -4,12 +4,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "****", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 2
+            ch   : cursor.ch + 2,
         } );
     }
 
@@ -18,12 +18,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "**", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 1
+            ch   : cursor.ch + 1,
         } );
     }
 
@@ -32,12 +32,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "~~~~", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 2
+            ch   : cursor.ch + 2,
         } );
     }
 
@@ -46,12 +46,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "# ", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 2
+            ch   : cursor.ch + 2,
         } );
     }
 
@@ -60,12 +60,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "## ", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 3
+            ch   : cursor.ch + 3,
         } );
     }
 
@@ -74,12 +74,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "### ", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 4
+            ch   : cursor.ch + 4,
         } );
     }
 
@@ -88,12 +88,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "#### ", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 5
+            ch   : cursor.ch + 5,
         } );
     }
 
@@ -102,12 +102,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "##### ", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 6
+            ch   : cursor.ch + 6,
         } );
     }
 
@@ -116,12 +116,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "###### ", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 7
+            ch   : cursor.ch + 7,
         } );
     }
 
@@ -130,12 +130,12 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "[]()", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 1
+            ch   : cursor.ch + 1,
         } );
     }
 
@@ -144,14 +144,14 @@ class ShortcutActions {
 
         CodeMirror.replaceRange( "![]()", {
             line : cursor.line,
-            ch   : cursor.ch
+            ch   : cursor.ch,
         } );
 
         CodeMirror.setCursor( {
             line : cursor.line,
-            ch   : cursor.ch + 2
+            ch   : cursor.ch + 2,
         } );
     }
-};
+}
 
 export default new ShortcutActions();

@@ -3,7 +3,7 @@ import { findDOMNode }      from "react-dom";
 import CodeMirrorComponent  from "react-codemirror";
 
 require( "codemirror/mode/gfm/gfm" );
-require( "codemirror/addon/edit/closebrackets" )
+require( "codemirror/addon/edit/closebrackets" );
 require( "codemirror/addon/scroll/scrollpastend" );
 require( "codemirror/addon/scroll/simplescrollbars" );
 require( "codemirror/addon/search/searchcursor" );
@@ -23,27 +23,27 @@ import EditorStore          from "../../stores/EditorStore";
 class EditorEditable extends Component {
     state = {
         options : {
-            mode                : "gfm",
-            theme               : "dark",
+            mode  : "gfm",
+            theme : "dark",
 
-            styleActiveLine     : true,
-            lineNumbers         : false,
-            lineWrapping        : true,
+            styleActiveLine : true,
+            lineNumbers     : false,
+            lineWrapping    : true,
 
-            autofocus           : true,
-            scrollbarStyle      : "overlay",
-            scrollPastEnd       : true,
+            autofocus      : true,
+            scrollbarStyle : "overlay",
+            scrollPastEnd  : true,
 
-            tabSize             : 4,
-            indentUnit          : 4,
-            indentWithTabs      : true,
+            tabSize        : 4,
+            indentUnit     : 4,
+            indentWithTabs : true,
 
-            autoCloseBrackets   : true,
+            autoCloseBrackets : true,
 
             extraKeys : {
                 "Alt-F" : "findPersistent",
-            }
-        }
+            },
+        },
     }
 
     componentDidMount() {
@@ -62,51 +62,62 @@ class EditorEditable extends Component {
     }
 
     editorDidMount = () => {
-        let CodeMirror = this.refs.editor.getCodeMirror();
+        const CodeMirror = this.refs.editor.getCodeMirror();
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_BOLD, () => {
-            ShortcutActions.requestBold( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_BOLD,
+            () => ShortcutActions.requestBold( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_ITALIC, () => {
-            ShortcutActions.requestItalic( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_ITALIC,
+            () => ShortcutActions.requestItalic( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_STRIKETHROUGH, () => {
-            ShortcutActions.requestStrikethrought( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_STRIKETHROUGH,
+            () => ShortcutActions.requestStrikethrought( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_1, () => {
-            ShortcutActions.requestHeader1( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_HEADER_1,
+            () => ShortcutActions.requestHeader1( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_2, () => {
-            ShortcutActions.requestHeader2( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_HEADER_2,
+            () => ShortcutActions.requestHeader2( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_3, () => {
-            ShortcutActions.requestHeader3( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_HEADER_3,
+            () => ShortcutActions.requestHeader3( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_4, () => {
-            ShortcutActions.requestHeader4( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_HEADER_4,
+            () => ShortcutActions.requestHeader4( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_5, () => {
-            ShortcutActions.requestHeader5( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_HEADER_5,
+            () => ShortcutActions.requestHeader5( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_HEADER_6, () => {
-            ShortcutActions.requestHeader6( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_HEADER_6,
+            () => ShortcutActions.requestHeader6( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_LINK, () => {
-            ShortcutActions.requestLink( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_LINK,
+            () => ShortcutActions.requestLink( CodeMirror )
+        );
 
-        this.addGlobalEventListener( MarkdownConstants.MARKDOWN_IMAGE, () => {
-            ShortcutActions.requestImage( CodeMirror );
-        } );
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_IMAGE,
+            () => ShortcutActions.requestImage( CodeMirror )
+        );
     }
 
     editorDidChange = value => {
@@ -115,7 +126,8 @@ class EditorEditable extends Component {
 
     finderDidMount = () => {
         // Add non-standard attributes on input:
-        findDOMNode( this.refs.saveFile ).setAttribute( "nwsaveas", "qilin.md" );
+        findDOMNode( this.refs.saveFile )
+            .setAttribute( "nwsaveas", "qilin.md" );
 
         this.refs.openFile.addEventListener( "change", event => {
             EditorActions.handleOpenFile( event.target.value );
@@ -127,13 +139,15 @@ class EditorEditable extends Component {
             event.target.value = "";
         }, false );
 
-        this.addGlobalEventListener( EditorConstants.EDITOR_OPEN_FILE_REQUEST, () => {
-            this.refs.openFile.click();
-        } );
+        this.addGlobalEventListener(
+            EditorConstants.EDITOR_OPEN_FILE_REQUEST,
+            () => this.refs.openFile.click()
+        );
 
-        this.addGlobalEventListener( EditorConstants.EDITOR_SAVE_FILE_REQUEST, () => {
-            this.refs.saveFile.click();
-        } );
+        this.addGlobalEventListener(
+            EditorConstants.EDITOR_SAVE_FILE_REQUEST,
+            () => this.refs.saveFile.click()
+        );
     }
 
     render() {
@@ -151,6 +165,6 @@ class EditorEditable extends Component {
             </div>
         );
     }
-};
+}
 
 export default EditorEditable;

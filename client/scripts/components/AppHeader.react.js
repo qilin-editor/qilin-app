@@ -1,25 +1,33 @@
-import React, { Component } from "react";
-import ReactSVG             from "react-svg/dist/react-svg";
-import className            from "classnames";
+import React, { PropTypes, Component }  from "react";
+import className                        from "classnames";
 
+import ReactSVG from "react-svg/dist/react-svg";
 import Controls from "./controls/Controls.react";
 
 export default class AppHeader extends Component {
+    static propTypes = {
+        toggleTheme   : PropTypes.func.isRequired,
+        togglePreview : PropTypes.func.isRequired,
+
+        isThemeToggled   : PropTypes.bool.isRequired,
+        isPreviewToggled : PropTypes.bool.isRequired,
+    }
+
     render() {
         const themeButton = className( "qilin-button", {
-            "is-active" : this.props.isThemeToggled
+            "is-active" : this.props.isThemeToggled,
         } );
 
         const themeIcon = className( "qilin-icon", {
-            "is-active" : this.props.isThemeToggled
+            "is-active" : this.props.isThemeToggled,
         } );
 
         const previewButton = className( "qilin-button", {
-            "is-active" : this.props.isPreviewToggled
+            "is-active" : this.props.isPreviewToggled,
         } );
 
         const previewIcon = className( "qilin-icon", {
-            "is-active" : this.props.isPreviewToggled
+            "is-active" : this.props.isPreviewToggled,
         } );
 
         return (

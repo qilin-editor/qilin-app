@@ -8,18 +8,18 @@ import Alerts               from "./alerts/Alerts.react";
 export default class App extends Component {
     state = {
         isPreviewToggled : false,
-        isThemeToggled   : false
+        isThemeToggled   : false,
     }
 
     togglePreview = () => {
         this.setState( {
-            isPreviewToggled : ! this.state.isPreviewToggled
+            isPreviewToggled : ! this.state.isPreviewToggled,
         } );
     }
 
     toggleTheme = () => {
         this.setState( {
-            isThemeToggled : ! this.state.isThemeToggled
+            isThemeToggled : ! this.state.isThemeToggled,
         } );
     }
 

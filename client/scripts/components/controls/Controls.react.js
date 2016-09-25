@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import NW                   from "nw";
 
 import ControlClose     from "./ControlClose.react";
 import ControlMaximize  from "./ControlMaximize.react";

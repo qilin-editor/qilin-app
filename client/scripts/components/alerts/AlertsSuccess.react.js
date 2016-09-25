@@ -4,7 +4,7 @@ import ReactSVG                         from "react-svg/dist/react-svg";
 export default class AlertsError extends Component {
     static propTypes = {
         index   : PropTypes.number.isRequired,
-        message : PropTypes.string.isRequired
+        message : PropTypes.string.isRequired,
     }
 
     render() {

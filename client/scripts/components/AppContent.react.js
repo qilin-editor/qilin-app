@@ -1,14 +1,18 @@
-import React, { Component } from "react";
-import className            from "classnames";
+import React, { PropTypes, Component }  from "react";
+import className                        from "classnames";
 
 import SplitPane        from "react-split-pane";
 import EditorEditable   from "./editor/EditorEditable.react";
 import EditorPreview    from "./editor/EditorPreview.react";
 
 export default class AppContent extends Component {
+    static propTypes = {
+        isPreviewToggled : PropTypes.bool.isRequired,
+    }
+
     render() {
         const splitPaneClasses = className( "app-content-pane", {
-            "is-preview-hidden" : ! this.props.isPreviewToggled
+            "is-preview-hidden" : ! this.props.isPreviewToggled,
         } );
 
         return (

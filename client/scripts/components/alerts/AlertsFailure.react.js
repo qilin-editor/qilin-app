@@ -1,15 +1,15 @@
-import React, { Component, PropTypes }  from "react";
+import React, { PropTypes, Component }  from "react";
 import ReactSVG                         from "react-svg/dist/react-svg";
 
 export default class AlertsFailure extends Component {
     static propTypes = {
         index   : PropTypes.number.isRequired,
-        message : PropTypes.string.isRequired
+        message : PropTypes.string.isRequired,
     }
 
     render() {
         return (
-            <div className="alert-failure" style={ { zIndex : this.props.index } }>
+            <div className="alert-failure" style={{ zIndex : this.props.index }}>
                 <ReactSVG path="images/icons/alerts/error.svg" className="alert-icon" />
 
                 <div className="alert-message">{this.props.message}</div>

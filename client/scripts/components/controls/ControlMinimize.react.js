@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from "react";
+import React, { PropTypes, Component } from "react";
 
 export default class ControlMinimize extends Component {
-    propTypes : {
-        window : PropTypes.object.isRequired
+    static propTypes = {
+        window : PropTypes.object.isRequired,
     }
 
     onClick = event => {

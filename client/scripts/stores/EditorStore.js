@@ -25,6 +25,6 @@ class EditorStore extends BaseStore {
             }
         } );
     }
-};
+}
 
 export default new EditorStore();

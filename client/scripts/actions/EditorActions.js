@@ -1,7 +1,6 @@
 import fs               from "fs";
 import path             from "path";
 import { dispatch }     from "../dispatchers/AppDispatcher";
-import AppConstants     from "../constants/AppConstants";
 import EditorConstants  from "../constants/EditorConstants";
 import EditorStore      from "../stores/EditorStore";
 import EmitterDecorator from "../decorators/EmitterDecorator";
@@ -9,9 +8,7 @@ import EmitterDecorator from "../decorators/EmitterDecorator";
 @EmitterDecorator
 class EditorActions {
     requestContentChange( content ) {
-        dispatch( EditorConstants.EDITOR_CONTENT_CHANGE, {
-            content : content
-        } );
+        dispatch( EditorConstants.EDITOR_CONTENT_CHANGE, { content } );
     }
 
     requestShortcut( shortcut ) {
@@ -28,13 +25,13 @@ class EditorActions {
                 dispatch( EditorConstants.EDITOR_OPEN_FILE_FAILURE, {
                     path    : file,
                     content : null,
-                    message : error
+                    message : error,
                 } );
             } else {
                 dispatch( EditorConstants.EDITOR_OPEN_FILE_SUCCESS, {
                     path    : file,
                     content : data,
-                    message : `File ${path.basename( file )} opened`
+                    message : `File ${path.basename( file )} opened`,
                 } );
             }
         } );
@@ -49,16 +46,16 @@ class EditorActions {
             if ( error ) {
                 dispatch( EditorConstants.EDITOR_SAVE_FILE_FAILURE, {
                     path    : file,
-                    message : error
+                    message : error,
                 } );
             } else {
                 dispatch( EditorConstants.EDITOR_SAVE_FILE_SUCCESS, {
                     path    : file,
-                    message : `File saved as ${file}`
+                    message : `File saved as ${file}`,
                 } );
             }
         } );
     }
-};
+}
 
 export default new EditorActions();

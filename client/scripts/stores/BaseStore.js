@@ -24,4 +24,4 @@ export default class BaseStore extends EventEmitter {
     removeChangeListener( callback ) {
         this.removeListener( AppConstants.CHANGE_EVENT, callback );
     }
-};
+}
