@@ -18,6 +18,17 @@
 .control-maximize,
 .control-minimize {
     background-color: $color-text-dark;
+    background-image: linear-gradient($color-text-dark, darken($color-text-dark, 3%));
+}
+
+.qilin-button {
+    box-shadow: 0 -1px 0 rgba(white, .25), 0 1px 2px -1px rgba(black, .75);
+}
+
+.control-close:hover,
+.control-maximize:hover,
+.control-minimize:hover {
+    background-image: none;
 }
 
 .qilin-icon {
