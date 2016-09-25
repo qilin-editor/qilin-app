@@ -18,8 +18,11 @@
 }
 
 .qilin-button {
-    background-color: $color-border-dark;
-    color: $color-text;
+    color: $color-border-dark;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-border-light;
 }
 
 .qilin-icon {
