@@ -1,14 +1,18 @@
 // main : ../../template.scss
 
 .qilin-button {
-    width: 26px;
-    height: 20px;
+    -webkit-appearance: none;
 
-    margin-left: 14px;
+    min-width: 26px;
+    min-height: 20px;
+
+    margin: 0 0 0 14px;
     padding: 0;
 
+    border-width: 0;
     border-radius: 4px;
 
     text-align: center;
     cursor: pointer;
+    outline: none;
 }

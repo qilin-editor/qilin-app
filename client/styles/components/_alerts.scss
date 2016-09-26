@@ -1,53 +1,55 @@
 // main : ../template.scss
 
 .alerts {
-    display: flex;
-    align-items: center;
-
     position: fixed;
     left: 0; bottom: 0;
+    display: flex;
+    align-items: center;
 
     margin: 0;
     padding: 0 .35rem 0 1rem;
 
     height: 40px;
-    width: 100%;
+    width: 100vw;
 
     border-top-width: 1px;
     border-top-style: solid;
 
     z-index: 2;
-}
 
-.alert-info,
-.alert-success,
-.alert-failure {
-    display: flex;
-    align-items: center;
-    position: absolute;
+    .alert-info,
+    .alert-success,
+    .alert-failure {
+        position: absolute;
+        display: flex;
+        align-items: center;
 
-    height: 100%;
-    width: 100%;
+        height: 100%;
+        width: 100%;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: .5rem;
+        font-family: "Montserrat", sans-serif;
+        font-size: .6rem;
 
-    .alert-icon {
-        margin-right: 1rem;
+        .alert-icon {
+            margin-right: 1rem;
 
-        width: 16px;
-        height: 16px;
+            width: 16px;
+            height: 16px;
+        }
     }
-}
 
-.alert-info .alert-icon {
-    fill: $color-blue;
-}
+    .alert-info .alert-icon {
+        color: $color-blue;
+        fill: $color-blue;
+    }
 
-.alert-success .alert-icon {
-    fill: $color-green;
-}
+    .alert-success .alert-icon {
+        color: $color-green;
+        fill: $color-green;
+    }
 
-.alert-failure .alert-icon {
-    fill: $color-red;
+    .alert-failure .alert-icon {
+        color: $color-red;
+        fill: $color-red;
+    }
 }

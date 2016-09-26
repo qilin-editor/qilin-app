@@ -2,27 +2,21 @@
 
 @import "configuration/colors";
 
-@import "resets/normalize";
-
 @import "animations/fade";
-
-@import "states/isHidden";
 
 @import "vendor/codeMirror",
         "vendor/splitPane",
         "vendor/katex",
         "../../node_modules/codemirror/lib/codemirror.css",
-        "../../node_modules/codemirror/addon/fold/foldgutter.css",
         "../../node_modules/codemirror/addon/scroll/simplescrollbars.css";
 
 @import "components/qilin/button",
         "components/qilin/icon",
-        "components/qilin/reset";
+        "components/qilin/reset",
 
-@import "components/alerts",
+        "components/states/isHidden",
+
+        "components/alerts",
         "components/app",
-        "components/appContent",
-        "components/appHeader",
         "components/controls",
-        "components/editorEditable",
-        "components/editorPreview";
+        "components/editor";

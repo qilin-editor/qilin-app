@@ -2,34 +2,26 @@
 
 .controls-container {
     display: flex;
-    flex-direction: row;
 
     margin: 0 18px;
 
     .control-close,
     .control-maximize,
     .control-minimize {
+        content: "";
+
         width: 14px;
         height: 14px;
 
-        margin-right: 10px;
+        margin: 0 10px 0 0;
 
+        border-width: 0;
         border-radius: 100%;
 
         transition: all 100ms ease;
-
-        content: "";
     }
 
-    .control-close:hover {
-        background-color: $color-red;
-    }
-
-    .control-maximize:hover {
-        background-color: $color-green;
-    }
-
-    .control-minimize:hover {
-        background-color: $color-yellow;
-    }
+    .control-close:hover    { background-color: $color-red; }
+    .control-maximize:hover { background-color: $color-green; }
+    .control-minimize:hover { background-color: $color-yellow; }
 }

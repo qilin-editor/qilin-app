@@ -1,11 +1,75 @@
 // main : ../template.scss
 
 .app {
+    position: relative;
     display: flex;
     flex-direction: column;
 
     min-height: 100vh;
     max-width: 100vw;
 
-    font-family: "Montserrat", sans-serif;
+    .app-content {
+        position: relative;
+        display: flex;
+        flex: 1;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .app-content-left,
+        .app-content-right,
+        .app-content-main {
+            position: relative;
+        }
+
+        .app-content-left,
+        .app-content-right {
+             flex: 0 0 50px;
+        }
+
+        .app-content-left {
+            order: -1;
+
+            border-right-width: 1px;
+            border-right-style: solid;
+        }
+
+        .app-content-right {
+            order: 1;
+
+            border-left-width: 1px;
+            border-left-style: solid;
+        }
+
+        .app-content-main {
+            flex: 1;
+
+            .is-preview-hidden {
+                .Pane1 { width: 100vw !important; }
+                .Pane2 { width: 0     !important; }
+            }
+        }
+    }
+
+    .app-header {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        height: 50px;
+        width: 100vw;
+
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+
+        -webkit-app-region: drag;
+
+        .app-header-buttons {
+            display: flex;
+            flex-direction: row;
+
+            margin: 0 18px;
+        }
+    }
 }
