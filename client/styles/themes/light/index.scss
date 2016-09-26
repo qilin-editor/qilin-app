@@ -38,13 +38,9 @@
 .editor-preview {
     color: $color-text;
 
-    hr {
-        background-color: $color-text;
-    }
-
-    p {
-        color: rgba($color-text, .7);
-    }
+    hr          { background-color: $color-border-light; }
+    p           { color: rgba($color-text, .7); }
+    b, strong   { color: rgba($color-text, .8); }
 }
 
 ::selection,
