@@ -57,7 +57,7 @@ export default class AppHeader extends Component {
                 <Controls />
 
                 <div className="app-header-title" onClick={this.revealFolder}>
-                    {path.basename( EditorStore.path ) || "Undefined file"}
+                    {path.basename( EditorStore.path ) || "Untitled"}
                 </div>
 
                 <div className="app-header-buttons">
