@@ -1,6 +1,8 @@
 import BaseStore       from "./BaseStore";
 import EditorConstants from "../constants/EditorConstants";
 
+const EXPIRED_DELAY = 3.5;
+
 class AlertStore extends BaseStore {
     constructor() {
         super();
@@ -12,7 +14,7 @@ class AlertStore extends BaseStore {
         this.initTimer();
         this.subscribe( action => {
             const currentDate = new Date;
-            const expiredDate = currentDate.setSeconds( currentDate.getSeconds() + 5 );
+            const expiredDate = currentDate.setSeconds( currentDate.getSeconds() + EXPIRED_DELAY );
 
             switch ( action.type ) {
                 case EditorConstants.EDITOR_AUTOSAVE_FILE_FAILURE:
@@ -84,7 +86,7 @@ class AlertStore extends BaseStore {
                     this.emitChange();
                 }
             }
-        }, 5000 );
+        }, EXPIRED_DELAY * 1000 );
     }
 }
 
