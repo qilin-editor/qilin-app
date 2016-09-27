@@ -65,6 +65,14 @@
 
         -webkit-app-region: drag;
 
+        .app-header-title {
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
         .app-header-buttons {
             display: flex;
             flex-direction: row;

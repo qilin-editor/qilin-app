@@ -1,8 +1,11 @@
+import path                             from "path";
 import React, { PropTypes, Component }  from "react";
 import className                        from "classnames";
 
 import ReactSVG from "react-svg/dist/react-svg";
 import Controls from "./controls/Controls.react";
+
+import EditorStore from "../stores/EditorStore";
 
 export default class AppHeader extends Component {
     static propTypes = {
@@ -11,6 +14,18 @@ export default class AppHeader extends Component {
 
         isThemeToggled   : PropTypes.bool.isRequired,
         isPreviewToggled : PropTypes.bool.isRequired,
+    }
+
+    componentDidMount() {
+        EditorStore.addChangeListener( this.editorDidUpdate );
+    }
+
+    componentWillUnmount() {
+        EditorStore.removeChangeListener( this.editorDidUpdate );
+    }
+
+    editorDidUpdate = () => {
+        this.forceUpdate();
     }
 
     render() {
@@ -33,6 +48,10 @@ export default class AppHeader extends Component {
         return (
             <div className="app-header qilin-panel">
                 <Controls />
+
+                <div className="app-header-title">
+                    {path.basename( EditorStore.path ) || "Undefined file"}
+                </div>
 
                 <div className="app-header-buttons">
                     <div className={themeButton} onClick={this.props.toggleTheme}>
