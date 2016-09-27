@@ -1,4 +1,6 @@
+import open                             from "open";
 import path                             from "path";
+
 import React, { PropTypes, Component }  from "react";
 import className                        from "classnames";
 
@@ -28,6 +30,11 @@ export default class AppHeader extends Component {
         this.forceUpdate();
     }
 
+    revealFolder = () => {
+        if ( EditorStore.path !== "" )
+            open( path.dirname( EditorStore.path ) );
+    }
+
     render() {
         const themeButton = className( "qilin-button", {
             "is-active" : this.props.isThemeToggled,
@@ -49,7 +56,7 @@ export default class AppHeader extends Component {
             <div className="app-header qilin-panel">
                 <Controls />
 
-                <div className="app-header-title">
+                <div className="app-header-title" onClick={this.revealFolder}>
                     {path.basename( EditorStore.path ) || "Undefined file"}
                 </div>
 
