@@ -15,6 +15,7 @@ class AlertStore extends BaseStore {
             const expiredDate = currentDate.setSeconds( currentDate.getSeconds() + 5 );
 
             switch ( action.type ) {
+                case EditorConstants.EDITOR_AUTOSAVE_FILE_FAILURE:
                 case EditorConstants.EDITOR_SAVE_FILE_FAILURE:
                 case EditorConstants.EDITOR_OPEN_FILE_FAILURE:
                     // console.error( `Editor error - ${action.path}` );
@@ -35,6 +36,19 @@ class AlertStore extends BaseStore {
                     // console.info( action.message );
 
                     this.success.push( {
+                        message : action.message,
+                        created : currentDate,
+                        expires : expiredDate,
+                    } );
+
+                    this.emitChange();
+                    break;
+
+                case EditorConstants.EDITOR_AUTOSAVE_FILE_SUCCESS:
+                    // console.info( `Editor info - ${action.path}\n` );
+                    // console.info( action.message );
+
+                    this.info.push( {
                         message : action.message,
                         created : currentDate,
                         expires : expiredDate,

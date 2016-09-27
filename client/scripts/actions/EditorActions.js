@@ -37,6 +37,22 @@ class EditorActions {
         } );
     }
 
+    requestAutoSave() {
+        fs.writeFile( EditorStore.path, EditorStore.content, error => {
+            if ( error ) {
+                dispatch( EditorConstants.EDITOR_AUTOSAVE_FILE_FAILURE, {
+                    path    : EditorStore.path,
+                    message : error,
+                } );
+            } else {
+                dispatch( EditorConstants.EDITOR_AUTOSAVE_FILE_SUCCESS, {
+                    path    : EditorStore.path,
+                    message : "File auto-saved",
+                } );
+            }
+        } );
+    }
+
     requestSaveFile() {
         this.emitGlobalEvent( EditorConstants.EDITOR_SAVE_FILE_REQUEST );
     }

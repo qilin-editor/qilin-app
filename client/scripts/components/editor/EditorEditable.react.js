@@ -47,6 +47,8 @@ class EditorEditable extends Component {
     }
 
     componentDidMount() {
+        this.startAutoSaveTimer();
+
         this.editorDidMount();
         this.finderDidMount();
 
@@ -54,11 +56,24 @@ class EditorEditable extends Component {
     }
 
     componentWillUnmount() {
+        this.clearAutoSaveTimer();
+
         EditorStore.removeChangeListener( this.editorDidUpdate );
+    }
+
+    clearAutoSaveTimer() {
+        this.autoSaveTimer = clearTimeout( this.autoSaveTimer );
+    }
+
+    startAutoSaveTimer() {
+        this.autoSaveTimer = setInterval( this.editorAutoSave, 7500 );
     }
 
     editorDidUpdate = () => {
         this.forceUpdate();
+
+        this.clearAutoSaveTimer();
+        this.startAutoSaveTimer();
     }
 
     editorDidMount = () => {
@@ -121,7 +136,21 @@ class EditorEditable extends Component {
     }
 
     editorDidChange = value => {
+        // Reset the auto-saver timer when user is typing:
+        this.clearAutoSaveTimer();
+        this.startAutoSaveTimer();
+
         EditorActions.requestContentChange( value );
+    }
+
+    editorAutoSave = () => {
+        if ( EditorStore.path !== "" ) {
+            EditorActions.requestAutoSave();
+
+            // Clear the auto-save timer and wait for new changes to start it
+            // again:
+            this.clearAutoSaveTimer();
+        }
     }
 
     finderDidMount = () => {

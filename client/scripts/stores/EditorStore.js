@@ -22,6 +22,12 @@ class EditorStore extends BaseStore {
 
                     this.emitChange();
                     break;
+
+                case EditorConstants.EDITOR_SAVE_FILE_SUCCESS:
+                    this.path = action.path;
+
+                    this.emitChange();
+                    break;
             }
         } );
     }
