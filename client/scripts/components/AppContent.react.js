@@ -29,6 +29,9 @@ export default class AppContent extends Component {
                         <EditorPreview />
                     </SplitPane>
                 </div>
+
+                <div className="app-content-right qilin-panel">
+                </div>
             </div>
         );
     }
