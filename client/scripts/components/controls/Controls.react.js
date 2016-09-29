@@ -9,7 +9,7 @@ export default class Controls extends Component {
         const WebWindow = nw.Window.get();
 
         return (
-            <div className="controls-container">
+            <div className="app-header-controls controls-container">
                 <ControlClose window={WebWindow} />
                 <ControlMinimize window={WebWindow} />
                 <ControlMaximize window={WebWindow} />

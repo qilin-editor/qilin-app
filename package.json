@@ -8,7 +8,7 @@
     "author"    : "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
     "license"   : "MIT",
 
-    "chromium-args"     : "--mixed-context",
+    "chromium-args"     : "--mixed-context --enable-experimental-web-platform-features",
     "inject_js_start"   : "./client/scripts/injectables/StartInjectable.js",
     "inject_js_end"     : "./client/scripts/injectables/EndInjectable.js",
 
