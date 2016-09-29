@@ -52,11 +52,15 @@ export default class AppHeader extends Component {
             "is-active" : this.props.isPreviewToggled,
         } );
 
+        const titleClasses = className( "aoo-header-title", {
+            "is-clickable" : EditorStore.path !== "",
+        } );
+
         return (
             <div className="app-header qilin-panel">
                 <Controls />
 
-                <div className="app-header-title" onClick={this.revealFolder}>
+                <div className={titleClasses} onClick={this.revealFolder}>
                     {path.basename( EditorStore.path ) || "Untitled"}
                 </div>
 
