@@ -52,7 +52,7 @@ export default class AppHeader extends Component {
             "is-active" : this.props.isPreviewToggled,
         } );
 
-        const titleClasses = className( "aoo-header-title", {
+        const titleClasses = className( "app-header-title", {
             "is-clickable" : EditorStore.path !== "",
         } );
 
