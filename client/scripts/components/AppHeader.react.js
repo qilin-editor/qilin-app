@@ -1,4 +1,4 @@
-import open                             from "open";
+import open                             from "opn";
 import path                             from "path";
 
 import React, { PropTypes, Component }  from "react";

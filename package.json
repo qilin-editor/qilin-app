@@ -43,7 +43,7 @@
         "markdown-it-asciimath"                     : "latest",
         "markdown-it-table-of-contents"             : "latest",
 
-        "open"                                      : "latest"
+        "opn"                                       : "latest"
     },
 
     "devDependencies" : {
