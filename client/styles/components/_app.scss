@@ -16,6 +16,27 @@
         overflow-x: hidden;
         overflow-y: auto;
 
+        .app-content-icon {
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            width: 50px;
+            height: 45px;
+
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-right-width: 1px;
+            border-right-style: solid;
+
+            cursor: pointer;
+
+            & > svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
         .app-content-left,
         .app-content-right,
         .app-content-main {
@@ -24,7 +45,16 @@
 
         .app-content-left,
         .app-content-right {
-             flex: 0 0 50px;
+            display: flex;
+            flex-direction: column;
+            align-itmes: center;
+            align-content: center;
+            justify-content: space-between;
+
+            flex: 0 0 50px;
+
+            width: 50px;
+            height: calc(100vh - 90px);
         }
 
         .app-content-left {

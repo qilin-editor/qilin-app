@@ -1,4 +1,5 @@
 import React, { PropTypes, Component }  from "react";
+import ReactSVG                         from "react-svg/dist/react-svg";
 import className                        from "classnames";
 
 import SplitPane        from "react-split-pane";
@@ -30,7 +31,10 @@ export default class AppContent extends Component {
                     </SplitPane>
                 </div>
 
-                <div className="app-content-right qilin-panel">
+                <div className="app-content-left qilin-panel">
+                    <div className="app-content-icon qilin-panel">
+                        <ReactSVG className="qilin-icon" path="images/icons/menu/theme.svg" />
+                    </div>
                 </div>
             </div>
         );

@@ -15,4 +15,13 @@
     text-align: center;
     cursor: pointer;
     outline: none;
+
+    .qilin-button-icon {
+        vertical-align: middle;
+
+        height: 14px;
+        width: auto;
+
+        transition: all 300ms ease;
+    }
 }

@@ -40,7 +40,7 @@ export default class AppHeader extends Component {
             "is-active" : this.props.isThemeToggled,
         } );
 
-        const themeIcon = className( "qilin-icon", {
+        const themeIcon = className( "qilin-button-icon", {
             "is-active" : this.props.isThemeToggled,
         } );
 
@@ -48,7 +48,7 @@ export default class AppHeader extends Component {
             "is-active" : this.props.isPreviewToggled,
         } );
 
-        const previewIcon = className( "qilin-icon", {
+        const previewIcon = className( "qilin-button-icon", {
             "is-active" : this.props.isPreviewToggled,
         } );
 
