@@ -33,7 +33,11 @@ export default class AppContent extends Component {
 
                 <div className="app-content-left qilin-panel">
                     <div className="app-content-icon qilin-panel">
-                        <ReactSVG className="qilin-icon" path="images/icons/menu/theme.svg" />
+                        <ReactSVG className="qilin-icon" path="images/icons/menu/functions.svg" />
+                    </div>
+
+                    <div className="app-content-icon qilin-panel">
+                        <ReactSVG className="qilin-icon" path="images/icons/menu/gesture.svg" />
                     </div>
                 </div>
             </div>
