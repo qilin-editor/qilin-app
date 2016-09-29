@@ -2,12 +2,12 @@
 
 .editor-editable {
     width: 100%;
-    height: calc(100% - 40px);
+    height: calc(100vh - 40px);
 }
 
 .editor-preview {
     width: 100%;
-    height: calc(100% - 90px);
+    height: calc(100vh - 90px);
 
     overflow-x: hidden;
     overflow-y: auto;
