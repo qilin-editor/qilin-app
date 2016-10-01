@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import className           from "classnames";
+import className            from "classnames";
 
 import AppContent           from "./AppContent.react";
 import AppHeader            from "./AppHeader.react";
