@@ -10,7 +10,7 @@ import ModalConstants       from "../constants/ModalConstants";
 
 export default class App extends Component {
     state = {
-        isModalFormulasOpen : true,
+        isModalFormulasOpen : false,
         isModalGeometryOpen : false,
 
         isPreviewToggled : false,
