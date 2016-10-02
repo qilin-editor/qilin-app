@@ -12,11 +12,22 @@ export default class AppContent extends Component {
     static propTypes = {
         toggleModal      : PropTypes.func.isRequired,
         isPreviewToggled : PropTypes.bool.isRequired,
+
+        isModalFormulasOpen : PropTypes.bool.isRequired,
+        isModalGeometryOpen : PropTypes.bool.isRequired,
     }
 
     render() {
         const splitPaneClasses = className( "app-content-pane", {
             "is-preview-hidden" : ! this.props.isPreviewToggled,
+        } );
+
+        const formulasButton = className( "app-content-icon qilin-panel", {
+            "is-active" : this.props.isModalFormulasOpen,
+        } );
+
+        const geometryButton = className( "app-content-icon qilin-panel", {
+            "is-active" : this.props.isModalGeometryOpen,
         } );
 
         return (
@@ -35,11 +46,11 @@ export default class AppContent extends Component {
                 </div>
 
                 <div className="app-content-left qilin-panel">
-                    <div className="app-content-icon qilin-panel" onClick={() => this.props.toggleModal( ModalConstants.MODAL_FORMULAS )}>
+                    <div className={formulasButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_FORMULAS )}>
                         <ReactSVG className="qilin-icon" path="images/icons/menu/functions.svg" />
                     </div>
 
-                    <div className="app-content-icon qilin-panel" onClick={() => this.props.toggleModal( ModalConstants.MODAL_GEOMETRY )}>
+                    <div className={geometryButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_GEOMETRY )}>
                         <ReactSVG className="qilin-icon" path="images/icons/menu/gesture.svg" />
                     </div>
                 </div>

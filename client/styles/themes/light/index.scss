@@ -25,6 +25,7 @@
     border-color: $color-border-light;
 }
 
+.app-content-icon.is-active > .qilin-icon,
 .app-content-icon:hover > .qilin-icon {
     color: $color-text;
     fill: $color-text;

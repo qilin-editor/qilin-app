@@ -31,6 +31,7 @@
     background-image: none;
 }
 
+.app-content-icon.is-active > .qilin-icon,
 .app-content-icon:hover > .qilin-icon {
     color: $color-text-light;
     fill: $color-text-light;
