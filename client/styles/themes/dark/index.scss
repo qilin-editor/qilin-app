@@ -10,7 +10,7 @@
 .qilin-panel {
     background-color: $color-background;
     border-color: $color-border-dark;
-    color: $color-text-light;
+    color: lighten($color-text-light, 10%);
 }
 
 .qilin-button,
@@ -53,14 +53,14 @@
 }
 
 .editor-preview {
-    color: $color-text-light;
+    color: lighten($color-text-light, 10%);
 
     hr {
         background-color: $color-text-dark;
     }
 
     p {
-        color: rgba($color-text-light, .7);
+        opacity: .85;
     }
 }
 
