@@ -5,9 +5,10 @@
     top: 50px; right: 0; bottom: 40px; left: 50px;
 
     content: "";
-    z-index: 3;
+    z-index: 6;
 
-    .modal {
+    .modal,
+    .modal-content {
         width: 100%;
         height: 100%;
 
