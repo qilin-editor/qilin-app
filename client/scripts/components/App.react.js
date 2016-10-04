@@ -31,6 +31,12 @@ export default class App extends Component {
 
     toggleModal = modal => {
         switch ( modal ) {
+            case ModalConstants.MODAL_TEXT:
+                return this.setState( {
+                    isModalFormulasOpen : false,
+                    isModalGeometryOpen : false,
+                } );
+
             case ModalConstants.MODAL_FORMULAS:
                 return this.setState( {
                     isModalFormulasOpen : ! this.state.isModalFormulasOpen,

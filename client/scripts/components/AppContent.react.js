@@ -22,6 +22,11 @@ export default class AppContent extends Component {
             "is-preview-hidden" : ! this.props.isPreviewToggled,
         } );
 
+        const textButton = className( "app-content-icon qilin-panel", {
+            "is-active" : !this.props.isModalFormulasOpen
+                       && !this.props.isModalGeometryOpen,
+        } );
+
         const formulasButton = className( "app-content-icon qilin-panel", {
             "is-active" : this.props.isModalFormulasOpen,
         } );
@@ -46,6 +51,10 @@ export default class AppContent extends Component {
                 </div>
 
                 <div className="app-content-left qilin-panel">
+                    <div className={textButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_TEXT )}>
+                        <ReactSVG className="qilin-icon" path="images/icons/menu/text.svg" />
+                    </div>
+
                     <div className={formulasButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_FORMULAS )}>
                         <ReactSVG className="qilin-icon" path="images/icons/menu/functions.svg" />
                     </div>
