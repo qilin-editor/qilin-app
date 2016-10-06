@@ -167,7 +167,7 @@
         "lines-around-comment"          : [ 0 ],
         "lines-around-directive"        : [ 1, { "before" : "never", "after" : "always" } ],
         "max-depth"                     : [ 2, { "max": 4 } ],
-        "max-len"                       : [ 1, 80 ],
+        "max-len"                       : [ 1, 120 ],
         "max-lines"                     : [ 0 ],
         "max-nested-callbacks"          : [ 1, 4 ],
         "max-params"                    : [ 0 ],
