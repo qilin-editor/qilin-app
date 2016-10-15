@@ -7,8 +7,10 @@
 @import "vendor/codeMirror",
         "vendor/splitPane",
         "vendor/katex",
+
         "../../node_modules/codemirror/lib/codemirror.css",
-        "../../node_modules/codemirror/addon/scroll/simplescrollbars.css";
+        "../../node_modules/codemirror/addon/scroll/simplescrollbars.css",
+        "../../node_modules/literallycanvas/lib/css/literallycanvas.css";
 
 @import "components/qilin/button",
         "components/qilin/icon",
@@ -21,4 +23,5 @@
         "components/app",
         "components/controls",
         "components/editor",
+        "components/geometry",
         "components/modal";

@@ -25,8 +25,18 @@
     border-color: $color-border-light;
 }
 
-.app-content-icon.is-active > .qilin-icon,
-.app-content-icon:hover > .qilin-icon {
+.qilin-range {
+    background-color: $color-background;
+    border-color: $color-border-dark;
+
+    &::-webkit-slider-thumb {
+        background-color: $color-border-dark;
+    }
+}
+
+:hover     > .qilin-icon,
+:focus     > .qilin-icon,
+.is-active > .qilin-icon {
     color: $color-text;
     fill: $color-text;
 }

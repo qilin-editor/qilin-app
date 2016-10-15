@@ -31,9 +31,13 @@
         "react-dom"                                 : "latest",
         "react-svg"                                 : "latest",
         "react-modal"                               : "latest",
+        "react-color"                               : "latest",
+        "react-tooltip"                             : "latest",
         "react-codemirror"                          : "latest",
         "react-split-pane"                          : "latest",
         "react-addons-css-transition-group"         : "latest",
+
+        "literallycanvas"                           : "latest",
 
         "flux"                                      : "latest",
         "keymirror"                                 : "latest",
@@ -44,7 +48,8 @@
         "markdown-it-asciimath"                     : "latest",
         "markdown-it-table-of-contents"             : "latest",
 
-        "opn"                                       : "latest"
+        "opn"                                       : "latest",
+        "uuid"                                      : "latest"
     },
 
     "devDependencies" : {

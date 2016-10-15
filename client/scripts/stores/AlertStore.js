@@ -1,5 +1,6 @@
-import BaseStore       from "./BaseStore";
-import EditorConstants from "../constants/EditorConstants";
+import BaseStore            from "./BaseStore";
+import EditorConstants      from "../constants/EditorConstants";
+import GeometryConstants    from "../constants/GeometryConstants";
 
 const EXPIRED_DELAY = 3.5;
 
@@ -17,12 +18,10 @@ class AlertStore extends BaseStore {
             const expiredDate = currentDate.setSeconds( currentDate.getSeconds() + EXPIRED_DELAY );
 
             switch ( action.type ) {
+                case GeometryConstants.GEOMETRY_SAVE_FAILURE:
                 case EditorConstants.EDITOR_AUTOSAVE_FILE_FAILURE:
                 case EditorConstants.EDITOR_SAVE_FILE_FAILURE:
                 case EditorConstants.EDITOR_OPEN_FILE_FAILURE:
-                    // console.error( `Editor error - ${action.path}` );
-                    // console.error( action.message );
-
                     this.failure.push( {
                         message : action.message,
                         created : currentDate,
@@ -32,11 +31,9 @@ class AlertStore extends BaseStore {
                     this.emitChange();
                     break;
 
+                case GeometryConstants.GEOMETRY_SAVE_SUCCESS:
                 case EditorConstants.EDITOR_SAVE_FILE_SUCCESS:
                 case EditorConstants.EDITOR_OPEN_FILE_SUCCESS:
-                    // console.info( `Editor success - ${action.path}\n` );
-                    // console.info( action.message );
-
                     this.success.push( {
                         message : action.message,
                         created : currentDate,
@@ -47,9 +44,6 @@ class AlertStore extends BaseStore {
                     break;
 
                 case EditorConstants.EDITOR_AUTOSAVE_FILE_SUCCESS:
-                    // console.info( `Editor info - ${action.path}\n` );
-                    // console.info( action.message );
-
                     this.info.push( {
                         message : action.message,
                         created : currentDate,

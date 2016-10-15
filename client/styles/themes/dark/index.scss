@@ -25,16 +25,20 @@
     box-shadow: 0 -1px 0 rgba(white, .25), 0 1px 2px -1px rgba(black, .75);
 }
 
-.control-close:hover,
-.control-maximize:hover,
-.control-minimize:hover {
-    background-image: none;
+.qilin-range {
+    background-color: $color-text-dark;
+    border-color: $color-border-dark;
+
+    &::-webkit-slider-thumb {
+        background-color: $color-text-light;
+    }
 }
 
-.app-content-icon.is-active > .qilin-icon,
-.app-content-icon:hover > .qilin-icon {
-    color: $color-text-light;
-    fill: $color-text-light;
+:hover     > .qilin-icon,
+:focus     > .qilin-icon,
+.is-active > .qilin-icon {
+    color: lighten($color-text-light, 10%);
+    fill: lighten($color-text-light, 10%);
 }
 
 .qilin-icon {
@@ -68,4 +72,10 @@
 .CodeMirror-selected {
     background-color: rgba(white, .05) !important;
     color: white !important;
+}
+
+.control-close:hover,
+.control-maximize:hover,
+.control-minimize:hover {
+    background-image: none;
 }

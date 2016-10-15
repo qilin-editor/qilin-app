@@ -1,0 +1,131 @@
+// main : ../template.scss
+
+.geometry-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .geometry-menu,
+    .geometry-submenu {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .geometry-menu {
+        flex-direction: row;
+        padding: 0 .5rem 0 0;
+
+        width: 100%;
+        height: 45px;
+
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+
+        .geometry-menu-group {
+            flex-direction: row;
+
+            &:first-of-type {
+                .geometry-menu-button {
+                    height: 45px;
+
+                    border-bottom-width: 1px;
+                    border-bottom-style: solid;
+
+                    &:first-of-type {
+                        border-bottom-width: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .geometry-submenu {
+        flex-direction: column;
+        padding: 0 0 .5rem 0;
+
+        height: 100%;
+        width: 45px;
+
+        border-right-width: 1px;
+        border-right-style: solid;
+
+        .geometry-menu-group {
+            flex-direction: column;
+        }
+    }
+
+    .geometry-menu-group {
+        position: relative;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        &.is-range {
+            top: 70px;
+            transform: rotate(270deg);
+        }
+
+        .geometry-menu-button {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            width: 44px;
+            height: 44px;
+
+            cursor: pointer;
+        }
+
+        .geometry-color {
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 100%;
+
+            width: 25px;
+            height: 25px;
+
+            &:first-of-type {
+                position: relative;
+                bottom: -10px;
+
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+
+    .geometry-main {
+        display: flex;
+        flex: 1;
+
+        .geometry-canvas {
+            flex: 1;
+
+            background-color: rgba(#e9e9e9, .05);
+            background-size: 150px 150px, 150px 150px, 15px 15px, 15px 15px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+            background-image: linear-gradient(rgba(grey, .35) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(grey, .35) 1px, transparent 1px),
+                              linear-gradient(rgba(grey, .15) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(grey, .15) 1px, transparent 1px);
+
+            cursor: crosshair;
+        }
+    }
+}
+
+.geometry-color-picker {
+    pointer-events: all !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}

@@ -6,6 +6,7 @@ import AppHeader            from "./AppHeader.react";
 import Alerts               from "./alerts/Alerts.react";
 
 import Modal                from "react-modal";
+import GeometryModal        from "./modals/GeometryModal.react";
 import ModalConstants       from "../constants/ModalConstants";
 
 export default class App extends Component {
@@ -85,7 +86,7 @@ export default class App extends Component {
                     portalClassName="modal-portal"
                     overlayClassName="modal-overlay qilin-panel"
                 >
-                    Geometry here
+                    <GeometryModal />
                 </Modal>
             </div>
         );
