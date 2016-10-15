@@ -222,11 +222,9 @@ export default class GeometryModal extends Component {
                                 </div>
                             </div>
 
-                            <div className="geometry-menu-group is-range qilin-panel">
-                                <input className="qilin-range" type="range" value={this.state.strokeSize} min="1" max="40" onChange={this.setStrokeSize} />
-                            </div>
-
                             <div className="geometry-menu-group qilin-panel">
+                                <input className="qilin-range geometry-range" type="range" value={this.state.strokeSize} min="1" max="40" onChange={this.setStrokeSize} />
+
                                 <div
                                     className="geometry-color qilin-panel"
                                     style={{ backgroundColor : this.state.primaryColor }}

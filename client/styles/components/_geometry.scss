@@ -58,6 +58,8 @@
 
         .geometry-menu-group {
             flex-direction: column;
+
+            width: 44px;
         }
     }
 
@@ -67,11 +69,6 @@
 
         justify-content: center;
         align-items: center;
-
-        &.is-range {
-            top: 70px;
-            transform: rotate(270deg);
-        }
 
         .geometry-menu-button {
             display: flex;
@@ -83,6 +80,13 @@
             height: 44px;
 
             cursor: pointer;
+        }
+
+        .geometry-range {
+            position: relative;
+            bottom: 70px;
+
+            transform: rotate(270deg);
         }
 
         .geometry-color {
