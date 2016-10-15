@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Markdown             from "markdown-it";
 import MarkdownEmoji        from "markdown-it-emoji";
 import MarkdownMaths        from "markdown-it-asciimath";
+import MarkdownTodos        from "markdown-it-task-lists";
 import MarkdownAnchor       from "markdown-it-anchor";
 import MarkdownTOC          from "markdown-it-table-of-contents";
 import EditorStore          from "../../stores/EditorStore";
@@ -27,6 +28,7 @@ export default class EditorPreview extends Component {
     textDidMount = () => {
         this.state.markdown.use( MarkdownEmoji );
         this.state.markdown.use( MarkdownMaths );
+        this.state.markdown.use( MarkdownTodos );
         this.state.markdown.use( MarkdownAnchor );
         this.state.markdown.use( MarkdownTOC );
     }

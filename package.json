@@ -46,6 +46,7 @@
         "markdown-it-emoji"                         : "latest",
         "markdown-it-anchor"                        : "latest",
         "markdown-it-asciimath"                     : "latest",
+        "markdown-it-task-lists"                    : "latest",
         "markdown-it-table-of-contents"             : "latest",
 
         "opn"                                       : "latest",

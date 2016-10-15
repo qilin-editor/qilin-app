@@ -133,4 +133,54 @@
         margin-bottom: -.60rem;
         padding-top: .60rem;
     }
+
+    .task-list {
+        list-style: none;
+
+        margin: 0 0 1rem;
+        padding: 0;
+
+        .task-list-item {
+            line-height: 30px;
+
+            .task-list-item-checkbox {
+                -webkit-appearance: button;
+
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                padding: 0;
+                margin: 0 1rem;
+
+                width: 22px;
+                height: 22px;
+
+                border-width: 2px;
+                border-style: solid;
+                border-color: $color-green;
+                border-radius: 100%;
+
+                &[checked] {
+                    &:after {
+                        position: absolute;
+                        top: 0; left: 0;
+
+                        content: "✓";
+                        color: $color-green;
+
+                        width: 18px;
+                        height: 18px;
+
+                        line-height: 18px;
+                        text-align: center;
+
+                        font-size: 10px;
+                        font-weight: 900;
+                    }
+                }
+            }
+
+        }
+    }
 }
