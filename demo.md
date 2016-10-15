@@ -1,7 +1,7 @@
 Devoir	: Synthèse argumentée de documents\
 Fichier	: chimie-enantiomeres.md
 
-![Heart](/Users/Bartek/Cloud/Projects/Qilin/4a733925-ac7c-4572-a90c-7ae8500f24fa.png)
+@[youtube](lJIrF4YjHfQ)
 
 ---
 
