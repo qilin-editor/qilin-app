@@ -5,16 +5,13 @@ export default class ControlClose extends Component {
         window : PropTypes.object.isRequired,
     }
 
-    onClick = event => {
-        event.preventDefault();
-        event.stopPropagation();
-
+    onClick = () => {
         this.props.window.close( true );
     }
 
     render() {
         return (
-            <div onClick={this.onClick} className="control-close"></div>
+            <div onClick={this.onClick} className="control-close" />
         );
     }
 }

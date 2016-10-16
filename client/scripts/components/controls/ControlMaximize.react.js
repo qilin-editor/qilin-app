@@ -5,16 +5,13 @@ export default class ControlMaximize extends Component {
         window : PropTypes.object.isRequired,
     }
 
-    onClick = event => {
-        event.preventDefault();
-        event.stopPropagation();
-
+    onClick = () => {
         this.props.window.toggleFullscreen();
     }
 
     render() {
         return (
-            <div onClick={this.onClick} className="control-maximize"></div>
+            <div onClick={this.onClick} className="control-maximize" />
         );
     }
 }

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes }  from "react";
 import ReactSVG                         from "react-svg/dist/react-svg";
 
-export default class AlertsError extends Component {
+export default class AlertsSuccess extends Component {
     static propTypes = {
         index   : PropTypes.number.isRequired,
         message : PropTypes.string.isRequired,

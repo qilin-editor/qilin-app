@@ -4,10 +4,10 @@ import MarkdownSub          from "markdown-it-sub";
 import MarkdownSup          from "markdown-it-sup";
 import MarkdownAbbr         from "markdown-it-abbr";
 import MarkdownEmoji        from "markdown-it-emoji";
+import MarkdownAnchor       from "markdown-it-anchor";
 import MarkdownMaths        from "markdown-it-asciimath";
 import MarkdownTodos        from "markdown-it-task-lists";
 import MarkdownVideo        from "markdown-it-block-embed";
-import MarkdownAnchor       from "markdown-it-anchor";
 import MarkdownTOC          from "markdown-it-table-of-contents";
 import EditorStore          from "../../stores/EditorStore";
 
@@ -15,37 +15,36 @@ require( "markdown-it-asciimath/ASCIIMathTeXImg" );
 
 export default class EditorPreview extends Component {
     state = {
-        content  : EditorStore.content,
-        markdown : new Markdown( {
+        content : EditorStore.content,
+    }
+
+    componentWillMount() {
+        this.markdown = new Markdown( {
             html       : true,
             linkify    : true,
             typography : true,
-        } ),
+        } );
+
+        this.markdown.use( MarkdownSub );
+        this.markdown.use( MarkdownSup );
+        this.markdown.use( MarkdownAbbr );
+        this.markdown.use( MarkdownEmoji );
+        this.markdown.use( MarkdownAnchor );
+        this.markdown.use( MarkdownMaths );
+        this.markdown.use( MarkdownTodos );
+        this.markdown.use( MarkdownTOC );
+
+        this.markdown.use( MarkdownVideo, {
+            filterUrl : url => `http://${url}`,
+        } );
     }
 
     componentDidMount() {
-        this.textDidMount();
-
         EditorStore.addChangeListener( this.textDidChange );
     }
 
     componentWillUnmount() {
         EditorStore.removeChangeListener( this.textDidChange );
-    }
-
-    textDidMount = () => {
-        this.state.markdown.use( MarkdownSub );
-        this.state.markdown.use( MarkdownSup );
-        this.state.markdown.use( MarkdownEmoji );
-        this.state.markdown.use( MarkdownMaths );
-        this.state.markdown.use( MarkdownTodos );
-        this.state.markdown.use( MarkdownAnchor );
-        this.state.markdown.use( MarkdownAbbr );
-        this.state.markdown.use( MarkdownTOC );
-
-        this.state.markdown.use( MarkdownVideo, {
-            filterUrl : url => `http://${url}`,
-        } );
     }
 
     textDidChange = () => {
@@ -56,7 +55,7 @@ export default class EditorPreview extends Component {
 
     render() {
         return (
-            <div className="editor-preview qilin-panel" dangerouslySetInnerHTML={{ __html : this.state.markdown.render( this.state.content ) }} />
+            <div className="editor-preview qilin-panel" dangerouslySetInnerHTML={{ __html : this.markdown.render( this.state.content ) }} />
         );
     }
 }

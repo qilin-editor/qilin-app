@@ -1,19 +1,15 @@
 import open                             from "opn";
 import path                             from "path";
-
 import React, { PropTypes, Component }  from "react";
+import ReactSVG                         from "react-svg/dist/react-svg";
 import className                        from "classnames";
-
-import ReactSVG from "react-svg/dist/react-svg";
-import Controls from "./controls/Controls.react";
-
-import EditorStore from "../stores/EditorStore";
+import Controls                         from "./controls/Controls.react";
+import EditorStore                      from "../stores/EditorStore";
 
 export default class AppHeader extends Component {
     static propTypes = {
-        toggleTheme   : PropTypes.func.isRequired,
-        togglePreview : PropTypes.func.isRequired,
-
+        toggleTheme      : PropTypes.func.isRequired,
+        togglePreview    : PropTypes.func.isRequired,
         isThemeToggled   : PropTypes.bool.isRequired,
         isPreviewToggled : PropTypes.bool.isRequired,
     }
@@ -36,21 +32,13 @@ export default class AppHeader extends Component {
     }
 
     render() {
-        const themeButton = className( "qilin-button", {
-            "is-active" : this.props.isThemeToggled,
-        } );
+        const themeActive   = { "is-active" : this.props.isThemeToggled };
+        const previewActive = { "is-active" : this.props.isPreviewToggled };
 
-        const themeIcon = className( "qilin-button-icon", {
-            "is-active" : this.props.isThemeToggled,
-        } );
-
-        const previewButton = className( "qilin-button", {
-            "is-active" : this.props.isPreviewToggled,
-        } );
-
-        const previewIcon = className( "qilin-button-icon", {
-            "is-active" : this.props.isPreviewToggled,
-        } );
+        const themeButton   = className( "qilin-button", themeActive );
+        const themeIcon     = className( "qilin-button-icon", themeActive );
+        const previewButton = className( "qilin-button", previewActive );
+        const previewIcon   = className( "qilin-button-icon", previewActive );
 
         const titleClasses = className( "app-header-title", {
             "is-clickable" : EditorStore.path !== "",

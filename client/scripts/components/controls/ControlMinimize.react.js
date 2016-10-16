@@ -5,16 +5,13 @@ export default class ControlMinimize extends Component {
         window : PropTypes.object.isRequired,
     }
 
-    onClick = event => {
-        event.preventDefault();
-        event.stopPropagation();
-
+    onClick = () => {
         this.props.window.minimize();
     }
 
     render() {
         return (
-            <div onClick={this.onClick} className="control-minimize"></div>
+            <div onClick={this.onClick} className="control-minimize" />
         );
     }
 }

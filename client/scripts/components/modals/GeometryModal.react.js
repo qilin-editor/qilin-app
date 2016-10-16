@@ -1,20 +1,17 @@
 import uuid                     from "uuid";
 import React, { Component }     from "react";
 import { findDOMNode }          from "react-dom";
-import { ChromePicker }         from "react-color";
-import Tooltip                  from "react-tooltip";
 import ReactSVG                 from "react-svg/dist/react-svg";
 import className                from "classnames";
+import { ChromePicker }         from "react-color";
+import Tooltip                  from "react-tooltip";
 import LC, { tools as Tools }   from "literallycanvas/lib/js/literallycanvas-core";
-import GC                       from "../../constants/GeometryConstants";
-
-import GeoemtryConstants      from "../../constants/GeometryConstants";
-import GeometryActions        from "../../actions/GeometryActions";
-import GeometryStore          from "../../stores/GeometryStore";
+import GeoemtryConstants        from "../../constants/GeometryConstants";
+import GeometryActions          from "../../actions/GeometryActions";
 
 export default class GeometryModal extends Component {
     state = {
-        selectedTool : GC.GEOMETRY_BRUSH,
+        selectedTool : GeoemtryConstants.GEOMETRY_BRUSH,
         strokeSize   : 5,
 
         primaryColor   : "#000",
@@ -29,13 +26,13 @@ export default class GeometryModal extends Component {
         this.drawer = LC.init( this.refs.lc );
 
         this.tools = {
-            [ GC.GEOMETRY_LINE ]      : new Tools.Line( this.drawer ),
-            [ GC.GEOMETRY_TEXT ]      : new Tools.Text( this.drawer ),
-            [ GC.GEOMETRY_BRUSH ]     : new Tools.Pencil( this.drawer ),
-            [ GC.GEOMETRY_ERASER ]    : new Tools.Eraser( this.drawer ),
-            [ GC.GEOMETRY_ELLIPSE ]   : new Tools.Ellipse( this.drawer ),
-            [ GC.GEOMETRY_MULTILINE ] : new Tools.Polygon( this.drawer ),
-            [ GC.GEOMETRY_RECTANGLE ] : new Tools.Rectangle( this.drawer ),
+            [ GeoemtryConstants.GEOMETRY_LINE ]      : new Tools.Line( this.drawer ),
+            [ GeoemtryConstants.GEOMETRY_TEXT ]      : new Tools.Text( this.drawer ),
+            [ GeoemtryConstants.GEOMETRY_BRUSH ]     : new Tools.Pencil( this.drawer ),
+            [ GeoemtryConstants.GEOMETRY_ERASER ]    : new Tools.Eraser( this.drawer ),
+            [ GeoemtryConstants.GEOMETRY_ELLIPSE ]   : new Tools.Ellipse( this.drawer ),
+            [ GeoemtryConstants.GEOMETRY_MULTILINE ] : new Tools.Polygon( this.drawer ),
+            [ GeoemtryConstants.GEOMETRY_RECTANGLE ] : new Tools.Rectangle( this.drawer ),
         };
     }
 
@@ -100,31 +97,31 @@ export default class GeometryModal extends Component {
 
     render() {
         const brushButton = className( "geometry-menu-button qilin-panel", {
-            "is-active" : this.state.selectedTool === GC.GEOMETRY_BRUSH,
+            "is-active" : this.state.selectedTool === GeoemtryConstants.GEOMETRY_BRUSH,
         } );
 
         const eraserButton = className( "geometry-menu-button qilin-panel", {
-            "is-active" : this.state.selectedTool === GC.GEOMETRY_ERASER,
+            "is-active" : this.state.selectedTool === GeoemtryConstants.GEOMETRY_ERASER,
         } );
 
         const lineButton = className( "geometry-menu-button qilin-panel", {
-            "is-active" : this.state.selectedTool === GC.GEOMETRY_LINE,
+            "is-active" : this.state.selectedTool === GeoemtryConstants.GEOMETRY_LINE,
         } );
 
         const multilineButton = className( "geometry-menu-button qilin-panel", {
-            "is-active" : this.state.selectedTool === GC.GEOMETRY_MULTILINE,
+            "is-active" : this.state.selectedTool === GeoemtryConstants.GEOMETRY_MULTILINE,
         } );
 
         const ellipseButton = className( "geometry-menu-button qilin-panel", {
-            "is-active" : this.state.selectedTool === GC.GEOMETRY_ELLIPSE,
+            "is-active" : this.state.selectedTool === GeoemtryConstants.GEOMETRY_ELLIPSE,
         } );
 
         const rectangleButton = className( "geometry-menu-button qilin-panel", {
-            "is-active" : this.state.selectedTool === GC.GEOMETRY_RECTANGLE,
+            "is-active" : this.state.selectedTool === GeoemtryConstants.GEOMETRY_RECTANGLE,
         } );
 
         const textButton = className( "geometry-menu-button qilin-panel", {
-            "is-active" : this.state.selectedTool === GC.GEOMETRY_TEXT,
+            "is-active" : this.state.selectedTool === GeoemtryConstants.GEOMETRY_TEXT,
         } );
 
         return (
@@ -168,33 +165,33 @@ export default class GeometryModal extends Component {
                 <div className="geometry-container">
                     <div className="geometry-menu qilin-panel">
                         <div className="geometry-menu-group qilin-panel">
-                            <div className={brushButton} onClick={event => this.setTool( event, GC.GEOMETRY_BRUSH )}>
+                            <div className={brushButton} onClick={event => this.setTool( event, GeoemtryConstants.GEOMETRY_BRUSH )}>
                                 <ReactSVG className="qilin-icon" path="images/icons/editor/brush.svg" />
                             </div>
 
-                            <div className={eraserButton} onClick={event => this.setTool( event, GC.GEOMETRY_ERASER )}>
+                            <div className={eraserButton} onClick={event => this.setTool( event, GeoemtryConstants.GEOMETRY_ERASER )}>
                                 <ReactSVG className="qilin-icon" path="images/icons/editor/erase.svg" />
                             </div>
                         </div>
 
                         <div className="geometry-menu-group qilin-panel">
-                            <div className={lineButton} onClick={event => this.setTool( event, GC.GEOMETRY_LINE )}>
+                            <div className={lineButton} onClick={event => this.setTool( event, GeoemtryConstants.GEOMETRY_LINE )}>
                                 <ReactSVG className="qilin-icon" path="images/icons/editor/line.svg" />
                             </div>
 
-                            <div className={multilineButton} onClick={event => this.setTool( event, GC.GEOMETRY_MULTILINE )}>
+                            <div className={multilineButton} onClick={event => this.setTool( event, GeoemtryConstants.GEOMETRY_MULTILINE )}>
                                 <ReactSVG className="qilin-icon" path="images/icons/editor/multiline.svg" />
                             </div>
 
-                            <div className={ellipseButton} onClick={event => this.setTool( event, GC.GEOMETRY_ELLIPSE )}>
+                            <div className={ellipseButton} onClick={event => this.setTool( event, GeoemtryConstants.GEOMETRY_ELLIPSE )}>
                                 <ReactSVG className="qilin-icon" path="images/icons/editor/circle.svg" />
                             </div>
 
-                            <div className={rectangleButton} onClick={event => this.setTool( event, GC.GEOMETRY_RECTANGLE )}>
+                            <div className={rectangleButton} onClick={event => this.setTool( event, GeoemtryConstants.GEOMETRY_RECTANGLE )}>
                                 <ReactSVG className="qilin-icon" path="images/icons/editor/square.svg" />
                             </div>
 
-                            <div className={textButton} onClick={event => this.setTool( event, GC.GEOMETRY_TEXT )}>
+                            <div className={textButton} onClick={event => this.setTool( event, GeoemtryConstants.GEOMETRY_TEXT )}>
                                 <ReactSVG className="qilin-icon" path="images/icons/editor/text.svg" />
                             </div>
                         </div>

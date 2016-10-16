@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import className            from "classnames";
-
 import AppContent           from "./AppContent.react";
 import AppFooter            from "./AppFooter.react";
 import AppHeader            from "./AppHeader.react";
-
 import Modal                from "react-modal";
-import GeometryModal        from "./modals/GeometryModal.react";
+import ModalGeometry        from "./modals/GeometryModal.react";
 import ModalConstants       from "../constants/ModalConstants";
 
 export default class App extends Component {
@@ -85,7 +83,7 @@ export default class App extends Component {
                     portalClassName="modal-portal"
                     overlayClassName="modal-overlay qilin-panel"
                 >
-                    <GeometryModal />
+                    <ModalGeometry />
                 </Modal>
             </div>
         );
