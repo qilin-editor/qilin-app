@@ -152,6 +152,20 @@ class ShortcutActions {
             ch   : cursor.ch + 2,
         } );
     }
+
+    requestAbbreviation( CodeMirror ) {
+        const cursor = CodeMirror.getCursor();
+
+        CodeMirror.replaceRange( "*[]: ", {
+            line : cursor.line,
+            ch   : cursor.ch,
+        } );
+
+        CodeMirror.setCursor( {
+            line : cursor.line,
+            ch   : cursor.ch + 2,
+        } );
+    }
 }
 
 export default new ShortcutActions();

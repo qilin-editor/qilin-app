@@ -66,6 +66,10 @@
     p {
         opacity: .85;
     }
+
+    abbr {
+        border-bottom-color: $color-text-dark;
+    }
 }
 
 ::selection,

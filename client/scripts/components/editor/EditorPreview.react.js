@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Markdown             from "markdown-it";
+import MarkdownAbbr         from "markdown-it-abbr";
 import MarkdownEmoji        from "markdown-it-emoji";
 import MarkdownMaths        from "markdown-it-asciimath";
 import MarkdownTodos        from "markdown-it-task-lists";
@@ -35,6 +36,7 @@ export default class EditorPreview extends Component {
         this.state.markdown.use( MarkdownMaths );
         this.state.markdown.use( MarkdownTodos );
         this.state.markdown.use( MarkdownAnchor );
+        this.state.markdown.use( MarkdownAbbr );
         this.state.markdown.use( MarkdownTOC );
 
         this.state.markdown.use( MarkdownVideo, {

@@ -134,6 +134,21 @@ export default MainMenu => {
         },
     } ) );
 
+    FormatMenu.append( new MenuItem( {
+        type : "separator",
+    } ) );
+
+    FormatMenu.append( new MenuItem( {
+        label     : "Abbreviation",
+        key       : "a",
+        modifiers : "cmd-alt",
+        click     : () => {
+            EditorActions.requestShortcut(
+                MarkdownConstants.MARKDOWN_ABBREVIATION
+            );
+        },
+    } ) );
+
     MainMenu.append( new MenuItem( {
         label   : "Format",
         submenu : FormatMenu,

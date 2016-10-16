@@ -133,6 +133,11 @@ class EditorEditable extends Component {
             MarkdownConstants.MARKDOWN_IMAGE,
             () => ShortcutActions.requestImage( CodeMirror )
         );
+
+        this.addGlobalEventListener(
+            MarkdownConstants.MARKDOWN_ABBREVIATION,
+            () => ShortcutActions.requestAbbreviation( CodeMirror )
+        );
     }
 
     editorDidChange = value => {

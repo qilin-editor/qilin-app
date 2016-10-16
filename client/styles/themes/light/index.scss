@@ -58,6 +58,7 @@
     hr          { background-color: $color-border-light; }
     p           { color: rgba($color-text, .7); }
     b, strong   { color: rgba($color-text, .8); }
+    abbr        { border-bottom-color: $color-border-light; }
 }
 
 ::selection,
