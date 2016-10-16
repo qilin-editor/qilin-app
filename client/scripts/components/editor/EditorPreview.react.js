@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Markdown             from "markdown-it";
+import MarkdownSub          from "markdown-it-sub";
+import MarkdownSup          from "markdown-it-sup";
 import MarkdownAbbr         from "markdown-it-abbr";
 import MarkdownEmoji        from "markdown-it-emoji";
 import MarkdownMaths        from "markdown-it-asciimath";
@@ -32,6 +34,8 @@ export default class EditorPreview extends Component {
     }
 
     textDidMount = () => {
+        this.state.markdown.use( MarkdownSub );
+        this.state.markdown.use( MarkdownSup );
         this.state.markdown.use( MarkdownEmoji );
         this.state.markdown.use( MarkdownMaths );
         this.state.markdown.use( MarkdownTodos );

@@ -43,6 +43,8 @@
         "keymirror"                                 : "latest",
 
         "markdown-it"                               : "latest",
+        "markdown-it-sup"                           : "latest",
+        "markdown-it-sub"                           : "latest",
         "markdown-it-abbr"                          : "latest",
         "markdown-it-emoji"                         : "latest",
         "markdown-it-anchor"                        : "latest",
