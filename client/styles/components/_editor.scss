@@ -136,7 +136,8 @@
 
     .block-embed {
         width: 100%;
-        height: auto;
+        height: 60%;
+        max-height: 50vh;
 
         iframe {
             display: block;
