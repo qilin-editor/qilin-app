@@ -14,7 +14,7 @@ import GeometryStore          from "../../stores/GeometryStore";
 
 export default class GeometryModal extends Component {
     state = {
-        selectedTool : null,
+        selectedTool : C.GEOMETRY_BRUSH,
         strokeSize   : 5,
 
         primaryColor   : "#000",
