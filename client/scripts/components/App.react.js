@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import className            from "classnames";
 
 import AppContent           from "./AppContent.react";
+import AppFooter            from "./AppFooter.react";
 import AppHeader            from "./AppHeader.react";
-import Alerts               from "./alerts/Alerts.react";
 
 import Modal                from "react-modal";
 import GeometryModal        from "./modals/GeometryModal.react";
@@ -64,8 +64,7 @@ export default class App extends Component {
 
                 <AppHeader  {...this.state} toggleTheme={this.toggleTheme} togglePreview={this.togglePreview} />
                 <AppContent {...this.state} toggleModal={this.toggleModal} />
-
-                <Alerts />
+                <AppFooter  {...this.state} />
 
                 <Modal
                     key={ModalConstants.MODAL_FORMULAS}

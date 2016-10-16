@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import ReactTransitionGroup from "react-addons-css-transition-group";
 
-import AlertInfo            from "./AlertsInfo.react";
-import AlertFailure         from "./AlertsFailure.react";
-import AlertSuccess         from "./AlertsSuccess.react";
+import AlertInfo            from "./alerts/AlertsInfo.react";
+import AlertFailure         from "./alerts/AlertsFailure.react";
+import AlertSuccess         from "./alerts/AlertsSuccess.react";
 
-import AlertsStore          from "../../stores/AlertStore";
+import AlertsStore          from "../stores/AlertStore";
 
 export default class Alerts extends Component {
     state = {
