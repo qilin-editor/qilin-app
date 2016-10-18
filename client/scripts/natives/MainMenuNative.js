@@ -1,10 +1,13 @@
 export default () => {
-    const { Menu, Window } = nw;
-    const mainWin          = Window.get();
-    const mainMenu         = new Menu( { type : "menubar" } );
+    const { Menu } = nw;
 
-    mainMenu.createMacBuiltin( "Qilin" );
-    mainWin.menu = mainMenu;
+    const mainMenu = new Menu({ type: "menubar" });
+
+    if (process.platform === "darwin") { //check if current OS is MacOS, createMacBuiltin crashes the app on Windows and possibly on Linux
+        mainMenu.createMacBuiltin("Qilin");
+    }
+
+
 
     return mainMenu;
 };
