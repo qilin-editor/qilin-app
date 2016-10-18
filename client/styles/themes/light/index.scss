@@ -61,6 +61,10 @@
     abbr        { border-bottom-color: $color-border-light; }
 }
 
+.geometry-canvas {
+    background-color: #f6f6f6;
+}
+
 ::selection,
 .CodeMirror-selected {
     background-color: rgba(black, .05) !important;

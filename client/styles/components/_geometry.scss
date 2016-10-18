@@ -114,13 +114,12 @@
         .geometry-canvas {
             flex: 1;
 
-            background-color: rgba(#e9e9e9, .05);
             background-size: 150px 150px, 150px 150px, 15px 15px, 15px 15px;
             background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
             background-image: linear-gradient(rgba(grey, .35) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(grey, .35) 1px, transparent 1px),
-                              linear-gradient(rgba(grey, .15) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(grey, .15) 1px, transparent 1px);
+                              linear-gradient(rgba(grey, .05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(grey, .05) 1px, transparent 1px);
 
             cursor: crosshair;
         }
@@ -132,4 +131,7 @@
 
     margin: 0 !important;
     padding: 0 !important;
+    opacity: 1 !important;
+
+    transition: none !important;
 }

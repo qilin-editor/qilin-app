@@ -1,10 +1,5 @@
 // main : ../template.scss
 
-.editor-editable {
-    width: 100%;
-    height: calc(100vh - 40px);
-}
-
 .editor-preview {
     width: 100%;
     height: calc(100vh - 90px);
@@ -15,7 +10,7 @@
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 2rem;
 
     padding: 1rem 2.5rem;
@@ -148,7 +143,7 @@
             display: block;
 
             width: 85%;
-            height: auto;
+            height: 100%;
 
             margin: 3rem auto;
             padding: 0;
