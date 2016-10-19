@@ -30,7 +30,7 @@ Changes and improvements are more than welcome! Feel free to fork and open a pul
 
 ### License
 
-Qilin's code is [BSD-like licensed](https://github.com/Bartozzz/Qilin/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/Bartozzz/Qilin/blob/master/PATENTS).
+Qilin's code is [BSD licensed](https://github.com/Bartozzz/Qilin/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/Bartozzz/Qilin/blob/master/PATENTS).
 
 ## Screenshots:
 
