@@ -13,6 +13,7 @@ Qilin is a free, open-source advanced text editor developed for exact sciences i
     - Embedded videos
     - Math formulas
     - Todo/Done
+    - Emoji
 - `Sketch mode` which allows you to create and edit images quickly
 - `Formulas mode` which allows you to write complex mathematical formulas
 
