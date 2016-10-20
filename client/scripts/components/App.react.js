@@ -3,17 +3,16 @@ import className            from "classnames";
 import AppContent           from "./AppContent.react";
 import AppFooter            from "./AppFooter.react";
 import AppHeader            from "./AppHeader.react";
+import Sketch               from "./sketch/Sketch.react";
 import Modal                from "react-modal";
-import ModalGeometry        from "./modals/GeometryModal.react";
 import ModalConstants       from "../constants/ModalConstants";
 
 export default class App extends Component {
     state = {
         isModalFormulasOpen : false,
-        isModalGeometryOpen : false,
-
-        isPreviewToggled : false,
-        isThemeToggled   : false,
+        isModalSketchOpen   : false,
+        isPreviewToggled    : false,
+        isThemeToggled      : false,
     }
 
     togglePreview = () => {
@@ -33,19 +32,19 @@ export default class App extends Component {
             case ModalConstants.MODAL_TEXT:
                 return this.setState( {
                     isModalFormulasOpen : false,
-                    isModalGeometryOpen : false,
+                    isModalSketchOpen   : false,
                 } );
 
             case ModalConstants.MODAL_FORMULAS:
                 return this.setState( {
                     isModalFormulasOpen : ! this.state.isModalFormulasOpen,
-                    isModalGeometryOpen : false,
+                    isModalSketchOpen   : false,
                 } );
 
-            case ModalConstants.MODAL_GEOMETRY:
+            case ModalConstants.MODAL_SKETCH:
                 return this.setState( {
                     isModalFormulasOpen : false,
-                    isModalGeometryOpen : ! this.state.isModalGeometryOpen,
+                    isModalSketchOpen   : ! this.state.isModalSketchOpen,
                 } );
         }
     }
@@ -65,7 +64,6 @@ export default class App extends Component {
                 <AppFooter  {...this.state} />
 
                 <Modal
-                    key={ModalConstants.MODAL_FORMULAS}
                     isOpen={this.state.isModalFormulasOpen}
 
                     className="modal qilin-panel"
@@ -76,14 +74,13 @@ export default class App extends Component {
                 </Modal>
 
                 <Modal
-                    key={ModalConstants.MODAL_GEOMETRY}
-                    isOpen={this.state.isModalGeometryOpen}
+                    isOpen={this.state.isModalSketchOpen}
 
                     className="modal qilin-panel"
                     portalClassName="modal-portal"
                     overlayClassName="modal-overlay qilin-panel"
                 >
-                    <ModalGeometry />
+                    <Sketch />
                 </Modal>
             </div>
         );

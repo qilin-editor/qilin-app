@@ -12,7 +12,7 @@ export default class AppContent extends Component {
         isPreviewToggled : PropTypes.bool.isRequired,
 
         isModalFormulasOpen : PropTypes.bool.isRequired,
-        isModalGeometryOpen : PropTypes.bool.isRequired,
+        isModalSketchOpen   : PropTypes.bool.isRequired,
     }
 
     render() {
@@ -22,15 +22,15 @@ export default class AppContent extends Component {
 
         const textButton = className( "app-content-icon qilin-panel", {
             "is-active" : ! this.props.isModalFormulasOpen
-                       && ! this.props.isModalGeometryOpen,
+                       && ! this.props.isModalSketchOpen,
         } );
 
         const formulasButton = className( "app-content-icon qilin-panel", {
             "is-active" : this.props.isModalFormulasOpen,
         } );
 
-        const geometryButton = className( "app-content-icon qilin-panel", {
-            "is-active" : this.props.isModalGeometryOpen,
+        const sketchButton = className( "app-content-icon qilin-panel", {
+            "is-active" : this.props.isModalSketchOpen,
         } );
 
         return (
@@ -57,7 +57,7 @@ export default class AppContent extends Component {
                         <ReactSVG className="qilin-icon" path="images/icons/menu/functions.svg" />
                     </div>
 
-                    <div className={geometryButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_GEOMETRY )}>
+                    <div className={sketchButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_SKETCH )}>
                         <ReactSVG className="qilin-icon" path="images/icons/menu/gesture.svg" />
                     </div>
                 </div>

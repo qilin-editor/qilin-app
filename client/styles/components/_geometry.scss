@@ -7,86 +7,87 @@
     height: 100%;
     width: 100%;
 
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    .geometry-menu,
-    .geometry-submenu {
+    .geometry-tools {
+        order: -1;
         display: flex;
-
-        align-items: center;
         justify-content: space-between;
-    }
 
-    .geometry-menu {
-        flex-direction: row;
         padding: 0 .5rem 0 0;
-
-        width: 100%;
-        height: 45px;
 
         border-bottom-width: 1px;
         border-bottom-style: solid;
-
-        .geometry-menu-group {
-            flex-direction: row;
-
-            &:first-of-type {
-                .geometry-menu-button {
-                    height: 45px;
-
-                    border-bottom-width: 1px;
-                    border-bottom-style: solid;
-
-                    &:first-of-type {
-                        border-bottom-width: 0;
-                    }
-                }
-            }
-        }
     }
 
-    .geometry-submenu {
-        flex-direction: column;
-        padding: 0 0 .5rem 0;
+    .geometry-content {
+        display: flex;
+        flex: 1;
 
-        height: 100%;
-        width: 45px;
-
-        border-right-width: 1px;
-        border-right-style: solid;
-
-        .geometry-menu-group {
+        .geometry-left,
+        .geoemtry-right {
+            display: flex;
             flex-direction: column;
 
-            width: 44px;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 0 .5rem 0;
+
+            .geometry-group {
+                flex-direction: column;
+            }
+        }
+
+        .geometry-left {
+            flex-basis: 45px;
+
+            order: -1;
+
+            border-right-width: 1px;
+            border-right-style: solid;
+
+            .geometry-group {
+                width: 44px;
+            }
+        }
+
+        .geometry-right {
+            flex-basis: 200px;
+
+            order: 1;
+
+            border-left-width: 1px;
+            border-left-style: solid;
+        }
+
+        .geometry-canvas {
+            flex: 1;
+
+            background-size: 150px 150px, 150px 150px, 15px 15px, 15px 15px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+            background-image: linear-gradient(rgba(grey, .35) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(grey, .35) 1px, transparent 1px),
+                              linear-gradient(rgba(grey, .05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(grey, .05) 1px, transparent 1px);
+
+            cursor: crosshair;
         }
     }
 
-    .geometry-menu-group {
+    .geometry-group {
         position: relative;
         display: flex;
 
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
-        .geometry-menu-button {
+        .geometry-icon {
             display: flex;
-
-            justify-content: center;
             align-items: center;
 
             width: 44px;
             height: 44px;
 
             cursor: pointer;
-        }
-
-        .geometry-range {
-            position: relative;
-            bottom: 70px;
-
-            transform: rotate(270deg);
         }
 
         .geometry-color {
@@ -107,21 +108,37 @@
         }
     }
 
-    .geometry-main {
-        display: flex;
-        flex: 1;
+    .geometry-section {
+        .geometry-group {
+            margin: 0 0 10px;
 
-        .geometry-canvas {
-            flex: 1;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
 
-            background-size: 150px 150px, 150px 150px, 15px 15px, 15px 15px;
-            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
-            background-image: linear-gradient(rgba(grey, .35) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(grey, .35) 1px, transparent 1px),
-                              linear-gradient(rgba(grey, .05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(grey, .05) 1px, transparent 1px);
+        .geometry-section-title {
+            padding: 0 0 0 1rem;
 
-            cursor: crosshair;
+            height: 2rem;
+            line-height: 2rem;
+
+            font-size: .85rem;
+            text-transform: lowercase;
+        }
+
+        .geometry-section-content {
+            padding: 10px;
+
+            .geometry-section-icon {
+                display: flex;
+                align-items: center;
+
+                width: 50px;
+                height: 50px;
+
+                cursor: pointer;
+            }
         }
     }
 }

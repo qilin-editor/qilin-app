@@ -25,13 +25,16 @@
     box-shadow: 0 -1px 0 rgba(white, .25), 0 1px 2px -1px rgba(black, .75);
 }
 
-.qilin-range {
-    background-color: $color-text-dark;
-    border-color: $color-border-dark;
+.geometry-section-title,
+.geometry-section-icon,
+.qilin-input {
+    background-color: $color-border-dark;
+    color: lighten($color-text-light, 10%);
+}
 
-    &::-webkit-slider-thumb {
-        background-color: $color-text-light;
-    }
+.qilin-radio {
+    background-color: $color-border-dark;
+    background-image: radial-gradient($color-text-dark 30%, transparent 40%);
 }
 
 :hover     > .qilin-icon,

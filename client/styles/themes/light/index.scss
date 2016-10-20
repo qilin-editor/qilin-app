@@ -25,13 +25,13 @@
     border-color: $color-border-light;
 }
 
-.qilin-range {
-    background-color: $color-background;
-    border-color: $color-border-dark;
+.qilin-input {
+    box-shadow: $color-border-light 0 0 0 1px inset;
+}
 
-    &::-webkit-slider-thumb {
-        background-color: $color-border-dark;
-    }
+.qilin-radio {
+    box-shadow: $color-border-light 0 0 0 1px inset;
+    background-image: radial-gradient(rgba($color-text, .5) 30%, transparent 40%);
 }
 
 :hover     > .qilin-icon,
@@ -59,6 +59,11 @@
     p           { color: rgba($color-text, .7); }
     b, strong   { color: rgba($color-text, .8); }
     abbr        { border-bottom-color: $color-border-light; }
+}
+
+.geometry-section-title,
+.geometry-section-icon {
+    background-color: $color-border-light;
 }
 
 .geometry-canvas {
