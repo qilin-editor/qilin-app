@@ -2,7 +2,8 @@
 
 Qilin is a free, open-source advanced text editor developed for exact sciences in mind. It is based on `Chromium` and `Node.js`.
 
-![Qilin] (http://i.imgur.com/7CdFYyZ.jpg)
+![Qilin](http://i.imgur.com/7CdFYyZ.jpg)
+[Youtube Devblogs](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN)
 
 ## Features
 
@@ -36,5 +37,5 @@ Qilin's code is [BSD licensed](https://github.com/Bartozzz/Qilin/blob/master/LIC
 
 All the screenshots can be found on [Imgur](http://imgur.com/a/dsUVm).
 
-![Qilin dark mode] (http://i.imgur.com/gabmf2J.jpg)
-![Qilin] (http://i.imgur.com/Bky893S.jpg)
+![Qilin dark mode](http://i.imgur.com/gabmf2J.jpg)
+![Qilin](http://i.imgur.com/Bky893S.jpg)
