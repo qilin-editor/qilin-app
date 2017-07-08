@@ -1,10 +1,11 @@
 import open                             from "opn";
 import path                             from "path";
-import React, { PropTypes, Component }  from "react";
 import ReactSVG                         from "react-svg";
 import className                        from "classnames";
 import Controls                         from "./controls/Controls.react";
 import EditorStore                      from "../stores/EditorStore";
+import React, { Component } from "react";
+import PropTypes            from "prop-types";
 
 export default class AppHeader extends Component {
     static propTypes = {

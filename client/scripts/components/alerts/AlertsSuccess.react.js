@@ -1,5 +1,6 @@
-import React, { Component, PropTypes }  from "react";
 import ReactSVG                         from "react-svg";
+import React, { Component } from "react";
+import PropTypes            from "prop-types";
 
 export default class AlertsSuccess extends Component {
     static propTypes = {

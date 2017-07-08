@@ -1,10 +1,11 @@
-import React, { PropTypes, Component }  from "react";
 import ReactSVG                         from "react-svg";
 import className                        from "classnames";
 import SplitPane                        from "react-split-pane";
 import EditorEditable                   from "./editor/EditorEditable.react";
 import EditorPreview                    from "./editor/EditorPreview.react";
 import ModalConstants                   from "../constants/ModalConstants";
+import React, { Component } from "react";
+import PropTypes            from "prop-types";
 
 export default class AppContent extends Component {
     static propTypes = {
