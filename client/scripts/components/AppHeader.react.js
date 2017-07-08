@@ -15,21 +15,10 @@ export default class AppHeader extends Component {
         isPreviewToggled : PropTypes.bool.isRequired,
     }
 
-    componentDidMount() {
-        EditorStore.addChangeListener( this.editorDidUpdate );
-    }
-
-    componentWillUnmount() {
-        EditorStore.removeChangeListener( this.editorDidUpdate );
-    }
-
-    editorDidUpdate = () => {
-        this.forceUpdate();
-    }
-
     revealFolder = () => {
-        if ( EditorStore.path !== "" )
+        if ( EditorStore.path !== "" ) {
             open( path.dirname( EditorStore.path ) );
+        }
     }
 
     render() {

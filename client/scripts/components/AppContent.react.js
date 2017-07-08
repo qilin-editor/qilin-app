@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes            from "prop-types";
 import className            from "classnames";
-import ReactSVG             from "react-svg";
 import SplitPane            from "react-split-pane";
 import EditorEditable       from "./editor/EditorEditable.react";
 import EditorPreview        from "./editor/EditorPreview.react";

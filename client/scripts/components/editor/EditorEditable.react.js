@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { findDOMNode }      from "react-dom";
 import CodeMirrorComponent  from "react-codemirror";
+import EditorStore          from "../../stores/EditorStore";
+import { observer }         from "mobx-react";
 
 require( "codemirror/mode/gfm/gfm" );
 require( "codemirror/addon/edit/closebrackets" );
@@ -11,15 +12,9 @@ require( "codemirror/addon/search/search" );
 require( "codemirror/addon/selection/active-line" );
 require( "codemirror/addon/dialog/dialog" );
 require( "codemirror/keymap/sublime" );
+require( "markdown-it-asciimath/ASCIIMathTeXImg" );
 
-import EmitterDecorator     from "../../decorators/EmitterDecorator";
-import MarkdownConstants    from "../../constants/MarkdownConstants";
-import ShortcutActions      from "../../actions/ShortcutActions";
-import EditorConstants      from "../../constants/EditorConstants";
-import EditorActions        from "../../actions/EditorActions";
-import EditorStore          from "../../stores/EditorStore";
-
-@EmitterDecorator
+@observer
 class EditorEditable extends Component {
     state = {
         options : {
@@ -46,152 +41,14 @@ class EditorEditable extends Component {
         },
     }
 
-    componentDidMount() {
-        this.startAutoSaveTimer();
-
-        this.editorDidMount();
-        this.finderDidMount();
-
-        EditorStore.addChangeListener( this.editorDidUpdate );
-    }
-
-    componentWillUnmount() {
-        this.clearAutoSaveTimer();
-
-        EditorStore.removeChangeListener( this.editorDidUpdate );
-    }
-
-    clearAutoSaveTimer() {
-        this.autoSaveTimer = clearTimeout( this.autoSaveTimer );
-    }
-
-    startAutoSaveTimer() {
-        this.autoSaveTimer = setInterval( this.editorAutoSave, 7500 );
-    }
-
-    editorDidUpdate = () => {
-        this.forceUpdate();
-
-        this.clearAutoSaveTimer();
-        this.startAutoSaveTimer();
-    }
-
-    editorDidMount = () => {
-        const CodeMirror = this.refs.editor.getCodeMirror();
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_BOLD,
-            () => ShortcutActions.requestBold( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_ITALIC,
-            () => ShortcutActions.requestItalic( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_STRIKETHROUGH,
-            () => ShortcutActions.requestStrikethrought( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_HEADER_1,
-            () => ShortcutActions.requestHeader1( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_HEADER_2,
-            () => ShortcutActions.requestHeader2( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_HEADER_3,
-            () => ShortcutActions.requestHeader3( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_HEADER_4,
-            () => ShortcutActions.requestHeader4( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_HEADER_5,
-            () => ShortcutActions.requestHeader5( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_HEADER_6,
-            () => ShortcutActions.requestHeader6( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_LINK,
-            () => ShortcutActions.requestLink( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_IMAGE,
-            () => ShortcutActions.requestImage( CodeMirror )
-        );
-
-        this.addGlobalEventListener(
-            MarkdownConstants.MARKDOWN_ABBREVIATION,
-            () => ShortcutActions.requestAbbreviation( CodeMirror )
-        );
-    }
-
     editorDidChange = value => {
-        // Reset the auto-saver timer when user is typing:
-        this.clearAutoSaveTimer();
-        this.startAutoSaveTimer();
-
-        EditorActions.requestContentChange( value );
-    }
-
-    editorAutoSave = () => {
-        if ( EditorStore.path !== "" ) {
-            EditorActions.requestAutoSave();
-
-            // Clear the auto-save timer and wait for new changes to start it
-            // again:
-            this.clearAutoSaveTimer();
-        }
-    }
-
-    finderDidMount = () => {
-        // Add non-standard attributes on input:
-        findDOMNode( this.refs.saveFile )
-            .setAttribute( "nwsaveas", "qilin.md" );
-
-        this.refs.openFile.addEventListener( "change", event => {
-            EditorActions.handleOpenFile( event.target.value );
-            event.target.value = "";
-        }, false );
-
-        this.refs.saveFile.addEventListener( "change", event => {
-            EditorActions.handleSaveFile( event.target.value );
-            event.target.value = "";
-        }, false );
-
-        this.addGlobalEventListener(
-            EditorConstants.EDITOR_OPEN_FILE_REQUEST,
-            () => this.refs.openFile.click()
-        );
-
-        this.addGlobalEventListener(
-            EditorConstants.EDITOR_SAVE_FILE_REQUEST,
-            () => this.refs.saveFile.click()
-        );
+        EditorStore.changeContent( value );
     }
 
     render() {
         return (
             <div className="editor-editable qilin-panel">
-                <input className="is-hidden" ref="openFile" type="file" />
-                <input className="is-hidden" ref="saveFile" type="file" />
-
                 <CodeMirrorComponent
-                    ref="editor"
                     value={EditorStore.content}
                     options={this.state.options}
                     onChange={this.editorDidChange}

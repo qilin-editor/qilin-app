@@ -1,23 +1,10 @@
 import React, { Component } from "react";
 import Markdown             from "markdown-it";
-import MarkdownSub          from "markdown-it-sub";
-import MarkdownSup          from "markdown-it-sup";
-import MarkdownAbbr         from "markdown-it-abbr";
-import MarkdownEmoji        from "markdown-it-emoji";
-import MarkdownAnchor       from "markdown-it-anchor";
-import MarkdownMaths        from "markdown-it-asciimath";
-import MarkdownTodos        from "markdown-it-task-lists";
-import MarkdownVideo        from "markdown-it-block-embed";
-import MarkdownTOC          from "markdown-it-table-of-contents";
 import EditorStore          from "../../stores/EditorStore";
+import { observer }         from "mobx-react";
 
-require( "markdown-it-asciimath/ASCIIMathTeXImg" );
-
-export default class EditorPreview extends Component {
-    state = {
-        content : EditorStore.content,
-    }
-
+@observer
+class EditorPreview extends Component {
     componentWillMount() {
         this.markdown = new Markdown( {
             html       : true,
@@ -25,40 +12,25 @@ export default class EditorPreview extends Component {
             typography : true,
         } );
 
-        this.markdown.use( MarkdownSub );
-        this.markdown.use( MarkdownSup );
-        this.markdown.use( MarkdownAbbr );
-        this.markdown.use( MarkdownEmoji );
-        this.markdown.use( MarkdownAnchor );
-        this.markdown.use( MarkdownMaths );
-        this.markdown.use( MarkdownTodos );
-        this.markdown.use( MarkdownTOC );
-
-        this.markdown.use( MarkdownVideo, {
-            filterUrl : url => `http://${url}`,
-        } );
-    }
-
-    componentDidMount() {
-        EditorStore.addChangeListener( this.textDidChange );
-    }
-
-    componentWillUnmount() {
-        EditorStore.removeChangeListener( this.textDidChange );
-    }
-
-    textDidChange = () => {
-        this.setState( {
-            content : EditorStore.content,
-        } );
+        this.markdown.use( require( "markdown-it-sub" ) );
+        this.markdown.use( require( "markdown-it-sup" ) );
+        this.markdown.use( require( "markdown-it-abbr" ) );
+        this.markdown.use( require( "markdown-it-emoji" ) );
+        this.markdown.use( require( "markdown-it-anchor" ) );
+        this.markdown.use( require( "markdown-it-asciimath" ) );
+        this.markdown.use( require( "markdown-it-task-lists" ) );
+        this.markdown.use( require( "markdown-it-table-of-contents" ) );
+        this.markdown.use( require( "markdown-it-block-embed" ), { filterUrl : url => `http://${url}` } );
     }
 
     render() {
         return (
             <div
                 className="editor-preview qilin-panel"
-                dangerouslySetInnerHTML={{ __html : this.markdown.render( this.state.content ) }}
+                dangerouslySetInnerHTML={{ __html : this.markdown.render( EditorStore.content ) }}
             />
         );
     }
 }
+
+export default EditorPreview;

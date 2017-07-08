@@ -1,35 +1,20 @@
-import BaseStore       from "./BaseStore";
-import EditorConstants from "../constants/EditorConstants";
+import { observable, action, computed } from "mobx";
 
-class EditorStore extends BaseStore {
-    constructor() {
-        super();
+class EditorStore {
+    @observable path = "";
+    @observable content = "";
 
-        this.path    = "";
-        this.content = "";
+    @action saveFile( path ) {
+        this.path = path;
+    }
 
-        this.subscribe( action => {
-            switch ( action.type ) {
-                case EditorConstants.EDITOR_OPEN_FILE_SUCCESS:
-                    this.path       = action.path;
-                    this.content    = action.content;
+    @action openFile( path, content ) {
+        this.path = path;
+        this.content = content;
+    }
 
-                    this.emitChange();
-                    break;
-
-                case EditorConstants.EDITOR_CONTENT_CHANGE:
-                    this.content = action.content;
-
-                    this.emitChange();
-                    break;
-
-                case EditorConstants.EDITOR_SAVE_FILE_SUCCESS:
-                    this.path = action.path;
-
-                    this.emitChange();
-                    break;
-            }
-        } );
+    @action changeContent( content ) {
+        this.content = content;
     }
 }
 

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import className            from "classnames";
 import AppContent           from "./AppContent.react";
-import AppFooter            from "./AppFooter.react";
 import AppHeader            from "./AppHeader.react";
+import AppFooter            from "./AppFooter.react";
 
 export default class App extends Component {
     state = {

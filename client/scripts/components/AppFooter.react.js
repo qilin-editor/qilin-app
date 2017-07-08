@@ -3,29 +3,12 @@ import ReactTransitionGroup from "react-addons-css-transition-group";
 import AlertInfo            from "./alerts/AlertsInfo.react";
 import AlertFailure         from "./alerts/AlertsFailure.react";
 import AlertSuccess         from "./alerts/AlertsSuccess.react";
-import AlertsStore          from "../stores/AlertStore";
 
 export default class AppFooter extends Component {
     state = {
-        info    : AlertsStore.info,
-        failure : AlertsStore.failure,
-        success : AlertsStore.success,
-    }
-
-    componentDidMount() {
-        AlertsStore.addChangeListener( () => this.onAlertsChange() );
-    }
-
-    componentWillUnmount() {
-        AlertsStore.removeChangeListener( this.onAlertsChange );
-    }
-
-    onAlertsChange() {
-        this.setState( {
-            info    : AlertsStore.info,
-            failure : AlertsStore.failure,
-            success : AlertsStore.success,
-        } );
+        info    : [],
+        failure : [],
+        success : []
     }
 
     renderInfo() {
