@@ -11,8 +11,7 @@ export default class AppContent extends Component {
         toggleModal      : PropTypes.func.isRequired,
         isPreviewToggled : PropTypes.bool.isRequired,
 
-        isModalFormulasOpen : PropTypes.bool.isRequired,
-        isModalSketchOpen   : PropTypes.bool.isRequired,
+        isModalFormulasOpen : PropTypes.bool.isRequired
     }
 
     render() {
@@ -21,16 +20,11 @@ export default class AppContent extends Component {
         } );
 
         const textButton = className( "app-content-icon qilin-panel", {
-            "is-active" : ! this.props.isModalFormulasOpen
-                       && ! this.props.isModalSketchOpen,
+            "is-active" : ! this.props.isModalFormulasOpen,
         } );
 
         const formulasButton = className( "app-content-icon qilin-panel", {
             "is-active" : this.props.isModalFormulasOpen,
-        } );
-
-        const sketchButton = className( "app-content-icon qilin-panel", {
-            "is-active" : this.props.isModalSketchOpen,
         } );
 
         return (
@@ -55,10 +49,6 @@ export default class AppContent extends Component {
 
                     <div className={formulasButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_FORMULAS )}>
                         <ReactSVG className="qilin-icon" path="images/icons/menu/functions.svg" />
-                    </div>
-
-                    <div className={sketchButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_SKETCH )}>
-                        <ReactSVG className="qilin-icon" path="images/icons/menu/gesture.svg" />
                     </div>
                 </div>
             </div>

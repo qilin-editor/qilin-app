@@ -3,14 +3,12 @@ import className            from "classnames";
 import AppContent           from "./AppContent.react";
 import AppFooter            from "./AppFooter.react";
 import AppHeader            from "./AppHeader.react";
-import Sketch               from "./sketch/Sketch.react";
 import Modal                from "react-modal";
 import ModalConstants       from "../constants/ModalConstants";
 
 export default class App extends Component {
     state = {
         isModalFormulasOpen : false,
-        isModalSketchOpen   : false,
         isPreviewToggled    : false,
         isThemeToggled      : false,
     }
@@ -32,19 +30,11 @@ export default class App extends Component {
             case ModalConstants.MODAL_TEXT:
                 return this.setState( {
                     isModalFormulasOpen : false,
-                    isModalSketchOpen   : false,
                 } );
 
             case ModalConstants.MODAL_FORMULAS:
                 return this.setState( {
                     isModalFormulasOpen : ! this.state.isModalFormulasOpen,
-                    isModalSketchOpen   : false,
-                } );
-
-            case ModalConstants.MODAL_SKETCH:
-                return this.setState( {
-                    isModalFormulasOpen : false,
-                    isModalSketchOpen   : ! this.state.isModalSketchOpen,
                 } );
         }
     }
@@ -71,16 +61,6 @@ export default class App extends Component {
                     overlayClassName="modal-overlay qilin-panel"
                 >
                     Formulas here
-                </Modal>
-
-                <Modal
-                    isOpen={this.state.isModalSketchOpen}
-
-                    className="modal qilin-panel"
-                    portalClassName="modal-portal"
-                    overlayClassName="modal-overlay qilin-panel"
-                >
-                    <Sketch />
                 </Modal>
             </div>
         );

@@ -1,6 +1,5 @@
 import BaseStore            from "./BaseStore";
 import EditorConstants      from "../constants/EditorConstants";
-import SketchConstants    from "../constants/SketchConstants";
 
 const EXPIRED_DELAY = 3.5;
 
@@ -18,7 +17,6 @@ class AlertStore extends BaseStore {
             const expiredDate = currentDate.setSeconds( currentDate.getSeconds() + EXPIRED_DELAY );
 
             switch ( action.type ) {
-                case SketchConstants.GEOMETRY_SAVE_FAILURE:
                 case EditorConstants.EDITOR_AUTOSAVE_FILE_FAILURE:
                 case EditorConstants.EDITOR_SAVE_FILE_FAILURE:
                 case EditorConstants.EDITOR_OPEN_FILE_FAILURE:
@@ -31,7 +29,6 @@ class AlertStore extends BaseStore {
                     this.emitChange();
                     break;
 
-                case SketchConstants.GEOMETRY_SAVE_SUCCESS:
                 case EditorConstants.EDITOR_SAVE_FILE_SUCCESS:
                 case EditorConstants.EDITOR_OPEN_FILE_SUCCESS:
                     this.success.push( {
