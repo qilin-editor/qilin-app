@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import ReactSVG             from "react-svg";
 import PropTypes            from "prop-types";
+import ReactSVG             from "react-svg";
 
 class AlertsFailure extends Component {
     static propTypes = {
         index   : PropTypes.number.isRequired,
-        message : PropTypes.string.isRequired,
+        message : PropTypes.string.isRequired
     }
 
     render() {

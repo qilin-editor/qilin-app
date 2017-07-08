@@ -26,15 +26,9 @@
 }
 
 .geometry-section-title,
-.geometry-section-icon,
-.qilin-input {
+.geometry-section-icon {
     background-color: $color-border-dark;
     color: lighten($color-text-light, 10%);
-}
-
-.qilin-radio {
-    background-color: $color-border-dark;
-    background-image: radial-gradient($color-text-dark 30%, transparent 40%);
 }
 
 :hover     > .qilin-icon,
@@ -73,10 +67,6 @@
     abbr {
         border-bottom-color: $color-text-dark;
     }
-}
-
-.geometry-canvas {
-    background-color: #1a1a1d;
 }
 
 ::selection,

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import { observer }         from "mobx-react";
 import CodeMirrorComponent  from "react-codemirror";
 import CodeMirrorService    from "../../services/CodeMirrorService";
 import MarkdownService      from "../../services/MarkdownService";
 import EditorStore          from "../../stores/EditorStore";
-import { observer }         from "mobx-react";
 
 @observer
 class EditorEditable extends Component {
@@ -15,8 +15,8 @@ class EditorEditable extends Component {
         return (
             <div className="editor-editable qilin-panel">
                 <CodeMirrorComponent
-                    value={EditorStore.content}
                     options={MarkdownService}
+                    value={EditorStore.content}
                     onChange={this.editorDidChange}
                 />
             </div>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactTransitionGroup from "react-addons-css-transition-group";
-import AlertInfo            from "./alerts/AlertsInfo.react";
-import AlertFailure         from "./alerts/AlertsFailure.react";
-import AlertSuccess         from "./alerts/AlertsSuccess.react";
+import AlertInfo            from "./alerts/AlertInfo.react";
+import AlertFailure         from "./alerts/AlertFailure.react";
+import AlertSuccess         from "./alerts/AlertSuccess.react";
 
 class AppFooter extends Component {
     state = {

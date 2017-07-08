@@ -1,3 +1,4 @@
+import path                             from "path";
 import { observable, action, computed } from "mobx";
 
 class EditorStore {
@@ -15,6 +16,14 @@ class EditorStore {
 
     @action changeContent( content ) {
         this.content = content;
+    }
+
+    @computed get filename() {
+        return this.path !== "" ? path.basename( this.path ) : "Untitled";
+    }
+
+    @computed get directory() {
+        return path.dirname( this.path );
     }
 }
 

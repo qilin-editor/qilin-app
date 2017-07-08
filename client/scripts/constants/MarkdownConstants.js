@@ -16,5 +16,5 @@ export default keyMirror( {
     MARKDOWN_LINK           : null,
     MARKDOWN_IMAGE          : null,
 
-    MARKDOWN_ABBREVIATION   : null,
+    MARKDOWN_ABBREVIATION   : null
 } );

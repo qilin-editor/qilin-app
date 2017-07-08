@@ -7,25 +7,25 @@ import AppFooter            from "./AppFooter.react";
 class App extends Component {
     state = {
         isPreviewToggled : false,
-        isThemeToggled   : false,
+        isThemeToggled   : false
     }
 
     togglePreview = () => {
         this.setState( {
-            isPreviewToggled : !this.state.isPreviewToggled,
+            isPreviewToggled : !this.state.isPreviewToggled
         } );
     }
 
     toggleTheme = () => {
         this.setState( {
-            isThemeToggled : !this.state.isThemeToggled,
+            isThemeToggled : !this.state.isThemeToggled
         } );
     }
 
     render() {
         const theme = className( {
-            "./styles/themes/light/index.min.css" : this.state.isThemeToggled,
-            "./styles/themes/dark/index.min.css"  : !this.state.isThemeToggled,
+            "./styles/themes/light/index.min.css" :  this.state.isThemeToggled,
+            "./styles/themes/dark/index.min.css"  : !this.state.isThemeToggled
         } );
 
         return (

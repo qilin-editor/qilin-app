@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { observer }         from "mobx-react";
 import Markdown             from "markdown-it";
 import EditorStore          from "../../stores/EditorStore";
-import { observer }         from "mobx-react";
 
 @observer
 class EditorPreview extends Component {

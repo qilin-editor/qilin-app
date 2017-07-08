@@ -1,8 +1,6 @@
 // main : ../../template.scss
 
-.qilin-button,
-.qilin-input,
-.qilin-radio {
+.qilin-button {
     -webkit-appearance: none;
 
     border-width: 0;
@@ -23,75 +21,14 @@
     min-height: 20px;
 
     margin: 7px;
+    padding: 0;
 
     cursor: pointer;
 
-    .qilin-button-icon {
+    &-icon {
         height: 14px;
         width: auto;
 
         transition: all 300ms ease;
-    }
-}
-
-.qilin-label {
-    display: inline-block;
-
-    text-rendering: geometricPrecision;
-    text-transform: lowercase;
-
-    font-variant: normal;
-    font-size: .85rem;
-    font-weight: 100;
-}
-
-.qilin-input-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 2px 7px 8px;
-
-    .qilin-input {
-        padding: 0 7px;
-
-        height: 30px;
-        width: 100%;
-
-        font-size: .8rem;
-        font-weight: normal;
-
-        &.is-small {
-            width: 65px;
-        }
-    }
-}
-
-.qilin-radio-container {
-    padding: 6px 7px;
-
-    .qilin-label {
-        margin: 0;
-        padding: 0 0 0 12px;
-    }
-
-    .qilin-radio {
-        vertical-align: middle;
-        display: inline-block;
-
-        width: 1rem;
-        height: 1rem;
-
-        border-radius: 100%;
-        border-width: 0;
-
-        background-repeat: no-repeat;
-        background-position: -20px;
-
-        cursor: pointer;
-
-        &:checked {
-            background-position: 0;
-        }
     }
 }

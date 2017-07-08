@@ -3,7 +3,7 @@ import PropTypes            from "prop-types";
 
 class ControlMaximize extends Component {
     static propTypes = {
-        window : PropTypes.object.isRequired,
+        window : PropTypes.object.isRequired
     }
 
     onClick = () => {

@@ -25,15 +25,6 @@
     border-color: $color-border-light;
 }
 
-.qilin-input {
-    box-shadow: $color-border-light 0 0 0 1px inset;
-}
-
-.qilin-radio {
-    box-shadow: $color-border-light 0 0 0 1px inset;
-    background-image: radial-gradient(rgba($color-text, .5) 30%, transparent 40%);
-}
-
 :hover     > .qilin-icon,
 :focus     > .qilin-icon,
 .is-active > .qilin-icon {
@@ -59,15 +50,6 @@
     p           { color: rgba($color-text, .7); }
     b, strong   { color: rgba($color-text, .8); }
     abbr        { border-bottom-color: $color-border-light; }
-}
-
-.geometry-section-title,
-.geometry-section-icon {
-    background-color: $color-border-light;
-}
-
-.geometry-canvas {
-    background-color: #f6f6f6;
 }
 
 ::selection,
