@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes            from "prop-types";
 
-export default class ControlClose extends Component {
+class ControlClose extends Component {
     static propTypes = {
         window : PropTypes.object.isRequired,
     }
@@ -16,3 +16,5 @@ export default class ControlClose extends Component {
         );
     }
 }
+
+export default ControlClose;

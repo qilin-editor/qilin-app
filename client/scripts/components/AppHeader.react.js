@@ -6,8 +6,10 @@ import ReactSVG             from "react-svg";
 import className            from "classnames";
 import Controls             from "./controls/Controls.react";
 import EditorStore          from "../stores/EditorStore";
+import { observer }         from "mobx-react";
 
-export default class AppHeader extends Component {
+@observer
+class AppHeader extends Component {
     static propTypes = {
         toggleTheme      : PropTypes.func.isRequired,
         togglePreview    : PropTypes.func.isRequired,
@@ -55,3 +57,5 @@ export default class AppHeader extends Component {
         );
     }
 }
+
+export default AppHeader;

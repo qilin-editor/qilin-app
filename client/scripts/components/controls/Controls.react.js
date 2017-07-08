@@ -3,7 +3,7 @@ import ControlClose         from "./ControlClose.react";
 import ControlMaximize      from "./ControlMaximize.react";
 import ControlMinimize      from "./ControlMinimize.react";
 
-export default class Controls extends Component {
+class Controls extends Component {
     render() {
         const WebWindow = nw.Window.get();
 
@@ -16,3 +16,5 @@ export default class Controls extends Component {
         );
     }
 }
+
+export default Controls;

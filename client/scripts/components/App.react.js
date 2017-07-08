@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import className            from "classnames";
-import AppContent           from "./AppContent.react";
 import AppHeader            from "./AppHeader.react";
+import AppContent           from "./AppContent.react";
 import AppFooter            from "./AppFooter.react";
 
-export default class App extends Component {
+class App extends Component {
     state = {
         isPreviewToggled : false,
         isThemeToggled   : false,
@@ -39,3 +39,5 @@ export default class App extends Component {
         );
     }
 }
+
+export default App;

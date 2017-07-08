@@ -5,7 +5,7 @@ import SplitPane            from "react-split-pane";
 import EditorEditable       from "./editor/EditorEditable.react";
 import EditorPreview        from "./editor/EditorPreview.react";
 
-export default class AppContent extends Component {
+class AppContent extends Component {
     static propTypes = {
         isPreviewToggled : PropTypes.bool.isRequired
     }
@@ -33,3 +33,5 @@ export default class AppContent extends Component {
         );
     }
 }
+
+export default AppContent;

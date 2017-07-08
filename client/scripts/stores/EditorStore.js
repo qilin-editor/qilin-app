@@ -1,7 +1,7 @@
 import { observable, action, computed } from "mobx";
 
 class EditorStore {
-    @observable path = "";
+    @observable path    = "";
     @observable content = "";
 
     @action saveFile( path ) {
@@ -9,7 +9,7 @@ class EditorStore {
     }
 
     @action openFile( path, content ) {
-        this.path = path;
+        this.path    = path;
         this.content = content;
     }
 

@@ -4,7 +4,7 @@ import AlertInfo            from "./alerts/AlertsInfo.react";
 import AlertFailure         from "./alerts/AlertsFailure.react";
 import AlertSuccess         from "./alerts/AlertsSuccess.react";
 
-export default class AppFooter extends Component {
+class AppFooter extends Component {
     state = {
         info    : [],
         failure : [],
@@ -44,3 +44,5 @@ export default class AppFooter extends Component {
         );
     }
 }
+
+export default AppFooter;
