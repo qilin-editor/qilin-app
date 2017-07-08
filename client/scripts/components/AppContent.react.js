@@ -1,5 +1,5 @@
 import React, { PropTypes, Component }  from "react";
-import ReactSVG                         from "react-svg/dist/react-svg";
+import ReactSVG                         from "react-svg";
 import className                        from "classnames";
 import SplitPane                        from "react-split-pane";
 import EditorEditable                   from "./editor/EditorEditable.react";

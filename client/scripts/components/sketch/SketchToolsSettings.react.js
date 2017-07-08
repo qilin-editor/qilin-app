@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import className                       from "classnames";
-import ReactSVG                        from "react-svg/dist/react-svg";
+import ReactSVG                        from "react-svg";
 import SketchConstants                 from "../../constants/SketchConstants";
 
 export default class SketchToolsSettings extends Component {

@@ -1,7 +1,7 @@
 import open                             from "opn";
 import path                             from "path";
 import React, { PropTypes, Component }  from "react";
-import ReactSVG                         from "react-svg/dist/react-svg";
+import ReactSVG                         from "react-svg";
 import className                        from "classnames";
 import Controls                         from "./controls/Controls.react";
 import EditorStore                      from "../stores/EditorStore";

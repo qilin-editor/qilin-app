@@ -1,5 +1,5 @@
 import React, { Component, PropTypes }  from "react";
-import ReactSVG                         from "react-svg/dist/react-svg";
+import ReactSVG                         from "react-svg";
 
 export default class AlertsInfo extends Component {
     static propTypes = {

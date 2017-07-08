@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { findDOMNode }                 from "react-dom";
-import ReactSVG                        from "react-svg/dist/react-svg";
+import ReactSVG                        from "react-svg";
 import { ChromePicker }                from "react-color";
 import Tooltip                         from "react-tooltip";
 import SketchConstants                 from "../../constants/SketchConstants";
