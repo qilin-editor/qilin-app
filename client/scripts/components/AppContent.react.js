@@ -16,10 +16,6 @@ export default class AppContent extends Component {
             "is-preview-hidden" : ! this.props.isPreviewToggled,
         } );
 
-        const textButton = className( "app-content-icon qilin-panel", {
-            "is-active" : true
-        } );
-
         return (
             <div className="app-content qilin-panel">
                 <div className="app-content-main qilin-panel">
@@ -33,12 +29,6 @@ export default class AppContent extends Component {
                         <EditorEditable />
                         <EditorPreview />
                     </SplitPane>
-                </div>
-
-                <div className="app-content-left qilin-panel">
-                    <div className={textButton}>
-                        <ReactSVG className="qilin-icon" path="images/icons/menu/text.svg" />
-                    </div>
                 </div>
             </div>
         );
