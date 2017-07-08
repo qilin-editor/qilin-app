@@ -8,10 +8,7 @@ import ModalConstants                   from "../constants/ModalConstants";
 
 export default class AppContent extends Component {
     static propTypes = {
-        toggleModal      : PropTypes.func.isRequired,
-        isPreviewToggled : PropTypes.bool.isRequired,
-
-        isModalFormulasOpen : PropTypes.bool.isRequired
+        isPreviewToggled : PropTypes.bool.isRequired
     }
 
     render() {
@@ -20,11 +17,7 @@ export default class AppContent extends Component {
         } );
 
         const textButton = className( "app-content-icon qilin-panel", {
-            "is-active" : ! this.props.isModalFormulasOpen,
-        } );
-
-        const formulasButton = className( "app-content-icon qilin-panel", {
-            "is-active" : this.props.isModalFormulasOpen,
+            "is-active" : true
         } );
 
         return (
@@ -43,12 +36,8 @@ export default class AppContent extends Component {
                 </div>
 
                 <div className="app-content-left qilin-panel">
-                    <div className={textButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_TEXT )}>
+                    <div className={textButton}>
                         <ReactSVG className="qilin-icon" path="images/icons/menu/text.svg" />
-                    </div>
-
-                    <div className={formulasButton} onClick={() => this.props.toggleModal( ModalConstants.MODAL_FORMULAS )}>
-                        <ReactSVG className="qilin-icon" path="images/icons/menu/functions.svg" />
                     </div>
                 </div>
             </div>

@@ -25,20 +25,6 @@ export default class App extends Component {
         } );
     }
 
-    toggleModal = modal => {
-        switch ( modal ) {
-            case ModalConstants.MODAL_TEXT:
-                return this.setState( {
-                    isModalFormulasOpen : false,
-                } );
-
-            case ModalConstants.MODAL_FORMULAS:
-                return this.setState( {
-                    isModalFormulasOpen : ! this.state.isModalFormulasOpen,
-                } );
-        }
-    }
-
     render() {
         const theme = className( {
             "./styles/themes/light/index.min.css" : this.state.isThemeToggled,
@@ -50,18 +36,8 @@ export default class App extends Component {
                 <link rel="stylesheet" href={theme} />
 
                 <AppHeader  {...this.state} toggleTheme={this.toggleTheme} togglePreview={this.togglePreview} />
-                <AppContent {...this.state} toggleModal={this.toggleModal} />
+                <AppContent {...this.state} />
                 <AppFooter  {...this.state} />
-
-                <Modal
-                    isOpen={this.state.isModalFormulasOpen}
-
-                    className="modal qilin-panel"
-                    portalClassName="modal-portal"
-                    overlayClassName="modal-overlay qilin-panel"
-                >
-                    Formulas here
-                </Modal>
             </div>
         );
     }
