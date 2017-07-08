@@ -18,7 +18,9 @@
     "window": {
         "min_height": 600,
         "min_width": 1000,
-        "frame": false
+        "title": "Qilin",
+        "frame": false,
+        "toolbar": false
     },
     "dependencies": {
         "classnames": "^2.2.5",
