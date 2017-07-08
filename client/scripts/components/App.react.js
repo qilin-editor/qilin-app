@@ -15,20 +15,20 @@ export default class App extends Component {
 
     togglePreview = () => {
         this.setState( {
-            isPreviewToggled : ! this.state.isPreviewToggled,
+            isPreviewToggled : !this.state.isPreviewToggled,
         } );
     }
 
     toggleTheme = () => {
         this.setState( {
-            isThemeToggled : ! this.state.isThemeToggled,
+            isThemeToggled : !this.state.isThemeToggled,
         } );
     }
 
     render() {
         const theme = className( {
             "./styles/themes/light/index.min.css" : this.state.isThemeToggled,
-            "./styles/themes/dark/index.min.css"  : ! this.state.isThemeToggled,
+            "./styles/themes/dark/index.min.css"  : !this.state.isThemeToggled,
         } );
 
         return (

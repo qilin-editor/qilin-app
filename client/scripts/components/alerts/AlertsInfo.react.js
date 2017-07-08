@@ -1,5 +1,5 @@
-import ReactSVG                         from "react-svg";
 import React, { Component } from "react";
+import ReactSVG             from "react-svg";
 import PropTypes            from "prop-types";
 
 export default class AlertsInfo extends Component {
