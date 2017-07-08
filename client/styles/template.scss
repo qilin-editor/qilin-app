@@ -9,8 +9,7 @@
         "vendor/katex",
 
         "../../node_modules/codemirror/lib/codemirror.css",
-        "../../node_modules/codemirror/addon/scroll/simplescrollbars.css",
-        "../../node_modules/literallycanvas/lib/css/literallycanvas.css";
+        "../../node_modules/codemirror/addon/scroll/simplescrollbars.css";
 
 @import "components/qilin/button",
         "components/qilin/icon",
@@ -19,9 +18,7 @@
         "components/states/isClickable",
         "components/states/isHidden",
 
-        "components/alerts",
         "components/app",
+        "components/alerts",
         "components/controls",
-        "components/editor",
-        "components/geometry",
-        "components/modal";
+        "components/editor";
