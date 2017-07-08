@@ -21,15 +21,15 @@
         }
     },
 
-    "extends" : [
-        "eslint:recommended"
-    ],
+    "globals" : {
+        "nw" : true
+    },
 
     "rules" : {
-        "indent"                            : [ "error", 4 ],
+        "indent"                            : [ "error", 4, { "SwitchCase" : 1 } ],
         "quotes"                            : [ "error", "double" ],
         "max-depth"                         : [ "warn", 5 ],
-        "max-len"                           : [ "warn", 100 ],
+        "max-len"                           : [ "warn", 120 ],
         "eol-last"                          : [ "warn", "always" ],
 
         "semi"                              : [ "error", "always" ],
