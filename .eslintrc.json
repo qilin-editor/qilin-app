@@ -9,7 +9,7 @@
         "es6"                   : true,
         "node"                  : true,
         "browser"               : true,
-        "shared-node-browser"   : true,
+        "shared-node-browser"   : true
     },
 
     "parserOptions" : {
