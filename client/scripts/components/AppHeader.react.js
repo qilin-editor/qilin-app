@@ -1,11 +1,11 @@
-import open                             from "opn";
-import path                             from "path";
-import ReactSVG                         from "react-svg";
-import className                        from "classnames";
-import Controls                         from "./controls/Controls.react";
-import EditorStore                      from "../stores/EditorStore";
+import open                 from "opn";
+import path                 from "path";
 import React, { Component } from "react";
 import PropTypes            from "prop-types";
+import ReactSVG             from "react-svg";
+import className            from "classnames";
+import Controls             from "./controls/Controls.react";
+import EditorStore          from "../stores/EditorStore";
 
 export default class AppHeader extends Component {
     static propTypes = {

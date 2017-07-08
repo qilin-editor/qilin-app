@@ -3,14 +3,11 @@ import className            from "classnames";
 import AppContent           from "./AppContent.react";
 import AppFooter            from "./AppFooter.react";
 import AppHeader            from "./AppHeader.react";
-import Modal                from "react-modal";
-import ModalConstants       from "../constants/ModalConstants";
 
 export default class App extends Component {
     state = {
-        isModalFormulasOpen : false,
-        isPreviewToggled    : false,
-        isThemeToggled      : false,
+        isPreviewToggled : false,
+        isThemeToggled   : false,
     }
 
     togglePreview = () => {
