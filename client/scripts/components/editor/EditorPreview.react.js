@@ -17,10 +17,10 @@ class EditorPreview extends Component {
         this.markdown.use( require( "markdown-it-abbr" ) );
         this.markdown.use( require( "markdown-it-emoji" ) );
         this.markdown.use( require( "markdown-it-anchor" ) );
-        this.markdown.use( require( "markdown-it-asciimath" ) );
         this.markdown.use( require( "markdown-it-task-lists" ) );
         this.markdown.use( require( "markdown-it-table-of-contents" ) );
         this.markdown.use( require( "markdown-it-block-embed" ), { filterUrl : url => `http://${url}` } );
+        this.markdown.use( require( "../../plugins/markdown/latex" ) );
     }
 
     render() {

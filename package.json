@@ -42,12 +42,15 @@
         "markdown-it-abbr": "^1.0.4",
         "markdown-it-emoji": "^1.4.0",
         "markdown-it-anchor": "^4.0.0",
+        "markdown-it-latex": "^0.1.3",
         "markdown-it-asciimath": "^1.0.0",
         "markdown-it-task-lists": "^2.0.1",
         "markdown-it-block-embed": "^0.0.3",
         "markdown-it-table-of-contents": "^0.3.2",
         "opn": "^5.1.0",
-        "uuid": "^3.1.0"
+        "uuid": "^3.1.0",
+        "asciimath-to-latex": "^0.3.2",
+        "katex": "^0.7.1"
     },
     "devDependencies": {
         "babel-eslint": "^7.2.3",
