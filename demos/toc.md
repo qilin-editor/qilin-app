@@ -1,17 +1,6 @@
-Devoir	: Synthèse argumentée de documents\
-Fichier	: chimie-enantiomeres.md
-
-@[youtube](lJIrF4YjHfQ)
-
----
-
 A partir de documents et de vos connaissances, rédigez une synthèse argumentée de 30 lignes montrant que la chiralité et la conformation des molécules leur donnent des propriétés biologiques particuliers.
 
----
-
 [[toc]]
-
----
 
 # Définitions
 
