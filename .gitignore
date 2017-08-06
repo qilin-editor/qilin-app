@@ -1,5 +1,6 @@
 # Minimized stuff:
 *.min.css
+compiled.js
 
 # Node stuff:
 node_modules
