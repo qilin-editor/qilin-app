@@ -28,7 +28,7 @@
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
         "react-svg": "^2.1.21",
-        "react-codemirror": "^0.2.6",
+        "react-codemirror": "^1.0.0",
         "react-split-pane": "^0.1.65",
         "react-addons-css-transition-group": "^15.6.0",
         "mobx": "^3.2.2",
