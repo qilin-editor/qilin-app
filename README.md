@@ -1,5 +1,7 @@
 # Qilin Editor
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Bartozzz/Qilin.svg)](https://greenkeeper.io/)
+
 Qilin is a free, open-source advanced text editor developed for exact sciences in mind. It is based on `Chromium` and `Node.js`.
 
 ![Qilin](http://i.imgur.com/7CdFYyZ.jpg)
