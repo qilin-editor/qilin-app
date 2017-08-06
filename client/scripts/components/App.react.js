@@ -24,8 +24,8 @@ class App extends Component {
 
     render() {
         const theme = className( {
-            "./styles/themes/light/index.min.css" :  this.state.isThemeToggled,
-            "./styles/themes/dark/index.min.css"  : !this.state.isThemeToggled
+            "./styles/themes/light/index.min.css" : !this.state.isThemeToggled,
+            "./styles/themes/dark/index.min.css"  :  this.state.isThemeToggled
         } );
 
         return (
