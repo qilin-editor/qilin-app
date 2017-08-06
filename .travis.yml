@@ -1,0 +1,16 @@
+language: node_js
+sudo: enabled
+dist: trusty
+
+node_js:
+  - "iojs"
+  - "node"
+
+before_install:
+  - "npm i -g npm@latest"
+install:
+  - npm install
+
+cache:
+  directories:
+    - "node_modules"
