@@ -3,7 +3,6 @@ sudo: enabled
 dist: precise
 
 node_js:
-  - "iojs"
   - "node"
 
 before_install:
