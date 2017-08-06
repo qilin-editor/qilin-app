@@ -8,8 +8,6 @@ function openFile( path ) {
         if ( error ) {
             console.log( error );
         } else {
-            console.log( content );
-
             EditorStore.changePath( path );
             EditorStore.changeContent( content );
         }
