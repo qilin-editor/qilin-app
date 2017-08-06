@@ -23,7 +23,7 @@ Project was created and developed by [Bartosz Łaniewski](https://github.com/Bar
 
 ## Screenshots
 
-All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC).
+All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC). You can found some devblogs on my [Youtube channel](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN).
 
 ![Qilin light mode](http://i.imgur.com/0gxjJIo.png)
 ![Qilin dark mode](http://i.imgur.com/eUWZvKw.png)
