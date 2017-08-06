@@ -1,18 +1,6 @@
 // main : ../../template.scss
 
 .qilin-button {
-    -webkit-appearance: none;
-
-    border-width: 0;
-    border-radius: 4px;
-    border-style: solid;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
-    outline: none;
-}
-
-.qilin-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +11,16 @@
     margin: 7px;
     padding: 0;
 
+    border-width: 0;
+    border-radius: 4px;
+    border-style: solid;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    outline: none;
     cursor: pointer;
+
+    -webkit-appearance: none;
 
     &-icon {
         height: 14px;

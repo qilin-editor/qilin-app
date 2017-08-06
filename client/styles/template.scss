@@ -2,17 +2,14 @@
 
 @import "configuration/colors";
 
-@import "animations/fade";
+@import "../../node_modules/codemirror/lib/codemirror",
+        "../../node_modules/codemirror/addon/scroll/simplescrollbars",
 
-@import "vendor/codeMirror",
+        "vendor/codeMirror",
         "vendor/splitPane",
-        "vendor/katex",
-
-        "../../node_modules/codemirror/lib/codemirror",
-        "../../node_modules/codemirror/addon/scroll/simplescrollbars";
+        "vendor/katex";
 
 @import "components/qilin/button",
-        "components/qilin/icon",
         "components/qilin/reset",
 
         "components/states/isClickable",
