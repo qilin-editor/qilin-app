@@ -11,5 +11,3 @@ function reloadWithoutCache() {
 }
 
 fs.watch( "./client", { recursive : true }, reloadWithoutCache );
-// fs.watch( "./shared", { recursive : true }, reloadWithoutCache );
-// fs.watch( "./server", { recursive : true }, reloadWithoutCache );

@@ -1,4 +1,3 @@
-import open                 from "opn";
 import React, { Component } from "react";
 import { observer }         from "mobx-react";
 import PropTypes            from "prop-types";
@@ -13,12 +12,12 @@ class AppHeader extends Component {
         toggleTheme      : PropTypes.func.isRequired,
         togglePreview    : PropTypes.func.isRequired,
         isThemeToggled   : PropTypes.bool.isRequired,
-        isPreviewToggled : PropTypes.bool.isRequired,
+        isPreviewToggled : PropTypes.bool.isRequired
     }
 
     revealFolder = () => {
         if ( EditorStore.path !== "" ) {
-            open( EditorStore.directory );
+            require( "opn" )( EditorStore.directory );
         }
     }
 

@@ -9,7 +9,7 @@ class EditorPreview extends Component {
         this.markdown = new Markdown( {
             html       : true,
             linkify    : true,
-            typography : true,
+            typography : true
         } );
 
         this.markdown.use( require( "markdown-it-sub" ) );
