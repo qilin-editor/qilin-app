@@ -6,7 +6,7 @@
 
 **Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports `KaTeX`/`AsciiMath` and works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.
 
-![Qilin](http://i.imgur.com/7CdFYyZ.jpg)
+![Qilin light mode](http://i.imgur.com/0gxjJIo.png)
 
 ## Contributing
 
