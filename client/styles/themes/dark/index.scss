@@ -1,82 +1,16 @@
 @import "./colors";
 @import "./syntax";
 
-.Resizer {
-    background-color: $color-border-dark;
-    border-color: transparent;
-}
+@import "./vendor/codeMirror",
+        "./vendor/splitPane";
 
-.CodeMirror,
+@import "./components/qilin/button",
+        "./components/qilin/icon",
+        "./components/controls",
+        "./components/editor";
+
 .qilin-panel {
     background-color: $color-background;
     border-color: $color-border-dark;
     color: lighten($color-text-light, 10%);
-}
-
-.qilin-button,
-.control-close,
-.control-maximize,
-.control-minimize {
-    background-color: $color-text-dark;
-    background-image: linear-gradient($color-text-dark, darken($color-text-dark, 3%));
-}
-
-.qilin-button {
-    box-shadow: 0 -1px 0 rgba(white, .25), 0 1px 2px -1px rgba(black, .75);
-}
-
-.geometry-section-title,
-.geometry-section-icon {
-    background-color: $color-border-dark;
-    color: lighten($color-text-light, 10%);
-}
-
-:hover     > .qilin-icon,
-:focus     > .qilin-icon,
-.is-active > .qilin-icon {
-    color: lighten($color-text-light, 10%);
-    fill: lighten($color-text-light, 10%);
-}
-
-.qilin-icon {
-    color: $color-text-dark;
-    fill: $color-text-dark;
-}
-
-.qilin-button-icon {
-    color: rgba(white, .5);
-    fill: rgba(white, .5);
-
-    &.is-active {
-        color: white;
-        fill: white;
-    }
-}
-
-.editor-preview {
-    color: lighten($color-text-light, 10%);
-
-    hr {
-        background-color: $color-text-dark;
-    }
-
-    p {
-        opacity: .85;
-    }
-
-    abbr {
-        border-bottom-color: $color-text-dark;
-    }
-}
-
-::selection,
-.CodeMirror-selected {
-    background-color: rgba(white, .05) !important;
-    color: white !important;
-}
-
-.control-close:hover,
-.control-maximize:hover,
-.control-minimize:hover {
-    background-image: none;
 }

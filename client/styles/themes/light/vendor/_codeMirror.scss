@@ -1,0 +1,17 @@
+// main : ../index.scss
+
+.CodeMirror {
+    background-color: $color-background;
+    border-color: $color-border-light;
+    color: $color-text;
+}
+
+.CodeMirror-overlayscroll-vertical div {
+    background-color: $color-border-dark;
+}
+
+::selection,
+.CodeMirror-selected {
+    background-color: rgba(black, .05) !important;
+    color: black !important;
+}

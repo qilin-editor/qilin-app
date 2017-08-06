@@ -1,0 +1,17 @@
+// main : ../index.scss
+
+.editor-preview {
+    color: lighten($color-text-light, 10%);
+
+    hr {
+        background-color: $color-text-dark;
+    }
+
+    p {
+        opacity: .85;
+    }
+
+    abbr {
+        border-bottom-color: $color-text-dark;
+    }
+}

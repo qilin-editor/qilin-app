@@ -1,0 +1,10 @@
+// main : ../index.scss
+
+.editor-preview {
+    color: $color-text;
+
+    hr          { background-color: $color-border-light; }
+    p           { color: rgba($color-text, .85); }
+    b, strong   { color: $color-text; }
+    abbr        { border-bottom-color: $color-border-light; }
+}

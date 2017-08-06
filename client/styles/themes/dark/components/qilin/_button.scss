@@ -1,0 +1,19 @@
+// main : ../../index.scss
+
+.qilin-button {
+    background-color: darken($color-text-dark, 20%);
+    background-image: linear-gradient(darken($color-text-dark, 20%), darken($color-text-dark, 25%));
+
+    box-shadow: 0 -1px 0 rgba(white, .25),
+                0 1px 2px -1px rgba(black, .75);
+
+    &-icon {
+        color: rgba(white, .5);
+        fill: rgba(white, .5);
+
+        &.is-active {
+            color: white;
+            fill: white;
+        }
+    }
+}

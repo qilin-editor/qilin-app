@@ -1,0 +1,19 @@
+// main : ../../index.scss
+
+.qilin-button {
+    color: $color-border-dark;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-border-light;
+
+    &-icon {
+        color: rgba($color-text, .5);
+        fill: rgba($color-text, .5);
+
+        &.is-active {
+            color: $color-text;
+            fill: $color-text;
+        }
+    }
+}

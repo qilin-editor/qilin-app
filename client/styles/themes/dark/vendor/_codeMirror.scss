@@ -1,0 +1,13 @@
+// main : ../index.scss
+
+.CodeMirror {
+    background-color: $color-background;
+    border-color: $color-border-dark;
+    color: lighten($color-text-light, 10%);
+}
+
+::selection,
+.CodeMirror-selected {
+    background-color: rgba(white, .05) !important;
+    color: white !important;
+}

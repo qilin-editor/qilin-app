@@ -1,0 +1,13 @@
+// main : ../../index.scss
+
+:hover     > .qilin-icon,
+:focus     > .qilin-icon,
+.is-active > .qilin-icon {
+    color: lighten($color-text-light, 10%);
+    fill: lighten($color-text-light, 10%);
+}
+
+.qilin-icon {
+    color: $color-text-dark;
+    fill: $color-text-dark;
+}

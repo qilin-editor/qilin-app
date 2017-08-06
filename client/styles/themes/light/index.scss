@@ -1,67 +1,16 @@
 @import "./colors";
 @import "./syntax";
 
-.CodeMirror-overlayscroll-vertical div {
-    background-color: $color-border-dark;
-}
+@import "./vendor/codeMirror",
+        "./vendor/splitPane";
 
-.Resizer {
-    background-color: $color-border-light;
-    border-color: transparent;
-}
+@import "./components/qilin/button",
+        "./components/qilin/icon",
+        "./components/controls",
+        "./components/editor";
 
-.CodeMirror,
 .qilin-panel {
     background-color: $color-background;
     border-color: $color-border-light;
     color: $color-text;
 }
-
-.qilin-button {
-    color: $color-border-dark;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: $color-border-light;
-}
-
-:hover     > .qilin-icon,
-:focus     > .qilin-icon,
-.is-active > .qilin-icon {
-    color: $color-text;
-    fill: $color-text;
-}
-
-.qilin-icon,
-.qilin-button-icon {
-    color: rgba($color-text, .5);
-    fill: rgba($color-text, .5);
-
-    &.is-active {
-        color: $color-text;
-        fill: $color-text;
-    }
-}
-
-.editor-preview {
-    color: $color-text;
-
-    hr          { background-color: $color-border-light; }
-    p           { color: rgba($color-text, .7); }
-    b, strong   { color: rgba($color-text, .8); }
-    abbr        { border-bottom-color: $color-border-light; }
-}
-
-::selection,
-.CodeMirror-selected {
-    background-color: rgba(black, .05) !important;
-    color: black !important;
-}
-
-.control-close    { background-color: $color-red; }
-.control-maximize { background-color: $color-green; }
-.control-minimize { background-color: $color-yellow; }
-
-.control-close:hover    { background-color: darken($color-red, 10%) !important; }
-.control-maximize:hover { background-color: darken($color-green, 10%) !important; }
-.control-minimize:hover { background-color: darken($color-yellow, 10%) !important; }

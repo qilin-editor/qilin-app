@@ -3,7 +3,7 @@
 @import "./colors";
 
 .CodeMirror-cursor {
-    border-left-color: black;
+    border-left-color: $color-text;
 }
 
 .CodeMirror-activeline-background {
