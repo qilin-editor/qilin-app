@@ -5,13 +5,8 @@ class EditorStore {
     @observable path    = "";
     @observable content = "";
 
-    @action saveFile( path ) {
+    @action changePath( path ) {
         this.path = path;
-    }
-
-    @action openFile( path, content ) {
-        this.path    = path;
-        this.content = content;
     }
 
     @action changeContent( content ) {
@@ -19,7 +14,7 @@ class EditorStore {
     }
 
     @computed get filename() {
-        return this.path !== "" ? path.basename( this.path ) : "Untitled";
+        return this.path != "" ? path.basename( this.path ) : "Untitled";
     }
 
     @computed get directory() {

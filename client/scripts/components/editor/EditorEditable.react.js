@@ -7,6 +7,10 @@ import EditorStore          from "../../stores/EditorStore";
 
 @observer
 class EditorEditable extends Component {
+    componentWillReact() {
+        this.cm.codeMirror.setValue( EditorStore.content );
+    }
+
     editorDidChange = value => {
         EditorStore.changeContent( value );
     }
@@ -18,6 +22,7 @@ class EditorEditable extends Component {
                     options={MarkdownService}
                     value={EditorStore.content}
                     onChange={this.editorDidChange}
+                    ref={mirror => this.cm = mirror}
                 />
             </div>
         );
