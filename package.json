@@ -1,7 +1,7 @@
 {
     "name": "me.laniewski.qilin",
     "main": "client/index.html",
-    "version": "0.0.1-alpha",
+    "version": "0.1.0-alpha",
     "private": true,
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
     "license": "BSD License with Patents",
@@ -11,7 +11,7 @@
     "app": {
         "id": "me.laniewski.qilin",
         "name": "Qilin",
-        "vers": "0.0.1-alpha",
+        "vers": "0.1.0-alpha",
         "desc": "Text editor for exact sciences",
         "copyright": "BSD License with Patents"
     },
