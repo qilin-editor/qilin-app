@@ -9,13 +9,10 @@ First off, thanks for taking the time to contribute! The following is a set of g
   * [Reporting bugs](#reporting-bugs)
   * [Suggesting enhancements](#suggesting-enhancements)
   * [Your first code contribution](#your-first-code-contribution)
-  * [Pull requests](#pull-requests)
 * [Styleguides](#styleguides)
   * [Git commit messages](#git-commit-messages)
   * [JavaScript styleguide](#javascript-styleguide)
   * [Documentation styleguide](#documentation-styleguide)
-* [Additional Notes](#additional-notes)
-  * [Issue and Pull Request Labels](#issue-and-pull-request-labels)
 
 ## Code of Conduct
 
