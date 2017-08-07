@@ -1,3 +1,5 @@
+import ThemeIcon            from "../../images/icons/menu/theme.svg";
+import PreviewIcon          from "../../images/icons/menu/preview.svg";
 import React, { Component } from "react";
 import { observer }         from "mobx-react";
 import PropTypes            from "prop-types";
@@ -5,6 +7,8 @@ import className            from "classnames";
 import ReactSVG             from "react-svg";
 import Controls             from "./controls/Controls.react";
 import EditorStore          from "../stores/EditorStore";
+
+alert( ThemeIcon );
 
 @observer
 class AppHeader extends Component {
@@ -44,11 +48,11 @@ class AppHeader extends Component {
 
                 <div className="app-header-buttons">
                     <div className="qilin-button" onClick={this.props.toggleTheme}>
-                        <ReactSVG className={themeIcon} path="images/icons/menu/theme.svg" />
+                        <ReactSVG className={themeIcon} path={ThemeIcon} />
                     </div>
 
                     <div className="qilin-button" onClick={this.props.togglePreview}>
-                        <ReactSVG className={previewIcon} path="images/icons/menu/preview.svg" />
+                        <ReactSVG className={previewIcon} path={PreviewIcon} />
                     </div>
                 </div>
             </div>

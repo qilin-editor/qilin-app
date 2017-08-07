@@ -21,8 +21,12 @@ module.exports = {
     module : {
         rules : [
             {
-                test : /\.(jpg|jpeg|png|woff|woff2|eot|otf|ttf|svg)$/,
+                test : /\.(jpg|jpeg|png|woff|woff2|eot|otf|ttf)$/,
                 use  : "url-loader?limit=1000"
+            },
+            {
+                test : /\.svg$/,
+                use  : "file-loader"
             },
             {
                 test : /\.json$/,
