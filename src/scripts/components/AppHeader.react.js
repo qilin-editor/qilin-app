@@ -8,8 +8,6 @@ import ReactSVG             from "react-svg";
 import Controls             from "./controls/Controls.react";
 import EditorStore          from "../stores/EditorStore";
 
-alert( ThemeIcon );
-
 @observer
 class AppHeader extends Component {
     static propTypes = {
