@@ -126,7 +126,7 @@ Both issue lists are sorted by total number of comments. While not perfect, numb
 
 ### JavaScript styleguide
 
-All JavaScript must adhere to [JavaScript Standard Style](http://standardjs.com/). Consider using a Linter package such as ESLinter.
+Consider using a Linter package such as ESLinter.
 
 ### Documentation styleguide
 
