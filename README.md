@@ -49,6 +49,7 @@ $ sudo npm run <command>
 |---------------|---------------------------------------------------|:----:|
 | preapre       | Compiles SCSS and JavaScript used by Qilin        | ×    |
 | build         | Builds Qilin releases for macOS, Windows, Linux   | ✓    |
+| watch         | Runs Qilin application and re-compiles on changes | ✓    |
 | start         | Runs Qilin application                            | ×    |
 | clean         | Deletes output, builds ands cache                 | ✓    |
 

@@ -45,6 +45,7 @@
     },
     "devDependencies": {
         "nw": "^0.24.1",
+        "nw-dev": "^3.0.1",
         "nw-builder": "^3.4.1",
         "eslint": "^4.4.0",
         "eslint-plugin-react": "^7.1.0",
@@ -79,6 +80,7 @@
     },
     "scripts": {
         "prepare": "./node_modules/.bin/webpack --progress",
+        "watch": "./node_modules/.bin/webpack --progress --watch & ./node_modules/.bin/nw . --nwjs_build_type=sdk",
         "start": "npm run prepare && ./node_modules/.bin/nw . --nwjs_build_type=sdk",
         "build": "npm run prepare && node ./bin/compile",
         "clear": "rm -rf ./build ./dist"
