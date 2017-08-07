@@ -1,10 +1,10 @@
 {
     "name": "me.laniewski.qilin",
     "main": "dist/index.html",
-    "version": "0.1.0-alpha",
+    "version": "0.1.1-alpha",
     "private": true,
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
-    "license": "BSD License with Patents",
+    "license": "BSD-3-Clause license with patents",
     "chromium-args": "--mixed-context --enable-experimental-web-platform-features",
     "window": {
         "min_height": 600,
