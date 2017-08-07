@@ -22,6 +22,36 @@ Changes and improvements are more than welcome! Feel free to fork and open a pul
 
 Project was created and developed by [Bartosz Łaniewski](https://github.com/Bartozzz). The full list of contributors can be found [here](https://github.com/Bartozzz/Qilin/graphs/contributors). Qilin's code is [BSD-3-Clause licensed](https://github.com/Bartozzz/Qilin/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/Bartozzz/Qilin/blob/master/PATENTS).
 
+### Development
+
+We have prepared multiple commands to help you develop Qilin on your own. Don't forget to install all `Node.js` dependencies from [npm](https://www.npmjs.com/). You
+will need a local copy of [Node.js](https://nodejs.org/en/) installed on your machine.
+
+```bash
+$ sudo npm install
+```
+
+Eventually, you might need to install `node-sass` manually, with the following command:
+
+```bash
+$ sudo npm install node-sass
+```
+
+#### Usage
+
+```bash
+$ sudo npm run <command>
+```
+
+#### List of commands
+
+| Command       | Description                                       | Root |
+|---------------|---------------------------------------------------|:----:|
+| preapre       | Compiles SCSS and JavaScript used by Qilin        | ×    |
+| build         | Builds Qilin releases for macOS, Windows, Linux   | ✓    |
+| start         | Runs Qilin application                            | ×    |
+| clean         | Deletes output, builds ands cache                 | ✓    |
+
 ## Screenshots
 
 All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC). You can found some devblogs on my [Youtube channel](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN).
