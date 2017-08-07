@@ -1,8 +1,8 @@
 # Qilin Editor
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Bartozzz/Qilin.svg)](https://greenkeeper.io/)
-[![Build Status](https://img.shields.io/travis/Bartozzz/Qilin.svg)]()
-[![Github Releases](https://img.shields.io/github/downloads/Bartozzz/Qilin/latest/total.svg)]()
+[![Build Status](https://img.shields.io/travis/Bartozzz/Qilin.svg)](https://travis-ci.org/Bartozzz/Qilin/)
+[![Github Releases](https://img.shields.io/github/downloads/Bartozzz/Qilin/latest/total.svg)](https://github.com/Bartozzz/Qilin/releases)
 
 **Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports [`LaTeX`](https://www.latex-project.org/), [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.
 
@@ -12,9 +12,9 @@
 
 ### Bug reporting
 
-[![Github Open Issues](https://img.shields.io/github/issues-raw/Bartozzz/Qilin.svg)]()
-[![Github Closed Issues](https://img.shields.io/github/issues-closed-raw/Bartozzz/Qilin.svg)]()
-[![Github Pull Requests](https://img.shields.io/github/issues-pr-raw/Bartozzz/Qilin.svg)]()
+[![Github Open Issues](https://img.shields.io/github/issues-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/issues)
+[![Github Closed Issues](https://img.shields.io/github/issues-closed-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/issues?q=is%3Aissue+is%3Aclosed)
+[![Github Pull Requests](https://img.shields.io/github/issues-pr-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/pulls)
 
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. If you have found any issues, please [report them here](https://github.com/Bartozzz/Qilin/issues/new) - they are being tracked on [GitHub Issues](https://github.com/Bartozzz/Qilin/issues).
 
