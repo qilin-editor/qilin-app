@@ -1,0 +1,17 @@
+.is-dark {
+    @import "./colors";
+    @import "./syntax";
+
+    @import "./vendor/codeMirror",
+            "./vendor/splitPane";
+
+    @import "./components/qilin/button",
+            "./components/controls",
+            "./components/editor";
+
+    .qilin-panel {
+        background-color: $color-background;
+        border-color: $color-border-dark;
+        color: lighten($color-text-light, 10%);
+    }
+}

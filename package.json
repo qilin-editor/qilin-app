@@ -1,6 +1,6 @@
 {
     "name": "me.laniewski.qilin",
-    "main": "client/index.html",
+    "main": "dist/index.html",
     "version": "0.1.0-alpha",
     "private": true,
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
@@ -8,13 +8,6 @@
     "chromium-args": "--mixed-context --enable-experimental-web-platform-features",
     "inject_js_start": "./client/scripts/injectables/StartInjectable.js",
     "inject_js_end": "./client/scripts/injectables/EndInjectable.js",
-    "app": {
-        "id": "me.laniewski.qilin",
-        "name": "Qilin",
-        "vers": "0.1.0-alpha",
-        "desc": "Text editor for exact sciences",
-        "copyright": "BSD License with Patents"
-    },
     "window": {
         "min_height": 600,
         "min_width": 1000,
@@ -51,13 +44,14 @@
         "katex": "^0.7.1"
     },
     "devDependencies": {
-        "browserify": "^14.4.0",
-        "watchify": "^3.9.0",
-        "uglifyify": "^4.0.1",
-        "babelify": "^7.3.0",
-        "babel-eslint": "^7.2.3",
+        "nw": "^0.24.1",
+        "nw-builder": "^3.4.1",
         "eslint": "^4.4.0",
         "eslint-plugin-react": "^7.1.0",
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.25.0",
+        "babel-eslint": "^7.2.3",
+        "babel-polyfill": "^6.23.0",
         "babel-preset-react": "^6.24.1",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-es2016": "^6.24.1",
@@ -65,12 +59,29 @@
         "babel-preset-stage-0": "^6.24.1",
         "babel-plugin-add-module-exports": "^0.2.1",
         "babel-plugin-transform-runtime": "^6.23.0",
-        "babel-plugin-transform-decorators-legacy": "^1.3.4"
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "webpack": "^2.6.1",
+        "webpack-dev-server": "^2.4.5",
+        "precss": "^1.4.0",
+        "autoprefixer": "^7.1.1",
+        "html-webpack-plugin": "^2.28.0",
+        "copy-webpack-plugin": "^4.0.1",
+        "extract-text-webpack-plugin": "^2.1.2",
+        "url-loader": "^0.5.8",
+        "css-loader": "^0.28.4",
+        "sass-loader": "^6.0.5",
+        "file-loader": "^0.11.2",
+        "json-loader": "^0.5.4",
+        "style-loader": "^0.18.2",
+        "babel-loader": "^7.0.0",
+        "postcss-loader": "^2.0.5",
+        "node-sass": "https://github.com/sass/node-sass/tarball/master"
     },
     "scripts": {
-        "build": "node ./bin/build",
-        "watch": "node ./bin/watch",
-        "compile": "node ./bin/compile"
+        "prepare": "./node_modules/.bin/webpack --progress",
+        "start": "npm run prepare && ./node_modules/.bin/nw . --nwjs_build_type=sdk",
+        "build": "npm run prepare && node ./bin/compile",
+        "clear": "rm -rf ./build ./dist"
     },
     "maintainers": [
         {

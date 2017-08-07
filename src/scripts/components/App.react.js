@@ -23,15 +23,13 @@ class App extends Component {
     }
 
     render() {
-        const theme = className( {
-            "./styles/themes/light/index.min.css" : !this.state.isThemeToggled,
-            "./styles/themes/dark/index.min.css"  :  this.state.isThemeToggled
+        const theme = className( "app qilin-panel", {
+            "is-light" : !this.state.isThemeToggled,
+            "is-dark"  :  this.state.isThemeToggled
         } );
 
         return (
-            <div className="app qilin-panel">
-                <link rel="stylesheet" href={theme} />
-
+            <div className={theme}>
                 <AppHeader  {...this.state} toggleTheme={this.toggleTheme} togglePreview={this.togglePreview} />
                 <AppContent {...this.state} />
                 <AppFooter  {...this.state} />

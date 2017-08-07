@@ -1,17 +1,12 @@
-# Minimized stuff:
-*.min.css
-compiled.js
+# Built stuff
+build
+cache
+dist
+*.min.*
 
 # Node stuff:
 node_modules
 *.log
-
-# NW.js stuff:
-*.app
-chromedriver
-minidump_stackwalk
-nwjc
-payload
 
 # OS Stuff:
 .DS_Store
