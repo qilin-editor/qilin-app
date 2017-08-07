@@ -14,6 +14,16 @@ module.exports = {
         filename : "index.min.js"
     },
 
+    watchOptions : {
+        ignored : [
+            path.resolve( __dirname, "./node_modules" ),
+            path.resolve( __dirname, "./build" ),
+            path.resolve( __dirname, "./cache" ),
+            path.resolve( __dirname, "./bin" ),
+            path.resolve( __dirname, "./src" )
+        ]
+    },
+
     devtool : "source-map",
     context : __dirname,
     target  : "node-webkit",
