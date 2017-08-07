@@ -6,8 +6,6 @@
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
     "license": "BSD License with Patents",
     "chromium-args": "--mixed-context --enable-experimental-web-platform-features",
-    "inject_js_start": "./client/scripts/injectables/StartInjectable.js",
-    "inject_js_end": "./client/scripts/injectables/EndInjectable.js",
     "window": {
         "min_height": 600,
         "min_width": 1000,
