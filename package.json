@@ -77,8 +77,8 @@
         "node-sass": "https://github.com/sass/node-sass/tarball/master"
     },
     "scripts": {
-        "prepare": "./node_modules/.bin/webpack --progress",
-        "watch": "./node_modules/.bin/webpack --progress --watch & ./node_modules/.bin/nw . --nwjs_build_type=sdk",
+        "prepare": "./node_modules/.bin/webpack --progress --display-optimization-bailout",
+        "watch": "./node_modules/.bin/webpack --progress --display-optimization-bailout --watch & ./node_modules/.bin/nw . --nwjs_build_type=sdk",
         "start": "npm run prepare && ./node_modules/.bin/nw . --nwjs_build_type=sdk",
         "build": "npm run prepare && node ./bin/compile",
         "clear": "rm -rf ./build ./dist"

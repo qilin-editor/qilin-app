@@ -61,6 +61,8 @@ module.exports = {
     },
 
     plugins : [
+        new Webpack.optimize.ModuleConcatenationPlugin(),
+
         new Webpack.LoaderOptionsPlugin( {
             options : {
                 postcss : [
