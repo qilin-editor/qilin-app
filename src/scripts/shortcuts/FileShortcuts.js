@@ -51,7 +51,7 @@ shortcut( "defmod-s", event => {
     return false;
 } );
 
-shortcut( "defmod-alt-s", event => {
+shortcut( "defmod-shift-s", event => {
     event.preventDefault();
     event.stopPropagation();
 
