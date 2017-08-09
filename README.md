@@ -1,15 +1,15 @@
 <div align="center">
-    <h1>Qilin Editor</h1>
+  <h1>Qilin Editor</h1>
 
-    [![Greenkeeper badge](https://badges.greenkeeper.io/Bartozzz/Qilin.svg)](https://greenkeeper.io/)
-    [![Build Status](https://img.shields.io/travis/Bartozzz/Qilin.svg)](https://travis-ci.org/Bartozzz/Qilin/)
-    [![Github Releases](https://img.shields.io/github/downloads/Bartozzz/Qilin/latest/total.svg)](https://github.com/Bartozzz/Qilin/releases)
-    [![Coverage Status](https://coveralls.io/repos/github/Bartozzz/Qilin/badge.svg?branch=master)](https://coveralls.io/github/Bartozzz/Qilin?branch=master)
-    <br>
+[![Greenkeeper badge](https://badges.greenkeeper.io/Bartozzz/Qilin.svg)](https://greenkeeper.io/)
+[![Build Status](https://img.shields.io/travis/Bartozzz/Qilin.svg)](https://travis-ci.org/Bartozzz/Qilin/)
+[![Github Releases](https://img.shields.io/github/downloads/Bartozzz/Qilin/latest/total.svg)](https://github.com/Bartozzz/Qilin/releases)
+[![Coverage Status](https://coveralls.io/repos/github/Bartozzz/Qilin/badge.svg?branch=master)](https://coveralls.io/github/Bartozzz/Qilin?branch=master)
+  <br>
 
-    <p>**Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports [`LaTeX`](https://www.latex-project.org/), [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.</p>
+  <p>**Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports [`LaTeX`](https://www.latex-project.org/), [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.</p>
 
-    ![Qilin light mode](http://i.imgur.com/0gxjJIo.png)
+![Qilin light mode](http://i.imgur.com/0gxjJIo.png)
 </div>
 
 <h2 align="center">Contributing</h2>
@@ -58,10 +58,10 @@ $ sudo npm run <command>
 | clean         | Deletes output, builds ands cache                 | ✓    |
 
 <div align="center">
-    <h2>Screenshots</h2>
+  <h2>Screenshots</h2>
 
-    <p>All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC). You can found some devblogs on my [Youtube channel](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN).</p>
+  <p>All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC). You can found some devblogs on my [Youtube channel](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN).</p>
 
-    ![Qilin light mode](http://i.imgur.com/0gxjJIo.png)
-    ![Qilin dark mode](http://i.imgur.com/eUWZvKw.png)
+![Qilin light mode](http://i.imgur.com/0gxjJIo.png)
+![Qilin dark mode](http://i.imgur.com/eUWZvKw.png)
 </div>
