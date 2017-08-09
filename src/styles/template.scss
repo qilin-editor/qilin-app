@@ -2,6 +2,9 @@
 
 @import "configuration/colors";
 
+@import "fonts/montserrat/Montserrat",
+        "fonts/sourcesanspro/SourceSansPro";
+
 @import "../../node_modules/codemirror/lib/codemirror",
         "../../node_modules/codemirror/addon/scroll/simplescrollbars",
 
