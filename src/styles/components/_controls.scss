@@ -18,6 +18,8 @@
         border-radius: 100%;
 
         transition: all 100ms ease;
+
+        -webkit-app-region: no-drag;
     }
 
     .control-close:hover    { background-color: $color-red; }

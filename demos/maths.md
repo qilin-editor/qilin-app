@@ -1,37 +1,18 @@
-## LaTeX (KaTeX) demo:
-
-More info at [KaTeX Documentation](https://khan.github.io/KaTeX/function-support.html).
-
-```katex
-f(x) = \int_{-\infty}^\infty
-    \hat f(\xi)\,e^{2 \pi i \xi x}
-    \,d\xi
-
-\begin{aligned}
-    a&=b+c \\
-    d+e&=f
-\end{aligned}
-```
+This is an excerpt from [Funkcja ζ Riemanna by Anna Gwiżdż](http://gamma.im.uj.edu.pl/~blocki/pmd/pm-gwizdz.pdf) which uses [AsciiMath](http://asciimath.org/).
 
 ---
-
-## AsciiMath demo:
-
-This is an excerpt from [Funkcja ζ Riemanna by Anna Gwiżdż](http://gamma.im.uj.edu.pl/~blocki/pmd/pm-gwizdz.pdf) which uses [AsciiMath](http://asciimath.org/).
 
 ### Definicja i podstawowe własności funkcji ζ
 
 ##### 1.1 Funkcja ζ Riemanna
 
-\
 Funkcja ζ Riemanna określona jest wzorem:
 
 ```math
 \zeta(s) = 1 + 1/2^s + ... + 1/n^s = \sum_{n=1}^{\infty} 1/n^s, \mathfrak{R(n)} > 1
 ```
 
-Dla `math s = \sigma + it` mamy `math |n - s| = n - \sigma`. A stąd wynika, że szereg ten jest zbieżny jednostajnie w każdym podzbiorze zwartym tej półpłaszczyzny i funkcja ζ jest tam holomorficzna.
-Co ciekawe, ten wzór jako pierwszy sformułował Euler. Wykazał on również, iż funkcja ta ma głębokie i istotne związki z liczbami pierwszymi, a dokładniej udowodnił, że:
+Dla `math s = \sigma + it` mamy `math |n - s| = n - \sigma`. A stąd wynika, że szereg ten jest zbieżny jednostajnie w każdym podzbiorze zwartym tej półpłaszczyzny i funkcja ζ jest tam holomorficzna. Co ciekawe, ten wzór jako pierwszy sformułował Euler. Wykazał on również, iż funkcja ta ma głębokie i istotne związki z liczbami pierwszymi, a dokładniej udowodnił, że:
 
 ```math
 \zeta(s) = 1/(1-1/2^s) * 1/(1-1/3^s) * 1/(1-1/5^s) * 1/(1-1/7^s) * ... = sum_{p\in\mathcalP} 1/(1-1/p^s)
@@ -50,7 +31,6 @@ o rozkładzie liczb pierwszych.
 
 ##### 1.2 Globalnie zbieżny szereg dla funkcji ζ
 
-\
 Powyżej zdefiniowaliśmy funkcję ζ dla liczb zespolonych s takich, że `math \mathfrak{R(n)} > 1`. Spróbujmy teraz znaleźć jej analityczne przedłużenie na większy obszar.
 Dla `math \mathfrak{R(n)} > 1`, mamy:
 
