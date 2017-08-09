@@ -1,5 +1,7 @@
 // main : ../template.scss
 
+@import "../fonts/SourceSansPro", "../fonts/Montserrat";
+
 .editor-preview {
     width: 100%;
     height: calc(100vh - 90px);
@@ -108,7 +110,7 @@
         margin-left: 2rem;
         padding-top: .55rem;
 
-        list-style-position: ouuside;
+        list-style-position: outside;
     }
 
     table {
