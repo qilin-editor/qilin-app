@@ -3,6 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/Bartozzz/Qilin.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/Bartozzz/Qilin.svg)](https://travis-ci.org/Bartozzz/Qilin/)
 [![Github Releases](https://img.shields.io/github/downloads/Bartozzz/Qilin/latest/total.svg)](https://github.com/Bartozzz/Qilin/releases)
+[![Coverage Status](https://coveralls.io/repos/github/Bartozzz/Qilin/badge.svg?branch=master)](https://coveralls.io/github/Bartozzz/Qilin?branch=master)
 
 **Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports [`LaTeX`](https://www.latex-project.org/), [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.
 
