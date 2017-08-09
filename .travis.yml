@@ -14,11 +14,17 @@ cache:
     - node_modules
 
 before_install:
-  - npm i -g npm
+  - npm set registry https://registry.npmjs.org/
+  - npm install -g npm
   - npm cache verify
+  - npm prune
+  - npm update
 
 install:
-  - npm i --no-optional --no-progress
+  - npm install
+
+after_install:
+  - npm rebuild node-sass
 
 script:
   - npm run clear
