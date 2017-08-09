@@ -20,7 +20,7 @@
 [![Github Closed Issues](https://img.shields.io/github/issues-closed-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/issues?q=is%3Aissue+is%3Aclosed)
 [![Github Pull Requests](https://img.shields.io/github/issues-pr-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/pulls)
 
-Changes and improvements are more than welcome! Feel free to fork and open a pull request. If you have found any issues, please [report them here](https://github.com/Bartozzz/Qilin/issues/new) - they are being tracked on [GitHub Issues](https://github.com/Bartozzz/Qilin/issues).
+**We want contributing to Qilin to be fun, enjoyable, and educational for anyone, and everyone.** Changes and improvements are more than welcome! Feel free to fork and open a pull request. If you have found any issues, please [report them here](https://github.com/Bartozzz/Qilin/issues/new) - they are being tracked on [GitHub Issues](https://github.com/Bartozzz/Qilin/issues).
 
 ### License
 
@@ -57,10 +57,13 @@ $ sudo npm run <command>
 | start         | Runs Qilin application                            | ×    |
 | clean         | Deletes output, builds ands cache                 | ✓    |
 
+<br>
+<br>
+
 <div align="center">
   <h2>Screenshots</h2>
 
-All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC). You can found some devblogs on my [Youtube channel](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN).
+All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC). You can find some devblogs on my [Youtube channel](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN).
 
 ![Qilin light mode](http://i.imgur.com/0gxjJIo.png)
 ![Qilin dark mode](http://i.imgur.com/eUWZvKw.png)
