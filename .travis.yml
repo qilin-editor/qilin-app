@@ -14,9 +14,6 @@ cache:
     - node_modules
 
 before_install:
-  - npm set registry https://registry.npmjs.org/
-  - npm install -g npm
-  - npm cache verify
   - npm prune
   - npm update
 
