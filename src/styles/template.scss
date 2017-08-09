@@ -3,7 +3,15 @@
 @import "fonts/montserrat/Montserrat",
         "fonts/sourcesanspro/SourceSansPro";
 
-@import "../../node_modules/codemirror/lib/codemirror",
+@import "../../node_modules/wireframe-framework/scss/configuration/functions/split-str",
+        "../../node_modules/wireframe-framework/scss/configuration/functions/strip-units",
+        "../../node_modules/wireframe-framework/scss/configuration/functions/to-length",
+        "../../node_modules/wireframe-framework/scss/configuration/functions/to-number",
+        "../../node_modules/wireframe-framework/scss/configuration/mixins/typography",
+        "../../node_modules/wireframe-framework/scss/configuration/responsive",
+        "../../node_modules/wireframe-framework/scss/configuration/typography",
+        "../../node_modules/wireframe-framework/scss/content/typography",
+        "../../node_modules/codemirror/lib/codemirror",
         "../../node_modules/codemirror/addon/scroll/simplescrollbars",
 
         "vendor/codeMirror",

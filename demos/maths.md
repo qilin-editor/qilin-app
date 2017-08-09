@@ -2,9 +2,9 @@ This is an excerpt from [Funkcja ζ Riemanna by Anna Gwiżdż](http://gamma.im.u
 
 ---
 
-### Definicja i podstawowe własności funkcji ζ
+# Definicja i podstawowe własności funkcji ζ
 
-##### 1.1 Funkcja ζ Riemanna
+## 1.1 Funkcja ζ Riemanna
 
 Funkcja ζ Riemanna określona jest wzorem:
 
@@ -49,7 +49,7 @@ Widać więc, że:
 
 A stąd już natychmiast otrzymujemy tezę. `katex \square`
 
-##### 1.2 Globalnie zbieżny szereg dla funkcji ζ
+## 1.2 Globalnie zbieżny szereg dla funkcji ζ
 
 Powyżej zdefiniowaliśmy funkcję ζ dla liczb zespolonych s takich, że `math \mathfrak{R(n)} > 1`. Spróbujmy teraz znaleźć jej analityczne przedłużenie na większy obszar. Dla `math \mathfrak{R(n)} > 1`, mamy:
 
