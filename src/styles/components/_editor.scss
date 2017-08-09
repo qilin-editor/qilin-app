@@ -1,16 +1,6 @@
 // main : ../template.scss
 
-@font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat.woff') format('woff'),
-    url('../fonts/Montserrat.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url('../fonts/SourceSansPro.woff') format('woff'),
-    url('../fonts/SourceSansPro.ttf') format('truetype');
-}
+@import "../fonts/SourceSansPro", "../fonts/Montserrat";
 
 .editor-preview {
     width: 100%;

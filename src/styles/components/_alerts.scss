@@ -1,10 +1,5 @@
 // main : ../template.scss
-
-@font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat.woff') format('woff'),
-    url('../fonts/Montserrat.ttf') format('truetype');
-}
+@import "../fonts/Montserrat";
 
 .alerts {
     position: relative;
