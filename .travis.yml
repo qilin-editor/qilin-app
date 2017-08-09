@@ -1,3 +1,5 @@
+sudo: true
+dist: trusty
 language: node_js
 
 node_js:
@@ -7,13 +9,15 @@ branches:
   only:
     - master
 
+cache:
+  directories:
+    - node_modules
+
 before_install:
   - npm i -g npm
   - npm cache verify
 
 install:
-  - npm i -g node-gyp-install
-  - node-gyp-install
   - npm i --no-optional --no-progress
 
 script:
