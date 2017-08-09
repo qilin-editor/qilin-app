@@ -8,11 +8,13 @@ branches:
     - master
 
 before_install:
-  - npm i -g npm
-  - npm cache verify
+  - bin/run-integration npm i -g npm
+  - bin/run-integration npm cache verify
 
 install:
-  - npm i
+  - bin/run-integration npm i -g node-gyp-install
+  - bin/run-integration node-gyp-install
+  - bin/run-integration npm i --no-optional --no-progress
 
 script:
   - npm run clear
