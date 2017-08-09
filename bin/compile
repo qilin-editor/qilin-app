@@ -5,20 +5,15 @@ var path    = require( "path" );
 
 var nw = new Builder( {
     files : [
-        path.resolve( __dirname, "../**/**" ),
-        `!${path.resolve( __dirname, "../bin" )}`,
-        `!${path.resolve( __dirname, "../src" )}`,
-        `!${path.resolve( __dirname, "../build" )}`,
-        `!${path.resolve( __dirname, "../cache" )}`,
-        `!${path.resolve( __dirname, "../demos" )}`,
-        `!${path.resolve( __dirname, "../node_modules" )}`
+        path.resolve( __dirname, "../package.json" ),
+        path.resolve( __dirname, "../dist/**" )
     ],
 
-    platforms   : [ "osx64", "win", "linux" ],
+    platforms   : [ "osx64", "win64", "linux64" ],
     version     : "latest"
 } );
 
-nw.on( "log",  console.log );
+nw.on( "log", console.log );
 
 nw.build()
     .then( function () {
