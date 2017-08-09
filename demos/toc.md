@@ -1,12 +1,10 @@
-A partir de documents et de vos connaissances, rédigez une synthèse argumentée de 30 lignes montrant que la chiralité et la conformation des molécules leur donnent des propriétés biologiques particuliers.
-
 [[toc]]
 
 # Définitions
 
 ## Stéréoismorères de configuration
 
-On appelle **stéréoisoméres de configuration** deux strucutres moleculairse avec la même formule brute et disposition des atomes dans l'espace differente - pour passer de l'un à l'autre il est nécessaire de permuter des liaisons.
+On appelle **stéréoisoméres de configuration** deux strucutres moleculairse avec la même formule brute et disposition des atomes dans l'espace differente - pour passer de l'un à l'autre il est nécessaire de *permuter des liaisons*.
 
 ## Énantiomère
 
@@ -38,17 +36,17 @@ Schéma qui nous montre les interaction entre un récepteur olfactif et deux én
 
 > Lorsque la molécule utilisée comme medicament est chirale, ses deux énantiomères interagissent différemment avec les récepteurs biologiques.
 
-Example du medicament avec deux énantiomères - Lévodopa:
+Exemple du medicament avec deux énantiomères - Lévodopa:
 - l'un agit comme médicament;
 - l'autre est toxique;
 
 Pour éviter les effets secondaires du médicaments dues à l'un des énantiomères, il est produit sous forme énantiomériquement pure et non sous forme de mélange racémique. Ainsi, seulement l'énantiomère correspondant au récepteurs constitue le médicament.
 
-## Document 4:  conformations
+## Document 4: conformations
 
 On apprends que les protéines adoptent des confirmations differentes grace aux rotations autour de cetaines liaisons simples d'acides aminés qui le composent. Les conformations d'une protéine sont stabilisés par plusieurs types de liaisons et d'interactions électrostatiques. Des conformations differentes d'une protéine leur conferent des propriétés differentes.
 
-## Document 5  conformations
+## Document 5: conformations
 
 La maladie de Creutzfeldt-Jakob est l'exemple des effets exercés par une conformation differente de la protéine naturelle PrPc - elle cause des troubles neurologiques et d'autres anomalies chez le sujet infecté. Elle est transmisible par simple contact entre un prion normal (PrPc) et un prion anormal (PrP). Ces agents infectieux s'accumulent dans le systeme nerveux. La transmision de cete maladie peut être facilité par la consumption des organes vitaux d'un individu atteint, par exemple les viscères/le cerveau chez un cadavre.
 
@@ -83,7 +81,7 @@ Le nez est doté de recepteurs olfactifs qui sont des molécules chirales. Ces d
 Lorsque la molécule utilisée comme medicament est chirale, ses deux énantiomères interagissent différemment avec les récepteurs biologiques. Pour éviter les effets secondaires du médicaments dues à l'un des énantiomères, il est produit sous forme énantiomériquement pure et non sous forme de mélange racémique. Ainsi, seulement l'énantiomère correspondant au récepteurs constitue le médicament. C'est l'example du medicament Lévodopa: l'un de ses énantiomères agit comme médicament et l'autre est toxique.
 
 ###### Transition:
-Dfsdfsdfsdfsdfsd
+…
 
 ## Les propriétés biologiques dues à des conformations de molécules differentes
 
@@ -91,7 +89,7 @@ Dfsdfsdfsdfsdfsd
 Les protéines adoptent des confirmations differentes grace aux rotations autour de cetaines liaisons simples d'acides aminés qui le composent. Les conformations d'une protéine sont stabilisés par plusieurs types de liaisons et d'interactions électrostatiques. Des conformations differentes d'une protéine leur conferent des propriétés differentes. La maladie de Creutzfeldt-Jakob est l'exemple des effets exercés par une conformation differente de la protéine naturelle PrPc - elle cause des troubles neurologiques et d'autres anomalies chez le sujet infecté. Elle est transmisible par simple contact entre un prion normal (PrPc) et un prion anormal (PrP). Ces agents infectieux s'accumulent dans le systeme nerveux. La transmision de cete maladie peut être facilité par la consumption des organes vitaux d'un individu atteint, par exemple les viscères/le cerveau chez un cadavre.
 
 ###### Transition:
-Dfsdfsdfsdfsdfsd
+…
 
 ## Conclusion
 
