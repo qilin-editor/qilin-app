@@ -70,8 +70,6 @@
         } ],
 
         "block-scoped-var"                  : [ "error" ],
-
-        "padded-blocks"                     : [ "error", "never" ],
-        "object-shorthand"                  : [ "error", "consistent" ]
+        "padded-blocks"                     : [ "error", "never" ]
     }
 }

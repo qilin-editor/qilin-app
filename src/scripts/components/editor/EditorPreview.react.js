@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import { observer }         from "mobx-react";
+import { inject, observer } from "mobx-react";
+import PropTypes            from "prop-types";
 import Markdown             from "markdown-it";
-import EditorStore          from "../../stores/EditorStore";
 
+@inject( [ "editorStore" ] )
 @observer
 class EditorPreview extends Component {
+    static propTypes = {
+        editorStore : PropTypes.object
+    }
+
     componentWillMount() {
         this.markdown = new Markdown( {
             html       : true,
@@ -27,7 +32,7 @@ class EditorPreview extends Component {
         return (
             <div
                 className="editor-preview qilin-panel typo"
-                dangerouslySetInnerHTML={{ __html : this.markdown.render( EditorStore.content || "") }}
+                dangerouslySetInnerHTML={{ __html : this.markdown.render( this.props.editorStore.content ) }}
             />
         );
     }

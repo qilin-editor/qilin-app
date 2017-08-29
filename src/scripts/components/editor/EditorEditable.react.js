@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import { observer }         from "mobx-react";
+import { inject, observer } from "mobx-react";
 import CodeMirrorComponent  from "react-codemirror";
-import EditorStore          from "../../stores/EditorStore";
+import PropTypes            from "prop-types";
 
+@inject( [ "editorStore" ] )
 @observer
 class EditorEditable extends Component {
+    static propTypes = {
+        editorStore : PropTypes.object
+    }
+
     state = {
         options : {
             mode                : "gfm",
@@ -30,7 +35,7 @@ class EditorEditable extends Component {
     }
 
     editorDidChange = value => {
-        EditorStore.changeContent( value );
+        this.props.editorStore.changeContent( value );
     }
 
     render() {
@@ -38,7 +43,7 @@ class EditorEditable extends Component {
             <div className="editor-editable qilin-panel">
                 <CodeMirrorComponent
                     options={this.state.options}
-                    value={EditorStore.content || ""}
+                    value={this.props.editorStore.content}
                     onChange={this.editorDidChange}
                 />
             </div>

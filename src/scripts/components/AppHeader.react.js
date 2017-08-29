@@ -1,16 +1,17 @@
 import ThemeIcon            from "../../images/icons/menu/theme.svg";
 import PreviewIcon          from "../../images/icons/menu/preview.svg";
 import React, { Component } from "react";
-import { observer }         from "mobx-react";
+import { inject, observer } from "mobx-react";
 import PropTypes            from "prop-types";
 import className            from "classnames";
 import ReactSVG             from "react-svg";
 import Controls             from "./controls/Controls.react";
-import EditorStore          from "../stores/EditorStore";
 
+@inject( [ "editorStore" ] )
 @observer
 class AppHeader extends Component {
     static propTypes = {
+        editorStore      : PropTypes.object,
         toggleTheme      : PropTypes.func.isRequired,
         togglePreview    : PropTypes.func.isRequired,
         isThemeToggled   : PropTypes.bool.isRequired,
@@ -18,8 +19,8 @@ class AppHeader extends Component {
     }
 
     revealFolder = () => {
-        if ( EditorStore.path !== "" ) {
-            require( "opn" )( EditorStore.directory );
+        if ( this.props.editorStore.path ) {
+            require( "opn" )( this.props.editorStore.directory );
         }
     }
 
@@ -33,7 +34,7 @@ class AppHeader extends Component {
         } );
 
         const titleClasses = className( "app-header-title", {
-            "is-clickable" : EditorStore.path !== ""
+            "is-clickable" : this.props.editorStore.path
         } );
 
         return (
@@ -41,7 +42,7 @@ class AppHeader extends Component {
                 <Controls />
 
                 <div className={titleClasses} onClick={this.revealFolder}>
-                    {EditorStore.filename}
+                    {this.props.editorStore.filename}
                 </div>
 
                 <div className="app-header-buttons">

@@ -1,5 +1,6 @@
 import React        from "react";
 import { render }   from "react-dom";
+import { Provider } from "mobx-react";
 import App          from "./components/App.react";
 
 import "./shortcuts/FileShortcuts";
@@ -14,4 +15,13 @@ import "codemirror/addon/dialog/dialog";
 import "codemirror/keymap/sublime";
 import "markdown-it-asciimath/ASCIIMathTeXImg";
 
-render( <App />, document.getElementById( "app" ) );
+const stores = {
+    alertsStore : require( "./stores/AlertStore" ),
+    editorStore : require( "./stores/EditorStore" )
+};
+
+render( (
+    <Provider {...stores}>
+        <App />
+    </Provider>
+), document.getElementById( "app" ) );
