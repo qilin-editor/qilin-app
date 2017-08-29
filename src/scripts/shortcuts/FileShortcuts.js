@@ -10,6 +10,7 @@ function openFile( path ) {
         } else {
             EditorStore.changePath( path );
             EditorStore.changeContent( content );
+            EditorStore.saved = true;
         }
     } );
 }
@@ -21,6 +22,7 @@ function saveFile( path, content ) {
         } else {
             EditorStore.changePath( path );
             EditorStore.changeContent( content );
+            EditorStore.saved = true;
         }
     } );
 }

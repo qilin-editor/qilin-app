@@ -24,6 +24,15 @@ class AppHeader extends Component {
         }
     }
 
+    renderFilename = () => {
+        const { filename, saved } = this.props.editorStore;
+        const saveIndicator = filename ? ( saved ? "" : "*" ) : "";
+
+        return (
+            <span>{`${filename || "Untitled"}${saveIndicator}`}</span>
+        );
+    }
+
     render() {
         const themeIcon = className( "qilin-button-icon", {
             "is-active" : this.props.isThemeToggled
@@ -42,7 +51,7 @@ class AppHeader extends Component {
                 <Controls />
 
                 <div className={titleClasses} onClick={this.revealFolder}>
-                    {this.props.editorStore.filename}
+                    {this.renderFilename()}
                 </div>
 
                 <div className="app-header-buttons">
