@@ -27,7 +27,7 @@ class EditorPreview extends Component {
         return (
             <div
                 className="editor-preview qilin-panel typo"
-                dangerouslySetInnerHTML={{ __html : this.markdown.render( EditorStore.content ) }}
+                dangerouslySetInnerHTML={{ __html : this.markdown.render( EditorStore.content || "") }}
             />
         );
     }

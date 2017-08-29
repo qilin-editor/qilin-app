@@ -38,7 +38,7 @@ class EditorEditable extends Component {
             <div className="editor-editable qilin-panel">
                 <CodeMirrorComponent
                     options={this.state.options}
-                    value={EditorStore.content}
+                    value={EditorStore.content || ""}
                     onChange={this.editorDidChange}
                 />
             </div>

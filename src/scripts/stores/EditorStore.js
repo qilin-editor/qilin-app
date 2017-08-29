@@ -14,7 +14,7 @@ class EditorStore {
     }
 
     @computed get filename() {
-        return this.path != "" ? path.basename( this.path ) : "Untitled";
+        return this.path ? path.basename( this.path ) : "Untitled";
     }
 
     @computed get directory() {
