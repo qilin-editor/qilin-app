@@ -3,11 +3,8 @@ const Webpack           = require( "webpack" );
 const HtmlWebpackPlugin = require( "html-webpack-plugin" );
 const ExtractTextPlugin = require( "extract-text-webpack-plugin" );
 
-module.exports = {
-    entry : [
-        "babel-polyfill",
-        "./src/index.js"
-    ],
+const config = {
+    entry : "./src/index.js",
 
     output : {
         path     : path.resolve( __dirname, "./dist" ),
@@ -19,8 +16,8 @@ module.exports = {
             path.resolve( __dirname, "./node_modules" ),
             path.resolve( __dirname, "./build" ),
             path.resolve( __dirname, "./cache" ),
-            path.resolve( __dirname, "./bin" ),
-            path.resolve( __dirname, "./src" )
+            path.resolve( __dirname, "./dist" ),
+            path.resolve( __dirname, "./bin" )
         ]
     },
 
@@ -84,18 +81,24 @@ module.exports = {
         } ),
 
         new Webpack.DefinePlugin( {
-            "process.env" : {
-                NODE_ENV : JSON.stringify( "development" ),
-            },
-        } ),
-
-        // new Webpack.optimize.UglifyJsPlugin( {
-        //     compress : {
-        //         warnings : false,
-        //     },
-        //     output : {
-        //         comments : false,
-        //     },
-        // } )
+            "process.env.NODE_ENV" : JSON.stringify( process.env.NODE_ENV )
+        } )
     ]
 };
+
+console.log( process.env.NODE_ENV );
+
+if ( process.env.NODE_ENV === "production" ) {
+    config.plugins.push(
+        new Webpack.optimize.UglifyJsPlugin( {
+            compress : {
+                warnings : false
+            },
+            output : {
+                comments : false
+            }
+        } )
+    );
+}
+
+module.exports = config;

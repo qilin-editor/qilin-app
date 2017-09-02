@@ -79,10 +79,10 @@
         "node-sass": "^4.5.3"
     },
     "scripts": {
-        "prepare": "./node_modules/.bin/webpack --progress --display-optimization-bailout",
-        "watch": "set NODE_ENV=development && ./node_modules/.bin/webpack --progress --display-optimization-bailout --watch & ./node_modules/.bin/nw . --nwjs_build_type=sdk",
-        "start": "set NODE_ENV=production && npm run prepare && ./node_modules/.bin/nw . --nwjs_build_type=sdk",
-        "build": "set NODE_ENV=production && npm run prepare && node ./bin/compile",
+        "prepare": "NODE_ENV=production ./node_modules/.bin/webpack --progress",
+        "watch": "NODE_ENV=development ./node_modules/.bin/webpack --progress --watch & ./node_modules/.bin/nw . --nwjs_build_type=sdk",
+        "start": "npm run prepare && ./node_modules/.bin/nw . --nwjs_build_type=sdk",
+        "build": "npm run prepare && node ./bin/compile",
         "clear": "rm -rf ./build ./dist"
     },
     "maintainers": [
