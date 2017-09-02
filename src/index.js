@@ -1,5 +1,6 @@
 import "./styles/template.scss";
 import "./scripts/bootstrap.js";
 
-// Live reloading on changes:
-import "nw-dev";
+if ( process.NODE_ENV === "development" ) {
+    require( "nw-dev" );
+}
