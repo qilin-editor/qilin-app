@@ -18,7 +18,7 @@ class AppHeader extends Component {
         toggleFormula    : PropTypes.func.isRequired,
         isThemeToggled   : PropTypes.bool.isRequired,
         isPreviewToggled : PropTypes.bool.isRequired,
-        isForumlaToggled : PropTypes.bool.isRequired
+        isFormulaToggled : PropTypes.bool.isRequired
     }
 
     revealFolder = () => {
@@ -42,7 +42,7 @@ class AppHeader extends Component {
         } );
 
         const forumlaIcon = className( "qilin-button-icon", {
-            "is-active" : this.props.isForumlaToggled
+            "is-active" : this.props.isFormulaToggled
         } );
 
         const previewIcon = className( "qilin-button-icon", {
