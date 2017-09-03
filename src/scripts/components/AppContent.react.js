@@ -4,10 +4,13 @@ import className            from "classnames";
 import SplitPane            from "react-split-pane";
 import EditorEditable       from "./editor/EditorEditable.react";
 import EditorPreview        from "./editor/EditorPreview.react";
+import EditorForumla        from "./editor/formula/EditorForumla.react";
 
 class AppContent extends Component {
     static propTypes = {
-        isPreviewToggled : PropTypes.bool.isRequired
+        toggleFormula    : PropTypes.func.isRequired,
+        isPreviewToggled : PropTypes.bool.isRequired,
+        isFormulaToggled : PropTypes.bool.isRequired
     }
 
     render() {
@@ -28,6 +31,11 @@ class AppContent extends Component {
                         <EditorEditable />
                         <EditorPreview />
                     </SplitPane>
+
+                    <EditorForumla
+                        isOpen={this.props.isFormulaToggled}
+                        close={this.props.toggleFormula}
+                    />
                 </div>
             </div>
         );

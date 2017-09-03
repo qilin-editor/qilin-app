@@ -1,0 +1,14 @@
+.qilin-popup {
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-border-light;
+
+    box-shadow: 0 5px 30px -5px rgba(black, .25);
+
+    &-header {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: $color-border-light;
+    }
+}

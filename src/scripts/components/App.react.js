@@ -7,12 +7,19 @@ import AppFooter            from "./AppFooter.react";
 class App extends Component {
     state = {
         isPreviewToggled : false,
+        isFormulaToggled : false,
         isThemeToggled   : false
     }
 
     togglePreview = () => {
         this.setState( {
             isPreviewToggled : !this.state.isPreviewToggled
+        } );
+    }
+
+    toggleFormula = () => {
+        this.setState( {
+            isFormulaToggled : !this.state.isFormulaToggled
         } );
     }
 
@@ -30,8 +37,16 @@ class App extends Component {
 
         return (
             <div className={theme}>
-                <AppHeader  {...this.state} toggleTheme={this.toggleTheme} togglePreview={this.togglePreview} />
-                <AppContent {...this.state} />
+                <AppHeader {...this.state}
+                    toggleTheme={this.toggleTheme}
+                    togglePreview={this.togglePreview}
+                    toggleFormula={this.toggleFormula}
+                />
+
+                <AppContent {...this.state}
+                    toggleFormula={this.toggleFormula}
+                />
+
                 <AppFooter  {...this.state} />
             </div>
         );

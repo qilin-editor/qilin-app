@@ -7,7 +7,6 @@
     min-height: 20px;
 
     margin: 7px;
-    padding: 0;
 
     border-width: 0;
     border-radius: 4px;
@@ -15,11 +14,16 @@
 
     overflow-x: hidden;
     overflow-y: hidden;
+
     outline: none;
     cursor: pointer;
 
     -webkit-appearance: none;
     -webkit-app-region: no-drag;
+
+    &.is-big {
+        padding: .5rem 1rem;
+    }
 
     &-icon {
         height: 14px;

@@ -1,5 +1,6 @@
 import ThemeIcon            from "../../images/icons/menu/theme.svg";
 import PreviewIcon          from "../../images/icons/menu/preview.svg";
+import FormulaIcon          from "../../images/icons/menu/formula.svg";
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
 import PropTypes            from "prop-types";
@@ -14,8 +15,10 @@ class AppHeader extends Component {
         editorStore      : PropTypes.object,
         toggleTheme      : PropTypes.func.isRequired,
         togglePreview    : PropTypes.func.isRequired,
+        toggleFormula    : PropTypes.func.isRequired,
         isThemeToggled   : PropTypes.bool.isRequired,
-        isPreviewToggled : PropTypes.bool.isRequired
+        isPreviewToggled : PropTypes.bool.isRequired,
+        isForumlaToggled : PropTypes.bool.isRequired
     }
 
     revealFolder = () => {
@@ -38,6 +41,10 @@ class AppHeader extends Component {
             "is-active" : this.props.isThemeToggled
         } );
 
+        const forumlaIcon = className( "qilin-button-icon", {
+            "is-active" : this.props.isForumlaToggled
+        } );
+
         const previewIcon = className( "qilin-button-icon", {
             "is-active" : this.props.isPreviewToggled
         } );
@@ -57,6 +64,10 @@ class AppHeader extends Component {
                 <div className="app-header-buttons">
                     <div className="qilin-button" onClick={this.props.toggleTheme}>
                         <ReactSVG className={themeIcon} path={ThemeIcon} />
+                    </div>
+
+                    <div className="qilin-button" onClick={this.props.toggleFormula}>
+                        <ReactSVG className={forumlaIcon} path={FormulaIcon} />
                     </div>
 
                     <div className="qilin-button" onClick={this.props.togglePreview}>

@@ -1,0 +1,54 @@
+.react-draggable {
+    position: relative;
+
+    // Fix position:
+    z-index: 1;
+}
+
+.qilin-popup {
+    display: none;
+    position: absolute;
+
+    // Center by default:
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    width: 500px;
+    min-height: 300px;
+
+    &.is-open {
+        display: block;
+    }
+
+    &-header {
+        position: relative;
+
+        height: 50px;
+        width: 100%;
+
+        cursor: -webkit-grab;
+
+        & {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-close,
+        &-done {
+            position: absolute;
+            top: 2px;
+
+            cursor: pointer;
+        }
+
+        &-close {
+            left: 0;
+        }
+
+        &-done {
+            right: 0;
+        }
+    }
+}
