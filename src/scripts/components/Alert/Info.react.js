@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes            from "prop-types";
 import ReactSVG             from "react-svg";
 
-class AlertsInfo extends Component {
+class AlertInfo extends Component {
     static propTypes = {
         index   : PropTypes.number.isRequired,
         message : PropTypes.string.isRequired
@@ -19,4 +19,4 @@ class AlertsInfo extends Component {
     }
 }
 
-export default AlertsInfo;
+export default AlertInfo;

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ReactTransitionGroup from "react-addons-css-transition-group";
-import AlertInfo            from "./alerts/AlertInfo.react";
-import AlertFailure         from "./alerts/AlertFailure.react";
-import AlertSuccess         from "./alerts/AlertSuccess.react";
+import AlertInfo            from "./Alert/Info.react";
+import AlertFailure         from "./Alert/Failure.react";
+import AlertSuccess         from "./Alert/Success.react";
 
-class AppFooter extends Component {
+class Footer extends Component {
     state = {
         info    : [],
         failure : [],
@@ -45,4 +45,4 @@ class AppFooter extends Component {
     }
 }
 
-export default AppFooter;
+export default Footer;

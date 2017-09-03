@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import className            from "classnames";
-import AppHeader            from "./AppHeader.react";
-import AppContent           from "./AppContent.react";
-import AppFooter            from "./AppFooter.react";
+import Header               from "./Header.react";
+import Content              from "./Content.react";
+import Footer               from "./Footer.react";
 
 class App extends Component {
     state = {
@@ -37,17 +37,17 @@ class App extends Component {
 
         return (
             <div className={theme}>
-                <AppHeader {...this.state}
+                <Header {...this.state}
                     toggleTheme={this.toggleTheme}
                     togglePreview={this.togglePreview}
                     toggleFormula={this.toggleFormula}
                 />
 
-                <AppContent {...this.state}
+                <Content {...this.state}
                     toggleFormula={this.toggleFormula}
                 />
 
-                <AppFooter  {...this.state} />
+                <Footer {...this.state} />
             </div>
         );
     }

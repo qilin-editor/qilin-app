@@ -1,6 +1,6 @@
 import React, { Component }         from "react";
 import PropTypes                    from "prop-types";
-import EditorForumlaHelpGroupSymbol from "./EditorForumlaHelpGroupSymbol.react";
+import EditorForumlaHelpGroupSymbol from "./HelpGroupSymbol.react";
 import { getMarkdown }              from "../../../utils/MarkdownUtils";
 
 class EditorForumlaHelpGroup extends Component {

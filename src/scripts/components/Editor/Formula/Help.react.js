@@ -1,6 +1,6 @@
 import React, { Component }     from "react";
 import PropTypes                from "prop-types";
-import EditorForumlaHelpGroup   from "./EditorFormulaHelpGroup.react";
+import EditorForumlaHelpGroup   from "./HelpGroup.react";
 import KatexConstant            from "../../../constants/katex";
 
 class EditorForumlaHelp extends Component {

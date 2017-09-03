@@ -6,11 +6,11 @@ import { inject, observer } from "mobx-react";
 import PropTypes            from "prop-types";
 import className            from "classnames";
 import ReactSVG             from "react-svg";
-import Controls             from "./controls/Controls.react";
+import Controls             from "./Control/Wrapper.react";
 
 @inject( [ "editorStore" ] )
 @observer
-class AppHeader extends Component {
+class Header extends Component {
     static propTypes = {
         editorStore      : PropTypes.object,
         toggleTheme      : PropTypes.func.isRequired,
@@ -79,4 +79,4 @@ class AppHeader extends Component {
     }
 }
 
-export default AppHeader;
+export default Header;

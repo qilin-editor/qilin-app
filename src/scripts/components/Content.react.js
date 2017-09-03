@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import PropTypes            from "prop-types";
 import className            from "classnames";
 import SplitPane            from "react-split-pane";
-import EditorEditable       from "./editor/EditorEditable.react";
-import EditorPreview        from "./editor/EditorPreview.react";
-import EditorForumla        from "./editor/formula/EditorForumla.react";
+import EditorEditable       from "./Editor/Editable.react";
+import EditorPreview        from "./Editor/Preview.react";
+import EditorForumlaPopup   from "./Editor/Formula/Popup.react";
 
-class AppContent extends Component {
+class Content extends Component {
     static propTypes = {
         toggleFormula    : PropTypes.func.isRequired,
         isPreviewToggled : PropTypes.bool.isRequired,
@@ -32,7 +32,7 @@ class AppContent extends Component {
                         <EditorPreview />
                     </SplitPane>
 
-                    <EditorForumla
+                    <EditorForumlaPopup
                         isOpen={this.props.isFormulaToggled}
                         close={this.props.toggleFormula}
                     />
@@ -42,4 +42,4 @@ class AppContent extends Component {
     }
 }
 
-export default AppContent;
+export default Content;

@@ -3,11 +3,11 @@ import Draggable                        from "react-draggable";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PropTypes                        from "prop-types";
 import className                        from "classnames";
-import FormulaHelp                      from "./EditorFormulaHelp.react";
-import FormulaEditor                    from "./EditorFormulaEditor.react";
-import FormulaPreview                   from "./EditorFormulaPreview.react";
+import FormulaHelp                      from "./Help.react";
+import FormulaEditor                    from "./Editor.react";
+import FormulaPreview                   from "./Preview.react";
 
-class EditorForumla extends Component {
+class EditorForumlaPopup extends Component {
     static propTypes = {
         isOpen : PropTypes.bool.isRequired,
         close  : PropTypes.func.isRequired
@@ -102,4 +102,4 @@ class EditorForumla extends Component {
     }
 }
 
-export default EditorForumla;
+export default EditorForumlaPopup;

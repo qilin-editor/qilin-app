@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes            from "prop-types";
 import ReactSVG             from "react-svg";
 
-class AlertsSuccess extends Component {
+class AlertFailure extends Component {
     static propTypes = {
         index   : PropTypes.number.isRequired,
         message : PropTypes.string.isRequired
@@ -10,8 +10,8 @@ class AlertsSuccess extends Component {
 
     render() {
         return (
-            <div className="alert-success qilin-panel" style={ { zIndex : this.props.index } }>
-                <ReactSVG path="images/icons/alerts/info.svg" className="alert-icon" />
+            <div className="alert-failure qilin-panel" style={{ zIndex : this.props.index }}>
+                <ReactSVG path="images/icons/alerts/error.svg" className="alert-icon" />
 
                 <div className="alert-message">{this.props.message}</div>
             </div>
@@ -19,4 +19,4 @@ class AlertsSuccess extends Component {
     }
 }
 
-export default AlertsSuccess;
+export default AlertFailure;
