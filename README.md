@@ -28,17 +28,10 @@ Project was created and developed by [Bartosz Łaniewski](https://github.com/Bar
 
 ### Development
 
-We have prepared multiple commands to help you develop Qilin on your own. Don't forget to install all `Node.js` dependencies from [npm](https://www.npmjs.com/). You
-will need a local copy of [Node.js](https://nodejs.org/en/) installed on your machine.
+We have prepared multiple commands to help you develop Qilin on your own. Don't forget to install all `Node.js` dependencies from [npm](https://www.npmjs.com/). You will need a local copy of [Node.js](https://nodejs.org/en/) installed on your machine.
 
 ```bash
 $ sudo npm install
-```
-
-Eventually, you might need to install `node-sass` manually, with the following command:
-
-```bash
-$ sudo npm install node-sass
 ```
 
 #### Usage
@@ -56,6 +49,10 @@ $ sudo npm run <command>
 | watch         | Runs Qilin application and re-compiles on changes | ✓    |
 | start         | Runs Qilin application                            | ×    |
 | clean         | Deletes output, builds ands cache                 | ✓    |
+
+### Installation
+
+There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions.
 
 <br>
 <br>
