@@ -1,79 +1,100 @@
-import React, { Component }         from "react";
-import PropTypes                    from "prop-types";
-import { getMarkdown }              from "../../../utils/MarkdownUtils";
-import AccentsConstants             from "../../../constants/katex/AccentsConstant";
-import AnnotationsConstant          from "../../../constants/katex/AnnotationsConstant";
-import ArrowsConstant               from "../../../constants/katex/ArrowsConstant";
-import BigOperatorsConstant         from "../../../constants/katex/BigOperatorsConstant";
-import BinaryOperatorsConstant      from "../../../constants/katex/BinaryOperatorsConstant";
-import BinomialCoefficientsConstant from "../../../constants/katex/BinomialCoefficientsConstant";
-import DeliminersConstant           from "../../../constants/katex/DeliminersConstant";
-import EnvironmentsConstant         from "../../../constants/katex/EnvironmentsConstant";
-import ExtensibleArrowsConstant     from "../../../constants/katex/ExtensibleArrowsConstant";
-import FractionsConstant            from "../../../constants/katex/FractionsConstant";
-import GreekLettersConstant         from "../../../constants/katex/GreekLettersConstant";
-import LogicAndSetTheoryConstant    from "../../../constants/katex/LogicAndSetTheoryConstant";
-import MathOperatorsConstant        from "../../../constants/katex/MathOperatorsConstant";
-import NegatedRelationsConstant     from "../../../constants/katex/NegatedRelationsConstant";
-import OtherLettersConstant         from "../../../constants/katex/OtherLettersConstant";
-import RelationsConstant            from "../../../constants/katex/RelationsConstant";
-import VerticalLayoutConstant       from "../../../constants/katex/VerticalLayoutConstant";
-
+import React, { Component }     from "react";
+import PropTypes                from "prop-types";
+import EditorForumlaHelpGroup   from "./EditorFormulaHelpGroup.react";
+import KatexConstant            from "../../../constants/katex";
 
 class EditorForumlaHelp extends Component {
     static propTypes = {
         choose : PropTypes.func.isRequired
     }
 
-    componentWillMount() {
-        this.markdown = getMarkdown( {
-            html       : true,
-            linkify    : true,
-            typography : true
-        } );
-    }
-
-    renderGroup = group => {
-        return Object.keys( group ).map( id => {
-            const symbol = group[ id ];
-
-            return this.renderSymbol( id, symbol );
-        } );
-    }
-
-    renderSymbol = ( id, symbol ) => {
-        return (
-            <div
-                key={id}
-                className="formula-help-symbol"
-                onClick={() => this.props.choose( symbol, id )}
-                dangerouslySetInnerHTML={{ __html : this.markdown.render(
-                    "```katex\n" + symbol.content + "\n```"
-                ) }}
-            />
-        );
-    }
-
     render() {
         return (
             <div className="formula-help">
-                {this.renderGroup( AccentsConstants )}
-                {this.renderGroup( AnnotationsConstant )}
-                {this.renderGroup( ArrowsConstant )}
-                {this.renderGroup( BigOperatorsConstant )}
-                {this.renderGroup( BinaryOperatorsConstant )}
-                {this.renderGroup( BinomialCoefficientsConstant )}
-                {this.renderGroup( DeliminersConstant )}
-                {this.renderGroup( EnvironmentsConstant )}
-                {this.renderGroup( ExtensibleArrowsConstant )}
-                {this.renderGroup( FractionsConstant )}
-                {this.renderGroup( GreekLettersConstant )}
-                {this.renderGroup( LogicAndSetTheoryConstant )}
-                {this.renderGroup( MathOperatorsConstant )}
-                {this.renderGroup( NegatedRelationsConstant )}
-                {this.renderGroup( OtherLettersConstant )}
-                {this.renderGroup( RelationsConstant )}
-                {this.renderGroup( VerticalLayoutConstant )}
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Accents"
+                    symbols={KatexConstant.Accents}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Annotations"
+                    symbols={KatexConstant.Annotations}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Arrows"
+                    symbols={KatexConstant.Arrows}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Big operators"
+                    symbols={KatexConstant.BigOperators}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Binary operators"
+                    symbols={KatexConstant.BinaryOperators}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Binomial coefficients"
+                    symbols={KatexConstant.BinomialCoefficients}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Deliminers"
+                    symbols={KatexConstant.Deliminers}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Environments"
+                    symbols={KatexConstant.Environments}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Extensible arrows"
+                    symbols={KatexConstant.ExtensibleArrows}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Fractions"
+                    symbols={KatexConstant.Fractions}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Greek letters"
+                    symbols={KatexConstant.GreekLetters}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Logic and Set Theory"
+                    symbols={KatexConstant.LogicAndSetTheory}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Math operators"
+                    symbols={KatexConstant.MathOperators}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Negated relations"
+                    symbols={KatexConstant.NegatedRelations}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Other letters"
+                    symbols={KatexConstant.OtherLetters}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Relations"
+                    symbols={KatexConstant.Relations}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Vertical layout"
+                    symbols={KatexConstant.VerticalLayout}
+                />
             </div>
         );
     }
