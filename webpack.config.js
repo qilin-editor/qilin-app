@@ -40,8 +40,8 @@ const config = {
                 use  : "json-loader"
             },
             {
-                test : /\.js$/,
-                use  : "babel-loader",
+                test    : /\.js$/,
+                use     : "babel-loader",
                 exclude : /(node_modules|bower_components)/
             },
             {
@@ -86,19 +86,8 @@ const config = {
     ]
 };
 
-console.log( process.env.NODE_ENV );
-
 if ( process.env.NODE_ENV === "production" ) {
-    config.plugins.push(
-        new Webpack.optimize.UglifyJsPlugin( {
-            compress : {
-                warnings : false
-            },
-            output : {
-                comments : false
-            }
-        } )
-    );
+    // …
 }
 
 module.exports = config;
