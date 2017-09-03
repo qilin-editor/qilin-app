@@ -4,7 +4,8 @@
     border-style: solid;
     border-color: $color-border-light;
 
-    box-shadow: 0 5px 30px -5px rgba(black, .25);
+    filter: drop-shadow(0 10px 10px rgba(black, .35))
+            drop-shadow(0 0 1px rgba(black, .25));
 
     &-header {
         border-bottom-width: 1px;
