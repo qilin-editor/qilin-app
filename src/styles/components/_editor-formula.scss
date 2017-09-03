@@ -1,0 +1,39 @@
+.formula {
+    &-preview {
+
+    }
+
+    &-editor {
+        padding: 0;
+        margin: 7px;
+
+        height: 105px;
+
+        overflow-x: auto;
+        overflow-y: auto;
+
+        &.is-full {
+            height: 285px;
+        }
+    }
+
+    &-help {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 7px;
+
+        &-symbol {
+            display: inline-flex;
+
+            margin: 1px;
+            padding: .25rem .5rem;
+
+            cursor: pointer;
+
+            .katex-display {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -20,6 +20,7 @@
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
         "react-svg": "^2.1.21",
+        "react-tabs": "^1.1.0",
         "react-draggable": "^3.0.3",
         "react-codemirror": "0.2.6",
         "react-split-pane": "^0.1.65",

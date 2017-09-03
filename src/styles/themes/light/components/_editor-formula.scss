@@ -1,0 +1,15 @@
+.formula {
+    &-editor {
+        border-width: 1px;
+        border-style: solid;
+        border-color: $color-border-light;
+    }
+
+    &-help {
+        &-symbol {
+            border-width: 1px;
+            border-style: solid;
+            border-color: $color-border-light;
+        }
+    }
+}

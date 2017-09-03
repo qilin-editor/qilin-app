@@ -11,4 +11,26 @@
         border-bottom-style: solid;
         border-bottom-color: $color-border-light;
     }
+
+    &-tabs {
+        &-list {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: $color-border-light;
+
+            &-item {
+                font-size: .85rem;
+
+                border-radius: 3px 3px 0 0;
+                border-width: 1px 1px 0 1px;
+                border-style: solid;
+                border-color: transparent;
+
+                &[aria-selected=true] {
+                    border-color: $color-border-light;
+                    background-color: $color-background;
+                }
+            }
+        }
+    }
 }
