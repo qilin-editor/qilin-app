@@ -8,7 +8,8 @@
     @import "./components/qilin/button",
             "./components/qilin/popup",
             "./components/controls",
-            "./components/editor";
+            "./components/editor-formula",
+            "./components/editor-preview";
 
     .qilin-panel {
         background-color: $color-background;

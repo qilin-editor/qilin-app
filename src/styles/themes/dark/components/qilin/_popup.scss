@@ -1,8 +1,8 @@
 .qilin-popup {
+    background-color: $color-popup !important;
+
     border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $color-border-dark;
+    border-width: 0;
 
     filter: drop-shadow(0 10px 10px rgba(black, .35))
             drop-shadow(0 0 1px rgba(black, .25));
@@ -13,8 +13,36 @@
         border-bottom-color: $color-border-dark;
     }
 
+    &-content {
+        background-color: $color-popup;
+    }
+
     .qilin-button {
         background-image: none;
         box-shadow: none;
+    }
+
+    &-tabs {
+        background-color: $color-background;
+
+        &-list {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: $color-border-dark;
+
+            &-item {
+                font-size: .85rem;
+
+                border-radius: 3px 3px 0 0;
+                border-width: 1px 1px 0 1px;
+                border-style: solid;
+                border-color: transparent;
+
+                &[aria-selected=true] {
+                    border-color: $color-border-dark;
+                    background-color: $color-popup;
+                }
+            }
+        }
     }
 }

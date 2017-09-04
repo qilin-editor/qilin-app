@@ -1,8 +1,6 @@
 .qilin-popup {
     border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $color-border-light;
+    border-width: 0;
 
     filter: drop-shadow(0 10px 10px rgba(black, .35))
             drop-shadow(0 0 1px rgba(black, .25));
@@ -13,7 +11,13 @@
         border-bottom-color: $color-border-light;
     }
 
+    &-content {
+        background-color: $color-background;
+    }
+
     &-tabs {
+        background-color: lighten($color-border-light, 5%);
+
         &-list {
             border-bottom-width: 1px;
             border-bottom-style: solid;

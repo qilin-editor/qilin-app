@@ -2,20 +2,20 @@
     &-editor {
         border-width: 1px;
         border-style: solid;
-        border-color: $color-border-light;
+        border-color: $color-border-dark;
     }
 
     &-help {
         &-group {
             border-top-width: 1px;
             border-top-style: solid;
-            border-top-color: $color-border-light;
+            border-top-color: $color-border-dark;
         }
 
         &-symbol {
             border-width: 1px;
             border-style: solid;
-            border-color: $color-border-light;
+            border-color: $color-border-dark;
         }
     }
 }

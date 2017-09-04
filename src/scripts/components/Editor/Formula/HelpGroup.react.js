@@ -22,10 +22,10 @@ class EditorForumlaHelpGroup extends Component {
         const { name, symbols, choose } = this.props;
 
         return (
-            <div>
-                <div>{name}</div>
+            <div className="formula-help-group">
+                <div className="formula-help-group-name">{name}</div>
 
-                <div>
+                <div className="formula-help-group-symbols">
                     {Object.keys( symbols ).map( id => (
                         <EditorForumlaHelpGroupSymbol
                             key={id}
