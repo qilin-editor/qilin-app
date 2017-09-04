@@ -52,9 +52,7 @@ $ sudo npm run <command>
 
 ### Installation
 
-There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions.
-
-<br>
+There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions. If you wonder how to work on Qilin or have other questions - check our [Wiki](https://github.com/Bartozzz/Qilin/wiki).
 
 <div align="center">
   <h2>Screenshots</h2>
