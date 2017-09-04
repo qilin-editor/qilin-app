@@ -22,7 +22,6 @@ class EditorForumlaEditor extends Component {
 
             autofocus           : true,
             scrollbarStyle      : "overlay",
-            scrollPastEnd       : false,
 
             tabSize             : 4,
             indentUnit          : 4,

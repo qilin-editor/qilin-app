@@ -1,20 +1,24 @@
 .formula {
     &-preview {
 
+    &-editor {
+        &,
+        .CodeMirror {
+            height: 105px;
+        }
+
+        &.is-full,
+        &.is-full .CodeMirror {
+            height: 285px;
+        }
     }
 
     &-editor {
         padding: 0;
         margin: 7px;
 
-        height: 105px;
-
         overflow-x: auto;
         overflow-y: auto;
-
-        &.is-full {
-            height: 285px;
-        }
     }
 
     &-help {
