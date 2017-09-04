@@ -14,19 +14,15 @@ export default {
         content : "\\coprod"
     },
 
-    int : {
-        type    : "Big operators",
-        content : "\\int"
-    },
-
-    intop : {
-        type    : "Big operators",
-        content : "\\intop"
-    },
-
     smallint : {
         type    : "Big operators",
         content : "\\smallint"
+    },
+
+    int : {
+        type    : "Big operators",
+        content : "\\int",
+        alias   : [ "\\intop" ]
     },
 
     iint : {

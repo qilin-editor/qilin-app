@@ -1,19 +1,4 @@
 export default {
-    "x_n" : {
-        type    : "Vertical layout",
-        content : "x_n"
-    },
-
-    "e^x" : {
-        type    : "Vertical layout",
-        content : "e^x"
-    },
-
-    "_u^o" : {
-        type    : "Vertical layout",
-        content : "_a^b"
-    },
-
     undeatoprset : {
         type    : "Vertical layout",
         content : "a \\atop b"
@@ -21,12 +6,8 @@ export default {
 
     stackrel : {
         type    : "Vertical layout",
-        content : "\\stackrel{!}{=}"
-    },
-
-    overset : {
-        type    : "Vertical layout",
-        content : "\\overset{!}{=}"
+        content : "\\stackrel{!}{=}",
+        alias   : [ "\\overset{!}{=}" ]
     },
 
     underset : {

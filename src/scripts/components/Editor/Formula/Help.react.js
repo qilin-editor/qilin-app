@@ -17,68 +17,8 @@ class EditorForumlaHelp extends Component {
                 />
 
                 <EditorForumlaHelpGroup {...this.props}
-                    name="Annotations"
-                    symbols={KatexConstant.Annotations}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Arrows"
-                    symbols={KatexConstant.Arrows}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Big operators"
-                    symbols={KatexConstant.BigOperators}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Binary operators"
-                    symbols={KatexConstant.BinaryOperators}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Binomial coefficients"
-                    symbols={KatexConstant.BinomialCoefficients}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Deliminers"
-                    symbols={KatexConstant.Deliminers}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Environments"
-                    symbols={KatexConstant.Environments}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Extensible arrows"
-                    symbols={KatexConstant.ExtensibleArrows}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Fractions"
-                    symbols={KatexConstant.Fractions}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
                     name="Greek letters"
                     symbols={KatexConstant.GreekLetters}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Logic and Set Theory"
-                    symbols={KatexConstant.LogicAndSetTheory}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Math operators"
-                    symbols={KatexConstant.MathOperators}
-                />
-
-                <EditorForumlaHelpGroup {...this.props}
-                    name="Negated relations"
-                    symbols={KatexConstant.NegatedRelations}
                 />
 
                 <EditorForumlaHelpGroup {...this.props}
@@ -87,13 +27,63 @@ class EditorForumlaHelp extends Component {
                 />
 
                 <EditorForumlaHelpGroup {...this.props}
+                    name="Logic and Set Theory"
+                    symbols={KatexConstant.LogicAndSetTheory}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Big operators"
+                    symbols={KatexConstant.BigOperators}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Environments"
+                    symbols={KatexConstant.Environments}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Annotations"
+                    symbols={KatexConstant.Annotations}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Math operators"
+                    symbols={KatexConstant.MathOperators}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Binary operators"
+                    symbols={KatexConstant.BinaryOperators}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Deliminers"
+                    symbols={KatexConstant.Deliminers}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
                     name="Relations"
                     symbols={KatexConstant.Relations}
                 />
 
                 <EditorForumlaHelpGroup {...this.props}
+                    name="Negated relations"
+                    symbols={KatexConstant.NegatedRelations}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
                     name="Vertical layout"
                     symbols={KatexConstant.VerticalLayout}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Arrows"
+                    symbols={KatexConstant.Arrows}
+                />
+
+                <EditorForumlaHelpGroup {...this.props}
+                    name="Extensible arrows"
+                    symbols={KatexConstant.ExtensibleArrows}
                 />
             </div>
         );

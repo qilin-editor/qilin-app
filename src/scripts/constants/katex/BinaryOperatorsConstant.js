@@ -121,20 +121,25 @@ export default {
         alias   : "\\doublecap"
     },
 
-    cap : {
-        type    : "Binary operators",
-        content : "\\cap"
-    },
-
     Cup : {
         type    : "Binary operators",
         content : "\\Cup",
         alias   : "\\doublecup"
     },
 
+    cap : {
+        type    : "Binary operators",
+        content : "\\cap"
+    },
+
     cup : {
         type    : "Binary operators",
         content : "\\cup"
+    },
+
+    uplus : {
+        type    : "Binary operators",
+        content : "\\uplus"
     },
 
     boxdot : {
@@ -267,11 +272,6 @@ export default {
     unrhd : {
         type    : "Binary operators",
         content : "\\unrhd"
-    },
-
-    uplus : {
-        type    : "Binary operators",
-        content : "\\uplus"
     },
 
     wr : {

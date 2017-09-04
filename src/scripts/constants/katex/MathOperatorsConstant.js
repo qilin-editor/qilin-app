@@ -217,5 +217,20 @@ export default {
     sqrt2 : {
         type    : "Math operators",
         content : "\\sqrt[3]{x}"
+    },
+
+    "x_n" : {
+        type    : "Vertical layout",
+        content : "x_{n}"
+    },
+
+    "e^x" : {
+        type    : "Vertical layout",
+        content : "e^{x}"
+    },
+
+    "_u^o" : {
+        type    : "Vertical layout",
+        content : "C_{a}^{b}"
     }
 };

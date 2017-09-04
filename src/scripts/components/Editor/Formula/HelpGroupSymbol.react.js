@@ -20,6 +20,7 @@ class EditorForumlaHelpGroupSymbol extends Component {
             <div
                 className="formula-help-symbol"
                 onClick={this.onChoose}
+                title={this.props.data.content}
                 dangerouslySetInnerHTML={{ __html : this.props.renderer.render(
                     "```katex\n" + this.props.data.content + "\n```"
                 ) }}

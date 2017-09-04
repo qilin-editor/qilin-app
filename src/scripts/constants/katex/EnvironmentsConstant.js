@@ -47,5 +47,27 @@ export default {
     cases : {
         type    : "Environments",
         content : "x = \\begin{cases}\n   a &\\text{if } b  \\\\\n   c &\\text{if } d\n\\end{cases}"
+    },
+
+    binom : {
+        type    : "Binomial Coefficients",
+        content : "\\binom{n}{k}",
+        alias   : [ "{n}\\choose{k}", "\\tbinom{n}{k}", "\\dbinom{n}{k}" ]
+    },
+
+    binomcustom : {
+        type    : "Binomial Coefficients",
+        content : "\\left\\langle\nn \\atop k\n\\right\\rangle"
+    },
+
+    frac : {
+        type    : "Fractions",
+        content : "\\frac{a}{b}",
+        alias   : [ "{a}\\over{b}", "\\dfrac{a}{b}", "\\tfrac{a}{b}" ]
+    },
+
+    fraccustom : {
+        type    : "Fractions",
+        content : "{a}/{b}"
     }
 };

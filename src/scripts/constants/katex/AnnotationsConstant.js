@@ -36,11 +36,7 @@ export default {
 
     llap : {
         type    : "Annotation",
-        content : "{=}\\llap{/\\,}"
-    },
-
-    rlap : {
-        type    : "Annotation",
-        content : "\\rlap{\\,/}{=}"
+        content : "{=}\\llap{/\\,}",
+        alias   : [ "\\rlap{\\,/}{=}" ]
     }
 };

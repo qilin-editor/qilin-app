@@ -24,6 +24,11 @@ export default {
         content : "\\xleftrightarrow{abc}"
     },
 
+    xtofrom : {
+        type    : "Extensible Arrows",
+        content : "\\xtofrom{abc}"
+    },
+
     xhookleftarrow : {
         type    : "Extensible Arrows",
         content : "\\xhookleftarrow{abc}"
@@ -34,12 +39,12 @@ export default {
         content : "\\xhookrightarrow{abc}"
     },
 
-    xtwoheadrightarrow : {
+    xtwoheadleftarrow : {
         type    : "Extensible Arrows",
-        content : "\\xtwoheadrightarrow{abc}"
+        content : "\\xtwoheadleftarrow{abc}"
     },
 
-    xtwoheadleftarrow : {
+    xtwoheadrightarrow : {
         type    : "Extensible Arrows",
         content : "\\xtwoheadrightarrow{abc}"
     },
@@ -47,6 +52,11 @@ export default {
     xLeftarrow : {
         type    : "Extensible Arrows",
         content : "\\xLeftarrow{abc}"
+    },
+
+    xLongequal : {
+        type    : "Extensible Arrows",
+        content : "\\xLongequal{abc}"
     },
 
     xRightarrow : {
@@ -59,14 +69,9 @@ export default {
         content : "\\xLeftrightarrow{abc}"
     },
 
-    xLongequal : {
+    xleftharpoonup : {
         type    : "Extensible Arrows",
-        content : "\\xLongequal{abc}"
-    },
-
-    xtofrom : {
-        type    : "Extensible Arrows",
-        content : "\\xtofrom{abc}"
+        content : "\\xleftharpoonup{abc}"
     },
 
     xrightharpoonup : {
@@ -74,28 +79,23 @@ export default {
         content : "\\xrightharpoonup{abc}"
     },
 
-    xrightharpoondown : {
-        type    : "Extensible Arrows",
-        content : "\\xrightharpoondown{abc}"
-    },
-
-    xleftharpoonup : {
-        type    : "Extensible Arrows",
-        content : "\\xleftharpoonup{abc}"
-    },
-
     xleftharpoondown : {
         type    : "Extensible Arrows",
         content : "\\xleftharpoondown{abc}"
     },
 
-    xrightleftharpoons : {
+    xrightharpoondown : {
         type    : "Extensible Arrows",
-        content : "\\xrightleftharpoons{abc}"
+        content : "\\xrightharpoondown{abc}"
     },
 
     xleftrightharpoons : {
         type    : "Extensible Arrows",
         content : "\\xleftrightharpoons{abc}"
+    },
+
+    xrightleftharpoons : {
+        type    : "Extensible Arrows",
+        content : "\\xrightleftharpoons{abc}"
     }
 };
