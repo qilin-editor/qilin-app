@@ -13,7 +13,6 @@ import "codemirror/addon/search/search";
 import "codemirror/addon/selection/active-line";
 import "codemirror/addon/dialog/dialog";
 import "codemirror/keymap/sublime";
-import "markdown-it-asciimath/ASCIIMathTeXImg";
 
 const stores = {
     alertsStore : require( "./stores/AlertStore" ),
