@@ -91,7 +91,7 @@ class EditorForumlaPopup extends Component {
                             <TabPanel className="qilin-popup-content">
                                 <FormulaEditor
                                     className="is-full"
-                                    value={"```math\n" + this.state.value + "\n```"}
+                                    value={"```katex\n" + this.state.value + "\n```"}
                                 />
                             </TabPanel>
                         </Tabs>
