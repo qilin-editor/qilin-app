@@ -1,10 +1,21 @@
 import Markdown from "markdown-it";
+import hljs     from "highlight.js";
 
 export function getMarkdown( options = {} ) {
     const markdown = new Markdown( {
         html       : true,
         linkify    : true,
         typography : true,
+        highlight  : ( str, lang ) => {
+            if ( lang && hljs.getLanguage( lang ) ) {
+                try {
+                    return hljs.highlight( lang, str ).value;
+                } catch ( error ) { /* … */ }
+            }
+
+            // Use external default escaping:
+            return "";
+        },
         ...options
     } );
 

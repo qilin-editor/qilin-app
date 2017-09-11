@@ -37,6 +37,7 @@
         "markdown-it-task-lists": "^2.0.1",
         "markdown-it-block-embed": "^0.0.3",
         "markdown-it-table-of-contents": "^0.3.2",
+        "highlight.js": "latest",
         "opn": "^5.1.0",
         "asciimath-to-latex": "^0.3.2",
         "katex": "^0.8.3"

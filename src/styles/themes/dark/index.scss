@@ -3,6 +3,7 @@
     @import "./syntax";
 
     @import "./vendor/codeMirror",
+            "./vendor/highlight",
             "./vendor/splitPane";
 
     @import "./components/qilin/button",

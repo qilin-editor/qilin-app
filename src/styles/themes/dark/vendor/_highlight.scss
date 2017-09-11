@@ -1,0 +1,8 @@
+@import "~highlight.js/styles/atom-one-dark";
+
+.editor-preview pre {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-border-dark;
+    border-radius: 2px;
+}
