@@ -12,7 +12,6 @@ import "codemirror/keymap/sublime";
 import "./shortcuts/FileShortcuts";
 
 const stores = {
-    alertsStore: require("./stores/AlertStore"),
     editorStore: require("./stores/EditorStore"),
 };
 
