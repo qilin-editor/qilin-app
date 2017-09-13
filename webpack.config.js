@@ -49,7 +49,7 @@ const config = {
                 exclude: /(node_modules|bower_components)/,
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 use: ExtractTextPlugin.extract({
                     use: [
                         "css-loader",
