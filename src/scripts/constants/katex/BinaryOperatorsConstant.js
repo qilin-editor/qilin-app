@@ -1,291 +1,291 @@
 export default {
-    plus : {
-        type    : "Binary operators",
-        content : "+"
+    plus: {
+        type: "Binary operators",
+        content: "+",
     },
 
-    minus : {
-        type    : "Binary operators",
-        content : "-"
+    minus: {
+        type: "Binary operators",
+        content: "-",
     },
 
-    pm : {
-        type    : "Binary operators",
-        content : "\\pm"
+    pm: {
+        type: "Binary operators",
+        content: "\\pm",
     },
 
-    mp : {
-        type    : "Binary operators",
-        content : "\\mp"
+    mp: {
+        type: "Binary operators",
+        content: "\\mp",
     },
 
-    divide : {
-        type    : "Binary operators",
-        content : "/"
+    divide: {
+        type: "Binary operators",
+        content: "/",
     },
 
-    div : {
-        type    : "Binary operators",
-        content : "\\div"
+    div: {
+        type: "Binary operators",
+        content: "\\div",
     },
 
-    times : {
-        type    : "Binary operators",
-        content : "\\times"
+    times: {
+        type: "Binary operators",
+        content: "\\times",
     },
 
-    mult : {
-        type    : "Binary operators",
-        content : "*",
-        alias   : "\\ast"
+    mult: {
+        type: "Binary operators",
+        content: "*",
+        alias: ["\\ast"],
     },
 
-    cdot : {
-        type    : "Binary operators",
-        content : "\\cdot"
+    cdot: {
+        type: "Binary operators",
+        content: "\\cdot",
     },
 
-    cdotp : {
-        type    : "Binary operators",
-        content : "\\cdotp"
+    cdotp: {
+        type: "Binary operators",
+        content: "\\cdotp",
     },
 
-    ldotp : {
-        type    : "Binary operators",
-        content : "\\ldotp"
+    ldotp: {
+        type: "Binary operators",
+        content: "\\ldotp",
     },
 
-    centerdot : {
-        type    : "Binary operators",
-        content : "\\centerdot"
+    centerdot: {
+        type: "Binary operators",
+        content: "\\centerdot",
     },
 
-    bullet : {
-        type    : "Binary operators",
-        content : "\\bullet"
+    bullet: {
+        type: "Binary operators",
+        content: "\\bullet",
     },
 
-    circ : {
-        type    : "Binary operators",
-        content : "\\circ"
+    circ: {
+        type: "Binary operators",
+        content: "\\circ",
     },
 
-    circledast : {
-        type    : "Binary operators",
-        content : "\\circledast"
+    circledast: {
+        type: "Binary operators",
+        content: "\\circledast",
     },
 
-    circledcirc : {
-        type    : "Binary operators",
-        content : "\\circledcirc"
+    circledcirc: {
+        type: "Binary operators",
+        content: "\\circledcirc",
     },
 
-    circleddash : {
-        type    : "Binary operators",
-        content : "\\circleddash"
+    circleddash: {
+        type: "Binary operators",
+        content: "\\circleddash",
     },
 
-    odot : {
-        type    : "Binary operators",
-        content : "\\odot"
+    odot: {
+        type: "Binary operators",
+        content: "\\odot",
     },
 
-    ominus : {
-        type    : "Binary operators",
-        content : "\\ominus"
+    ominus: {
+        type: "Binary operators",
+        content: "\\ominus",
     },
 
-    oplus : {
-        type    : "Binary operators",
-        content : "\\oplus"
+    oplus: {
+        type: "Binary operators",
+        content: "\\oplus",
     },
 
-    otimes : {
-        type    : "Binary operators",
-        content : "\\otimes"
+    otimes: {
+        type: "Binary operators",
+        content: "\\otimes",
     },
 
-    oslash : {
-        type    : "Binary operators",
-        content : "\\oslash"
+    oslash: {
+        type: "Binary operators",
+        content: "\\oslash",
     },
 
-    bigcirc : {
-        type    : "Binary operators",
-        content : "\\bigcirc"
+    bigcirc: {
+        type: "Binary operators",
+        content: "\\bigcirc",
     },
 
-    Cap : {
-        type    : "Binary operators",
-        content : "\\Cap",
-        alias   : "\\doublecap"
+    Cap: {
+        type: "Binary operators",
+        content: "\\Cap",
+        alias: ["\\doublecap"],
     },
 
-    Cup : {
-        type    : "Binary operators",
-        content : "\\Cup",
-        alias   : "\\doublecup"
+    Cup: {
+        type: "Binary operators",
+        content: "\\Cup",
+        alias: ["\\doublecup"],
     },
 
-    cap : {
-        type    : "Binary operators",
-        content : "\\cap"
+    cap: {
+        type: "Binary operators",
+        content: "\\cap",
     },
 
-    cup : {
-        type    : "Binary operators",
-        content : "\\cup"
+    cup: {
+        type: "Binary operators",
+        content: "\\cup",
     },
 
-    uplus : {
-        type    : "Binary operators",
-        content : "\\uplus"
+    uplus: {
+        type: "Binary operators",
+        content: "\\uplus",
     },
 
-    boxdot : {
-        type    : "Binary operators",
-        content : "\\boxdot"
+    boxdot: {
+        type: "Binary operators",
+        content: "\\boxdot",
     },
 
-    boxminus : {
-        type    : "Binary operators",
-        content : "\\boxminus"
+    boxminus: {
+        type: "Binary operators",
+        content: "\\boxminus",
     },
 
-    boxplus : {
-        type    : "Binary operators",
-        content : "\\boxplus"
+    boxplus: {
+        type: "Binary operators",
+        content: "\\boxplus",
     },
 
-    boxtimes : {
-        type    : "Binary operators",
-        content : "\\boxtimes"
+    boxtimes: {
+        type: "Binary operators",
+        content: "\\boxtimes",
     },
 
-    curlyvee : {
-        type    : "Binary operators",
-        content : "\\curlyvee"
+    curlyvee: {
+        type: "Binary operators",
+        content: "\\curlyvee",
     },
 
-    curlywedge : {
-        type    : "Binary operators",
-        content : "\\curlywedge"
+    curlywedge: {
+        type: "Binary operators",
+        content: "\\curlywedge",
     },
 
-    divideontimes : {
-        type    : "Binary operators",
-        content : "\\divideontimes"
+    divideontimes: {
+        type: "Binary operators",
+        content: "\\divideontimes",
     },
 
-    dotplus : {
-        type    : "Binary operators",
-        content : "\\dotplus"
+    dotplus: {
+        type: "Binary operators",
+        content: "\\dotplus",
     },
 
-    doublebarwedge : {
-        type    : "Binary operators",
-        content : "\\doublebarwedge"
+    doublebarwedge: {
+        type: "Binary operators",
+        content: "\\doublebarwedge",
     },
 
-    intercal : {
-        type    : "Binary operators",
-        content : "\\intercal"
+    intercal: {
+        type: "Binary operators",
+        content: "\\intercal",
     },
 
-    land : {
-        type    : "Binary operators",
-        content : "\\land",
-        alias   : "\\wedge"
+    land: {
+        type: "Binary operators",
+        content: "\\land",
+        alias: ["\\wedge"],
     },
 
-    lor : {
-        type    : "Binary operators",
-        content : "\\lor",
-        alias   : "\\vee"
+    lor: {
+        type: "Binary operators",
+        content: "\\lor",
+        alias: ["\\vee"],
     },
 
-    veebar : {
-        type    : "Binary operators",
-        content : "\\veebar"
+    veebar: {
+        type: "Binary operators",
+        content: "\\veebar",
     },
 
-    leftthreetimes : {
-        type    : "Binary operators",
-        content : "\\leftthreetimes"
+    leftthreetimes: {
+        type: "Binary operators",
+        content: "\\leftthreetimes",
     },
 
-    rightthreetimes : {
-        type    : "Binary operators",
-        content : "\\rightthreetimes"
+    rightthreetimes: {
+        type: "Binary operators",
+        content: "\\rightthreetimes",
     },
 
-    lessdot : {
-        type    : "Binary operators",
-        content : "\\lessdot"
+    lessdot: {
+        type: "Binary operators",
+        content: "\\lessdot",
     },
 
-    lhd : {
-        type    : "Binary operators",
-        content : "\\lhd"
+    lhd: {
+        type: "Binary operators",
+        content: "\\lhd",
     },
 
-    rhd : {
-        type    : "Binary operators",
-        content : "\\rhd"
+    rhd: {
+        type: "Binary operators",
+        content: "\\rhd",
     },
 
-    ltimes : {
-        type    : "Binary operators",
-        content : "\\ltimes"
+    ltimes: {
+        type: "Binary operators",
+        content: "\\ltimes",
     },
 
-    rtimes : {
-        type    : "Binary operators",
-        content : "\\rtimes"
+    rtimes: {
+        type: "Binary operators",
+        content: "\\rtimes",
     },
 
-    setminus : {
-        type    : "Binary operators",
-        content : "\\setminus"
+    setminus: {
+        type: "Binary operators",
+        content: "\\setminus",
     },
 
-    smallsetminus : {
-        type    : "Binary operators",
-        content : "\\smallsetminus"
+    smallsetminus: {
+        type: "Binary operators",
+        content: "\\smallsetminus",
     },
 
-    sqcap : {
-        type    : "Binary operators",
-        content : "\\sqcap"
+    sqcap: {
+        type: "Binary operators",
+        content: "\\sqcap",
     },
 
-    sqcup : {
-        type    : "Binary operators",
-        content : "\\sqcup"
+    sqcup: {
+        type: "Binary operators",
+        content: "\\sqcup",
     },
 
-    unlhd : {
-        type    : "Binary operators",
-        content : "\\unlhd"
+    unlhd: {
+        type: "Binary operators",
+        content: "\\unlhd",
     },
 
-    unrhd : {
-        type    : "Binary operators",
-        content : "\\unrhd"
+    unrhd: {
+        type: "Binary operators",
+        content: "\\unrhd",
     },
 
-    wr : {
-        type    : "Binary operators",
-        content : "\\wr"
+    wr: {
+        type: "Binary operators",
+        content: "\\wr",
     },
 
-    mod : {
-        type    : "Binary operators",
-        content : "\\mod a"
+    mod: {
+        type: "Binary operators",
+        content: "\\mod a",
     },
 
-    pmod : {
-        type    : "Binary operators",
-        content : "x \\pmod a"
-    }
+    pmod: {
+        type: "Binary operators",
+        content: "x \\pmod a",
+    },
 };

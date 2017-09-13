@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import PropTypes            from "prop-types";
-import className            from "classnames";
-import SplitPane            from "react-split-pane";
-import EditorEditable       from "./Editor/Editable.react";
-import EditorPreview        from "./Editor/Preview.react";
-import EditorForumlaPopup   from "./Editor/Formula/Popup.react";
+import PropTypes from "prop-types";
+import className from "classnames";
+import SplitPane from "react-split-pane";
+import EditorEditable from "./Editor/Editable";
+import EditorPreview from "./Editor/Preview";
+import EditorForumlaPopup from "./Editor/Formula/Popup";
 
 class Content extends Component {
     static propTypes = {
-        toggleFormula    : PropTypes.func.isRequired,
-        isPreviewToggled : PropTypes.bool.isRequired,
-        isFormulaToggled : PropTypes.bool.isRequired
+        toggleFormula: PropTypes.func.isRequired,
+        isPreviewToggled: PropTypes.bool.isRequired,
+        isFormulaToggled: PropTypes.bool.isRequired,
     }
 
     render() {
-        const splitPaneClasses = className( "app-content-pane", {
-            "is-preview-hidden" : !this.props.isPreviewToggled
-        } );
+        const splitPaneClasses = className("app-content-pane", {
+            "is-preview-hidden": !this.props.isPreviewToggled,
+        });
 
         return (
             <div className="app-content qilin-panel">

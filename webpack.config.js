@@ -1,92 +1,96 @@
-const path              = require( "path" );
-const Webpack           = require( "webpack" );
-const HtmlWebpackPlugin = require( "html-webpack-plugin" );
-const ExtractTextPlugin = require( "extract-text-webpack-plugin" );
+const path = require("path");
+const Webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const config = {
-    entry : "./src/index.js",
+    entry: "./src/index.js",
 
-    output : {
-        path     : path.resolve( __dirname, "./dist" ),
-        filename : "index.min.js"
+    output: {
+        path: path.resolve(__dirname, "./dist"),
+        filename: "index.min.js",
     },
 
-    watchOptions : {
-        ignored : [
-            path.resolve( __dirname, "./node_modules" ),
-            path.resolve( __dirname, "./build" ),
-            path.resolve( __dirname, "./cache" ),
-            path.resolve( __dirname, "./dist" ),
-            path.resolve( __dirname, "./bin" )
-        ]
+    resolve: {
+        extensions: [".js", ".jsx", ".json"],
     },
 
-    devtool : "source-map",
-    context : __dirname,
-    target  : "node-webkit",
+    watchOptions: {
+        ignored: [
+            path.resolve(__dirname, "./node_modules"),
+            path.resolve(__dirname, "./build"),
+            path.resolve(__dirname, "./cache"),
+            path.resolve(__dirname, "./dist"),
+            path.resolve(__dirname, "./bin"),
+        ],
+    },
 
-    module : {
-        rules : [
+    devtool: "source-map",
+    context: __dirname,
+    target: "node-webkit",
+
+    module: {
+        rules: [
             {
-                test : /\.(jpg|jpeg|png|woff|woff2|eot|otf|ttf)$/,
-                use  : "url-loader?limit=1000"
+                test: /\.(jpg|jpeg|png|woff|woff2|eot|otf|ttf)$/,
+                use: "url-loader?limit=1000",
             },
             {
-                test : /\.svg$/,
-                use  : "file-loader"
+                test: /\.svg$/,
+                use: "file-loader",
             },
             {
-                test : /\.json$/,
-                use  : "json-loader"
+                test: /\.json$/,
+                use: "json-loader",
             },
             {
-                test    : /\.js$/,
-                use     : "babel-loader",
-                exclude : /(node_modules|bower_components)/
+                test: /\.(js|jsx)$/,
+                use: "babel-loader",
+                exclude: /(node_modules|bower_components)/,
             },
             {
-                test : /\.scss$/,
-                use  : ExtractTextPlugin.extract( {
-                    use : [
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
                         "css-loader",
                         "postcss-loader",
-                        "sass-loader"
-                    ]
-                } )
-            }
-        ]
+                        "sass-loader",
+                    ],
+                }),
+            },
+        ],
     },
 
-    plugins : [
+    plugins: [
         new Webpack.optimize.ModuleConcatenationPlugin(),
 
-        new Webpack.LoaderOptionsPlugin( {
-            options : {
-                postcss : [
-                    require( "autoprefixer" )
+        new Webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    require("autoprefixer"),
                 ],
-                devServer : {
-                    inline : true
-                }
-            }
-        } ),
+                devServer: {
+                    inline: true,
+                },
+            },
+        }),
 
-        new HtmlWebpackPlugin( {
-            template : "./src/index.html"
-        } ),
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+        }),
 
-        new ExtractTextPlugin( {
-            filename  : "./index.min.css",
-            allChunks : true
-        } ),
+        new ExtractTextPlugin({
+            filename: "./index.min.css",
+            allChunks: true,
+        }),
 
-        new Webpack.DefinePlugin( {
-            "process.env.NODE_ENV" : JSON.stringify( process.env.NODE_ENV )
-        } )
-    ]
+        new Webpack.DefinePlugin({
+            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+        }),
+    ],
 };
 
-if ( process.env.NODE_ENV === "production" ) {
+if (process.env.NODE_ENV === "production") {
     // …
 }
 

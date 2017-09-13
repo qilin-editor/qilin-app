@@ -1,21 +1,21 @@
-import React, { Component }             from "react";
-import Draggable                        from "react-draggable";
+import React, { Component } from "react";
+import Draggable from "react-draggable";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import PropTypes                        from "prop-types";
-import className                        from "classnames";
-import FormulaHelp                      from "./Help.react";
-import FormulaEditor                    from "./Editor.react";
-import FormulaPreview                   from "./Preview.react";
+import PropTypes from "prop-types";
+import className from "classnames";
+import FormulaHelp from "./Help";
+import FormulaEditor from "./Editor";
+import FormulaPreview from "./Preview";
 
 class EditorForumlaPopup extends Component {
     static propTypes = {
-        isOpen : PropTypes.bool.isRequired,
-        close  : PropTypes.func.isRequired
+        isOpen: PropTypes.bool.isRequired,
+        close: PropTypes.func.isRequired,
     }
 
     state = {
-        value  : "",
-        symbol : {}
+        value: "",
+        symbol: {},
     }
 
     onClose = () => {
@@ -23,32 +23,32 @@ class EditorForumlaPopup extends Component {
     }
 
     onDone = () => {
-        this.setState( {
-            value : ""
-        } );
+        this.setState({
+            value: "",
+        });
 
         this.props.close();
     }
 
-    onChange = value => {
-        this.setState( {
-            value
-        } );
+    onChange = (value) => {
+        this.setState({
+            value,
+        });
     }
 
-    onChoose = symbol => {
-        this.setState( {
-            symbol : {
-                cache : +new Date,
-                ...symbol
-            }
-        } );
+    onChoose = (symbol) => {
+        this.setState({
+            symbol: {
+                cache: +new Date(),
+                ...symbol,
+            },
+        });
     }
 
     render() {
-        const popupClasses = className( "qilin-panel", "qilin-popup", {
-            "is-open" : this.props.isOpen
-        } );
+        const popupClasses = className("qilin-panel", "qilin-popup", {
+            "is-open": this.props.isOpen,
+        });
 
         return (
             <Draggable handle=".qilin-popup-header">
@@ -91,7 +91,7 @@ class EditorForumlaPopup extends Component {
                             <TabPanel className="qilin-popup-content">
                                 <FormulaEditor
                                     className="is-full"
-                                    value={"```katex\n" + this.state.value + "\n```"}
+                                    value={`\`\`\`katex\n${this.state.value}\n\`\`\``}
                                 />
                             </TabPanel>
                         </Tabs>

@@ -1,25 +1,25 @@
-import path                             from "path";
+import path from "path";
 import { observable, action, computed } from "mobx";
 
 export default {
-    @observable path    : "",
-    @observable content : "",
-    @observable saved   : false,
+    @observable path: "",
+    @observable content: "",
+    @observable saved: false,
 
-    @action changePath( path ) {
-        this.path = path;
+    @action changePath(newPath) {
+        this.path = newPath;
     },
 
-    @action changeContent( content ) {
-        this.content = content;
-        this.saved   = false;
+    @action changeContent(newContent) {
+        this.content = newContent;
+        this.saved = false;
     },
 
     @computed get filename() {
-        return this.path ? path.basename( this.path ) : "";
+        return this.path ? path.basename(this.path) : "";
     },
 
     @computed get directory() {
-        return path.dirname( this.path );
-    }
+        return path.dirname(this.path);
+    },
 };

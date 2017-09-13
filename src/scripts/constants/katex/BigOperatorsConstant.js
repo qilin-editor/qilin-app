@@ -1,87 +1,87 @@
 export default {
-    sum : {
-        type    : "Big operators",
-        content : "\\sum"
+    sum: {
+        type: "Big operators",
+        content: "\\sum",
     },
 
-    prod : {
-        type    : "Big operators",
-        content : "\\prod"
+    prod: {
+        type: "Big operators",
+        content: "\\prod",
     },
 
-    coprod : {
-        type    : "Big operators",
-        content : "\\coprod"
+    coprod: {
+        type: "Big operators",
+        content: "\\coprod",
     },
 
-    smallint : {
-        type    : "Big operators",
-        content : "\\smallint"
+    smallint: {
+        type: "Big operators",
+        content: "\\smallint",
     },
 
-    int : {
-        type    : "Big operators",
-        content : "\\int",
-        alias   : [ "\\intop" ]
+    int: {
+        type: "Big operators",
+        content: "\\int",
+        alias: ["\\intop"],
     },
 
-    iint : {
-        type    : "Big operators",
-        content : "\\iint"
+    iint: {
+        type: "Big operators",
+        content: "\\iint",
     },
 
-    iiint : {
-        type    : "Big operators",
-        content : "\\iiint"
+    iiint: {
+        type: "Big operators",
+        content: "\\iiint",
     },
 
-    oint : {
-        type    : "Big operators",
-        content : "\\oint"
+    oint: {
+        type: "Big operators",
+        content: "\\oint",
     },
 
-    bigvee : {
-        type    : "Big operators",
-        content : "\\bigvee"
+    bigvee: {
+        type: "Big operators",
+        content: "\\bigvee",
     },
 
-    bigwedge : {
-        type    : "Big operators",
-        content : "\\bigwedge"
+    bigwedge: {
+        type: "Big operators",
+        content: "\\bigwedge",
     },
 
-    bigcap : {
-        type    : "Big operators",
-        content : "\\bigcap"
+    bigcap: {
+        type: "Big operators",
+        content: "\\bigcap",
     },
 
-    bigcup : {
-        type    : "Big operators",
-        content : "\\bigcup"
+    bigcup: {
+        type: "Big operators",
+        content: "\\bigcup",
     },
 
-    bigsqcup : {
-        type    : "Big operators",
-        content : "\\bigsqcup"
+    bigsqcup: {
+        type: "Big operators",
+        content: "\\bigsqcup",
     },
 
-    bigotimes : {
-        type    : "Big operators",
-        content : "\\bigotimes"
+    bigotimes: {
+        type: "Big operators",
+        content: "\\bigotimes",
     },
 
-    bigoplus : {
-        type    : "Big operators",
-        content : "\\bigoplus"
+    bigoplus: {
+        type: "Big operators",
+        content: "\\bigoplus",
     },
 
-    bigodot : {
-        type    : "Big operators",
-        content : "\\bigodot"
+    bigodot: {
+        type: "Big operators",
+        content: "\\bigodot",
     },
 
-    biguplus : {
-        type    : "Big operators",
-        content : "\\biguplus"
-    }
+    biguplus: {
+        type: "Big operators",
+        content: "\\biguplus",
+    },
 };

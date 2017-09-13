@@ -1,75 +1,48 @@
 {
-    "root" : true,
+    "root": true,
 
-    "parser"    : "babel-eslint",
-    "extends"   : [ "eslint:recommended", "plugin:react/recommended" ],
-    "plugins"   : [ "react" ],
+    "parser": "babel-eslint",
+    "extends": ["airbnb"],
+    "plugins": ["react", "import", "jsx-a11y"],
 
-    "env" : {
-        "es6"                   : true,
-        "node"                  : true,
-        "browser"               : true,
-        "shared-node-browser"   : true
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true,
+        "shared-node-browser": true
     },
 
-    "parserOptions" : {
-        "ecmaVersion"   : 6,
-        "sourceType"    : "module",
-        "ecmaFeatures"  : {
-            "jsx"                           : true,
-            "experimentalObjectRestSpread"  : true
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
         }
     },
 
-    "globals" : {
-        "nw" : true
+    "globals": {
+        "nw": true
     },
 
-    "rules" : {
-        "indent"                            : [ "error", 4, { "SwitchCase" : 1 } ],
-        "quotes"                            : [ "error", "double" ],
-        "max-depth"                         : [ "warn", 5 ],
-        "max-len"                           : [ "warn", 120 ],
-        "eol-last"                          : [ "warn", "always" ],
+     "rules": {
+         "quotes": [1, "double"],
+         "indent": [2, 4],
 
-        "semi"                              : [ "error", "always" ],
-        "linebreak-style"                   : [ "error", "unix" ],
+         "no-console": [0],
+         "no-param-reassign": [0],
 
-        "prefer-const"                      : [ "warn" ],
-        "prefer-arrow-callback"             : [ "warn" ],
+         "react/no-danger": [0],
+         "react/jsx-indent": [2, 4],
+         "react/jsx-indent-props": [2, 4],
+         "react/no-array-index-key": [0],
+         "react/require-default-props": [0],
+         "react/prefer-stateless-function": [0],
+         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 
-        "no-var"                            : [ "error" ],
-        "no-console"                        : [ "off" ],
-        "no-lonely-if"                      : [ "warn" ],
-        "no-unused-vars"                    : [ "warn", { "varsIgnorePattern" : "React" } ],
-        "no-multi-assign"                   : [ "warn" ],
-        "no-await-in-loop"                  : [ "error" ],
-        "no-useless-rename"                 : [ "error" ],
-        "no-trailing-spaces"                : [ "error" ],
-        "no-duplicate-imports"              : [ "error" ],
-        "no-useless-constructor"            : [ "error" ],
-        "no-multiple-empty-lines"           : [ "warn", { "max" : 2 } ],
-
-        "space-unary-ops"                   : [ "error", { "words" : true, "nonwords" : false } ],
-        "space-infix-ops"                   : [ "error", { "int32Hint" : false } ],
-        "space-in-parens"                   : [ "error", "always" ],
-        "space-before-blocks"               : [ "error", "always" ],
-        "space-before-function-paren"       : [ "error", {
-            "anonymous"     : "always",
-            "named"         : "never",
-            "asyncArrow"    : "ignore"
-        } ],
-
-        "spaced-comment"                    : [ "warn", "always" ],
-        "arrow-spacing"                     : [ "error", { "before" : true, "after" : true } ],
-
-        "one-var-declaration-per-line"      : [ "error", "always" ],
-        "one-var"                           : [ "error", {
-            "initialized"   : "never",
-            "uninitialized" : "always"
-        } ],
-
-        "block-scoped-var"                  : [ "error" ],
-        "padded-blocks"                     : [ "error", "never" ]
-    }
+         "global-require": [0],
+         "import/first": [0],
+         "import/prefer-default-export": [0],
+         "import/no-extraneous-dependencies": [0]
+     }
 }

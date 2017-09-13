@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Close                from "./Close.react";
-import Maximize             from "./Maximize.react";
-import Minimize             from "./Minimize.react";
+import Close from "./Close";
+import Maximize from "./Maximize";
+import Minimize from "./Minimize";
 
 class ControlWrapper extends Component {
     render() {
