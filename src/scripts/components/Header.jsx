@@ -1,6 +1,3 @@
-import ThemeIcon from "../../images/icons/menu/theme.svg";
-import PreviewIcon from "../../images/icons/menu/preview.svg";
-import FormulaIcon from "../../images/icons/menu/formula.svg";
 import React, { Component } from "react";
 import { inject, observer, PropTypes as MobxPropTypes } from "mobx-react";
 import className from "classnames";
@@ -63,15 +60,15 @@ class Header extends Component {
 
                 <div className="app-header-buttons">
                     <button className="qilin-button" onClick={this.props.toggleTheme} role="menuitem">
-                        <ReactSVG className={themeIcon} path={ThemeIcon} />
+                        <ReactSVG className={themeIcon} path={require("../../images/icons/menu/theme.svg")} />
                     </button>
 
                     <button className="qilin-button" onClick={this.props.toggleFormula} role="menuitem">
-                        <ReactSVG className={forumlaIcon} path={FormulaIcon} />
+                        <ReactSVG className={forumlaIcon} path={require("../../images/icons/menu/formula.svg")} />
                     </button>
 
                     <button className="qilin-button" onClick={this.props.togglePreview} role="menuitem">
-                        <ReactSVG className={previewIcon} path={PreviewIcon} />
+                        <ReactSVG className={previewIcon} path={require("../../images/icons/menu/preview.svg")} />
                     </button>
                 </div>
             </div>
