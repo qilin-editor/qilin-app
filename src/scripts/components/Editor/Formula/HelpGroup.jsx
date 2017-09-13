@@ -1,39 +1,22 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import EditorForumlaHelpGroupSymbol from "./HelpGroupSymbol";
-import { getMarkdown } from "../../../utils/MarkdownUtils";
 
-class EditorForumlaHelpGroup extends Component {
+class EditorForumlaHelpGroup extends PureComponent {
     static propTypes = {
         name: PropTypes.string.isRequired,
-        choose: PropTypes.func.isRequired,
-        symbols: PropTypes.objectOf(PropTypes.object).isRequired,
-    }
-
-    componentWillMount() {
-        this.markdown = getMarkdown({
-            html: true,
-            linkify: true,
-            typography: true,
-        });
+        children: PropTypes.oneOfType([
+            PropTypes.arrayOf(PropTypes.node),
+            PropTypes.node,
+        ]),
     }
 
     render() {
-        const { name, symbols, choose } = this.props;
-
         return (
             <div className="formula-help-group">
-                <div className="formula-help-group-name">{name}</div>
+                <div className="formula-help-group-name">{this.props.name}</div>
 
                 <div className="formula-help-group-symbols">
-                    {Object.keys(symbols).map(id => (
-                        <EditorForumlaHelpGroupSymbol
-                            key={id}
-                            data={symbols[id]}
-                            choose={choose}
-                            renderer={this.markdown}
-                        />
-                    ))}
+                    {this.props.children}
                 </div>
             </div>
         );

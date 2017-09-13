@@ -1,105 +1,58 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import EditorForumlaHelpGroup from "./HelpGroup";
+import EditorForumlaHelpGroupSymbol from "./HelpGroupSymbol";
 import KatexConstant from "../../../constants/katex";
+import { getMarkdown } from "../../../utils/MarkdownUtils";
 
-class EditorForumlaHelp extends Component {
+class EditorForumlaHelp extends PureComponent {
     static propTypes = {
         choose: PropTypes.func.isRequired,
     }
 
+    static symbols = {
+        "Accents ": KatexConstant.Accents,
+        "Greek Letters": KatexConstant.GreekLetters,
+        "Other letters": KatexConstant.OtherLetters,
+        "Logic and Set Theory": KatexConstant.LogicAndSetTheory,
+        "Big operators": KatexConstant.BigOperators,
+        "Environments ": KatexConstant.Environments,
+        "Annotations ": KatexConstant.Annotations,
+        "Math operators": KatexConstant.MathOperators,
+        "Binary operators": KatexConstant.BinaryOperators,
+        "Deliminers ": KatexConstant.Deliminers,
+        "Relations ": KatexConstant.Relations,
+        "Negated relations": KatexConstant.NegatedRelations,
+        "Vertical layout": KatexConstant.VerticalLayout,
+        "Arrows ": KatexConstant.Arrows,
+        "Extensible arrows": KatexConstant.ExtensibleArrows,
+    }
+
+    componentWillMount() {
+        this.markdown = getMarkdown({
+            html: true,
+            linkify: true,
+            typography: true,
+        });
+    }
+
+    renderGroup = (name, symbols) => (
+        <EditorForumlaHelpGroup key={name} name={name}>
+            {Object.keys(symbols).map(id => (
+                <EditorForumlaHelpGroupSymbol
+                    key={id}
+                    data={symbols[id]}
+                    choose={this.props.choose}
+                    renderer={this.markdown}
+                />
+            ))}
+        </EditorForumlaHelpGroup>
+    )
+
     render() {
         return (
             <div className="formula-help">
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Accents"
-                    symbols={KatexConstant.Accents}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Greek letters"
-                    symbols={KatexConstant.GreekLetters}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Other letters"
-                    symbols={KatexConstant.OtherLetters}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Logic and Set Theory"
-                    symbols={KatexConstant.LogicAndSetTheory}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Big operators"
-                    symbols={KatexConstant.BigOperators}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Environments"
-                    symbols={KatexConstant.Environments}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Annotations"
-                    symbols={KatexConstant.Annotations}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Math operators"
-                    symbols={KatexConstant.MathOperators}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Binary operators"
-                    symbols={KatexConstant.BinaryOperators}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Deliminers"
-                    symbols={KatexConstant.Deliminers}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Relations"
-                    symbols={KatexConstant.Relations}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Negated relations"
-                    symbols={KatexConstant.NegatedRelations}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Vertical layout"
-                    symbols={KatexConstant.VerticalLayout}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Arrows"
-                    symbols={KatexConstant.Arrows}
-                />
-
-                <EditorForumlaHelpGroup
-                    {...this.props}
-                    name="Extensible arrows"
-                    symbols={KatexConstant.ExtensibleArrows}
-                />
+                {Object.keys(EditorForumlaHelp.symbols).map(type => this.renderGroup(type, EditorForumlaHelp.symbols[type]))}
             </div>
         );
     }

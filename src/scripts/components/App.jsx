@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import className from "classnames";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
-import EditorForumlaPopup from "./Editor/Formula/Popup";
+import EditorForumlaPopup from "./Editor/Formula";
 
-class App extends Component {
+class App extends PureComponent {
     state = {
         isPreviewToggled: false,
         isFormulaToggled: false,
@@ -31,7 +31,7 @@ class App extends Component {
     }
 
     render() {
-        const theme = className("app qilin-panel", {
+        const theme = className("app", "qilin-panel", {
             "is-light": !this.state.isThemeToggled,
             "is-dark": this.state.isThemeToggled,
         });
@@ -39,15 +39,16 @@ class App extends Component {
         return (
             <div className={theme}>
                 <Header
-                    {...this.state}
+                    isPreviewToggled={this.state.isPreviewToggled}
+                    isFormulaToggled={this.state.isFormulaToggled}
+                    isThemeToggled={this.state.isThemeToggled}
                     toggleTheme={this.toggleTheme}
                     togglePreview={this.togglePreview}
                     toggleFormula={this.toggleFormula}
                 />
 
                 <Content
-                    {...this.state}
-                    toggleFormula={this.toggleFormula}
+                    isPreviewToggled={this.state.isPreviewToggled}
                 />
 
                 <EditorForumlaPopup
@@ -55,7 +56,7 @@ class App extends Component {
                     close={this.toggleFormula}
                 />
 
-                <Footer {...this.state} />
+                <Footer />
             </div>
         );
     }

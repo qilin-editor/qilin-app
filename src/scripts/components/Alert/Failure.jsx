@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import ReactSVG from "react-svg";
 
-class AlertFailure extends Component {
+class AlertFailure extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         message: PropTypes.string.isRequired,

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { getMarkdown } from "../../../utils/MarkdownUtils";
 
-class EditorForumlaPreview extends Component {
+class EditorForumlaPreview extends PureComponent {
     static propTypes = {
         value: PropTypes.string.isRequired,
     }

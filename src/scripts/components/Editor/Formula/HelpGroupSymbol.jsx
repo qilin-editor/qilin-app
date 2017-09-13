@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import Markdown from "markdown-it";
 
-class EditorForumlaHelpGroupSymbol extends Component {
+class EditorForumlaHelpGroupSymbol extends PureComponent {
     static propTypes = {
         data: PropTypes.shape({
             type: PropTypes.string.isRequired,

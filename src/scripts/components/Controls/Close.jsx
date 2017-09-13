@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 
-class ControlClose extends Component {
+class ControlClose extends PureComponent {
     static propTypes = {
         window: PropTypes.shape({
             close: PropTypes.func.isRequired,

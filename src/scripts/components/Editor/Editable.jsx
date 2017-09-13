@@ -25,6 +25,10 @@ class EditorEditable extends Component {
         },
     }
 
+    shouldComponentUpdate(nextProps) {
+        return nextProps.editorStore.content !== this.props.editorStore.content;
+    }
+
     editorDidChange = (value) => {
         this.props.editorStore.changeContent(value);
     }

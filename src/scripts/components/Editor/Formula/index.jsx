@@ -7,7 +7,7 @@ import FormulaHelp from "./Help";
 import FormulaEditor from "./Editor";
 import FormulaPreview from "./Preview";
 
-class EditorForumlaPopup extends Component {
+class EditorForumla extends Component {
     static propTypes = {
         isOpen: PropTypes.bool.isRequired,
         close: PropTypes.func.isRequired,
@@ -130,4 +130,4 @@ class EditorForumlaPopup extends Component {
     }
 }
 
-export default EditorForumlaPopup;
+export default EditorForumla;

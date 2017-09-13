@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import Close from "./Close";
 import Maximize from "./Maximize";
 import Minimize from "./Minimize";
 
-class ControlWrapper extends Component {
+class ControlWrapper extends PureComponent {
     render() {
         const WebWindow = nw.Window.get();
 

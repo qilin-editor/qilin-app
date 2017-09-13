@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 
-class ControlMaximize extends Component {
+class ControlMaximize extends PureComponent {
     static propTypes = {
         window: PropTypes.shape({
             close: PropTypes.func.isRequired,

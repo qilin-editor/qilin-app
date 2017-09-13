@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import className from "classnames";
 import SplitPane from "react-split-pane";
 import EditorEditable from "./Editor/Editable";
 import EditorPreview from "./Editor/Preview";
 
-class Content extends Component {
+class Content extends PureComponent {
     static propTypes = {
         isPreviewToggled: PropTypes.bool.isRequired,
     }
@@ -26,7 +26,7 @@ class Content extends Component {
                         className={splitPaneClasses}
                     >
                         <EditorEditable />
-                        <EditorPreview />
+                        <EditorPreview isOpen={this.props.isPreviewToggled} />
                     </SplitPane>
                 </div>
             </div>
