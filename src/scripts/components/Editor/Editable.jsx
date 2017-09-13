@@ -26,10 +26,6 @@ class EditorEditable extends Component {
             indentUnit: 4,
             indentWithTabs: true,
             autoCloseBrackets: true,
-
-            extraKeys: {
-                "Alt-F": "findPersistent",
-            },
         },
     }
 
