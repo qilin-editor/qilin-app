@@ -13,19 +13,15 @@ class EditorEditable extends Component {
         options: {
             mode: "gfm",
             theme: "dark",
-
-            styleActiveLine: true,
+            autofocus: true,
             lineNumbers: false,
             lineWrapping: true,
-
-            autofocus: true,
+            styleActiveLine: true,
             scrollbarStyle: "overlay",
             scrollPastEnd: true,
-
-            tabSize: 4,
             indentUnit: 4,
-            indentWithTabs: true,
             autoCloseBrackets: true,
+            keyMap: "sublime",
         },
     }
 
