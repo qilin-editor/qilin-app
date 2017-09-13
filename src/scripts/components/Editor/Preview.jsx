@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { inject, observer, PropTypes as MobxPropTypes } from "mobx-react";
 import PropTypes from "prop-types";
-import { getMarkdown } from "../../utils/MarkdownUtils";
+import Markdown from "../TopLevel/Markdown";
 
 @inject(["editorStore"])
 @observer
@@ -9,14 +9,6 @@ class EditorPreview extends Component {
     static propTypes = {
         editorStore: MobxPropTypes.observableObject,
         isOpen: PropTypes.bool.isRequired,
-    }
-
-    componentWillMount() {
-        this.markdown = getMarkdown({
-            html: true,
-            linkify: true,
-            typography: true,
-        });
     }
 
     shouldComponentUpdate(nextProps) {
@@ -29,11 +21,9 @@ class EditorPreview extends Component {
         }
 
         return (
-            <div
+            <Markdown
                 className="editor-preview qilin-panel typo"
-                dangerouslySetInnerHTML={{
-                    __html: this.markdown.render(this.props.editorStore.content),
-                }}
+                content={this.props.editorStore.content}
             />
         );
     }

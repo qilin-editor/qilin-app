@@ -1,9 +1,8 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import EditorForumlaHelpGroup from "./HelpGroup";
-import EditorForumlaHelpGroupSymbol from "./HelpGroupSymbol";
+import Markdown from "../../TopLevel/Markdown";
 import KatexConstant from "../../../constants/katex";
-import { getMarkdown } from "../../../utils/MarkdownUtils";
 
 class EditorForumlaHelp extends PureComponent {
     static propTypes = {
@@ -28,22 +27,14 @@ class EditorForumlaHelp extends PureComponent {
         "Extensible arrows": KatexConstant.ExtensibleArrows,
     }
 
-    componentWillMount() {
-        this.markdown = getMarkdown({
-            html: true,
-            linkify: true,
-            typography: true,
-        });
-    }
-
     renderGroup = (name, symbols) => (
         <EditorForumlaHelpGroup key={name} name={name}>
             {Object.keys(symbols).map(id => (
-                <EditorForumlaHelpGroupSymbol
+                <Markdown
                     key={id}
-                    data={symbols[id]}
-                    choose={this.props.choose}
-                    renderer={this.markdown}
+                    className="formula-help-symbol"
+                    content={`\`\`\`katex\n${symbols[id].content}\n\`\`\``}
+                    onClick={() => this.props.choose(symbols[id])}
                 />
             ))}
         </EditorForumlaHelpGroup>

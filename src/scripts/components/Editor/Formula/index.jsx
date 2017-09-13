@@ -5,7 +5,8 @@ import PropTypes from "prop-types";
 import className from "classnames";
 import FormulaHelp from "./Help";
 import FormulaEditor from "./Editor";
-import FormulaPreview from "./Preview";
+import Makrdown from "../../TopLevel/Markdown";
+import CodeMirror from "../../TopLevel/CodeMirror";
 
 class EditorForumla extends Component {
     static propTypes = {
@@ -101,8 +102,9 @@ class EditorForumla extends Component {
                             </TabList>
 
                             <TabPanel className="qilin-popup-content">
-                                <FormulaPreview
-                                    value={this.state.value}
+                                <Makrdown
+                                    className="formula-preview"
+                                    content={`\`\`\`katex\n${this.state.value}\n\`\`\``}
                                 />
 
                                 <FormulaEditor
@@ -117,9 +119,15 @@ class EditorForumla extends Component {
                             </TabPanel>
 
                             <TabPanel className="qilin-popup-content">
-                                <FormulaEditor
-                                    className="is-full"
-                                    value={`\`\`\`katex\n${this.state.value}\n\`\`\``}
+                                <CodeMirror
+                                    className="formula-editor is-full"
+                                    content={`\`\`\`katex\n${this.state.value}\n\`\`\``}
+                                    options={{
+                                        scrollPastEnd: false,
+                                        lineWrapping: false,
+                                        lineNumbers: true,
+                                        readOnly: true,
+                                    }}
                                 />
                             </TabPanel>
                         </Tabs>

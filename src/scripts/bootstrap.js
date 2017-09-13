@@ -2,13 +2,6 @@ import React from "react";
 import { render } from "react-dom";
 import { Provider } from "mobx-react";
 import App from "./components/App";
-
-import "codemirror/mode/gfm/gfm";
-import "codemirror/addon/edit/closebrackets";
-import "codemirror/addon/scroll/scrollpastend";
-import "codemirror/addon/scroll/simplescrollbars";
-import "codemirror/addon/selection/active-line";
-import "codemirror/keymap/sublime";
 import "./shortcuts/FileShortcuts";
 
 const stores = {

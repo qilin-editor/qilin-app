@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CodeMirrorComponent from "react-codemirror";
+import CodeMirror from "../../TopLevel/CodeMirror";
 import PropTypes from "prop-types";
 import className from "classnames";
 
@@ -17,29 +17,6 @@ class EditorForumlaEditor extends Component {
             alias: PropTypes.arrayOf(PropTypes.string),
             cache: PropTypes.number,
         }),
-    }
-
-    state = {
-        options: {
-            mode: "plain/text",
-            theme: "dark",
-
-            styleActiveLine: true,
-            lineNumbers: true,
-            lineWrapping: true,
-
-            autofocus: true,
-            scrollbarStyle: "overlay",
-
-            tabSize: 4,
-            indentUnit: 4,
-            indentWithTabs: true,
-            autoCloseBrackets: true,
-        },
-    }
-
-    componentDidMount() {
-        this.cm = this.rcm.getCodeMirror();
     }
 
     componentWillReceiveProps(props) {
@@ -62,9 +39,12 @@ class EditorForumlaEditor extends Component {
 
         return (
             <div className={formulaClasses}>
-                <CodeMirrorComponent
-                    ref={(e) => { this.rcm = e; }}
-                    options={this.state.options}
+                <CodeMirror
+                    api={(e) => { this.cm = e; }}
+                    options={{
+                        mode: "plain/text",
+                        lineNumbers: true,
+                    }}
                     value={this.props.value}
                     onChange={this.props.change}
                 />

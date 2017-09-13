@@ -7,11 +7,10 @@
         &,
         .CodeMirror {
             height: 105px;
-        }
 
-        &.is-full,
-        &.is-full .CodeMirror {
-            height: 285px;
+            &.is-full {
+                height: 380px;
+            }
         }
     }
 
