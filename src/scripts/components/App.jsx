@@ -3,6 +3,7 @@ import className from "classnames";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
+import EditorForumlaPopup from "./Editor/Formula/Popup";
 
 class App extends Component {
     state = {
@@ -47,6 +48,11 @@ class App extends Component {
                 <Content
                     {...this.state}
                     toggleFormula={this.toggleFormula}
+                />
+
+                <EditorForumlaPopup
+                    isOpen={this.state.isFormulaToggled}
+                    close={this.toggleFormula}
                 />
 
                 <Footer {...this.state} />

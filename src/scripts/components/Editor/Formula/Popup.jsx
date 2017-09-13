@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Draggable from "react-draggable";
+import Rnd from "react-rnd";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PropTypes from "prop-types";
 import className from "classnames";
@@ -45,14 +45,42 @@ class EditorForumlaPopup extends Component {
         });
     }
 
+    onDrag = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
     render() {
         const popupClasses = className("qilin-panel", "qilin-popup", {
             "is-open": this.props.isOpen,
         });
 
         return (
-            <Draggable handle=".qilin-popup-header">
-                <div>
+            <div
+                style={{
+                    position: "absolute",
+                    top: 50,
+                    bottom: 50,
+                    left: 0,
+                    right: 0,
+                }}
+            >
+                <Rnd
+                    dragHandleClassName=".qilin-popup-header"
+                    bounds="parent"
+                    minWidth={300}
+                    minHeight={300}
+                    style={{
+                        position: "absolute",
+                        zIndex: 10,
+                    }}
+                    default={{
+                        x: 0,
+                        y: 80,
+                        width: 500,
+                        height: 400,
+                    }}
+                >
                     <div className={popupClasses}>
                         <div className="qilin-popup-header">
                             <div className="qilin-popup-header-title">Math forumla</div>
@@ -96,8 +124,8 @@ class EditorForumlaPopup extends Component {
                             </TabPanel>
                         </Tabs>
                     </div>
-                </div>
-            </Draggable>
+                </Rnd>
+            </div>
         );
     }
 }
