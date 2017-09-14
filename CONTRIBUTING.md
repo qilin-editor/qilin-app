@@ -1,6 +1,6 @@
 # Contributing to Qilin
 
-First off, thanks for taking the time to contribute! The following is a set of guidelines for contributing to Qilin, which are hosted in the [Qilin Repository](https://github.com/Bartozzz/Qilin) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+First off, thanks for taking the time to contribute! The following is a set of guidelines for contributing to Qilin, which are hosted in the [Qilin Repository](https://github.com/qilin-editor/qilin-app) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 #### Table of contents
 
@@ -26,7 +26,7 @@ This section guides you through submitting a bug report for Qilin. Following the
 
 #### Before submitting a bug report
 
-* **Check the DevTools console**. You might be able to find the cause of the problem and fix things yourself. Most importantly, check if you can reproduce the problem [in the latest version of Qilin](https://github.com/Bartozzz/Qilin/releases).
+* **Check the DevTools console**. You might be able to find the cause of the problem and fix things yourself. Most importantly, check if you can reproduce the problem [in the latest version of Qilin](https://github.com/qilin-editor/qilin-app/releases).
 * **Determine which component causes the bug**. Sometimes the issue comes from an external dependency, not Qilin components.
 * **Perform a cursory search** to see if the problem has already been reported. If it is the case and the issue is still open, add a comment to the existing issue instead of opening a new one.
 
@@ -45,7 +45,7 @@ Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/).
 Provide more context by answering these questions:
 
 * **Did the problem start happening recently** (e.g. after updating to a new version of Qilin) or was this always a problem?
-* **Can you reproduce the problem in an [older version of Qilin](https://github.com/Bartozzz/Qilin/releases)?** What's the most recent version in which the problem doesn't happen?
+* **Can you reproduce the problem in an [older version of Qilin](https://github.com/qilin-editor/qilin-app/releases)?** What's the most recent version in which the problem doesn't happen?
 * **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
 * **Does the problem happen for all files and projects or only some?** Does the problem happen only when working with local or remote files (e.g. on network drives), with large files or files with very long lines, or with files in a specific encoding? Is there anything else special about the files you are using?
 
@@ -62,7 +62,7 @@ This section guides you through submitting an enhancement suggestion for Qilin, 
 
 #### Before submitting an enhancement suggestion
 
-* Most importantly, check if you're using [the latest version of Qilin](https://github.com/Bartozzz/Qilin/releases).
+* Most importantly, check if you're using [the latest version of Qilin](https://github.com/qilin-editor/qilin-app/releases).
 * Perform a cursory search to see if the enhancement has already been suggested.
 
 #### How do I submit a (good) enhancement suggestion?
