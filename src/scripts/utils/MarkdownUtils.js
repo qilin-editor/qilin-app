@@ -27,7 +27,7 @@ export function getMarkdown(options = {}) {
     markdown.use(require("markdown-it-task-lists"));
     markdown.use(require("markdown-it-table-of-contents"));
     markdown.use(require("markdown-it-block-embed"), { filterUrl: url => `http://${url}` });
-    markdown.use(require("../plugins/markdown/latex"));
+    markdown.use(require("markdown-it-maths"));
 
     return markdown;
 }
