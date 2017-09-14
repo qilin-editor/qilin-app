@@ -81,6 +81,7 @@
         "style-loader": "^0.18.2",
         "babel-loader": "^7.1.2",
         "postcss-loader": "^2.0.5",
+        "resolve-url-loader": "^2.1.0",
         "node-sass": "^4.5.3"
     },
     "scripts": {

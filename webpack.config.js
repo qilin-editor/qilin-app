@@ -13,6 +13,7 @@ const config = {
 
     resolve: {
         extensions: [".js", ".jsx", ".json"],
+        modules: ["node_modules"],
     },
 
     watchOptions: {
@@ -32,8 +33,12 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(jpg|jpeg|png|woff|woff2|eot|otf|ttf)$/,
+                test: /\.(jpg|jpeg|png)$/,
                 use: "url-loader?limit=1000",
+            },
+            {
+                test: /\.(woff|woff2|eot|otf|ttf)$/,
+                use: "file-loader",
             },
             {
                 test: /\.svg$/,
@@ -52,9 +57,10 @@ const config = {
                 test: /\.(scss|css)$/,
                 use: ExtractTextPlugin.extract({
                     use: [
-                        "css-loader",
-                        "postcss-loader",
-                        "sass-loader",
+                        { loader: "css-loader", options: { sourceMap: true } },
+                        { loader: "resolve-url-loader", options: { sourceMap: true } },
+                        { loader: "postcss-loader", options: { sourceMap: true } },
+                        { loader: "sass-loader", options: { sourceMap: true } },
                     ],
                 }),
             },
