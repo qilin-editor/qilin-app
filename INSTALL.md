@@ -6,8 +6,8 @@ You can download one of the [releases](https://github.com/Bartozzz/Qilin/release
 **The better way:**
 We recommend you building Qilin yourself to get the latest features (as the last release can be several commits behind the `master` branch). You will need [Node.js](https://nodejs.org/en/download/) installed locally on your machine and follow [instructions in README.md](https://github.com/Bartozzz/Qilin#development):
 
-1. Clone or [download](https://github.com/Bartozzz/Qilin/archive/master.zip) Qilin's repository from GitHub (`$ git clone https://github.com/Bartozzz/Qilin.git`);
-2. Move to the downloaded directory in your terminal (`$ cd Qilin`);
+1. Clone or [download](https://github.com/Bartozzz/Qilin/archive/master.zip) Qilin's repository from GitHub (`$ git clone https://github.com/qilin-editor/qilin-app.git`);
+2. Move to the downloaded directory in your terminal (`$ cd qilin-app`);
 3. Download NPM dependencies via: `$ npm i`;
 4. Once all dependencies are installed, build Qilin via: `$ npm run build`;
 5. Once the build is finished, you can find Qilin binaries in `build/` folder;
