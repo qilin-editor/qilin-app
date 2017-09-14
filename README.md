@@ -1,10 +1,10 @@
 <div align="center">
   <h1>Qilin Editor</h1>
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Bartozzz/Qilin.svg)](https://greenkeeper.io/)
-[![Build Status](https://img.shields.io/travis/Bartozzz/Qilin.svg)](https://travis-ci.org/Bartozzz/Qilin/)
-[![Github Releases](https://img.shields.io/github/downloads/Bartozzz/Qilin/latest/total.svg)](https://github.com/Bartozzz/Qilin/releases)
-[![Coverage Status](https://coveralls.io/repos/github/Bartozzz/Qilin/badge.svg?branch=master)](https://coveralls.io/github/Bartozzz/Qilin?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/qilin-editor/qilin-app.svg)](https://greenkeeper.io/)
+[![Build Status](https://img.shields.io/travis/qilin-editor/qilin-app.svg)](https://travis-ci.org/qilin-editor/qilin-app/)
+[![Github Releases](https://img.shields.io/github/downloads/qilin-editor/qilin-app/latest/total.svg)](https://github.com/qilin-editor/qilin-app/releases)
+[![Coverage Status](https://coveralls.io/repos/github/qilin-editor/qilin-app/badge.svg?branch=master)](https://coveralls.io/github/qilin-editor/qilin-app?branch=master)
   <br>
 
 **Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/), partially [`LaTeX`](https://www.latex-project.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.
@@ -16,15 +16,15 @@
 
 ### Bug reporting
 
-[![Github Open Issues](https://img.shields.io/github/issues-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/issues)
-[![Github Closed Issues](https://img.shields.io/github/issues-closed-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/issues?q=is%3Aissue+is%3Aclosed)
-[![Github Pull Requests](https://img.shields.io/github/issues-pr-raw/Bartozzz/Qilin.svg)](https://github.com/Bartozzz/Qilin/pulls)
+[![Github Open Issues](https://img.shields.io/github/issues-raw/qilin-editor/qilin-app.svg)](https://github.com/qilin-editor/qilin-app/issues)
+[![Github Closed Issues](https://img.shields.io/github/issues-closed-raw/qilin-editor/qilin-app.svg)](https://github.com/qilin-editor/qilin-app/issues?q=is%3Aissue+is%3Aclosed)
+[![Github Pull Requests](https://img.shields.io/github/issues-pr-raw/qilin-editor/qilin-app.svg)](https://github.com/qilin-editor/qilin-app/pulls)
 
-**We want contributing to Qilin to be fun, enjoyable, and educational for anyone, and everyone.** Changes and improvements are more than welcome! Feel free to fork and open a pull request. If you have found any issues, please [report them here](https://github.com/Bartozzz/Qilin/issues/new) - they are being tracked on [GitHub Issues](https://github.com/Bartozzz/Qilin/issues).
+**We want contributing to Qilin to be fun, enjoyable, and educational for anyone, and everyone.** Changes and improvements are more than welcome! Feel free to fork and open a pull request. If you have found any issues, please [report them here](https://github.com/qilin-editor/qilin-app/issues/new) - they are being tracked on [GitHub Issues](https://github.com/qilin-editor/qilin-app/issues).
 
 ### License
 
-Project was created and developed by [Bartosz Łaniewski](https://github.com/Bartozzz). The full list of contributors can be found [here](https://github.com/Bartozzz/Qilin/graphs/contributors). Qilin's code is [BSD-3-Clause licensed](https://github.com/Bartozzz/Qilin/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/Bartozzz/Qilin/blob/master/PATENTS).
+Project was created and developed by [Bartosz Łaniewski](https://github.com/Bartozzz). The full list of contributors can be found [here](https://github.com/qilin-editor/qilin-app/graphs/contributors). Qilin's code is [BSD-3-Clause licensed](https://github.com/qilin-editor/qilin-app/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/qilin-editor/qilin-app/blob/master/PATENTS).
 
 ### Development
 
@@ -52,7 +52,7 @@ $ sudo npm run <command>
 
 ### Installation
 
-There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions. If you wonder how to work on Qilin or have other questions - check our [Wiki](https://github.com/Bartozzz/Qilin/wiki).
+There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions. If you wonder how to work on Qilin or have other questions - check our [Wiki](https://github.com/qilin-editor/qilin-app/wiki).
 
 <div align="center">
   <h2>Screenshots</h2>
