@@ -27,6 +27,21 @@ function saveFile(path, content) {
     });
 }
 
+shortcut("defmod-n", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    nw.Window.open("dist/index.html", {
+        new_instance: true,
+        focus: true,
+        frame: false,
+        min_height: 600,
+        min_width: 1000,
+    });
+
+    return false;
+});
+
 shortcut("defmod-o", (event) => {
     event.preventDefault();
     event.stopPropagation();
