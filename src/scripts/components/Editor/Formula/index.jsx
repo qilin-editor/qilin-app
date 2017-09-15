@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Rnd from "react-rnd";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PropTypes from "prop-types";
-import className from "classnames";
 import FormulaHelp from "./Help";
 import FormulaEditor from "./Editor";
 import Makrdown from "../../TopLevel/Markdown";
