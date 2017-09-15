@@ -21,7 +21,7 @@ class EditorEditable extends Component {
         return (
             <div className="editor-editable qilin-panel">
                 <CodeMirror
-                    value={this.props.editorStore.content}
+                    content={this.props.editorStore.content}
                     onChange={this.editorDidChange}
                 />
             </div>

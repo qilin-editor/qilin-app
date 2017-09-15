@@ -45,7 +45,7 @@ class EditorForumlaEditor extends Component {
                         mode: "plain/text",
                         lineNumbers: true,
                     }}
-                    value={this.props.value}
+                    content={this.props.value}
                     onChange={this.props.change}
                 />
             </div>
