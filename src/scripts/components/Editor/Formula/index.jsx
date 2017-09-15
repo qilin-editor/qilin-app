@@ -52,10 +52,6 @@ class EditorForumla extends Component {
     }
 
     render() {
-        const popupClasses = className("qilin-panel", "qilin-popup", {
-            "is-open": this.props.isOpen,
-        });
-
         return (
             <Rnd
                 dragHandleClassName=".qilin-popup-header"
@@ -66,6 +62,7 @@ class EditorForumla extends Component {
                     position: "fixed",
                     top: "50px",
                     zIndex: 10,
+                    display: this.props.isOpen ? "block" : "none",
                 }}
                 default={{
                     x: 0,
@@ -74,7 +71,7 @@ class EditorForumla extends Component {
                     height: 400,
                 }}
             >
-                <div className={popupClasses}>
+                <div className="qilin-panel qilin-popup">
                     <div className="qilin-popup-header">
                         <div className="qilin-popup-header-title">Math forumla</div>
 

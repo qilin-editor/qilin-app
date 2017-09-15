@@ -1,14 +1,9 @@
 .qilin-popup {
-    display: none;
-
+    display: flex;
     flex-direction: column;
 
     width: inherit;
     height: inherit;
-
-    &.is-open {
-        display: flex;
-    }
 
     &-header {
         display: flex;
