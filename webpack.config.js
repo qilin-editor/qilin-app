@@ -3,6 +3,8 @@ const Webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+console.log(`Running in ${process.env.NODE_ENV || "production"} mode`);
+
 const config = {
     entry: "./src/index.js",
 
@@ -13,12 +15,12 @@ const config = {
 
     resolve: {
         extensions: [".js", ".jsx", ".json"],
-        modules: ["node_modules"],
     },
 
     watchOptions: {
         ignored: [
             path.resolve(__dirname, "./node_modules"),
+            path.resolve(__dirname, "./demos"),
             path.resolve(__dirname, "./build"),
             path.resolve(__dirname, "./cache"),
             path.resolve(__dirname, "./dist"),
@@ -37,11 +39,7 @@ const config = {
                 use: "url-loader?limit=1000",
             },
             {
-                test: /\.(woff|woff2|eot|otf|ttf)$/,
-                use: "file-loader",
-            },
-            {
-                test: /\.svg$/,
+                test: /\.(woff|woff2|eot|otf|ttf|svg)$/,
                 use: "file-loader",
             },
             {
