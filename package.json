@@ -1,7 +1,7 @@
 {
     "name": "me.laniewski.qilin",
     "main": "dist/index.html",
-    "version": "0.2.0-alpha",
+    "version": "0.3.0-alpha",
     "private": true,
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
     "license": "BSD-3-Clause license with patents",
