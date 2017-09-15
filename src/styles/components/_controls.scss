@@ -13,16 +13,11 @@
         height: 14px;
 
         margin: 0 10px 0 0;
+        padding: 0;
 
-        border-width: 0;
-        border-radius: 100%;
-
+        outline: none;
         transition: all 100ms ease;
 
         -webkit-app-region: no-drag;
     }
-
-    .control-close:hover    { background-color: $color-red; }
-    .control-maximize:hover { background-color: $color-green; }
-    .control-minimize:hover { background-color: $color-yellow; }
 }

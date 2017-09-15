@@ -15,15 +15,13 @@
         height: 50px;
         width: 100vw;
 
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-
         -webkit-app-region: drag;
 
         &-controls,
         &-buttons,
         &-title {
             display: flex;
+            outline: none;
         }
 
         &-controls {
@@ -32,9 +30,6 @@
 
         &-title {
             justify-self: center;
-
-            font-family: "Montserrat", sans-serif;
-            font-size: .75rem;
         }
 
         &-buttons {

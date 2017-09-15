@@ -1,12 +1,21 @@
-.control-close,
-.control-maximize,
-.control-minimize {
-    background-color: darken($color-text-dark, 20%);
-    background-image: linear-gradient(darken($color-text-dark, 20%), darken($color-text-dark, 25%));
-}
+.controls-container {
+    .control-close,
+    .control-maximize,
+    .control-minimize {
+        border-width: 0;
+        border-radius: 100%;
+    }
 
-.control-close:hover,
-.control-maximize:hover,
-.control-minimize:hover {
-    background-image: none;
+    .control-close,
+    .control-maximize,
+    .control-minimize {
+        background-color: darken($color-text-dark, 20%);
+        background-image: linear-gradient(darken($color-text-dark, 20%), darken($color-text-dark, 25%));
+    }
+
+    .control-close:hover,
+    .control-maximize:hover,
+    .control-minimize:hover {
+        background-image: none;
+    }
 }

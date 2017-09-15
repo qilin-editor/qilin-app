@@ -1,0 +1,95 @@
+.typo {
+    p {
+        line-height: 2rem;
+
+        margin: 1rem 0 .5rem;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 1.5rem 0 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.35rem;
+        line-height: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    ul, ol {
+        margin: 1.5rem 0;
+        padding: 0 1.5rem;
+
+        li {
+            line-height: 1.5rem;
+        }
+
+        ul, ol {
+            margin: 0;
+        }
+    }
+
+    blockquote {
+        line-height: 1.5rem;
+
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    code {
+        vertical-align: bottom;
+
+        line-height: 1.25rem;
+    }
+
+    hr {
+        border-width: 0;
+
+        height: 1px;
+        width: 100%;
+
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+
+    a {
+        color: inherit;
+
+        text-transform: none;
+        text-decoration: underline;
+    }
+
+    abbr {
+        border-bottom-width: 1px;
+        border-bottom-style: dashed;
+    }
+}

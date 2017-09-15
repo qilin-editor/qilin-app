@@ -1,7 +1,5 @@
-@import "configuration/colors";
-
-@import "fonts/montserrat/Montserrat",
-        "fonts/sourcesanspro/SourceSansPro";
+@import "configuration/colors",
+        "configuration/typo";
 
 @import "~wireframe-framework/scss/content/typography",
         "~wireframe-framework/scss/content/table",
@@ -24,7 +22,6 @@
         "components/states/isHidden",
 
         "components/app",
-        "components/alerts",
         "components/controls",
         "components/editor-formula",
         "components/editor-preview";

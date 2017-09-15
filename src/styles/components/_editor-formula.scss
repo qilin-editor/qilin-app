@@ -4,7 +4,12 @@
     }
 
     &-editor {
-        &,
+        padding: 0;
+        margin: 7px;
+
+        overflow-x: auto;
+        overflow-y: auto;
+
         .CodeMirror {
             height: 105px;
 
@@ -12,14 +17,6 @@
                 height: 380px;
             }
         }
-    }
-
-    &-editor {
-        padding: 0;
-        margin: 7px;
-
-        overflow-x: auto;
-        overflow-y: auto;
     }
 
     &-help {
