@@ -8,7 +8,7 @@ import { getPlatform } from "../utils/PlatformUtils";
 
 class App extends PureComponent {
     state = {
-        isPreviewToggled: false,
+        isPreviewToggled: true,
         isFormulaToggled: false,
         isThemeToggled: false,
     }
