@@ -3,13 +3,15 @@
 
 @import "~wireframe-framework/scss/content/typography",
         "~wireframe-framework/scss/content/table",
-        "~codemirror/lib/codemirror",
-        "~codemirror/addon/scroll/simplescrollbars",
         "~markdown-it-maths/dist/index.min",
+        "~codemirror/addon/scroll/simplescrollbars",
+        "~codemirror/lib/codemirror",
 
         "vendor/codeMirror",
-        "vendor/highlight",
         "vendor/splitPane";
+
+@import "platforms/windows/index",
+        "platforms/darwin/index";
 
 @import "themes/light/index",
         "themes/dark/index";

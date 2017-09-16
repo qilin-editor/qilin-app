@@ -1,0 +1,52 @@
+.controls-container {
+    margin: 0 7px;
+    padding: 0;
+
+    .control-close,
+    .control-maximize,
+    .control-minimize {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 35px;
+        height: 25px;
+
+        margin: 0;
+        padding: 0;
+
+        &:after {
+            display: block;
+
+            content: "";
+        }
+    }
+
+    .control-close      { grid-area: c; }
+    .control-minimize   { grid-area: a; }
+    .control-maximize   { grid-area: b; }
+
+    .control-close:after {
+        content: "\D7";
+
+        font-size: 20px;
+    }
+
+    .control-maximize:after,
+    .control-minimize:after {
+        width: 10px;
+        height: 10px;
+
+        border-color: #000;
+        border-style: solid;
+    }
+
+    .control-maximize:after {
+        border-width: 2px 1px 1px 1px;
+    }
+
+    .control-minimize:after {
+        border-width: 0 0 2px 0;
+    }
+}

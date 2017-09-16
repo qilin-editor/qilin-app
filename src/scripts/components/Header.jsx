@@ -34,15 +34,15 @@ class Header extends PureComponent {
     }
 
     render() {
-        const themeIcon = className("qilin-button-icon", {
+        const themeButton = className("qilin-button", {
             "is-active": this.props.isThemeToggled,
         });
 
-        const forumlaIcon = className("qilin-button-icon", {
+        const formulaButton = className("qilin-button", {
             "is-active": this.props.isFormulaToggled,
         });
 
-        const previewIcon = className("qilin-button-icon", {
+        const previewButton = className("qilin-button", {
             "is-active": this.props.isPreviewToggled,
         });
 
@@ -59,16 +59,16 @@ class Header extends PureComponent {
                 </div>
 
                 <div className="app-header-buttons">
-                    <button className="qilin-button" onClick={this.props.toggleTheme} role="menuitem">
-                        <ReactSVG className={themeIcon} path={require("../../images/icons/menu/theme.svg")} />
+                    <button className={themeButton} onClick={this.props.toggleTheme} role="menuitem">
+                        <ReactSVG className="qilin-button-icon" path={require("../../images/icons/menu/theme.svg")} />
                     </button>
 
-                    <button className="qilin-button" onClick={this.props.toggleFormula} role="menuitem">
-                        <ReactSVG className={forumlaIcon} path={require("../../images/icons/menu/formula.svg")} />
+                    <button className={formulaButton} onClick={this.props.toggleFormula} role="menuitem">
+                        <ReactSVG className="qilin-button-icon" path={require("../../images/icons/menu/formula.svg")} />
                     </button>
 
-                    <button className="qilin-button" onClick={this.props.togglePreview} role="menuitem">
-                        <ReactSVG className={previewIcon} path={require("../../images/icons/menu/preview.svg")} />
+                    <button className={previewButton} onClick={this.props.togglePreview} role="menuitem">
+                        <ReactSVG className="qilin-button-icon" path={require("../../images/icons/menu/preview.svg")} />
                     </button>
                 </div>
             </div>

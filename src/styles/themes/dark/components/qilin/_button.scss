@@ -1,19 +1,44 @@
 .qilin-button {
-    background-color: darken($color-text-dark, 20%);
-    background-image: linear-gradient(darken($color-text-dark, 20%), darken($color-text-dark, 25%));
-
-    box-shadow: 0 -1px 0 rgba(white, .25),
-                0 1px 2px -1px rgba(black, .75);
-
     color: rgba(white, .5);
+
+    &.is-active {
+        .qilin-button-icon {
+            color: white;
+            fill: white;
+        }
+    }
 
     &-icon {
         color: rgba(white, .5);
         fill: rgba(white, .5);
+    }
+}
+
+
+&.is-linux,
+&.is-darwin {
+    .qilin-button {
+        background-color: darken($color-text-dark, 20%);
+        background-image: linear-gradient(darken($color-text-dark, 20%), darken($color-text-dark, 25%));
+
+        border-radius: 4px;
+
+        box-shadow: 0 -1px 0 rgba(white, .25),
+                    0 1px 2px -1px rgba(black, .75);
+    }
+}
+
+&.is-windows {
+    .qilin-button {
+        color: $color-text;
+        background-color: $color-border-light;
+
+        &:hover {
+            background-color: $color-border-dark;
+        }
 
         &.is-active {
-            color: white;
-            fill: white;
+            background-color: $color-border-dark;
         }
     }
 }

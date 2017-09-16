@@ -1,21 +1,46 @@
-.controls-container {
+&.is-linux,
+&.is-darwin {
+    .controls-container {
+        .control-close,
+        .control-maximize,
+        .control-minimize {
+            border-width: 0;
+            border-radius: 100%;
+        }
+
+        .control-close,
+        .control-maximize,
+        .control-minimize {
+            background-color: darken($color-text-dark, 20%);
+            background-image: linear-gradient(darken($color-text-dark, 20%), darken($color-text-dark, 25%));
+        }
+
+        .control-close:hover,
+        .control-maximize:hover,
+        .control-minimize:hover {
+            background-image: none;
+        }
+    }
+}
+
+&.is-windows {
     .control-close,
     .control-maximize,
     .control-minimize {
         border-width: 0;
-        border-radius: 100%;
+        border-radius: 0;
+
+        &:after {
+            color: white;
+            border-color: white;
+        }
     }
 
-    .control-close,
-    .control-maximize,
-    .control-minimize {
-        background-color: darken($color-text-dark, 20%);
-        background-image: linear-gradient(darken($color-text-dark, 20%), darken($color-text-dark, 25%));
-    }
+    .control-close    { background-color: $color-red; }
+    .control-maximize { background-color: rgba($color-green, .0); }
+    .control-minimize { background-color: rgba($color-yellow, .0); }
 
-    .control-close:hover,
-    .control-maximize:hover,
-    .control-minimize:hover {
-        background-image: none;
-    }
+    .control-close:hover    { background-color: $color-red; }
+    .control-maximize:hover { background-color: $color-green; }
+    .control-minimize:hover { background-color: $color-yellow; }
 }

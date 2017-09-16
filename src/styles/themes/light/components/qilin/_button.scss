@@ -1,18 +1,43 @@
 .qilin-button {
     color: $color-text;
-    background-color: $color-background;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: $color-border-light;
+    &.is-active {
+        .qilin-button-icon {
+            color: $color-text;
+            fill: $color-text;
+        }
+    }
 
     &-icon {
         color: rgba($color-text, .5);
         fill: rgba($color-text, .5);
+    }
+}
+
+&.is-linux,
+&.is-darwin {
+    .qilin-button {
+        color: $color-text;
+        background-color: $color-background;
+
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: $color-border-light;
+    }
+}
+
+&.is-windows {
+    .qilin-button {
+        color: $color-text;
+        background-color: $color-border-light;
+
+        &:hover {
+            background-color: $color-border-dark;
+        }
 
         &.is-active {
-            color: $color-text;
-            fill: $color-text;
+            background-color: $color-border-dark;
         }
     }
 }

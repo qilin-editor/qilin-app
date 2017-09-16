@@ -4,6 +4,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 import EditorForumlaPopup from "./Editor/Formula";
+import { getPlatform } from "../utils/PlatformUtils";
 
 class App extends PureComponent {
     state = {
@@ -31,7 +32,7 @@ class App extends PureComponent {
     }
 
     render() {
-        const theme = className("app", "qilin-panel", {
+        const theme = className("app", "qilin-panel", `is-${getPlatform()}`, {
             "is-light": !this.state.isThemeToggled,
             "is-dark": this.state.isThemeToggled,
         });

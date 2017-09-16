@@ -1,19 +1,12 @@
 .controls-container {
-    display: flex;
-
-    margin: 0 18px;
-    padding: 0;
+    display: grid;
+    grid-template-areas: "a b c";
+    grid-template-columns: auto auto auto;
 
     .control-close,
     .control-maximize,
     .control-minimize {
         content: "";
-
-        width: 14px;
-        height: 14px;
-
-        margin: 0 10px 0 0;
-        padding: 0;
 
         outline: none;
         transition: all 100ms ease;

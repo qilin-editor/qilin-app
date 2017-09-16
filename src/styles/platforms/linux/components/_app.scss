@@ -1,0 +1,20 @@
+.app {
+    &-header {
+        height: 50px;
+
+        &-controls,
+        &-buttons,
+        &-title {
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-buttons {
+            margin: 0 11px;
+        }
+
+        &-controls  { grid-area: a; justify-self: start; }
+        &-buttons   { grid-area: c; justify-self: end; }
+        &-title     { grid-area: b; justify-self: center; }
+    }
+}
