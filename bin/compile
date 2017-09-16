@@ -10,7 +10,9 @@ var nw = new Builder( {
     ],
 
     platforms   : [ "osx64", "win64", "linux64" ],
-    version     : "latest"
+    version     : "latest",
+    macIcns     : path.resolve( __dirname, "../logo/icns/1600x1600" ),
+    winIco      : path.resolve( __dirname, "../logo/ico/1600x1600.ico" )
 } );
 
 nw.on( "log", console.log );
