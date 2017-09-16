@@ -1,3 +1,5 @@
+@import "../fonts/FiraCode/fira_code";
+
 @import "configuration/colors",
         "configuration/typo";
 
@@ -7,7 +9,6 @@
         "~codemirror/addon/scroll/simplescrollbars",
         "~codemirror/lib/codemirror",
 
-        "vendor/codeMirror",
         "vendor/splitPane";
 
 @import "platforms/windows/index",
@@ -20,10 +21,11 @@
         "components/qilin/popup",
         "components/qilin/reset",
 
-        "components/states/isClickable",
-        "components/states/isHidden",
+        "components/states/is-clickable",
+        "components/states/is-hidden",
 
         "components/app",
         "components/controls",
+        "components/editor-editable",
         "components/editor-formula",
         "components/editor-preview";
