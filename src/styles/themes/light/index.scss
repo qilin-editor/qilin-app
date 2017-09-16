@@ -2,9 +2,7 @@
     @import "./colors";
     @import "./syntax";
 
-    @import "./vendor/codeMirror",
-            "./vendor/highlight",
-            "./vendor/splitPane";
+    @import "./vendor/codeMirror";
 
     @import "./components/qilin/button",
             "./components/qilin/popup",

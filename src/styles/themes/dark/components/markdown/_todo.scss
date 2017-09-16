@@ -7,7 +7,7 @@
     .task-list-item {
         line-height: 30px;
 
-        .task-list-item-checkbox {
+        &-item-checkbox {
             -webkit-appearance: none;
 
             position: relative;

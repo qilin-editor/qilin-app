@@ -1,18 +1,21 @@
-.CodeMirror-cursor {
-    border-left-color: $color-text;
+@import "~highlight.js/styles/atom-one-light";
+
+.CodeMirror {
+    &-cursor {
+        border-left-color: $color-text;
+    }
+
+    &-activeline-background {
+        background-color: $color-border-light;
+    }
 }
 
-.CodeMirror-activeline-background {
+hr {
     background-color: $color-border-light;
 }
 
-.cm-searching {
-    color: rgba(white, .5) !important;
-}
-
-.cm-searching {
-    background-color: $color-yellow;
-    border-radius: 3px;
+abbr {
+    border-bottom-color: $color-border-light;
 }
 
 .cm-header {
@@ -28,6 +31,7 @@
     color: $color-red;
 }
 
+p,
 .cm-hr,
 .cm-link,
 .cm-quote,

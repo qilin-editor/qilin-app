@@ -32,7 +32,7 @@ class EditorForumlaHelp extends PureComponent {
             {Object.keys(symbols).map(id => (
                 <Markdown
                     key={id}
-                    className="formula-help-symbol"
+                    className="editor-formula-help-symbol"
                     content={`\`\`\`katex\n${symbols[id].content}\n\`\`\``}
                     onClick={() => this.props.choose(symbols[id])}
                 />
@@ -42,7 +42,7 @@ class EditorForumlaHelp extends PureComponent {
 
     render() {
         return (
-            <div className="formula-help">
+            <div className="editor-formula-help">
                 {Object.keys(EditorForumlaHelp.symbols).map(type => this.renderGroup(type, EditorForumlaHelp.symbols[type]))}
             </div>
         );

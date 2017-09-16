@@ -12,10 +12,10 @@ class EditorForumlaHelpGroup extends PureComponent {
 
     render() {
         return (
-            <div className="formula-help-group">
-                <div className="formula-help-group-name">{this.props.name}</div>
+            <div className="editor-formula-help-group">
+                <div className="editor-formula-help-group-name">{this.props.name}</div>
 
-                <div className="formula-help-group-symbols">
+                <div className="editor-formula-help-group-symbols">
                     {this.props.children}
                 </div>
             </div>

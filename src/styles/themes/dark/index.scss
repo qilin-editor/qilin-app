@@ -2,9 +2,7 @@
     @import "./colors";
     @import "./syntax";
 
-    @import "./vendor/codeMirror",
-            "./vendor/highlight",
-            "./vendor/splitPane";
+    @import "./vendor/codeMirror";
 
     @import "./components/qilin/button",
             "./components/qilin/popup",
@@ -20,6 +18,6 @@
     .qilin-panel {
         background-color: $color-background;
         border-color: $color-border-dark;
-        color: lighten($color-text-light, 10%);
+        color: $color-text;
     }
 }

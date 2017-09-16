@@ -20,6 +20,8 @@
         &-title {
             display: flex;
             outline: none;
+
+            -webkit-app-region: no-drag;
         }
     }
 
@@ -36,6 +38,31 @@
             .is-preview-hidden {
                 .Pane1 { width: 100% !important; }
                 .Pane2 { width: 0 !important; }
+            }
+        }
+
+        &-pane {
+            .Resizer {
+                background-clip: padding-box;
+                z-index: 1;
+
+                &.vertical {
+                    margin: 0 -5px;
+
+                    width: 11px;
+                    height: auto;
+
+                    border-width: 0 5px;
+                    border-style: solid;
+                    border-color: transparent;
+
+                    cursor: col-resize;
+                }
+            }
+
+            .Pane {
+                overflow-x: hidden;
+                overflow-y: hidden;
             }
         }
     }

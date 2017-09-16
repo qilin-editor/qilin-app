@@ -1,11 +1,8 @@
+$color-popup : lighten($color-background, 2.5%);
+$color-tabs  : lighten($color-background, 1%);
+
 .qilin-popup {
     background-color: $color-popup !important;
-
-    border-radius: 3px;
-    border-width: 0;
-
-    filter: drop-shadow(0 10px 10px rgba(black, .35))
-            drop-shadow(0 0 1px rgba(black, .25));
 
     &-header {
         border-bottom-width: 1px;
@@ -23,7 +20,7 @@
     }
 
     &-tabs {
-        background-color: $color-background;
+        background-color: $color-tabs;
 
         &-list {
             border-bottom-width: 1px;
@@ -33,7 +30,7 @@
             &-item {
                 font-size: .85rem;
 
-                border-radius: 3px 3px 0 0;
+                border-radius: 4px 4px 0 0;
                 border-width: 1px 1px 0 1px;
                 border-style: solid;
                 border-color: transparent;
@@ -44,5 +41,25 @@
                 }
             }
         }
+    }
+}
+
+&.is-linux,
+&.is-darwin {
+    .qilin-popup {
+        border-radius: 4px;
+        border-width: 0;
+
+        filter: drop-shadow(0 10px 10px rgba(black, .5))
+                drop-shadow(0 0 1px rgba(black, .25));
+    }
+}
+
+&.is-windows {
+    .qilin-popup {
+        border-radius: 0;
+        border-width: 0;
+
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
     }
 }

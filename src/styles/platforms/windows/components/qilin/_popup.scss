@@ -1,0 +1,34 @@
+.qilin-popup {
+    &-header {
+        flex-basis: 37px;
+        height: 37px;
+
+        &-close,
+        &-done {
+            top: 2px;
+
+            & > .qilin-button {
+                width: 55px;
+                height: 32px;
+            }
+        }
+
+        &-close { left: 2px; }
+        &-done { right: 2px; }
+    }
+
+    &-tabs {
+        padding: 5px 0 0 0;
+
+        &-list {
+            &-item {
+                bottom: -1px;
+
+                padding: .35rem .75rem;
+                margin: 0 5px;
+
+                border-radius: 0;
+            }
+        }
+    }
+}

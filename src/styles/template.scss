@@ -3,13 +3,9 @@
 @import "configuration/colors",
         "configuration/typo";
 
-@import "~wireframe-framework/scss/content/typography",
-        "~wireframe-framework/scss/content/table",
-        "~markdown-it-maths/dist/index.min",
+@import "~markdown-it-maths/dist/index.min",
         "~codemirror/addon/scroll/simplescrollbars",
-        "~codemirror/lib/codemirror",
-
-        "vendor/splitPane";
+        "~codemirror/lib/codemirror";
 
 @import "platforms/windows/index",
         "platforms/darwin/index";

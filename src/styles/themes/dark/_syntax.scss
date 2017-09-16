@@ -1,22 +1,25 @@
-.CodeMirror-cursor {
-    border-left-color: $color-text-dark;
+@import "~highlight.js/styles/atom-one-dark";
+
+.CodeMirror {
+    &-cursor {
+        border-left-color: $color-text;
+    }
+
+    &-activeline-background {
+        background-color: $color-border-light;
+    }
+
+    &-overlayscroll-vertical div {
+        background-color: $color-border-light;
+    }
 }
 
-.CodeMirror-activeline-background {
-    background-color: $color-border-light;
+hr {
+    background-color: $color-text;
 }
 
-.CodeMirror-overlayscroll-vertical div {
-    background-color: $color-text-dark;
-}
-
-.cm-searching {
-    color: rgba(white, .5) !important;
-}
-
-.cm-searching {
-    background-color: rgba($color-yellow, .75);
-    border-radius: 3px;
+abbr {
+    border-bottom-color: $color-text;
 }
 
 .cm-header {
@@ -32,20 +35,21 @@
     color: rgba($color-red, .5);
 }
 
+p,
 .cm-hr,
 .cm-link,
 .cm-quote,
 .cm-image,
 .cm-comment {
-    color: $color-text-dark;
+    color: $color-text;
 }
 
 .cm-quote:before {
-    background-color: $color-text-dark;
+    background-color: $color-text;
 }
 
 .cm-variable-2 {
-    color: $color-text-light;
+    color: $color-text;
 }
 
 .cm-property {

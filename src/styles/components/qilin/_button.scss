@@ -1,28 +1,24 @@
 .qilin-button {
     display: flex;
+
+    text-align: center;
     align-items: center;
     justify-content: center;
+    vertical-align: middle;
 
     border: none;
     outline: none;
     cursor: pointer;
 
-    overflow-x: hidden;
-    overflow-y: hidden;
-
     -webkit-appearance: none;
     -webkit-app-region: no-drag;
 
-    transition: all 100ms ease;
-
-    &.is-big {
-        padding: .5rem 1rem;
+    &, & > * {
+        transition: all 100ms ease;
     }
 
     &-icon {
         height: 15px;
         width: auto;
-
-        transition: all 100ms ease;
     }
 }

@@ -1,15 +1,10 @@
 .editor-preview {
-    color: lighten($color-text-light, 10%);
+    color: $color-text;
 
-    hr {
-        background-color: $color-text-dark;
-    }
-
-    p {
-        opacity: .85;
-    }
-
-    abbr {
-        border-bottom-color: $color-text-dark;
+    pre {
+        border-width: 1px;
+        border-style: solid;
+        border-color: $color-border-dark;
+        border-radius: 4px;
     }
 }

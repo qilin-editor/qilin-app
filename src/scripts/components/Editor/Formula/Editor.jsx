@@ -35,7 +35,7 @@ class EditorForumlaEditor extends Component {
     }
 
     render() {
-        const formulaClasses = className("formula-editor", this.props.className);
+        const formulaClasses = className("editor-formula-editor", this.props.className);
 
         return (
             <div className={formulaClasses}>

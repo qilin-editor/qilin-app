@@ -91,7 +91,7 @@ class EditorForumla extends Component {
 
                         <TabPanel className="qilin-popup-content">
                             <Makrdown
-                                className="formula-preview"
+                                className="editor-formula-preview"
                                 content={`\`\`\`katex\n${this.state.value}\n\`\`\``}
                             />
 
@@ -108,7 +108,7 @@ class EditorForumla extends Component {
 
                         <TabPanel className="qilin-popup-content">
                             <CodeMirror
-                                className="formula-editor is-full"
+                                className="editor-formula-editor is-full"
                                 content={`\`\`\`katex\n${this.state.value}\n\`\`\``}
                                 options={{
                                     scrollPastEnd: false,

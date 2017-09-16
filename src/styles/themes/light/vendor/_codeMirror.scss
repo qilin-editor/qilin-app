@@ -2,10 +2,10 @@
     background-color: $color-background;
     border-color: $color-border-light;
     color: $color-text;
-}
 
-.CodeMirror-overlayscroll-vertical div {
-    background-color: $color-border-dark;
+    &-overlayscroll-vertical div {
+        background-color: $color-border-dark;
+    }
 }
 
 ::selection,
