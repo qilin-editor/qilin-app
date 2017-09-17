@@ -9,7 +9,7 @@
 
 **Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports [`LaTeX`](https://www.latex-project.org/), [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.
 
-![Qilin editor](https://i.imgur.com/qpguVEw.png)
+![Qilin editor](https://i.imgur.com/VOGLGv5.png)
 </div>
 
 <h2 align="center">Contributing</h2>
@@ -62,6 +62,6 @@ There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) f
 
 All the screenshots can be found on [Imgur](http://imgur.com/a/CVOFC). You can find some devblogs on my [Youtube channel](https://www.youtube.com/playlist?list=PLK2Lb6JZ41iOvtBN4H5GLELHYJDOVZTGN).
 
-![Qilin light mode](https://i.imgur.com/kOrRQOo.png)
-![Qilin dark mode](https://i.imgur.com/YOB8iwd.png)
+![Qilin light mode](https://i.imgur.com/LYzVw99.png)
+![Qilin dark mode](https://i.imgur.com/utXxWLf.png)
 </div>
