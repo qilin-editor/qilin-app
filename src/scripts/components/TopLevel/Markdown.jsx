@@ -19,7 +19,7 @@ class Markdown extends PureComponent {
         typography: true,
     })
 
-    defaultProps = {
+    static defaultProps = {
         onClick: () => null,
     }
 

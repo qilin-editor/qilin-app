@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import { inject, observer, PropTypes as MobxPropTypes } from "mobx-react";
 import className from "classnames";
 import PropTypes from "prop-types";
@@ -7,7 +7,7 @@ import Controls from "./Controls";
 
 @inject(["editorStore"])
 @observer
-class Header extends PureComponent {
+class Header extends Component {
     static propTypes = {
         editorStore: MobxPropTypes.observableObject,
         toggleTheme: PropTypes.func.isRequired,

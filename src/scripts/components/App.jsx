@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 import className from "classnames";
 import Header from "./Header";
 import Content from "./Content";
-import Footer from "./Footer";
 import EditorForumlaPopup from "./Editor/Formula";
 import { getPlatform } from "../utils/PlatformUtils";
 
@@ -56,8 +55,6 @@ class App extends PureComponent {
                     isOpen={this.state.isFormulaToggled}
                     close={this.toggleFormula}
                 />
-
-                <Footer />
             </div>
         );
     }

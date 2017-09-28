@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import CodeMirrorComponent from "react-codemirror";
+import CodeMirrorComponent from "react-codemirror2";
 import className from "classnames";
 import PropTypes from "prop-types";
 
@@ -36,7 +36,7 @@ class CodeMirror extends PureComponent {
         keyMap: "sublime",
     }
 
-    defaultProps = {
+    static defaultProps = {
         options: {},
         content: "",
     }
@@ -53,9 +53,13 @@ class CodeMirror extends PureComponent {
         this.updateOptions(nextProps.options);
     }
 
+    onChange = (editor, metadata, value) => {
+        this.props.onChange(value);
+    }
+
     getCodeMirrorRef = (ref) => {
         if (ref && this.props.api) {
-            this.props.api(ref.getCodeMirror(), ref);
+            this.props.api(ref);
         }
     }
 
@@ -76,7 +80,7 @@ class CodeMirror extends PureComponent {
                 className={className(this.props.className)}
                 options={this.state.options}
                 value={this.props.content}
-                onChange={this.props.onChange}
+                onChange={this.onChange}
             />
         );
     }
