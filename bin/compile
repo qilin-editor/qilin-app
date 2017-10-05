@@ -1,26 +1,26 @@
 #!/usr/bin/env node
 
-var Builder = require( "nw-builder" );
-var path    = require( "path" );
+const Builder = require('nw-builder');
+const path = require('path');
 
-var nw = new Builder( {
-    files : [
-        path.resolve( __dirname, "../package.json" ),
-        path.resolve( __dirname, "../dist/**" )
-    ],
+const nw = new Builder({
+  files: [
+    path.resolve(__dirname, '../package.json'),
+    path.resolve(__dirname, '../dist/**'),
+  ],
 
-    platforms   : [ "osx64", "win64", "linux64" ],
-    version     : "latest",
-    macIcns     : path.resolve( __dirname, "../logo/icns/1600x1600" ),
-    winIco      : path.resolve( __dirname, "../logo/ico/1600x1600.ico" )
-} );
+  platforms: ['osx64', 'win64', 'linux64'],
+  version: 'latest',
+  macIcns: path.resolve(__dirname, '../logo/icns/1600x1600'),
+  winIco: path.resolve(__dirname, '../logo/ico/1600x1600.ico'),
+});
 
-nw.on( "log", console.log );
+nw.on('log', console.log);
 
 nw.build()
-    .then( function () {
-       console.log( "Done" );
-    } )
-    .catch( function ( error ) {
-        console.error( error );
-    } );
+  .then(() => {
+    console.log('Done');
+  })
+  .catch((error) => {
+    console.error(error);
+  });

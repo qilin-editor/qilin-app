@@ -1,42 +1,43 @@
 {
-    "root": true,
+  "root": true,
 
-    "parser": "babel-eslint",
-    "extends": ["airbnb"],
-    "plugins": ["react", "import", "jsx-a11y"],
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "plugins": ["react", "import", "jsx-a11y"],
 
-    "env": {
-        "es6": true,
-        "node": true,
-        "browser": true,
-        "shared-node-browser": true
-    },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "shared-node-browser": true
+  },
 
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true,
-            "experimentalObjectRestSpread": true
-        }
-    },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
 
-    "globals": {
-        "nw": true
-    },
+  "globals": {
+    "nw": true
+  },
 
-     "rules": {
-         "no-console": [0],
-         "no-param-reassign": [0],
+  "rules": {
+    "no-console": [0],
+    "no-param-reassign": [0],
 
-         "react/no-danger": [0],
-         "react/no-array-index-key": [0],
-         "react/require-default-props": [0],
-         "react/prefer-stateless-function": [0],
+    "react/sort-comp": [0],
+    "react/no-danger": [0],
+    "react/no-array-index-key": [0],
+    "react/require-default-props": [0],
+    "react/prefer-stateless-function": [0],
 
-         "global-require": [0],
-         "import/first": [0],
-         "import/prefer-default-export": [0],
-         "import/no-extraneous-dependencies": [0]
-     }
+    "global-require": [0],
+    "import/first": [0],
+    "import/prefer-default-export": [0],
+    "import/no-extraneous-dependencies": [0]
+  }
 }
