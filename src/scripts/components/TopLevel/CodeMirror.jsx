@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import CodeMirrorComponent from 'react-codemirror2';
 import className from 'classnames';
 import PropTypes from 'prop-types';
@@ -10,7 +10,7 @@ import 'codemirror/addon/scroll/simplescrollbars';
 import 'codemirror/addon/selection/active-line';
 import 'codemirror/keymap/sublime';
 
-class CodeMirror extends PureComponent {
+class CodeMirror extends Component {
   static propTypes = {
     options: PropTypes.objectOf(PropTypes.any),
     content: PropTypes.string,
