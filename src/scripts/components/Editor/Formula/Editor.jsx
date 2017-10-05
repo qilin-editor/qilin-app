@@ -25,6 +25,10 @@ class EditorForumlaEditor extends Component {
     }
   }
 
+  editorWillMount = (editor) => {
+    this.cm = editor;
+  }
+
   insertSymbol = (symbol) => {
     const cursor = this.cm.getCursor();
 
@@ -40,12 +44,12 @@ class EditorForumlaEditor extends Component {
     return (
       <div className={formulaClasses}>
         <CodeMirror
-          api={(e) => { this.cm = e; }}
           options={{
             mode: 'plain/text',
             lineNumbers: true,
           }}
           content={this.props.value}
+          onMount={this.editorWillMount}
           onChange={this.props.change}
         />
       </div>

@@ -14,8 +14,8 @@ class CodeMirror extends PureComponent {
   static propTypes = {
     options: PropTypes.objectOf(PropTypes.any),
     content: PropTypes.string,
+    onMount: PropTypes.func,
     onChange: PropTypes.func,
-    api: PropTypes.func,
     className: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.string),
       PropTypes.string,
@@ -54,12 +54,8 @@ class CodeMirror extends PureComponent {
   }
 
   onChange = (editor, metadata, value) => {
-    this.props.onChange(value);
-  }
-
-  getCodeMirrorRef = (ref) => {
-    if (ref && this.props.api) {
-      this.props.api(ref);
+    if (this.props.onChange) {
+      this.props.onChange(value);
     }
   }
 
@@ -76,11 +72,11 @@ class CodeMirror extends PureComponent {
   render() {
     return (
       <CodeMirrorComponent
-        ref={this.getCodeMirrorRef}
         className={className(this.props.className)}
         options={this.state.options}
         value={this.props.content}
         onChange={this.onChange}
+        editorDidMount={this.props.onMount}
       />
     );
   }
