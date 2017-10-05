@@ -1,111 +1,111 @@
 export default {
-    lrgroup: {
-        type: "Deliminers",
-        content: "( )",
-        alias: ["\\lgroup", "\\rgroup"],
-    },
+  lrgroup: {
+    type: 'Deliminers',
+    content: '( )',
+    alias: ['\\lgroup', '\\rgroup'],
+  },
 
-    lrbrack: {
-        type: "Deliminers",
-        content: "[ ]",
-        alias: ["\\lbrack", "\\rbrack"],
-    },
+  lrbrack: {
+    type: 'Deliminers',
+    content: '[ ]',
+    alias: ['\\lbrack', '\\rbrack'],
+  },
 
-    lrbrace: {
-        type: "Deliminers",
-        content: "\\{ \\}",
-        alias: ["\\lbrace", "\\rbrace"],
-    },
+  lrbrace: {
+    type: 'Deliminers',
+    content: '\\{ \\}',
+    alias: ['\\lbrace', '\\rbrace'],
+  },
 
-    backslash: {
-        type: "Deliminers",
-        content: "\\backslash",
-    },
+  backslash: {
+    type: 'Deliminers',
+    content: '\\backslash',
+  },
 
-    vert: {
-        type: "Deliminers",
-        content: "|",
-        alias: ["\\vert"],
-    },
+  vert: {
+    type: 'Deliminers',
+    content: '|',
+    alias: ['\\vert'],
+  },
 
-    Vert: {
-        type: "Deliminers",
-        content: "\\|",
-        alias: ["\\Vert"],
-    },
+  Vert: {
+    type: 'Deliminers',
+    content: '\\|',
+    alias: ['\\Vert'],
+  },
 
-    lrvert: {
-        type: "Deliminers",
-        content: "\\lvert \\rvert",
-    },
+  lrvert: {
+    type: 'Deliminers',
+    content: '\\lvert \\rvert',
+  },
 
-    lrVert: {
-        type: "Deliminers",
-        content: "\\lVert \\rVert",
-    },
+  lrVert: {
+    type: 'Deliminers',
+    content: '\\lVert \\rVert',
+  },
 
-    lrangle: {
-        type: "Deliminers",
-        content: "\\langle \\rangle",
-    },
+  lrangle: {
+    type: 'Deliminers',
+    content: '\\langle \\rangle',
+  },
 
-    lrt: {
-        type: "Deliminers",
-        content: "\\lt \\gt",
-    },
+  lrt: {
+    type: 'Deliminers',
+    content: '\\lt \\gt',
+  },
 
-    lrceil: {
-        type: "Deliminers",
-        content: "\\lceil \\rceil",
-    },
+  lrceil: {
+    type: 'Deliminers',
+    content: '\\lceil \\rceil',
+  },
 
-    lrfloor: {
-        type: "Deliminers",
-        content: "\\lfloor \\rfloor",
-    },
+  lrfloor: {
+    type: 'Deliminers',
+    content: '\\lfloor \\rfloor',
+  },
 
-    ulrcorner: {
-        type: "Deliminers",
-        content: "\\ulcorner \\urcorner",
-    },
+  ulrcorner: {
+    type: 'Deliminers',
+    content: '\\ulcorner \\urcorner',
+  },
 
-    llrcorner: {
-        type: "Deliminers",
-        content: "\\llcorner \\lrcorner",
-    },
+  llrcorner: {
+    type: 'Deliminers',
+    content: '\\llcorner \\lrcorner',
+  },
 
-    lrmoustache: {
-        type: "Deliminers",
-        content: "\\lmoustache \\rmoustache",
-    },
+  lrmoustache: {
+    type: 'Deliminers',
+    content: '\\lmoustache \\rmoustache',
+  },
 
-    uparrow: {
-        type: "Deliminers",
-        content: "\\uparrow",
-    },
+  uparrow: {
+    type: 'Deliminers',
+    content: '\\uparrow',
+  },
 
-    downarrow: {
-        type: "Deliminers",
-        content: "\\downarrow",
-    },
+  downarrow: {
+    type: 'Deliminers',
+    content: '\\downarrow',
+  },
 
-    updownarrow: {
-        type: "Deliminers",
-        content: "\\updownarrow",
-    },
+  updownarrow: {
+    type: 'Deliminers',
+    content: '\\updownarrow',
+  },
 
-    Uparrow: {
-        type: "Deliminers",
-        content: "\\Uparrow",
-    },
+  Uparrow: {
+    type: 'Deliminers',
+    content: '\\Uparrow',
+  },
 
-    Downarrow: {
-        type: "Deliminers",
-        content: "\\Downarrow",
-    },
+  Downarrow: {
+    type: 'Deliminers',
+    content: '\\Downarrow',
+  },
 
-    Updownarrow: {
-        type: "Deliminers",
-        content: "\\Updownarrow",
-    },
+  Updownarrow: {
+    type: 'Deliminers',
+    content: '\\Updownarrow',
+  },
 };
