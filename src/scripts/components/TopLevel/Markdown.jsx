@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import className from 'classnames';
 import { getMarkdown } from '../../utils/MarkdownUtils';
 
-class Markdown extends PureComponent {
+class Markdown extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
     className: PropTypes.oneOfType([
@@ -11,6 +11,12 @@ class Markdown extends PureComponent {
       PropTypes.string,
     ]),
     onClick: PropTypes.func,
+    isLazy: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    onClick: () => null,
+    isLazy: false,
   }
 
   static renderer = getMarkdown({
@@ -19,8 +25,19 @@ class Markdown extends PureComponent {
     typography: true,
   })
 
-  static defaultProps = {
-    onClick: () => null,
+  // For lazy reload:
+  timeout = 0
+
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.isLazy) {
+      if (this.timeout > +new Date()) {
+        return false;
+      }
+
+      this.timeout = +new Date() + 500;
+    }
+
+    return true;
   }
 
   render() {

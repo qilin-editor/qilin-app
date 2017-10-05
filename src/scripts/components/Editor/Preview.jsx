@@ -24,6 +24,7 @@ class EditorPreview extends Component {
       <Markdown
         className="editor-preview qilin-panel typo"
         content={this.props.editorStore.content}
+        isLazy
       />
     );
   }
