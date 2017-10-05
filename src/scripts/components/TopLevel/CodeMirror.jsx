@@ -68,7 +68,7 @@ class CodeMirror extends PureComponent {
       options: {
         ...CodeMirror.defaultOptions,
         ...this.state.options,
-        options,
+        ...options,
       },
     });
   }
