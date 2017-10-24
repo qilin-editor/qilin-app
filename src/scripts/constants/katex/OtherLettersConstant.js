@@ -1,91 +1,91 @@
 export default {
   imath: {
-    type: 'Other letters',
-    content: '\\imath',
+    type: "Other letters",
+    content: "\\imath",
   },
 
   jmath: {
-    type: 'Other letters',
-    content: '\\jmath',
+    type: "Other letters",
+    content: "\\jmath",
   },
 
   aleph: {
-    type: 'Other letters',
-    content: '\\aleph',
+    type: "Other letters",
+    content: "\\aleph",
   },
 
   beth: {
-    type: 'Other letters',
-    content: '\\beth',
+    type: "Other letters",
+    content: "\\beth",
   },
 
   gimel: {
-    type: 'Other letters',
-    content: '\\gimel',
+    type: "Other letters",
+    content: "\\gimel",
   },
 
   daleth: {
-    type: 'Other letters',
-    content: '\\daleth',
+    type: "Other letters",
+    content: "\\daleth",
   },
 
   eth: {
-    type: 'Other letters',
-    content: '\\eth',
+    type: "Other letters",
+    content: "\\eth",
   },
 
   Finv: {
-    type: 'Other letters',
-    content: '\\Finv',
+    type: "Other letters",
+    content: "\\Finv",
   },
 
   Game: {
-    type: 'Other letters',
-    content: '\\Game',
+    type: "Other letters",
+    content: "\\Game",
   },
 
   ell: {
-    type: 'Other letters',
-    content: '\\ell',
+    type: "Other letters",
+    content: "\\ell",
   },
 
   hbar: {
-    type: 'Other letters',
-    content: '\\hbar',
+    type: "Other letters",
+    content: "\\hbar",
   },
 
   hslash: {
-    type: 'Other letters',
-    content: '\\hslash',
+    type: "Other letters",
+    content: "\\hslash",
   },
 
   Im: {
-    type: 'Other letters',
-    content: '\\Im',
+    type: "Other letters",
+    content: "\\Im",
   },
 
   Re: {
-    type: 'Other letters',
-    content: '\\Re',
+    type: "Other letters",
+    content: "\\Re",
   },
 
   wp: {
-    type: 'Other letters',
-    content: '\\wp',
+    type: "Other letters",
+    content: "\\wp",
   },
 
   partial: {
-    type: 'Other letters',
-    content: '\\partial',
+    type: "Other letters",
+    content: "\\partial",
   },
 
   nabla: {
-    type: 'Other letters',
-    content: '\\nabla',
+    type: "Other letters",
+    content: "\\nabla",
   },
 
   Bbbk: {
-    type: 'Other letters',
-    content: '\\Bbbk',
+    type: "Other letters",
+    content: "\\Bbbk",
   },
 };

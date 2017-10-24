@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import CodeMirrorComponent from 'react-codemirror2';
-import className from 'classnames';
-import PropTypes from 'prop-types';
+import React, {Component} from "react";
+import {UnControlled as CodeMirrorComponent} from "react-codemirror2";
+import className from "classnames";
+import PropTypes from "prop-types";
 
-import 'codemirror/mode/gfm/gfm';
-import 'codemirror/addon/edit/closebrackets';
-import 'codemirror/addon/scroll/scrollpastend';
-import 'codemirror/addon/scroll/simplescrollbars';
-import 'codemirror/addon/selection/active-line';
-import 'codemirror/keymap/sublime';
+import "codemirror/mode/gfm/gfm";
+import "codemirror/addon/edit/closebrackets";
+import "codemirror/addon/scroll/scrollpastend";
+import "codemirror/addon/scroll/simplescrollbars";
+import "codemirror/addon/selection/active-line";
+import "codemirror/keymap/sublime";
 
 class CodeMirror extends Component {
   static propTypes = {
@@ -23,22 +23,22 @@ class CodeMirror extends Component {
   }
 
   static defaultOptions = {
-    mode: 'gfm',
-    theme: 'dark',
+    mode: "gfm",
+    theme: "dark",
     autofocus: true,
     lineNumbers: false,
     lineWrapping: true,
     styleActiveLine: true,
-    scrollbarStyle: 'overlay',
+    scrollbarStyle: "overlay",
     scrollPastEnd: true,
     indentUnit: 4,
     autoCloseBrackets: true,
-    keyMap: 'sublime',
+    keyMap: "sublime",
   }
 
   static defaultProps = {
     options: {},
-    content: '',
+    content: "",
   }
 
   state = {

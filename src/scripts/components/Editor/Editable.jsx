@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { inject, observer, PropTypes as MobxPropTypes } from 'mobx-react';
-import CodeMirror from '../TopLevel/CodeMirror';
+import React, {Component} from "react";
+import {inject, observer, PropTypes as MobxPropTypes} from "mobx-react";
+import CodeMirror from "../TopLevel/CodeMirror";
 
-@inject(['editorStore'])
+@inject(["editorStore"])
 @observer
 class EditorEditable extends Component {
   static propTypes = {

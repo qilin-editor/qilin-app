@@ -1,10 +1,10 @@
-import fs from 'fs';
-import shortcut from 'keymage';
-import EditorStore from '../stores/EditorStore';
-import { click } from '../utils/FileUtils';
+import fs from "fs";
+import shortcut from "keymage";
+import EditorStore from "../stores/EditorStore";
+import {click} from "../utils/FileUtils";
 
 function openFile(path) {
-  fs.readFile(path, 'utf8', (error, content) => {
+  fs.readFile(path, "utf8", (error, content) => {
     if (error) {
       console.log(error);
     } else {
@@ -27,11 +27,11 @@ function saveFile(path, content) {
   });
 }
 
-shortcut('defmod-n', (event) => {
+shortcut("defmod-n", (event) => {
   event.preventDefault();
   event.stopPropagation();
 
-  nw.Window.open('dist/index.html', {
+  nw.Window.open("dist/index.html", {
     new_instance: true,
     focus: true,
     frame: false,
@@ -42,25 +42,25 @@ shortcut('defmod-n', (event) => {
   return false;
 });
 
-shortcut('defmod-o', (event) => {
+shortcut("defmod-o", (event) => {
   event.preventDefault();
   event.stopPropagation();
 
-  click('#openFile', (e) => {
+  click("#openFile", (e) => {
     openFile(e.target.value);
   });
 
   return false;
 });
 
-shortcut('defmod-s', (event) => {
+shortcut("defmod-s", (event) => {
   event.preventDefault();
   event.stopPropagation();
 
   if (EditorStore.path) {
     saveFile(EditorStore.path, EditorStore.content);
   } else {
-    click('#saveFile', (e) => {
+    click("#saveFile", (e) => {
       saveFile(e.target.value, EditorStore.content);
     });
   }
@@ -68,11 +68,11 @@ shortcut('defmod-s', (event) => {
   return false;
 });
 
-shortcut('defmod-shift-s', (event) => {
+shortcut("defmod-shift-s", (event) => {
   event.preventDefault();
   event.stopPropagation();
 
-  click('#saveFile', (e) => {
+  click("#saveFile", (e) => {
     saveFile(e.target.value, EditorStore.content);
   });
 

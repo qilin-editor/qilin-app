@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import CodeMirror from '../../TopLevel/CodeMirror';
-import PropTypes from 'prop-types';
-import className from 'classnames';
+import React, {Component} from "react";
+import CodeMirror from "../../TopLevel/CodeMirror";
+import PropTypes from "prop-types";
+import className from "classnames";
 
 class EditorForumlaEditor extends Component {
   static propTypes = {
@@ -39,13 +39,13 @@ class EditorForumlaEditor extends Component {
   }
 
   render() {
-    const formulaClasses = className('editor-formula-editor', this.props.className);
+    const formula = className("editor-formula-editor", this.props.className);
 
     return (
-      <div className={formulaClasses}>
+      <div className={formula}>
         <CodeMirror
           options={{
-            mode: 'plain/text',
+            mode: "plain/text",
             lineNumbers: true,
           }}
           content={this.props.value}

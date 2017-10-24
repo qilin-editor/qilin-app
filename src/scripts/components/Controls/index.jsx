@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
-import Close from './Close';
-import Maximize from './Maximize';
-import Minimize from './Minimize';
+import React, {PureComponent} from "react";
+import Close from "./Close";
+import Maximize from "./Maximize";
+import Minimize from "./Minimize";
 
 class ControlWrapper extends PureComponent {
   render() {

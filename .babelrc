@@ -1,17 +1,21 @@
 {
   "presets" : [
     "react",
-    "es2015",
-    "es2016",
-    "es2017",
-    "airbnb",
-    "stage-0"
+    [
+      "env", {
+        "targets": {
+          "node": "current",
+          "browser": "last Chrome version"
+        }
+      }
+    ]
   ],
 
   "plugins" : [
     "add-module-exports",
     "transform-runtime",
     "transform-class-properties",
-    "transform-decorators-legacy"
+    "transform-decorators-legacy",
+    "transform-object-rest-spread"
   ]
 }

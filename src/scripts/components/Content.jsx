@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import className from 'classnames';
-import SplitPane from 'react-split-pane';
-import EditorEditable from './Editor/Editable';
-import EditorPreview from './Editor/Preview';
+import React, {PureComponent} from "react";
+import PropTypes from "prop-types";
+import className from "classnames";
+import SplitPane from "react-split-pane";
+import EditorEditable from "./Editor/Editable";
+import EditorPreview from "./Editor/Preview";
 
 class Content extends PureComponent {
   static propTypes = {
@@ -11,8 +11,8 @@ class Content extends PureComponent {
   }
 
   render() {
-    const splitPaneClasses = className('app-content-pane', {
-      'is-preview-hidden': !this.props.isPreviewToggled,
+    const splitPaneClasses = className("app-content-pane", {
+      "is-preview-hidden": !this.props.isPreviewToggled,
     });
 
     return (

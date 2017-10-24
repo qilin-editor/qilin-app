@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { inject, observer, PropTypes as MobxPropTypes } from 'mobx-react';
-import PropTypes from 'prop-types';
-import Markdown from '../TopLevel/Markdown';
+import React, {Component} from "react";
+import {inject, observer, PropTypes as MobxPropTypes} from "mobx-react";
+import PropTypes from "prop-types";
+import Markdown from "../TopLevel/Markdown";
 
-@inject(['editorStore'])
+@inject(["editorStore"])
 @observer
 class EditorPreview extends Component {
   static propTypes = {

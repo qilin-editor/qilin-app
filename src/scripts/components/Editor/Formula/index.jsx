@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Rnd from 'react-rnd';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import PropTypes from 'prop-types';
-import FormulaHelp from './Help';
-import FormulaEditor from './Editor';
-import Makrdown from '../../TopLevel/Markdown';
-import CodeMirror from '../../TopLevel/CodeMirror';
+import React, {Component} from "react";
+import Rnd from "react-rnd";
+import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
+import PropTypes from "prop-types";
+import FormulaHelp from "./Help";
+import FormulaEditor from "./Editor";
+import Makrdown from "../../TopLevel/Markdown";
+import CodeMirror from "../../TopLevel/CodeMirror";
 
 class EditorForumla extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ class EditorForumla extends Component {
   }
 
   state = {
-    value: '',
+    value: "",
     symbol: {},
   }
 
@@ -24,7 +24,7 @@ class EditorForumla extends Component {
 
   onDone = () => {
     this.setState({
-      value: '',
+      value: "",
     });
 
     this.props.close();
@@ -58,10 +58,10 @@ class EditorForumla extends Component {
         minHeight={300}
         bounds="parent"
         style={{
-          position: 'fixed',
-          top: '50px',
+          position: "fixed",
+          top: "50px",
           zIndex: 10,
-          display: this.props.isOpen ? 'block' : 'none',
+          display: this.props.isOpen ? "block" : "none",
         }}
         default={{
           x: 0,
@@ -75,11 +75,17 @@ class EditorForumla extends Component {
             <div className="qilin-popup-header-title">Math forumla</div>
 
             <div className="qilin-popup-header-close">
-              <button className="qilin-button is-big" onClick={this.onClose}>Close</button>
+              <button
+                className="qilin-button is-big"
+                onClick={this.onClose}
+              >Close</button>
             </div>
 
             <div className="qilin-popup-header-done">
-              <button className="qilin-button is-big" onClick={this.onDone}>Done</button>
+              <button
+                className="qilin-button is-big"
+                onClick={this.onDone}
+              >Done</button>
             </div>
           </div>
 
