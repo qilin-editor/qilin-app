@@ -1,6 +1,6 @@
 {
     "name": "me.laniewski.qilin.dist",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "version": "0.4.0-alpha",
     "repository": {
         "type": "git",

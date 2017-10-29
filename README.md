@@ -4,10 +4,9 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/qilin-editor/qilin-app.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/qilin-editor/qilin-app.svg)](https://travis-ci.org/qilin-editor/qilin-app/)
 [![Github Releases](https://img.shields.io/github/downloads/qilin-editor/qilin-app/latest/total.svg)](https://github.com/qilin-editor/qilin-app/releases)
-[![Coverage Status](https://coveralls.io/repos/github/qilin-editor/qilin-app/badge.svg?branch=master)](https://coveralls.io/github/qilin-editor/qilin-app?branch=master)
   <br>
 
-**Qilin** is a free, open-source text editor developed for exact sciences in mind. It fully supports [`LaTeX`](https://www.latex-project.org/), [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *BSD-3-Clause* license.
+**Qilin** is a *free*, *open-source* and *fully hackable* text editor developed for exact sciences in mind. It fully supports [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *[MIT-like license](#license)*. Qilin is extensible via several [plugins and themes](https://github.com/qilin-editor/qilin-manager).
 
 ![Qilin editor](https://i.imgur.com/VOGLGv5.png)
 </div>
@@ -24,7 +23,7 @@
 
 ### License
 
-Qilin was created and developed by [Bartosz Łaniewski](https://github.com/Bartozzz). The full list of contributors can be found [here](https://github.com/qilin-editor/qilin-app/graphs/contributors). Qilin's code is [BSD-3-Clause licensed](https://github.com/qilin-editor/qilin-app/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/qilin-editor/qilin-app/blob/master/PATENTS).
+Qilin was created and developed by [Bartosz Łaniewski](https://github.com/Bartozzz). The full list of contributors can be found [here](https://github.com/qilin-editor/qilin-app/graphs/contributors). Qilin's code is [MIT licensed](https://github.com/qilin-editor/qilin-app/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/qilin-editor/qilin-app/blob/master/PATENTS).
 
 ### Development
 
@@ -44,18 +43,20 @@ $ npm run <command>
 
 | Command       | Description                                       |
 |---------------|---------------------------------------------------|
-| `preapre`     | Compiles resources used by Qilin                  |
-| `build`       | Builds Qilin releases for macOS, Windows, Linux   |
-| `watch`       | Runs Qilin application and re-compiles on changes |
-| `start`       | Runs Qilin application                            |
-| `clean`       | Deletes builds and caches                         |
+| `preapre-qpm` | Prepares Qilin package manager                    |
+| `preapre`     | Prepares Qilin itself                             |
+| `build`       | Builds Qilin binaries for macOS, Windows, Linux   |
+| `start`       | Builds and opens Qilin application                |
+| `watch`       | Builds on changes and opens Qilin application     |
+| `clean`       | Deletes cache directories                         |
 | `eslint`      | Fixes ESLinter errors                             |
+| `nw`          | Opens Qilin application                           |
 
 > **Note:** In some cases, you might need to run those scripts with administrator privileges (`sudo`).
 
 ### Installation
 
-There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions. If you wonder how to work on Qilin or have other questions - check our [Wiki](https://github.com/qilin-editor/qilin-app/wiki).
+There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions. If you wonder how to use Qilin or have any other questions - check our [Wiki](https://github.com/qilin-editor/qilin-app/wiki).
 
 <div align="center">
   <h2>Screenshots</h2>
