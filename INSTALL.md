@@ -7,7 +7,7 @@ You can download one of the [stable releases](https://github.com/qilin-editor/qi
 > **Note:** We use [`nw.js`](https://nwjs.io/) to build and run Qilin on desktop platforms. If you encounter any problems, please, check first that you platform is being supported by `nw.js` [before creating an issue](https://github.com/qilin-editor/qilin-app/issues/new).
 
 ## Developer preview:
-You building Qilin yourself to check the latest features (as the last stable release can be several commits behind the `master` branch). You will need the latest version of [Node.js](https://nodejs.org/en/download/) installed locally on your machine and follow [instructions in README.md](https://github.com/qilin-editor/qilin-app#development):
+You can build Qilin yourself to check the latest features (as the last stable release can be several commits behind the `master` branch). You will need the latest version of [Node.js](https://nodejs.org/en/download/) installed locally on your machine and follow [instructions in README.md](https://github.com/qilin-editor/qilin-app#development):
 
 1. Clone or [download](https://github.com/qilin-editor/qilin-app/archive/master.zip) Qilin's repository (`$ git clone https://github.com/qilin-editor/qilin-app.git`).
 2. Move to the downloaded directory in your terminal (`$ cd qilin-app`).
