@@ -1,16 +1,16 @@
 .CodeMirror {
-    background-color: $color-background;
-    border-color: $color-border-dark;
-    color: $color-text;
+  background-color: $color-background;
+  border-color: $color-border-dark;
+  color: $color-text;
 
-    &-gutters {
-        border-right-color: $color-border-dark;
-        background-color: $color-border-light;
-    }
+  &-gutters {
+    border-right-color: $color-border-dark;
+    background-color: $color-border-light;
+  }
 }
 
 ::selection,
 .CodeMirror-selected {
-    background-color: rgba(white, .05) !important;
-    color: white !important;
+  background-color: rgba(white, 0.05) !important;
+  color: white !important;
 }

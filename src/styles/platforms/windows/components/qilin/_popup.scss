@@ -1,34 +1,32 @@
 .qilin-popup {
-    &-header {
-        flex-basis: 37px;
-        height: 37px;
+  &-header {
+    flex-basis: 37px;
+    height: 37px;
 
-        &-close,
-        &-done {
-            top: 2px;
+    &-close,
+    &-done {
+      top: 2px;
 
-            & > .qilin-button {
-                width: 55px;
-                height: 32px;
-            }
-        }
-
-        &-close { left: 2px; }
-        &-done { right: 2px; }
+      & > .qilin-button {
+        width: 55px;
+        height: 32px;
+      }
     }
 
-    &-tabs {
-        padding: 5px 0 0 0;
+    &-close { left: 2px; }
+    &-done { right: 2px; }
+  }
 
-        &-list {
-            &-item {
-                bottom: -1px;
+  &-tabs {
+    padding: 5px 0 0;
 
-                padding: .35rem .75rem;
-                margin: 0 5px;
-
-                border-radius: 0;
-            }
-        }
+    &-list {
+      &-item {
+        bottom: -1px;
+        padding: 0.35rem 0.75rem;
+        margin: 0 5px;
+        border-radius: 0;
+      }
     }
+  }
 }

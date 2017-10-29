@@ -1,23 +1,21 @@
 .is-light {
-    @import "./colors";
-    @import "./syntax";
+  @import "./colors";
+  @import "./syntax";
+  @import "./vendor/codeMirror";
+  @import "./components/qilin/button";
+  @import "./components/qilin/popup";
+  @import "./components/markdown/formula";
+  @import "./components/markdown/embed";
+  @import "./components/markdown/todo";
+  @import "./components/markdown/typo";
+  @import "./components/app";
+  @import "./components/controls";
+  @import "./components/editor-formula";
+  @import "./components/editor-preview";
 
-    @import "./vendor/codeMirror";
-
-    @import "./components/qilin/button",
-            "./components/qilin/popup",
-            "./components/markdown/formula",
-            "./components/markdown/embed",
-            "./components/markdown/todo",
-            "./components/markdown/typo",
-            "./components/app",
-            "./components/controls",
-            "./components/editor-formula",
-            "./components/editor-preview";
-
-    .qilin-panel {
-        background-color: $color-background;
-        border-color: $color-border-light;
-        color: $color-text;
-    }
+  .qilin-panel {
+    background-color: $color-background;
+    border-color: $color-border-light;
+    color: $color-text;
+  }
 }

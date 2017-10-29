@@ -1,23 +1,22 @@
 .editor-formula {
-    &-editor {
-        border-width: 1px;
-        border-style: solid;
-        border-color: $color-border-light;
+  &-editor {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-border-light;
+  }
+
+  &-help {
+    &-group {
+      border-width: 1px 0 0;
+      border-style: solid;
+      border-color: $color-border-light;
     }
 
-    &-help {
-        &-group {
-            border-top-width: 1px;
-            border-top-style: solid;
-            border-top-color: $color-border-light;
-        }
-
-        &-symbol {
-            border-width: 1px;
-            border-style: solid;
-            border-color: $color-border-light;
-
-            background-color: $color-background;
-        }
+    &-symbol {
+      border-width: 1px;
+      border-style: solid;
+      border-color: $color-border-light;
+      background-color: $color-background;
     }
+  }
 }

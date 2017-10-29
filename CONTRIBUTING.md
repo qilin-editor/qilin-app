@@ -125,6 +125,10 @@ Both issue lists are sorted by total number of comments. While not perfect, numb
 
 Consider using a Linter package such as ESLinter.
 
+### SCSS styleguide
+
+Consider using a Linter package such as stylelint.
+
 ### Documentation styleguide
 
 Use [JSDoc](http://usejsdoc.org/).

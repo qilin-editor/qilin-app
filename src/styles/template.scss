@@ -1,27 +1,30 @@
 @import "../fonts/FiraCode/fira_code";
 
-@import "configuration/colors",
-        "configuration/typo";
+// Configuration:
+@import "configuration/colors";
+@import "configuration/typo";
 
-@import "~markdown-it-maths/dist/index.min",
-        "~codemirror/addon/scroll/simplescrollbars",
-        "~codemirror/lib/codemirror";
+// Vendor:
+@import "~markdown-it-maths/dist/index.min";
+@import "~codemirror/addon/scroll/simplescrollbars";
+@import "~codemirror/lib/codemirror";
 
-@import "platforms/windows/index",
-        "platforms/darwin/index";
+// Platform-specific:
+@import "platforms/windows/index";
+@import "platforms/darwin/index";
 
-@import "themes/light/index",
-        "themes/dark/index";
+// Themes:
+@import "themes/light/index";
+@import "themes/dark/index";
 
-@import "components/qilin/button",
-        "components/qilin/popup",
-        "components/qilin/reset",
-
-        "components/states/is-clickable",
-        "components/states/is-hidden",
-
-        "components/app",
-        "components/controls",
-        "components/editor-editable",
-        "components/editor-formula",
-        "components/editor-preview";
+// Components:
+@import "components/qilin/button";
+@import "components/qilin/popup";
+@import "components/qilin/reset";
+@import "components/states/is-clickable";
+@import "components/states/is-hidden";
+@import "components/app";
+@import "components/controls";
+@import "components/editor-editable";
+@import "components/editor-formula";
+@import "components/editor-preview";

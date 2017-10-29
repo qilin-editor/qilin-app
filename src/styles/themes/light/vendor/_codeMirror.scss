@@ -1,15 +1,15 @@
 .CodeMirror {
-    background-color: $color-background;
-    border-color: $color-border-light;
-    color: $color-text;
+  background-color: $color-background;
+  border-color: $color-border-light;
+  color: $color-text;
 
-    &-overlayscroll-vertical div {
-        background-color: $color-border-dark;
-    }
+  &-overlayscroll-vertical div {
+    background-color: $color-border-dark;
+  }
 }
 
 ::selection,
 .CodeMirror-selected {
-    background-color: rgba(black, .05) !important;
-    color: black !important;
+  background-color: rgba(black, 0.05) !important;
+  color: black !important;
 }

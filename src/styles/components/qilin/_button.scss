@@ -1,24 +1,22 @@
 .qilin-button {
-    display: flex;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-app-region: no-drag;
 
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
+  &,
+  & > * {
+    transition: all 100ms ease;
+  }
 
-    border: none;
-    outline: none;
-    cursor: pointer;
-
-    -webkit-appearance: none;
-    -webkit-app-region: no-drag;
-
-    &, & > * {
-        transition: all 100ms ease;
-    }
-
-    &-icon {
-        height: 15px;
-        width: auto;
-    }
+  &-icon {
+    height: 15px;
+    width: auto;
+  }
 }

@@ -1,69 +1,61 @@
 .app {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 
+  &-header {
+    display: grid;
+    grid-template-areas: "a b c";
+    grid-template-columns: 1fr auto 1fr;
+    height: auto;
     width: 100vw;
-    height: 100vh;
+    -webkit-app-region: drag;
 
-    &-header {
-        display: grid;
-        grid-template-areas: "a b c";
-        grid-template-columns: 1fr auto 1fr;
+    &-controls,
+    &-buttons,
+    &-title {
+      display: flex;
+      outline: none;
+      -webkit-app-region: no-drag;
+    }
+  }
 
-        height: auto;
-        width: 100vw;
+  &-content {
+    display: flex;
+    flex: 1 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-        -webkit-app-region: drag;
+    &-main {
+      flex: 1;
 
-        &-controls,
-        &-buttons,
-        &-title {
-            display: flex;
-            outline: none;
-
-            -webkit-app-region: no-drag;
-        }
+      .is-preview-hidden {
+        .Pane1 { width: 100% !important; }
+        .Pane2 { width: 0 !important; }
+      }
     }
 
-    &-content {
-        display: flex;
-        flex: 1 0 auto;
+    &-pane {
+      .Resizer {
+        background-clip: padding-box;
+        z-index: 1;
 
+        &.vertical {
+          margin: 0 -5px;
+          width: 11px;
+          height: auto;
+          border-width: 0 5px;
+          border-style: solid;
+          border-color: transparent;
+          cursor: col-resize;
+        }
+      }
+
+      .Pane {
         overflow-x: hidden;
-        overflow-y: auto;
-
-        &-main {
-            flex: 1;
-
-            .is-preview-hidden {
-                .Pane1 { width: 100% !important; }
-                .Pane2 { width: 0 !important; }
-            }
-        }
-
-        &-pane {
-            .Resizer {
-                background-clip: padding-box;
-                z-index: 1;
-
-                &.vertical {
-                    margin: 0 -5px;
-
-                    width: 11px;
-                    height: auto;
-
-                    border-width: 0 5px;
-                    border-style: solid;
-                    border-color: transparent;
-
-                    cursor: col-resize;
-                }
-            }
-
-            .Pane {
-                overflow-x: hidden;
-                overflow-y: hidden;
-            }
-        }
+        overflow-y: hidden;
+      }
     }
+  }
 }

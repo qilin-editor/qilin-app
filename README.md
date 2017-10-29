@@ -50,6 +50,7 @@ $ npm run <command>
 | `watch`       | Builds on changes and opens Qilin application     |
 | `clean`       | Deletes cache directories                         |
 | `eslint`      | Fixes ESLinter errors                             |
+| `stylelint`   | Fixes StyleLint errors                             |
 | `nw`          | Opens Qilin application                           |
 
 > **Note:** In some cases, you might need to run those scripts with administrator privileges (`sudo`).

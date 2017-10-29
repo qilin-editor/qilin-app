@@ -1,18 +1,17 @@
 .controls-container {
-    margin: 0 18px;
+  margin: 0 18px;
+  padding: 0;
+
+  .control-close,
+  .control-maximize,
+  .control-minimize {
+    width: 14px;
+    height: 14px;
+    margin: 0 10px 0 0;
     padding: 0;
+  }
 
-    .control-close,
-    .control-maximize,
-    .control-minimize {
-        width: 14px;
-        height: 14px;
-
-        margin: 0 10px 0 0;
-        padding: 0;
-    }
-
-    .control-close      { grid-area: a; }
-    .control-minimize   { grid-area: b; }
-    .control-maximize   { grid-area: c; }
+  .control-close { grid-area: a; }
+  .control-minimize { grid-area: b; }
+  .control-maximize { grid-area: c; }
 }

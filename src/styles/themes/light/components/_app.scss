@@ -1,14 +1,14 @@
 .app {
-    &-header {
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-    }
+  &-header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
 
-    &-content {
-        &-pane {
-            .Resizer {
-                background-color: $color-border-light;
-            }
-        }
+  &-content {
+    &-pane {
+      .Resizer {
+        background-color: $color-border-light;
+      }
     }
+  }
 }

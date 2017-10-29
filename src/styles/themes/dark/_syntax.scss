@@ -1,38 +1,38 @@
 @import "~highlight.js/styles/atom-one-dark";
 
 .CodeMirror {
-    &-cursor {
-        border-left-color: $color-text;
-    }
+  &-cursor {
+    border-left-color: $color-text;
+  }
 
-    &-activeline-background {
-        background-color: $color-border-light;
-    }
+  &-activeline-background {
+    background-color: $color-border-light;
+  }
 
-    &-overlayscroll-vertical div {
-        background-color: $color-border-light;
-    }
+  &-overlayscroll-vertical div {
+    background-color: $color-border-light;
+  }
 }
 
 hr {
-    background-color: $color-text;
+  background-color: $color-text;
 }
 
 abbr {
-    border-bottom-color: $color-text;
+  border-bottom-color: $color-text;
 }
 
 .cm-header {
-    color: rgba($color-green, .5);
+  color: rgba($color-green, 0.5);
 }
 
 .cm-url {
-    color: rgba($color-blue, .5);
+  color: rgba($color-blue, 0.5);
 }
 
 .cm-em,
 .cm-strong {
-    color: rgba($color-red, .5);
+  color: rgba($color-red, 0.5);
 }
 
 p,
@@ -41,17 +41,17 @@ p,
 .cm-quote,
 .cm-image,
 .cm-comment {
-    color: $color-text;
+  color: $color-text;
 }
 
-.cm-quote:before {
-    background-color: $color-text;
+.cm-quote::before {
+  background-color: $color-text;
 }
 
 .cm-variable-2 {
-    color: $color-text;
+  color: $color-text;
 }
 
 .cm-property {
-    color: rgba($color-yellow, .75);
+  color: rgba($color-yellow, 0.75);
 }

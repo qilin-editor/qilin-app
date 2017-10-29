@@ -1,49 +1,44 @@
 .editor-editable {
+  height: 100%;
+
+  .CodeMirror {
     height: 100%;
+    height: calc(100vh - 50px);
+    font-family: $font-mono;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
 
-    .CodeMirror {
-        height: 100%;
-        height: calc(100vh - 50px);
-
-        font-family: $font-mono;
-        font-feature-settings: "calt" 1;
-        font-variant-ligatures: contextual;
-
-        &-lines {
-            padding: 0;
-        }
-
-        &-line {
-            line-height: 1.35rem;
-
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        &-cursor {
-            border-left-width: 3px;
-            border-left-style: solid;
-        }
-
-        &-overlayscroll-vertical div {
-            border-radius: 10px;
-
-            transition: all 100ms ease;
-
-            &:hover {
-                width: 10px;
-            }
-        }
+    &-lines {
+      padding: 0;
     }
 
-    .cm-quote:before {
-        position: absolute;
-        left: 1rem;
-
-        width: .5rem;
-        height: 100%;
-
-        content: "";
-        z-index: 1;
+    &-line {
+      line-height: 1.35rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
+
+    &-cursor {
+      border-left-width: 3px;
+      border-left-style: solid;
+    }
+
+    &-overlayscroll-vertical div {
+      border-radius: 10px;
+      transition: all 100ms ease;
+
+      &:hover {
+        width: 10px;
+      }
+    }
+  }
+
+  .cm-quote::before {
+    position: absolute;
+    left: 1rem;
+    width: 0.5rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
 }

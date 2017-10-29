@@ -1,16 +1,14 @@
 .controls-container {
-    display: grid;
-    grid-template-areas: "a b c";
-    grid-template-columns: auto auto auto;
+  display: grid;
+  grid-template-areas: "a b c";
+  grid-template-columns: auto auto auto;
 
-    .control-close,
-    .control-maximize,
-    .control-minimize {
-        content: "";
-
-        outline: none;
-        transition: all 100ms ease;
-
-        -webkit-app-region: no-drag;
-    }
+  .control-close,
+  .control-maximize,
+  .control-minimize {
+    content: "";
+    outline: none;
+    transition: all 100ms ease;
+    -webkit-app-region: no-drag;
+  }
 }

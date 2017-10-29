@@ -1,22 +1,20 @@
 body {
-    font-size: $font-size;
-    font-family: $font-main;
-    font-weight: 400;
-    font-style: normal;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    text-rendering: geometricPrecision;
-
-    -webkit-overflow-scrolling: touch;
-    -webkit-text-size-adjust: 100%;
-    -webkit-user-select: none;
+  font-size: $font-size;
+  font-family: $font-main;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-rendering: geometricPrecision;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
-
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
