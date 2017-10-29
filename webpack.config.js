@@ -10,12 +10,16 @@ const config = {
   entry: "./src/index.js",
 
   output: {
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "./qpm/src"),
     filename: "index.min.js",
   },
 
   resolve: {
     extensions: [".js", ".jsx", ".json"],
+  },
+
+  externals: {
+    "qilin-manager": "require('../node_modules/qilin-manager')",
   },
 
   watchOptions: {
@@ -24,7 +28,7 @@ const config = {
       path.resolve(__dirname, "./demos"),
       path.resolve(__dirname, "./build"),
       path.resolve(__dirname, "./cache"),
-      path.resolve(__dirname, "./dist"),
+      path.resolve(__dirname, "./qpm"),
       path.resolve(__dirname, "./bin"),
     ],
   },

@@ -1,10 +1,17 @@
 {
     "name": "me.laniewski.qilin",
-    "main": "dist/index.html",
+    "main": "qpm/src/index.html",
     "version": "0.4.0-alpha",
     "private": true,
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
-    "license": "BSD-3-Clause license with patents",
+    "license": "BSD-3-Clause",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/qilin-editor/qilin-app.git"
+    },
+    "bugs": {
+        "url": "https://github.com/qilin-editor/qilin-app/issues"
+    },
     "chromium-args": "--mixed-context --enable-experimental-web-platform-features",
     "window": {
         "min_height": 600,
@@ -79,12 +86,14 @@
         "webpack-dev-server": "^2.9.3"
     },
     "scripts": {
-        "prepare": "export NODE_ENV=production && npm run eslint && node_modules/.bin/webpack --progress",
-        "watch": "export NODE_ENV=development && node_modules/.bin/webpack --progress --watch & node_modules/.bin/nw . --nwjs_build_type=sdk",
-        "start": "npm run prepare && node_modules/.bin/nw . --nwjs_build_type=sdk",
+        "prepare-manager": "cd qpm && npm install",
+        "prepare": "export NODE_ENV=production && npm run eslint && node_modules/.bin/webpack --progress && npm run prepare-manager",
+        "watch": "export NODE_ENV=development && node_modules/.bin/webpack --progress --watch & npm run nw",
+        "start": "npm run prepare && npm run nw",
         "build": "npm run prepare && node bin/compile",
         "eslint": "node_modules/.bin/eslint --ext .js --ext .jsx src --fix",
-        "clear": "rm -rf build cache dist"
+        "clear": "rm -rf build cache qpm/node_modules qpm/src",
+        "nw": "node_modules/.bin/nw . --nwjs_build_type=sdk"
     },
     "maintainers": [
         {
