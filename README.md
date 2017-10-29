@@ -6,7 +6,7 @@
 [![Github Releases](https://img.shields.io/github/downloads/qilin-editor/qilin-app/latest/total.svg)](https://github.com/qilin-editor/qilin-app/releases)
   <br>
 
-**Qilin** is a *free*, *open-source* and *fully hackable* text editor developed for exact sciences in mind. It fully supports [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *[MIT-like license](#license)*. Qilin is extensible via several [plugins and themes](https://github.com/qilin-editor/qilin-manager).
+**Qilin** is a *free*, *open-source* and *fully hackable* text editor developed for exact sciences in mind. It fully supports [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *[MIT license](#license)*. Qilin is extensible via several [plugins and themes](https://github.com/qilin-editor/qilin-manager).
 
 ![Qilin editor](https://i.imgur.com/VOGLGv5.png)
 </div>
