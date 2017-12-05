@@ -8,10 +8,10 @@
 
 **Qilin** is a *free*, *open-source* and *fully hackable* text editor developed for exact sciences in mind. It fully supports [`KaTeX`](https://khan.github.io/KaTeX/) and [`AsciiMath`](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the *[MIT license](#license)*. Qilin is extensible via several [plugins and themes](https://github.com/qilin-editor/qilin-manager).
 
->**Note**: Qilin Editor and all related repositories are still in development - it might not be suitable for daily usage. As the only active maintainer, I ([@Bartozzz](https://github.com/Bartozzz)) am not able to provide regular updates, so any help is more than welcome.
-
 ![Qilin editor](https://i.imgur.com/VOGLGv5.png)
 </div>
+
+>**Note**: Qilin Editor and all related repositories are still in development - it might not be suitable for daily usage. As the only active maintainer, I ([@Bartozzz](https://github.com/Bartozzz)) am not able to provide regular updates, so any help is more than welcome.
 
 <h2 align="center">Contributing</h2>
 
