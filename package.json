@@ -50,7 +50,7 @@
         "wireframe-framework": "latest"
     },
     "devDependencies": {
-        "autoprefixer": "^7.1.6",
+        "autoprefixer": "^8.0.0",
         "babel-cli": "^6.24.1",
         "babel-core": "^6.25.0",
         "babel-eslint": "^8.0.1",
