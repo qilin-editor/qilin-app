@@ -86,7 +86,7 @@
         "uglifyjs-webpack-plugin": "beta",
         "url-loader": "^0.6.1",
         "webpack": "^3.8.1",
-        "webpack-dev-server": "^2.9.3"
+        "webpack-dev-server": "^3.0.0"
     },
     "scripts": {
         "prepare-qpm": "cd qpm && npm install",
