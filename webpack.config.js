@@ -2,7 +2,6 @@ const path = require("path");
 const Webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 console.log(`Running in ${process.env.NODE_ENV || "production"} mode`);
 
@@ -48,10 +47,6 @@ const config = {
         use: "file-loader",
       },
       {
-        test: /\.json$/,
-        use: "json-loader",
-      },
-      {
         test: /\.(js|jsx)$/,
         use: "babel-loader",
         exclude: /(node_modules|bower_components)/,
@@ -90,39 +85,17 @@ const config = {
       filename: "./index.min.css",
       allChunks: true,
     }),
-
-    new Webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-    }),
   ],
 };
 
 if (process.env.NODE_ENV === "development") {
-  // …
+  config.mode = "development";
 }
 
 if (process.env.NODE_ENV === "production") {
+  config.mode = "production";
   config.plugins.push(new Webpack.optimize.ModuleConcatenationPlugin());
   config.plugins.push(new Webpack.optimize.AggressiveMergingPlugin());
-  config.plugins.push(new UglifyJSPlugin({
-    uglifyOptions: {
-      ie8: false,
-
-      compress: {
-        keep_infinity: true,
-        drop_console: true,
-        dead_code: true,
-        passes: 3,
-      },
-
-      output: {
-        inline_script: true,
-        comments: false,
-        beautify: false,
-        ecma: 6,
-      },
-    },
-  }));
 }
 
 module.exports = config;
