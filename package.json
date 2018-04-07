@@ -44,6 +44,7 @@
         "react-codemirror2": "^3.0.0",
         "react-dom": "^16.0.0",
         "react-rnd": "^7.1.4",
+        "react-router-dom": "^4.2.2",
         "react-split-pane": "^0.1.65",
         "react-svg": "^2.1.22",
         "react-tabs": "^2.1.0",

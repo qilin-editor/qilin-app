@@ -1,5 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
+import {HashRouter} from "react-router-dom";
 import {Provider} from "mobx-react";
 import App from "./components/App";
 import "./shortcuts/FileShortcuts";
@@ -10,6 +11,8 @@ const stores = {
 
 render((
   <Provider {...stores}>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </Provider>
 ), document.getElementById("app"));
