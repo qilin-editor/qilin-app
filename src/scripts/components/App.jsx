@@ -1,4 +1,5 @@
 import React, {PureComponent} from "react";
+import PropTypes from "prop-types";
 import {Switch, Route, withRouter} from "react-router-dom";
 import App from "qilin-components/app";
 import Bar from "qilin-components/bar";
@@ -42,6 +43,11 @@ const theme = {
 
 @withRouter
 class AppWindow extends PureComponent {
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
+  }
+
   closeWindow = () => {
     this.window.close(true);
   }
