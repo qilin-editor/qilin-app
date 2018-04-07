@@ -1,30 +1,4 @@
 @import "../fonts/FiraCode/fira_code";
 
-// Configuration:
-@import "configuration/colors";
-@import "configuration/typo";
-
 // Vendor:
 @import "~markdown-it-maths/dist/index.min";
-@import "~codemirror/addon/scroll/simplescrollbars";
-@import "~codemirror/lib/codemirror";
-
-// Platform-specific:
-@import "platforms/windows/index";
-@import "platforms/darwin/index";
-
-// Themes:
-@import "themes/light/index";
-@import "themes/dark/index";
-
-// Components:
-@import "components/qilin/button";
-@import "components/qilin/popup";
-@import "components/qilin/reset";
-@import "components/states/is-clickable";
-@import "components/states/is-hidden";
-@import "components/app";
-@import "components/controls";
-@import "components/editor-editable";
-@import "components/editor-formula";
-@import "components/editor-preview";

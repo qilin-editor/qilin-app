@@ -1,63 +1,97 @@
 import React, {PureComponent} from "react";
-import className from "classnames";
-import Header from "./Header";
-import Content from "./Content";
-import EditorForumlaPopup from "./Editor/Formula";
-import {getPlatform} from "../utils/PlatformUtils";
+import {Switch, Route, withRouter} from "react-router-dom";
+import App from "qilin-components/app";
+import Bar from "qilin-components/bar";
+import Button from "qilin-components/form/button";
+import Controls, {Control} from "qilin-components/control";
 
-class App extends PureComponent {
-  state = {
-    isPreviewToggled: true,
-    isFormulaToggled: false,
-    isThemeToggled: false,
+const syntax = {
+  import: "#e696f9",
+  snippet: "#f5f4f5",
+  comment: "#6b6b8a",
+  variable: "#f77ea5",
+  constant: "#f77ea5",
+  property: "#ffe25b",
+  function: "#6cc1fa",
+  attribute: "#ffe25b",
+  value: "#f5f4f5",
+  class: "#e696f9",
+  method: "#6cc1fa",
+  keyword: "#e696f9",
+  tag: "#e696f9",
+};
+
+const theme = {
+  foreground: "#9998b9",
+  background: "#272740",
+  border: "#171727",
+  caret: "#f97fa7",
+  lineHighlight: "#2b2b48",
+  findHighlight: "#00ff00",
+  findHighlightForeground: "#0000ff",
+  gutter: "#272740",
+  gutterForeground: "#4c4b66",
+  selection: "#3a3960",
+  selectionBorder: "#3a3960",
+  selectionForeground: "#9998b9",
+  inactiveSelection: "#3a3960",
+  inactiveSelectionForeground: "#9998b9",
+  shadow: "#111111",
+  syntax: syntax,
+};
+
+@withRouter
+class AppWindow extends PureComponent {
+  closeWindow = () => {
+    this.window.close(true);
   }
 
-  togglePreview = () => {
-    this.setState({
-      isPreviewToggled: !this.state.isPreviewToggled,
-    });
+  minimizeWindow = () => {
+    this.window.minimize();
   }
 
-  toggleFormula = () => {
-    this.setState({
-      isFormulaToggled: !this.state.isFormulaToggled,
-    });
+  maximizeWindow = () => {
+    this.window.toggleFullscreen();
   }
 
-  toggleTheme = () => {
-    this.setState({
-      isThemeToggled: !this.state.isThemeToggled,
-    });
+  toggleSettings = () => {
+    const {location, history} = this.props;
+
+    if (location.pathname.includes("settings")) {
+      history.push("/");
+    } else {
+      history.push("/settings");
+    }
   }
 
   render() {
-    const theme = className("app", "qilin-panel", `is-${getPlatform()}`, {
-      "is-light": !this.state.isThemeToggled,
-      "is-dark": this.state.isThemeToggled,
-    });
-
     return (
-      <div className={theme}>
-        <Header
-          isPreviewToggled={this.state.isPreviewToggled}
-          isFormulaToggled={this.state.isFormulaToggled}
-          isThemeToggled={this.state.isThemeToggled}
-          toggleTheme={this.toggleTheme}
-          togglePreview={this.togglePreview}
-          toggleFormula={this.toggleFormula}
-        />
+      <App theme={theme}>
+        <Bar header>
+          <Controls>
+            <Control close onClick={this.closeWindow} />
+            <Control minimize onClick={this.minimizeWindow} />
+            <Control maximize onClick={this.maximizeWindow} />
+          </Controls>
 
-        <Content
-          isPreviewToggled={this.state.isPreviewToggled}
-        />
+          <p>Filename</p>
 
-        <EditorForumlaPopup
-          isOpen={this.state.isFormulaToggled}
-          close={this.toggleFormula}
-        />
-      </div>
+          <section>
+            <Button onClick={this.toggleSettings}>C</Button>
+          </section>
+        </Bar>
+
+        <Switch>
+          <Route path="/" exact component={require("./Editor")} />
+          <Route path="/settings" component={require("./Settings")} />
+        </Switch>
+
+        <Bar footer>
+          …
+        </Bar>
+      </App>
     );
   }
 }
 
-export default App;
+export default AppWindow;

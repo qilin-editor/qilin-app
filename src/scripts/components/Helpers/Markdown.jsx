@@ -6,17 +6,15 @@ import {getMarkdown} from "../../utils/MarkdownUtils";
 class Markdown extends Component {
   static propTypes = {
     content: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
     className: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.string),
       PropTypes.string,
     ]),
-    onClick: PropTypes.func,
-    isLazy: PropTypes.bool,
   }
 
   static defaultProps = {
     onClick: () => null,
-    isLazy: false,
   }
 
   static renderer = getMarkdown({
@@ -25,25 +23,9 @@ class Markdown extends Component {
     typography: true,
   })
 
-  // For lazy reload:
-  timeout = 0
-
-  shouldComponentUpdate(nextProps) {
-    if (nextProps.isLazy) {
-      if (this.timeout > +new Date()) {
-        return false;
-      }
-
-      this.timeout = +new Date() + 500;
-    }
-
-    return true;
-  }
-
   render() {
     return (
       <div
-        role="presentation"
         onClick={this.props.onClick}
         className={className(this.props.className)}
         dangerouslySetInnerHTML={{
