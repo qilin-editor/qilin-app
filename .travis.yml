@@ -7,7 +7,7 @@ node_js:
 
 branches:
   only:
-    - master
+    - development
     - /^greenkeeper/.*$/
 
 cache:
