@@ -16,7 +16,7 @@ export default {
   },
 
   @computed get filename() {
-    return this.path ? path.basename(this.path) : "";
+    return this.path ? path.basename(this.path) : null;
   },
 
   @computed get directory() {

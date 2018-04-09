@@ -16,12 +16,15 @@ class FileName extends Component {
 
   render() {
     const {filename, saved} = this.props.editorStore;
-    const saveIndicator = filename && saved ? "" : "*";
+    const saveIndicator = filename ? (saved ? "" : "•") : "";
+
+    console.log(filename, saved);
 
     return (
-      <span className="filename" onClick={this.reveal}>
-        {`${filename || "Untitled"}${saveIndicator}`}
-      </span>
+      <p className="filename" onClick={this.reveal}>
+        <span>{`${filename || "Untitled"}`}</span>
+        <span className="filename-indicator">{saveIndicator}</span>
+      </p>
     );
   }
 }

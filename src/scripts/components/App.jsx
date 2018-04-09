@@ -5,6 +5,7 @@ import App from "qilin-components/app";
 import Bar from "qilin-components/bar";
 import Button from "qilin-components/form/button";
 import Controls, {Control} from "qilin-components/control";
+import Filename from "./Helpers/FileName";
 
 const syntax = {
   import: "#e696f9",
@@ -80,7 +81,7 @@ class AppWindow extends PureComponent {
             <Control maximize onClick={this.maximizeWindow} />
           </Controls>
 
-          <p>Filename</p>
+          <Filename />
 
           <section>
             <Button onClick={this.toggleSettings}>C</Button>
