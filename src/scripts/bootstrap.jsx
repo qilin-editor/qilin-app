@@ -7,6 +7,7 @@ import "./shortcuts/FileShortcuts";
 
 const stores = {
   editorStore: require("./stores/EditorStore"),
+  themeStore: require("./stores/ThemeStore"),
 };
 
 render((
