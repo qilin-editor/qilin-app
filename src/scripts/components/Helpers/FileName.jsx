@@ -18,8 +18,6 @@ class FileName extends Component {
     const {filename, saved} = this.props.editorStore;
     const saveIndicator = filename ? (saved ? "" : "•") : "";
 
-    console.log(filename, saved);
-
     return (
       <p className="filename" onClick={this.reveal}>
         <span>{`${filename || "Untitled"}`}</span>
