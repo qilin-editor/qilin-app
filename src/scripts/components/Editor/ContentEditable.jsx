@@ -2,21 +2,21 @@ import React, {Component} from "react";
 import {inject, observer, PropTypes as MobxPropTypes} from "mobx-react";
 import Editor from "qilin-components/editor";
 
-@inject(["editorStore"])
+@inject(["editor"])
 @observer
 class ContentEditable extends Component {
   static propTypes = {
-    editorStore: MobxPropTypes.observableObject,
+    editor: MobxPropTypes.observableObject,
   }
 
   editorDidChange = (editor, data, value) => {
-    this.props.editorStore.changeContent(value);
+    this.props.editor.changeContent(value);
   }
 
   render() {
     return (
       <Editor
-        value={this.props.editorStore.content}
+        value={this.props.editor.content}
         onBeforeChange={this.editorDidChange}
       />
     );

@@ -3,12 +3,9 @@ import {render} from "react-dom";
 import {HashRouter} from "react-router-dom";
 import {Provider} from "mobx-react";
 import App from "./components/App";
-import "./shortcuts/FileShortcuts";
+import stores from "./stores";
 
-const stores = {
-  editorStore: require("./stores/EditorStore"),
-  themeStore: require("./stores/ThemeStore"),
-};
+import "./shortcuts/FileShortcuts";
 
 render((
   <Provider {...stores}>

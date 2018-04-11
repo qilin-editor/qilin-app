@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {inject, observer, PropTypes as MobxPropTypes} from "mobx-react";
 import {Switch, Route, withRouter} from "react-router-dom";
@@ -8,14 +8,14 @@ import Button from "qilin-components/form/button";
 import Controls, {Control} from "qilin-components/control";
 import Filename from "./Helpers/FileName";
 
-@inject(["themeStore"])
+@inject(["theme"])
 @observer
 @withRouter
-class AppWindow extends PureComponent {
+class AppWindow extends Component {
   static propTypes = {
     location: PropTypes.object,
     history: PropTypes.object,
-    themeStore: MobxPropTypes.observableObject,
+    theme: MobxPropTypes.observableObject,
   }
 
   closeWindow = () => {
@@ -42,7 +42,7 @@ class AppWindow extends PureComponent {
 
   render() {
     return (
-      <App theme={this.props.themeStore.theme}>
+      <App theme={this.props.theme.colors}>
         <Bar header>
           <Controls>
             <Control close onClick={this.closeWindow} />

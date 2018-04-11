@@ -1,21 +1,21 @@
 import React, {Component} from "react";
 import {inject, observer, PropTypes as MobxPropTypes} from "mobx-react";
 
-@inject(["editorStore"])
+@inject(["editor"])
 @observer
 class FileName extends Component {
   static propTypes = {
-    editorStore: MobxPropTypes.observableObject,
+    editor: MobxPropTypes.observableObject,
   }
 
   reveal = () => {
-    if (this.props.editorStore.path) {
-      require("opn")(this.props.editorStore.directory);
+    if (this.props.editor.path) {
+      require("opn")(this.props.editor.directory);
     }
   }
 
   render() {
-    const {filename, saved} = this.props.editorStore;
+    const {filename, saved} = this.props.editor;
     const saveIndicator = filename ? (saved ? "" : "•") : "";
 
     return (
