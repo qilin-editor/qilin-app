@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {inject, observer, PropTypes as MobxPropTypes} from "mobx-react";
 import {Switch, Route, withRouter} from "react-router-dom";
+import MaterialIcon from "material-icons-react";
 import App from "qilin-components/app";
 import Bar from "qilin-components/bar";
 import Button from "qilin-components/form/button";
@@ -41,8 +42,10 @@ class AppWindow extends Component {
   }
 
   render() {
+    const {colors} = this.props.theme;
+
     return (
-      <App theme={this.props.theme.colors}>
+      <App theme={colors}>
         <Bar header>
           <Controls>
             <Control close onClick={this.closeWindow} />
@@ -53,7 +56,9 @@ class AppWindow extends Component {
           <Filename />
 
           <section>
-            <Button onClick={this.toggleSettings}>C</Button>
+            <Button onClick={this.toggleSettings}>
+              <MaterialIcon icon="settings" color={colors.foreground} size={15} />
+            </Button>
           </section>
         </Bar>
 
