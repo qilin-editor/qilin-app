@@ -40,11 +40,13 @@
         "opn": "^5.3.0",
         "prop-types": "^15.6.1",
         "qilin-components": "0.0.131",
-        "react": "16.3.1",
+        "react": "^16.3.1",
         "react-dom": "^16.3.1",
         "react-router-dom": "^4.2.2",
         "react-split-pane": "^0.1.77",
         "react-svg": "^2.2.16",
+        "typography": "^0.16.6",
+        "typography-theme-github": "^0.15.10",
         "wireframe-framework": "latest"
     },
     "devDependencies": {

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {inject, observer, PropTypes} from "mobx-react";
 import Markdown from "../Helpers/Markdown";
+import Typography from "../Helpers/Typography";
 
 @inject(["editorStore"])
 @observer
@@ -11,10 +12,12 @@ class ContentPreview extends Component {
 
   render() {
     return (
-      <Markdown
-        className="typo"
-        content={this.props.editorStore.content}
-      />
+      <Typography>
+        <Markdown
+          className="typo"
+          content={this.props.editorStore.content}
+        />
+      </Typography>
     );
   }
 }
