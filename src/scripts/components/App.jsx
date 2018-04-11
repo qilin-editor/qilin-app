@@ -9,8 +9,8 @@ import Controls, {Control} from "qilin-components/control";
 import Filename from "./Helpers/FileName";
 
 @inject(["theme"])
-@observer
 @withRouter
+@observer
 class AppWindow extends Component {
   static propTypes = {
     location: PropTypes.object,
