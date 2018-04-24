@@ -7,7 +7,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/qilin-editor/qilin-app.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/qilin-editor/qilin-app.svg)](https://travis-ci.org/qilin-editor/qilin-app/)
-[![License](https://img.shields.io/github/license/qilin-editor/qilin-app.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Github Releases](https://img.shields.io/github/downloads/qilin-editor/qilin-app/latest/total.svg)](https://github.com/qilin-editor/qilin-app/releases)
   <br>
 
