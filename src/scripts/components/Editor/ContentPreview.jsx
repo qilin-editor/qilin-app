@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {inject, observer, PropTypes} from "mobx-react";
+import React, { Component } from "react";
+import { inject, observer, PropTypes } from "mobx-react";
 import Markdown from "../Helpers/Markdown";
 import Typography from "../Helpers/Typography";
 
@@ -7,16 +7,13 @@ import Typography from "../Helpers/Typography";
 @observer
 class ContentPreview extends Component {
   static propTypes = {
-    editor: PropTypes.observableObject,
-  }
+    editor: PropTypes.observableObject
+  };
 
   render() {
     return (
       <Typography>
-        <Markdown
-          className="typo"
-          content={this.props.editor.content}
-        />
+        <Markdown className="typo" content={this.props.editor.content} />
       </Typography>
     );
   }

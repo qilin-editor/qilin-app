@@ -1,236 +1,236 @@
 export default {
-  "arcsin": {
+  arcsin: {
     type: "Math operators",
-    content: "\\arcsin",
+    content: "\\arcsin"
   },
 
-  "arccos": {
+  arccos: {
     type: "Math operators",
-    content: "\\arccos",
+    content: "\\arccos"
   },
 
-  "arctan": {
+  arctan: {
     type: "Math operators",
-    content: "\\arctan",
+    content: "\\arctan"
   },
 
-  "arctg": {
+  arctg: {
     type: "Math operators",
-    content: "\\arctg",
+    content: "\\arctg"
   },
 
-  "arcctg": {
+  arcctg: {
     type: "Math operators",
-    content: "\\arcctg",
+    content: "\\arcctg"
   },
 
-  "arg": {
+  arg: {
     type: "Math operators",
-    content: "\\arg",
+    content: "\\arg"
   },
 
-  "ch": {
+  ch: {
     type: "Math operators",
-    content: "\\ch",
+    content: "\\ch"
   },
 
-  "cos": {
+  cos: {
     type: "Math operators",
-    content: "\\cos",
+    content: "\\cos"
   },
 
-  "cosec": {
+  cosec: {
     type: "Math operators",
-    content: "\\cosec",
+    content: "\\cosec"
   },
 
-  "cosh": {
+  cosh: {
     type: "Math operators",
-    content: "\\cosh",
+    content: "\\cosh"
   },
 
-  "cot": {
+  cot: {
     type: "Math operators",
-    content: "\\cot",
+    content: "\\cot"
   },
 
-  "cotg": {
+  cotg: {
     type: "Math operators",
-    content: "\\cotg",
+    content: "\\cotg"
   },
 
-  "coth": {
+  coth: {
     type: "Math operators",
-    content: "\\coth",
+    content: "\\coth"
   },
 
-  "csc": {
+  csc: {
     type: "Math operators",
-    content: "\\csc",
+    content: "\\csc"
   },
 
-  "ctg": {
+  ctg: {
     type: "Math operators",
-    content: "\\ctg",
+    content: "\\ctg"
   },
 
-  "cth": {
+  cth: {
     type: "Math operators",
-    content: "\\cth",
+    content: "\\cth"
   },
 
-  "deg": {
+  deg: {
     type: "Math operators",
-    content: "\\deg",
+    content: "\\deg"
   },
 
-  "dim": {
+  dim: {
     type: "Math operators",
-    content: "\\dim",
+    content: "\\dim"
   },
 
-  "exp": {
+  exp: {
     type: "Math operators",
-    content: "\\exp",
+    content: "\\exp"
   },
 
-  "hom": {
+  hom: {
     type: "Math operators",
-    content: "\\hom",
+    content: "\\hom"
   },
 
-  "ker": {
+  ker: {
     type: "Math operators",
-    content: "\\ker",
+    content: "\\ker"
   },
 
-  "lg": {
+  lg: {
     type: "Math operators",
-    content: "\\lg",
+    content: "\\lg"
   },
 
-  "ln": {
+  ln: {
     type: "Math operators",
-    content: "\\ln",
+    content: "\\ln"
   },
 
-  "log": {
+  log: {
     type: "Math operators",
-    content: "\\log",
+    content: "\\log"
   },
 
-  "sec": {
+  sec: {
     type: "Math operators",
-    content: "\\sec",
+    content: "\\sec"
   },
 
-  "sin": {
+  sin: {
     type: "Math operators",
-    content: "\\sin",
+    content: "\\sin"
   },
 
-  "sinh": {
+  sinh: {
     type: "Math operators",
-    content: "\\sinh",
+    content: "\\sinh"
   },
 
-  "sh": {
+  sh: {
     type: "Math operators",
-    content: "\\sh",
+    content: "\\sh"
   },
 
-  "tan": {
+  tan: {
     type: "Math operators",
-    content: "\\tan",
+    content: "\\tan"
   },
 
-  "tanh": {
+  tanh: {
     type: "Math operators",
-    content: "\\tanh",
+    content: "\\tanh"
   },
 
-  "tg": {
+  tg: {
     type: "Math operators",
-    content: "\\tg",
+    content: "\\tg"
   },
 
-  "th": {
+  th: {
     type: "Math operators",
-    content: "\\th",
+    content: "\\th"
   },
 
-  "det": {
+  det: {
     type: "Math operators",
-    content: "\\det",
+    content: "\\det"
   },
 
-  "gcd": {
+  gcd: {
     type: "Math operators",
-    content: "\\gcd",
+    content: "\\gcd"
   },
 
-  "inf": {
+  inf: {
     type: "Math operators",
-    content: "\\inf",
+    content: "\\inf"
   },
 
-  "lim": {
+  lim: {
     type: "Math operators",
-    content: "\\lim",
+    content: "\\lim"
   },
 
-  "liminf": {
+  liminf: {
     type: "Math operators",
-    content: "\\liminf",
+    content: "\\liminf"
   },
 
-  "limsup": {
+  limsup: {
     type: "Math operators",
-    content: "\\limsup",
+    content: "\\limsup"
   },
 
-  "max": {
+  max: {
     type: "Math operators",
-    content: "\\max",
+    content: "\\max"
   },
 
-  "min": {
+  min: {
     type: "Math operators",
-    content: "\\min",
+    content: "\\min"
   },
 
-  "Pr": {
+  Pr: {
     type: "Math operators",
-    content: "\\Pr",
+    content: "\\Pr"
   },
 
-  "sup": {
+  sup: {
     type: "Math operators",
-    content: "\\sup",
+    content: "\\sup"
   },
 
-  "sqrt": {
+  sqrt: {
     type: "Math operators",
-    content: "\\sqrt{x}",
+    content: "\\sqrt{x}"
   },
 
-  "sqrt2": {
+  sqrt2: {
     type: "Math operators",
-    content: "\\sqrt[3]{x}",
+    content: "\\sqrt[3]{x}"
   },
 
-  "x_n": {
+  x_n: {
     type: "Vertical layout",
-    content: "x_{n}",
+    content: "x_{n}"
   },
 
   "e^x": {
     type: "Vertical layout",
-    content: "e^{x}",
+    content: "e^{x}"
   },
 
   "_u^o": {
     type: "Vertical layout",
-    content: "C_{a}^{b}",
-  },
+    content: "C_{a}^{b}"
+  }
 };

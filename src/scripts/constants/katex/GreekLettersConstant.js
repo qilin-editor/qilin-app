@@ -1,216 +1,216 @@
 export default {
   Gamma: {
     type: "Greek letters",
-    content: "\\Gamma",
+    content: "\\Gamma"
   },
 
   Delta: {
     type: "Greek letters",
-    content: "\\Delta",
+    content: "\\Delta"
   },
 
   Theta: {
     type: "Greek letters",
-    content: "\\Theta",
+    content: "\\Theta"
   },
 
   Lambda: {
     type: "Greek letters",
-    content: "\\Lambda",
+    content: "\\Lambda"
   },
 
   Xi: {
     type: "Greek letters",
-    content: "\\Xi",
+    content: "\\Xi"
   },
 
   Pi: {
     type: "Greek letters",
-    content: "\\Pi",
+    content: "\\Pi"
   },
 
   Sigma: {
     type: "Greek letters",
-    content: "\\Sigma",
+    content: "\\Sigma"
   },
 
   Upsilon: {
     type: "Greek letters",
-    content: "\\Upsilon",
+    content: "\\Upsilon"
   },
 
   Phi: {
     type: "Greek letters",
-    content: "\\Phi",
+    content: "\\Phi"
   },
 
   Psi: {
     type: "Greek letters",
-    content: "\\Psi",
+    content: "\\Psi"
   },
 
   Omega: {
     type: "Greek letters",
-    content: "\\Omega",
+    content: "\\Omega"
   },
 
   alpha: {
     type: "Greek letters",
-    content: "\\alpha",
+    content: "\\alpha"
   },
 
   beta: {
     type: "Greek letters",
-    content: "\\beta",
+    content: "\\beta"
   },
 
   gamma: {
     type: "Greek letters",
-    content: "\\gamma",
+    content: "\\gamma"
   },
 
   delta: {
     type: "Greek letters",
-    content: "\\delta",
+    content: "\\delta"
   },
 
   epsilon: {
     type: "Greek letters",
-    content: "\\epsilon",
+    content: "\\epsilon"
   },
 
   zeta: {
     type: "Greek letters",
-    content: "\\zeta",
+    content: "\\zeta"
   },
 
   eta: {
     type: "Greek letters",
-    content: "\\eta",
+    content: "\\eta"
   },
 
   theta: {
     type: "Greek letters",
-    content: "\\theta",
+    content: "\\theta"
   },
 
   iota: {
     type: "Greek letters",
-    content: "\\iota",
+    content: "\\iota"
   },
 
   kappa: {
     type: "Greek letters",
-    content: "\\kappa",
+    content: "\\kappa"
   },
 
   lambda: {
     type: "Greek letters",
-    content: "\\lambda",
+    content: "\\lambda"
   },
 
   mu: {
     type: "Greek letters",
-    content: "\\mu",
+    content: "\\mu"
   },
 
   nu: {
     type: "Greek letters",
-    content: "\\nu",
+    content: "\\nu"
   },
 
   xi: {
     type: "Greek letters",
-    content: "\\xi",
+    content: "\\xi"
   },
 
   omicron: {
     type: "Greek letters",
-    content: "\\omicron",
+    content: "\\omicron"
   },
 
   pi: {
     type: "Greek letters",
-    content: "\\pi",
+    content: "\\pi"
   },
 
   rho: {
     type: "Greek letters",
-    content: "\\rho",
+    content: "\\rho"
   },
 
   sigma: {
     type: "Greek letters",
-    content: "\\sigma",
+    content: "\\sigma"
   },
 
   tau: {
     type: "Greek letters",
-    content: "\\tau",
+    content: "\\tau"
   },
 
   upsilon: {
     type: "Greek letters",
-    content: "\\upsilon",
+    content: "\\upsilon"
   },
 
   phi: {
     type: "Greek letters",
-    content: "\\phi",
+    content: "\\phi"
   },
 
   chi: {
     type: "Greek letters",
-    content: "\\chi",
+    content: "\\chi"
   },
 
   psi: {
     type: "Greek letters",
-    content: "\\psi",
+    content: "\\psi"
   },
 
   omega: {
     type: "Greek letters",
-    content: "\\omega",
+    content: "\\omega"
   },
 
   varepsilon: {
     type: "Greek letters",
-    content: "\\varepsilon",
+    content: "\\varepsilon"
   },
 
   varkappa: {
     type: "Greek letters",
-    content: "\\varkappa",
+    content: "\\varkappa"
   },
 
   vartheta: {
     type: "Greek letters",
-    content: "\\vartheta",
+    content: "\\vartheta"
   },
 
   varpi: {
     type: "Greek letters",
-    content: "\\varpi",
+    content: "\\varpi"
   },
 
   varrho: {
     type: "Greek letters",
-    content: "\\varrho",
+    content: "\\varrho"
   },
 
   varsigma: {
     type: "Greek letters",
-    content: "\\varsigma",
+    content: "\\varsigma"
   },
 
   varphi: {
     type: "Greek letters",
-    content: "\\varphi",
+    content: "\\varphi"
   },
 
   digamma: {
     type: "Greek letters",
-    content: "\\digamma",
-  },
+    content: "\\digamma"
+  }
 };

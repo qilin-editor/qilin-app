@@ -1,296 +1,296 @@
 export default {
   not: {
     type: "Negated relations",
-    content: "\\not =",
+    content: "\\not ="
   },
 
   gnapprox: {
     type: "Negated relations",
-    content: "\\gnapprox",
+    content: "\\gnapprox"
   },
 
   gneq: {
     type: "Negated relations",
-    content: "\\gneq",
+    content: "\\gneq"
   },
 
   gneqq: {
     type: "Negated relations",
-    content: "\\gneqq",
+    content: "\\gneqq"
   },
 
   gnsim: {
     type: "Negated relations",
-    content: "\\gnsim",
+    content: "\\gnsim"
   },
 
   gvertneqq: {
     type: "Negated relations",
-    content: "\\gvertneqq",
+    content: "\\gvertneqq"
   },
 
   lnapprox: {
     type: "Negated relations",
-    content: "\\lnapprox",
+    content: "\\lnapprox"
   },
 
   lneq: {
     type: "Negated relations",
-    content: "\\lneq",
+    content: "\\lneq"
   },
 
   lneqq: {
     type: "Negated relations",
-    content: "\\lneqq",
+    content: "\\lneqq"
   },
 
   lnsim: {
     type: "Negated relations",
-    content: "\\lnsim",
+    content: "\\lnsim"
   },
 
   lvertneqq: {
     type: "Negated relations",
-    content: "\\lvertneqq",
+    content: "\\lvertneqq"
   },
 
   ncong: {
     type: "Negated relations",
-    content: "\\ncong",
+    content: "\\ncong"
   },
 
   ne: {
     type: "Negated relations",
-    content: "\\ne",
+    content: "\\ne"
   },
 
   neq: {
     type: "Negated relations",
-    content: "\\neq",
+    content: "\\neq"
   },
 
   ngeq: {
     type: "Negated relations",
-    content: "\\ngeq",
+    content: "\\ngeq"
   },
 
   ngeqq: {
     type: "Negated relations",
-    content: "\\ngeqq",
+    content: "\\ngeqq"
   },
 
   ngeqslant: {
     type: "Negated relations",
-    content: "\\ngeqslant",
+    content: "\\ngeqslant"
   },
 
   ngtr: {
     type: "Negated relations",
-    content: "\\ngtr",
+    content: "\\ngtr"
   },
 
   ni: {
     type: "Negated relations",
-    content: "\\ni",
+    content: "\\ni"
   },
 
   nleq: {
     type: "Negated relations",
-    content: "\\nleq",
+    content: "\\nleq"
   },
 
   nleqq: {
     type: "Negated relations",
-    content: "\\nleqq",
+    content: "\\nleqq"
   },
 
   nleqslant: {
     type: "Negated relations",
-    content: "\\nleqslant",
+    content: "\\nleqslant"
   },
 
   nless: {
     type: "Negated relations",
-    content: "\\nless",
+    content: "\\nless"
   },
 
   nmid: {
     type: "Negated relations",
-    content: "\\nmid",
+    content: "\\nmid"
   },
 
   notin: {
     type: "Negated relations",
-    content: "\\notin",
+    content: "\\notin"
   },
 
   nparallel: {
     type: "Negated relations",
-    content: "\\nparallel",
+    content: "\\nparallel"
   },
 
   nprec: {
     type: "Negated relations",
-    content: "\\nprec",
+    content: "\\nprec"
   },
 
   npreceq: {
     type: "Negated relations",
-    content: "\\npreceq",
+    content: "\\npreceq"
   },
 
   nshortmid: {
     type: "Negated relations",
-    content: "\\nshortmid",
+    content: "\\nshortmid"
   },
 
   nshortparallel: {
     type: "Negated relations",
-    content: "\\nshortparallel",
+    content: "\\nshortparallel"
   },
 
   nsim: {
     type: "Negated relations",
-    content: "\\nsim",
+    content: "\\nsim"
   },
 
   nsubseteq: {
     type: "Negated relations",
-    content: "\\nsubseteq",
+    content: "\\nsubseteq"
   },
 
   nsubseteqq: {
     type: "Negated relations",
-    content: "\\nsubseteqq",
+    content: "\\nsubseteqq"
   },
 
   nsucc: {
     type: "Negated relations",
-    content: "\\nsucc",
+    content: "\\nsucc"
   },
 
   nsucceq: {
     type: "Negated relations",
-    content: "\\nsucceq",
+    content: "\\nsucceq"
   },
 
   nsupseteq: {
     type: "Negated relations",
-    content: "\\nsupseteq",
+    content: "\\nsupseteq"
   },
 
   nsupseteqq: {
     type: "Negated relations",
-    content: "\\nsupseteqq",
+    content: "\\nsupseteqq"
   },
 
   ntriangleleft: {
     type: "Negated relations",
-    content: "\\ntriangleleft",
+    content: "\\ntriangleleft"
   },
 
   ntrianglelefteq: {
     type: "Negated relations",
-    content: "\\ntrianglelefteq",
+    content: "\\ntrianglelefteq"
   },
 
   ntriangleright: {
     type: "Negated relations",
-    content: "\\ntriangleright",
+    content: "\\ntriangleright"
   },
 
   ntrianglerighteq: {
     type: "Negated relations",
-    content: "\\ntrianglerighteq",
+    content: "\\ntrianglerighteq"
   },
 
   nvdash: {
     type: "Negated relations",
-    content: "\\nvdash",
+    content: "\\nvdash"
   },
 
   nvDash: {
     type: "Negated relations",
-    content: "\\nvDash",
+    content: "\\nvDash"
   },
 
   nVDash: {
     type: "Negated relations",
-    content: "\\nVDash",
+    content: "\\nVDash"
   },
 
   nVdash: {
     type: "Negated relations",
-    content: "\\nVdash",
+    content: "\\nVdash"
   },
 
   precnapprox: {
     type: "Negated relations",
-    content: "\\precnapprox",
+    content: "\\precnapprox"
   },
 
   precneqq: {
     type: "Negated relations",
-    content: "\\precneqq",
+    content: "\\precneqq"
   },
 
   precnsim: {
     type: "Negated relations",
-    content: "\\precnsim",
+    content: "\\precnsim"
   },
 
   subsetneq: {
     type: "Negated relations",
-    content: "\\subsetneq",
+    content: "\\subsetneq"
   },
 
   subsetneqq: {
     type: "Negated relations",
-    content: "\\subsetneqq",
+    content: "\\subsetneqq"
   },
 
   succnapprox: {
     type: "Negated relations",
-    content: "\\succnapprox",
+    content: "\\succnapprox"
   },
 
   succneqq: {
     type: "Negated relations",
-    content: "\\succneqq",
+    content: "\\succneqq"
   },
 
   succnsim: {
     type: "Negated relations",
-    content: "\\succnsim",
+    content: "\\succnsim"
   },
 
   supsetneq: {
     type: "Negated relations",
-    content: "\\supsetneq",
+    content: "\\supsetneq"
   },
 
   supsetneqq: {
     type: "Negated relations",
-    content: "\\supsetneqq",
+    content: "\\supsetneqq"
   },
 
   varsubsetneq: {
     type: "Negated relations",
-    content: "\\varsubsetneq",
+    content: "\\varsubsetneq"
   },
 
   varsubsetneqq: {
     type: "Negated relations",
-    content: "\\varsubsetneqq",
+    content: "\\varsubsetneqq"
   },
 
   varsupsetneq: {
     type: "Negated relations",
-    content: "\\varsupsetneq",
+    content: "\\varsupsetneq"
   },
 
   varsupsetneqq: {
     type: "Negated relations",
-    content: "\\varsupsetneqq",
-  },
+    content: "\\varsupsetneqq"
+  }
 };

@@ -1,87 +1,87 @@
 export default {
   sum: {
     type: "Big operators",
-    content: "\\sum",
+    content: "\\sum"
   },
 
   prod: {
     type: "Big operators",
-    content: "\\prod",
+    content: "\\prod"
   },
 
   coprod: {
     type: "Big operators",
-    content: "\\coprod",
+    content: "\\coprod"
   },
 
   smallint: {
     type: "Big operators",
-    content: "\\smallint",
+    content: "\\smallint"
   },
 
   int: {
     type: "Big operators",
     content: "\\int",
-    alias: ["\\intop"],
+    alias: ["\\intop"]
   },
 
   iint: {
     type: "Big operators",
-    content: "\\iint",
+    content: "\\iint"
   },
 
   iiint: {
     type: "Big operators",
-    content: "\\iiint",
+    content: "\\iiint"
   },
 
   oint: {
     type: "Big operators",
-    content: "\\oint",
+    content: "\\oint"
   },
 
   bigvee: {
     type: "Big operators",
-    content: "\\bigvee",
+    content: "\\bigvee"
   },
 
   bigwedge: {
     type: "Big operators",
-    content: "\\bigwedge",
+    content: "\\bigwedge"
   },
 
   bigcap: {
     type: "Big operators",
-    content: "\\bigcap",
+    content: "\\bigcap"
   },
 
   bigcup: {
     type: "Big operators",
-    content: "\\bigcup",
+    content: "\\bigcup"
   },
 
   bigsqcup: {
     type: "Big operators",
-    content: "\\bigsqcup",
+    content: "\\bigsqcup"
   },
 
   bigotimes: {
     type: "Big operators",
-    content: "\\bigotimes",
+    content: "\\bigotimes"
   },
 
   bigoplus: {
     type: "Big operators",
-    content: "\\bigoplus",
+    content: "\\bigoplus"
   },
 
   bigodot: {
     type: "Big operators",
-    content: "\\bigodot",
+    content: "\\bigodot"
   },
 
   biguplus: {
     type: "Big operators",
-    content: "\\biguplus",
-  },
+    content: "\\biguplus"
+  }
 };

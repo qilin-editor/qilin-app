@@ -1,161 +1,161 @@
 export default {
   prime: {
     type: "Accents",
-    content: "a'",
+    content: "a'"
   },
 
   pprime: {
     type: "Accents",
-    content: "a''",
+    content: "a''"
   },
 
   acute: {
     type: "Accents",
-    content: "\\acute{a}",
+    content: "\\acute{a}"
   },
 
   bar: {
     type: "Accents",
-    content: "\\bar{a}",
+    content: "\\bar{a}"
   },
 
   breve: {
     type: "Accents",
-    content: "\\breve{a}",
+    content: "\\breve{a}"
   },
 
   check: {
     type: "Accents",
-    content: "\\check{a}",
+    content: "\\check{a}"
   },
 
   dot: {
     type: "Accents",
-    content: "\\dot{a}",
+    content: "\\dot{a}"
   },
 
   ddot: {
     type: "Accents",
-    content: "\\ddot{a}",
+    content: "\\ddot{a}"
   },
 
   grave: {
     type: "Accents",
-    content: "\\grave{a}",
+    content: "\\grave{a}"
   },
 
   hat: {
     type: "Accents",
-    content: "\\hat{a}",
+    content: "\\hat{a}"
   },
 
   widehat: {
     type: "Accents",
-    content: "\\widehat{ab}",
+    content: "\\widehat{ab}"
   },
 
   tilde: {
     type: "Accents",
-    content: "\\tilde{a}",
+    content: "\\tilde{a}"
   },
 
   widetilde: {
     type: "Accents",
-    content: "\\widetilde{a}",
+    content: "\\widetilde{a}"
   },
 
   vec: {
     type: "Accents",
-    content: "\\vec{F}",
+    content: "\\vec{F}"
   },
 
   overline: {
     type: "Accents",
-    content: "\\overline{AB}",
+    content: "\\overline{AB}"
   },
 
   underline: {
     type: "Accents",
-    content: "\\underline{AB}",
+    content: "\\underline{AB}"
   },
 
   undertilde: {
     type: "Accents",
-    content: "\\undertilde{AB}",
+    content: "\\undertilde{AB}"
   },
 
   overleftarrow: {
     type: "Accents",
-    content: "\\overleftarrow{AB}",
+    content: "\\overleftarrow{AB}"
   },
 
   overrightarrow: {
     type: "Accents",
-    content: "\\overrightarrow{AB}",
+    content: "\\overrightarrow{AB}"
   },
 
   underleftarrow: {
     type: "Accents",
-    content: "\\underleftarrow{AB}",
+    content: "\\underleftarrow{AB}"
   },
 
   underrightarrow: {
     type: "Accents",
-    content: "\\underrightarrow{AB}",
+    content: "\\underrightarrow{AB}"
   },
 
   overleftrightarrow: {
     type: "Accents",
-    content: "\\overleftrightarrow{AB}",
+    content: "\\overleftrightarrow{AB}"
   },
 
   underleftrightarrow: {
     type: "Accents",
-    content: "\\underleftrightarrow{AB}",
+    content: "\\underleftrightarrow{AB}"
   },
 
   overgroup: {
     type: "Accents",
-    content: "\\overgroup{AB}",
+    content: "\\overgroup{AB}"
   },
 
   undergroup: {
     type: "Accents",
-    content: "\\undergroup{AB}",
+    content: "\\undergroup{AB}"
   },
 
   overleftharpoon: {
     type: "Accents",
-    content: "\\overleftharpoon{AB}",
+    content: "\\overleftharpoon{AB}"
   },
 
   overrightharpoon: {
     type: "Accents",
-    content: "\\overrightharpoon{AB}",
+    content: "\\overrightharpoon{AB}"
   },
 
   Overrightarrow: {
     type: "Accents",
-    content: "\\Overrightarrow{AB}",
+    content: "\\Overrightarrow{AB}"
   },
 
   overlinesegment: {
     type: "Accents",
-    content: "\\overlinesegment{AB}",
+    content: "\\overlinesegment{AB}"
   },
 
   underlinesegment: {
     type: "Accents",
-    content: "\\underlinesegment{AB}",
+    content: "\\underlinesegment{AB}"
   },
 
   overbrace: {
     type: "Accents",
-    content: "\\overbrace{AB}",
+    content: "\\overbrace{AB}"
   },
 
   underbrace: {
     type: "Accents",
-    content: "\\underbrace{AB}",
-  },
+    content: "\\underbrace{AB}"
+  }
 };

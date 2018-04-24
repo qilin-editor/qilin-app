@@ -1,587 +1,587 @@
 export default {
   equal: {
     type: "Relations",
-    content: "=",
+    content: "="
   },
 
   approx: {
     type: "Relations",
-    content: "\\approx",
+    content: "\\approx"
   },
 
   approxeq: {
     type: "Relations",
-    content: "\\approxeq",
+    content: "\\approxeq"
   },
 
   cong: {
     type: "Relations",
-    content: "\\cong",
+    content: "\\cong"
   },
 
   gt: {
     type: "Relations",
     content: ">",
-    alias: ["\\gt"],
+    alias: ["\\gt"]
   },
 
   lt: {
     type: "Relations",
     content: "<",
-    alias: ["\\lt"],
+    alias: ["\\lt"]
   },
 
   vcentcolon: {
     type: "Relations",
     content: ":",
-    alias: ["\\vcentcolon"],
+    alias: ["\\vcentcolon"]
   },
 
   asymp: {
     type: "Relations",
-    content: "\\asymp",
+    content: "\\asymp"
   },
 
   backepsilon: {
     type: "Relations",
-    content: "\\backepsilon",
+    content: "\\backepsilon"
   },
 
   backsim: {
     type: "Relations",
-    content: "\\backsim",
+    content: "\\backsim"
   },
 
   backsimeq: {
     type: "Relations",
-    content: "\\backsimeq",
+    content: "\\backsimeq"
   },
 
   between: {
     type: "Relations",
-    content: "\\between",
+    content: "\\between"
   },
 
   bowtie: {
     type: "Relations",
-    content: "\\bowtie",
+    content: "\\bowtie"
   },
 
   bumpeq: {
     type: "Relations",
-    content: "\\bumpeq",
+    content: "\\bumpeq"
   },
 
   Bumpeq: {
     type: "Relations",
-    content: "\\Bumpeq",
+    content: "\\Bumpeq"
   },
 
   circeq: {
     type: "Relations",
-    content: "\\circeq",
+    content: "\\circeq"
   },
 
   dblcolon: {
     type: "Relations",
-    content: "\\dblcolon",
+    content: "\\dblcolon"
   },
 
   colonapprox: {
     type: "Relations",
-    content: "\\colonapprox",
+    content: "\\colonapprox"
   },
 
   Colonapprox: {
     type: "Relations",
-    content: "\\Colonapprox",
+    content: "\\Colonapprox"
   },
 
   coloneq: {
     type: "Relations",
-    content: "\\coloneq",
+    content: "\\coloneq"
   },
 
   Coloneq: {
     type: "Relations",
-    content: "\\Coloneq",
+    content: "\\Coloneq"
   },
 
   coloneqq: {
     type: "Relations",
-    content: "\\coloneqq",
+    content: "\\coloneqq"
   },
 
   Coloneqq: {
     type: "Relations",
-    content: "\\Coloneqq",
+    content: "\\Coloneqq"
   },
 
   colonsim: {
     type: "Relations",
-    content: "\\colonsim",
+    content: "\\colonsim"
   },
 
   Colonsim: {
     type: "Relations",
-    content: "\\Colonsim",
+    content: "\\Colonsim"
   },
 
   curlyeqprec: {
     type: "Relations",
-    content: "\\curlyeqprec",
+    content: "\\curlyeqprec"
   },
 
   curlyeqsucc: {
     type: "Relations",
-    content: "\\curlyeqsucc",
+    content: "\\curlyeqsucc"
   },
 
   dashv: {
     type: "Relations",
-    content: "\\dashv",
+    content: "\\dashv"
   },
 
   doteq: {
     type: "Relations",
-    content: "\\doteq",
+    content: "\\doteq"
   },
 
   Doteq: {
     type: "Relations",
-    content: "\\Doteq",
+    content: "\\Doteq"
   },
 
   doteqdot: {
     type: "Relations",
-    content: "\\doteqdot",
+    content: "\\doteqdot"
   },
 
   eqcirc: {
     type: "Relations",
-    content: "\\eqcirc",
+    content: "\\eqcirc"
   },
 
   eqcolon: {
     type: "Relations",
-    content: "\\eqcolon",
+    content: "\\eqcolon"
   },
 
   Eqcolon: {
     type: "Relations",
-    content: "\\Eqcolon",
+    content: "\\Eqcolon"
   },
 
   eqqcolon: {
     type: "Relations",
-    content: "\\eqqcolon",
+    content: "\\eqqcolon"
   },
 
   Eqqcolon: {
     type: "Relations",
-    content: "\\Eqqcolon",
+    content: "\\Eqqcolon"
   },
 
   eqsim: {
     type: "Relations",
-    content: "\\eqsim",
+    content: "\\eqsim"
   },
 
   eqslantgtr: {
     type: "Relations",
-    content: "\\eqslantgtr",
+    content: "\\eqslantgtr"
   },
 
   eqslantless: {
     type: "Relations",
-    content: "\\eqslantless",
+    content: "\\eqslantless"
   },
 
   equiv: {
     type: "Relations",
-    content: "\\equiv",
+    content: "\\equiv"
   },
 
   fallingdotseq: {
     type: "Relations",
-    content: "\\fallingdotseq",
+    content: "\\fallingdotseq"
   },
 
   frown: {
     type: "Relations",
-    content: "\\frown",
+    content: "\\frown"
   },
 
   ge: {
     type: "Relations",
-    content: "\\ge",
+    content: "\\ge"
   },
 
   geq: {
     type: "Relations",
-    content: "\\geq",
+    content: "\\geq"
   },
 
   geqq: {
     type: "Relations",
-    content: "\\geqq",
+    content: "\\geqq"
   },
 
   geqslant: {
     type: "Relations",
-    content: "\\geqslant",
+    content: "\\geqslant"
   },
 
   gg: {
     type: "Relations",
-    content: "\\gg",
+    content: "\\gg"
   },
 
   ggg: {
     type: "Relations",
     content: "\\ggg",
-    alias: ["\\gggtr"],
+    alias: ["\\gggtr"]
   },
 
   gtrapprox: {
     type: "Relations",
-    content: "\\gtrapprox",
+    content: "\\gtrapprox"
   },
 
   gtreqless: {
     type: "Relations",
-    content: "\\gtreqless",
+    content: "\\gtreqless"
   },
 
   gtreqqless: {
     type: "Relations",
-    content: "\\gtreqqless",
+    content: "\\gtreqqless"
   },
 
   gtrless: {
     type: "Relations",
-    content: "\\gtrless",
+    content: "\\gtrless"
   },
 
   gtrsim: {
     type: "Relations",
-    content: "\\gtrsim",
+    content: "\\gtrsim"
   },
 
   in: {
     type: "Relations",
-    content: "\\in",
+    content: "\\in"
   },
 
   Join: {
     type: "Relations",
-    content: "\\Join",
+    content: "\\Join"
   },
 
   le: {
     type: "Relations",
     content: "\\le",
-    alias: ["\\leq"],
+    alias: ["\\leq"]
   },
 
   leqq: {
     type: "Relations",
-    content: "\\leqq",
+    content: "\\leqq"
   },
 
   leqslant: {
     type: "Relations",
-    content: "\\leqslant",
+    content: "\\leqslant"
   },
 
   lessapprox: {
     type: "Relations",
-    content: "\\lessapprox",
+    content: "\\lessapprox"
   },
 
   lesseqgtr: {
     type: "Relations",
-    content: "\\lesseqgtr",
+    content: "\\lesseqgtr"
   },
 
   lesseqqgtr: {
     type: "Relations",
-    content: "\\lesseqqgtr",
+    content: "\\lesseqqgtr"
   },
 
   lessgtr: {
     type: "Relations",
-    content: "\\lessgtr",
+    content: "\\lessgtr"
   },
 
   lesssim: {
     type: "Relations",
-    content: "\\lesssim",
+    content: "\\lesssim"
   },
 
   ll: {
     type: "Relations",
-    content: "\\ll",
+    content: "\\ll"
   },
 
   lll: {
     type: "Relations",
     content: "\\lll",
-    alias: ["\\llless"],
+    alias: ["\\llless"]
   },
 
   mid: {
     type: "Relations",
-    content: "\\mid",
+    content: "\\mid"
   },
 
   models: {
     type: "Relations",
-    content: "\\models",
+    content: "\\models"
   },
 
   multimap: {
     type: "Relations",
-    content: "\\multimap",
+    content: "\\multimap"
   },
 
   owns: {
     type: "Relations",
-    content: "\\owns",
+    content: "\\owns"
   },
 
   parallel: {
     type: "Relations",
-    content: "\\parallel",
+    content: "\\parallel"
   },
 
   perp: {
     type: "Relations",
-    content: "\\perp",
+    content: "\\perp"
   },
 
   pitchfork: {
     type: "Relations",
-    content: "\\pitchfork",
+    content: "\\pitchfork"
   },
 
   prec: {
     type: "Relations",
-    content: "\\prec",
+    content: "\\prec"
   },
 
   precapprox: {
     type: "Relations",
-    content: "\\precapprox",
+    content: "\\precapprox"
   },
 
   preccurlyeq: {
     type: "Relations",
-    content: "\\preccurlyeq",
+    content: "\\preccurlyeq"
   },
 
   preceq: {
     type: "Relations",
-    content: "\\preceq",
+    content: "\\preceq"
   },
 
   precsim: {
     type: "Relations",
-    content: "\\precsim",
+    content: "\\precsim"
   },
 
   propto: {
     type: "Relations",
-    content: "\\propto",
+    content: "\\propto"
   },
 
   risingdotseq: {
     type: "Relations",
-    content: "\\risingdotseq",
+    content: "\\risingdotseq"
   },
 
   shortmid: {
     type: "Relations",
-    content: "\\shortmid",
+    content: "\\shortmid"
   },
 
   shortparallel: {
     type: "Relations",
-    content: "\\shortparallel",
+    content: "\\shortparallel"
   },
 
   sim: {
     type: "Relations",
-    content: "\\sim",
+    content: "\\sim"
   },
 
   simeq: {
     type: "Relations",
-    content: "\\simeq",
+    content: "\\simeq"
   },
 
   smallfrown: {
     type: "Relations",
-    content: "\\smallfrown",
+    content: "\\smallfrown"
   },
 
   smallsmile: {
     type: "Relations",
-    content: "\\smallsmile",
+    content: "\\smallsmile"
   },
 
   smile: {
     type: "Relations",
-    content: "\\smile",
+    content: "\\smile"
   },
 
   sqsubset: {
     type: "Relations",
-    content: "\\sqsubset",
+    content: "\\sqsubset"
   },
 
   sqsubseteq: {
     type: "Relations",
-    content: "\\sqsubseteq",
+    content: "\\sqsubseteq"
   },
 
   sqsupset: {
     type: "Relations",
-    content: "\\sqsupset",
+    content: "\\sqsupset"
   },
 
   sqsupseteq: {
     type: "Relations",
-    content: "\\sqsupseteq",
+    content: "\\sqsupseteq"
   },
 
   Subset: {
     type: "Relations",
-    content: "\\Subset",
+    content: "\\Subset"
   },
 
   subset: {
     type: "Relations",
-    content: "\\subset",
+    content: "\\subset"
   },
 
   subseteq: {
     type: "Relations",
-    content: "\\subseteq",
+    content: "\\subseteq"
   },
 
   subseteqq: {
     type: "Relations",
-    content: "\\subseteqq",
+    content: "\\subseteqq"
   },
 
   succ: {
     type: "Relations",
-    content: "\\succ",
+    content: "\\succ"
   },
 
   succapprox: {
     type: "Relations",
-    content: "\\succapprox",
+    content: "\\succapprox"
   },
 
   succcurlyeq: {
     type: "Relations",
-    content: "\\succcurlyeq",
+    content: "\\succcurlyeq"
   },
 
   succeq: {
     type: "Relations",
-    content: "\\succeq",
+    content: "\\succeq"
   },
 
   succsim: {
     type: "Relations",
-    content: "\\succsim",
+    content: "\\succsim"
   },
 
   Supset: {
     type: "Relations",
-    content: "\\Supset",
+    content: "\\Supset"
   },
 
   supset: {
     type: "Relations",
-    content: "\\supset",
+    content: "\\supset"
   },
 
   supseteq: {
     type: "Relations",
-    content: "\\supseteq",
+    content: "\\supseteq"
   },
 
   supseteqq: {
     type: "Relations",
-    content: "\\supseteqq",
+    content: "\\supseteqq"
   },
 
   thickapprox: {
     type: "Relations",
-    content: "\\thickapprox",
+    content: "\\thickapprox"
   },
 
   thicksim: {
     type: "Relations",
-    content: "\\thicksim",
+    content: "\\thicksim"
   },
 
   trianglelefteq: {
     type: "Relations",
-    content: "\\trianglelefteq",
+    content: "\\trianglelefteq"
   },
 
   triangleq: {
     type: "Relations",
-    content: "\\triangleq",
+    content: "\\triangleq"
   },
 
   trianglerighteq: {
     type: "Relations",
-    content: "\\trianglerighteq",
+    content: "\\trianglerighteq"
   },
 
   varpropto: {
     type: "Relations",
-    content: "\\varpropto",
+    content: "\\varpropto"
   },
 
   vartriangle: {
     type: "Relations",
-    content: "\\vartriangle",
+    content: "\\vartriangle"
   },
 
   vartriangleleft: {
     type: "Relations",
-    content: "\\vartriangleleft",
+    content: "\\vartriangleleft"
   },
 
   vartriangleright: {
     type: "Relations",
-    content: "\\vartriangleright",
+    content: "\\vartriangleright"
   },
 
   vdash: {
     type: "Relations",
-    content: "\\vdash",
+    content: "\\vdash"
   },
 
   vDash: {
     type: "Relations",
-    content: "\\vDash",
+    content: "\\vDash"
   },
 
   Vdash: {
     type: "Relations",
-    content: "\\Vdash",
+    content: "\\Vdash"
   },
 
   Vvdash: {
     type: "Relations",
-    content: "\\Vvdash",
-  },
+    content: "\\Vvdash"
+  }
 };

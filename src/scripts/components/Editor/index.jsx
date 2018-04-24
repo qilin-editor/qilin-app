@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react";
+import React, { PureComponent } from "react";
 import SplitPane from "react-split-pane";
 import Panel from "qilin-components/panel";
 import Section from "qilin-components/section";

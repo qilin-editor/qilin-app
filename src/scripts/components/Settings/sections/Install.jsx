@@ -1,12 +1,8 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class SettingsInstallSection extends Component {
   render() {
-    return (
-      <div>
-        Install
-      </div>
-    );
+    return <div>Install</div>;
   }
 }
 

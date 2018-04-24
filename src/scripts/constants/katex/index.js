@@ -13,5 +13,5 @@ export default {
   NegatedRelations: require("./NegatedRelationsConstant"),
   OtherLetters: require("./OtherLettersConstant"),
   Relations: require("./RelationsConstant"),
-  VerticalLayout: require("./VerticalLayoutConstant"),
+  VerticalLayout: require("./VerticalLayoutConstant")
 };

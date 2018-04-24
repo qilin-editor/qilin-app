@@ -1,12 +1,8 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class SettingsPluginsSection extends Component {
   render() {
-    return (
-      <div>
-        Plugins
-      </div>
-    );
+    return <div>Plugins</div>;
   }
 }
 

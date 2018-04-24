@@ -19,7 +19,7 @@ const syntax = {
   class: "#e696f9",
   method: "#6cc1fa",
   keyword: "#e696f9",
-  tag: "#e696f9",
+  tag: "#e696f9"
 };
 
 // We use Typography.js for the preview mode. The goal of Typography.js is to
@@ -43,11 +43,11 @@ const typography = {
 
   // An array of strings specifying the font family stack for headers. Defaults
   // to a system UI font stack. Might be overwritten by themes.
-  //headerFontFamily: ["Helvetica", 'sans-serif'],
+  // headerFontFamily: ["Helvetica", 'sans-serif'],
 
   // An array of strings specifying the font family stack for the body. Might be
   // overwritten by themes.
-  //bodyFontFamily: ["georgia", "serif"],
+  // bodyFontFamily: ["georgia", "serif"],
 
   // A css color string to be set on headers
   headerColor: "inherit",
@@ -70,16 +70,14 @@ const typography = {
   // algorithmically generated styles.
   //
   // @see https://github.com/KyleAMathews/typography.js#api
-  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
-  }),
+  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({}),
 
   // This has the same function signature as overrideStyles but should be used
   // in place of overrideStyles when using a 3rd-party theme so as to not delete
   // the theme's own overrideStyles function.
   //
   // @see https://github.com/KyleAMathews/typography.js#api
-  overrideThemeStyles: ({ rhythm }, options, styles) => ({
-  })
+  overrideThemeStyles: ({ rhythm }, options, styles) => ({})
 };
 
 // Theme information for styling editor components. This is copied verbatim from

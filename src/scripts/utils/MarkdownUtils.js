@@ -10,13 +10,15 @@ export function getMarkdown(options = {}) {
       if (lang && hljs.getLanguage(lang)) {
         try {
           return hljs.highlight(lang, str).value;
-        } catch (error) {/* … */}
+        } catch (error) {
+          /* … */
+        }
       }
 
       // Use external default escaping:
       return "";
     },
-    ...options,
+    ...options
   });
 
   markdown.use(require("markdown-it-sub"));
@@ -26,7 +28,9 @@ export function getMarkdown(options = {}) {
   markdown.use(require("markdown-it-anchor"));
   markdown.use(require("markdown-it-task-lists"));
   markdown.use(require("markdown-it-table-of-contents"));
-  markdown.use(require("markdown-it-block-embed"), {filterUrl: (url) => `http://${url}`});
+  markdown.use(require("markdown-it-block-embed"), {
+    filterUrl: url => `http://${url}`
+  });
   markdown.use(require("markdown-it-maths"));
 
   return markdown;

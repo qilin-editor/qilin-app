@@ -1,366 +1,366 @@
 export default {
   circlearrowleft: {
     type: "Arrows",
-    content: "\\circlearrowleft",
+    content: "\\circlearrowleft"
   },
 
   circlearrowright: {
     type: "Arrows",
-    content: "\\circlearrowright",
+    content: "\\circlearrowright"
   },
 
   curvearrowleft: {
     type: "Arrows",
-    content: "\\curvearrowleft",
+    content: "\\curvearrowleft"
   },
 
   curvearrowright: {
     type: "Arrows",
-    content: "\\curvearrowright",
+    content: "\\curvearrowright"
   },
 
   dashleftarrow: {
     type: "Arrows",
-    content: "\\dashleftarrow",
+    content: "\\dashleftarrow"
   },
 
   dashrightarrow: {
     type: "Arrows",
-    content: "\\dashrightarrow",
+    content: "\\dashrightarrow"
   },
 
   downarrow: {
     type: "Arrows",
-    content: "\\downarrow",
+    content: "\\downarrow"
   },
 
   Downarrow: {
     type: "Arrows",
-    content: "\\Downarrow",
+    content: "\\Downarrow"
   },
 
   downdownarrows: {
     type: "Arrows",
-    content: "\\downdownarrows",
+    content: "\\downdownarrows"
   },
 
   downharpoonleft: {
     type: "Arrows",
-    content: "\\downharpoonleft",
+    content: "\\downharpoonleft"
   },
 
   downharpoonright: {
     type: "Arrows",
-    content: "\\downharpoonright",
+    content: "\\downharpoonright"
   },
 
   gets: {
     type: "Arrows",
-    content: "\\gets",
+    content: "\\gets"
   },
 
   hookleftarrow: {
     type: "Arrows",
-    content: "\\hookleftarrow",
+    content: "\\hookleftarrow"
   },
 
   hookrightarrow: {
     type: "Arrows",
-    content: "\\hookrightarrow",
+    content: "\\hookrightarrow"
   },
 
   iff: {
     type: "Arrows",
-    content: "\\iff",
+    content: "\\iff"
   },
 
   impliedby: {
     type: "Arrows",
-    content: "\\impliedby",
+    content: "\\impliedby"
   },
 
   implies: {
     type: "Arrows",
-    content: "\\implies",
+    content: "\\implies"
   },
 
   leadsto: {
     type: "Arrows",
-    content: "\\leadsto",
+    content: "\\leadsto"
   },
 
   leftarrow: {
     type: "Arrows",
-    content: "\\leftarrow",
+    content: "\\leftarrow"
   },
 
   Leftarrow: {
     type: "Arrows",
-    content: "\\Leftarrow",
+    content: "\\Leftarrow"
   },
 
   leftarrowtail: {
     type: "Arrows",
-    content: "\\leftarrowtail",
+    content: "\\leftarrowtail"
   },
 
   leftharpoondown: {
     type: "Arrows",
-    content: "\\leftharpoondown",
+    content: "\\leftharpoondown"
   },
 
   leftharpoonup: {
     type: "Arrows",
-    content: "\\leftharpoonup",
+    content: "\\leftharpoonup"
   },
 
   leftleftarrows: {
     type: "Arrows",
-    content: "\\leftleftarrows",
+    content: "\\leftleftarrows"
   },
 
   leftrightarrow: {
     type: "Arrows",
-    content: "\\leftrightarrow",
+    content: "\\leftrightarrow"
   },
 
   Leftrightarrow: {
     type: "Arrows",
-    content: "\\Leftrightarrow",
+    content: "\\Leftrightarrow"
   },
 
   leftrightarrows: {
     type: "Arrows",
-    content: "\\leftrightarrows",
+    content: "\\leftrightarrows"
   },
 
   leftrightharpoons: {
     type: "Arrows",
-    content: "\\leftrightharpoons",
+    content: "\\leftrightharpoons"
   },
 
   leftrightsquigarrow: {
     type: "Arrows",
-    content: "\\leftrightsquigarrow",
+    content: "\\leftrightsquigarrow"
   },
 
   Lleftarrow: {
     type: "Arrows",
-    content: "\\Lleftarrow",
+    content: "\\Lleftarrow"
   },
 
   longleftarrow: {
     type: "Arrows",
-    content: "\\longleftarrow",
+    content: "\\longleftarrow"
   },
 
   Longleftarrow: {
     type: "Arrows",
-    content: "\\Longleftarrow",
+    content: "\\Longleftarrow"
   },
 
   longleftrightarrow: {
     type: "Arrows",
-    content: "\\longleftrightarrow",
+    content: "\\longleftrightarrow"
   },
 
   Longleftrightarrow: {
     type: "Arrows",
-    content: "\\Longleftrightarrow",
+    content: "\\Longleftrightarrow"
   },
 
   longmapsto: {
     type: "Arrows",
-    content: "\\longmapsto",
+    content: "\\longmapsto"
   },
 
   longrightarrow: {
     type: "Arrows",
-    content: "\\longrightarrow",
+    content: "\\longrightarrow"
   },
 
   Longrightarrow: {
     type: "Arrows",
-    content: "\\Longrightarrow",
+    content: "\\Longrightarrow"
   },
 
   looparrowleft: {
     type: "Arrows",
-    content: "\\looparrowleft",
+    content: "\\looparrowleft"
   },
 
   looparrowright: {
     type: "Arrows",
-    content: "\\looparrowright",
+    content: "\\looparrowright"
   },
 
   Lsh: {
     type: "Arrows",
-    content: "\\Lsh",
+    content: "\\Lsh"
   },
 
   mapsto: {
     type: "Arrows",
-    content: "\\mapsto",
+    content: "\\mapsto"
   },
 
   nearrow: {
     type: "Arrows",
-    content: "\\nearrow",
+    content: "\\nearrow"
   },
 
   nleftarrow: {
     type: "Arrows",
-    content: "\\nleftarrow",
+    content: "\\nleftarrow"
   },
 
   nLeftarrow: {
     type: "Arrows",
-    content: "\\nLeftarrow",
+    content: "\\nLeftarrow"
   },
 
   nleftrightarrow: {
     type: "Arrows",
-    content: "\\nleftrightarrow",
+    content: "\\nleftrightarrow"
   },
 
   nLeftrightarrow: {
     type: "Arrows",
-    content: "\\nLeftrightarrow",
+    content: "\\nLeftrightarrow"
   },
 
   nrightarrow: {
     type: "Arrows",
-    content: "\\nrightarrow",
+    content: "\\nrightarrow"
   },
 
   nRightarrow: {
     type: "Arrows",
-    content: "\\nRightarrow",
+    content: "\\nRightarrow"
   },
 
   nwarrow: {
     type: "Arrows",
-    content: "\\nwarrow",
+    content: "\\nwarrow"
   },
 
   restriction: {
     type: "Arrows",
-    content: "\\restriction",
+    content: "\\restriction"
   },
 
   rightarrow: {
     type: "Arrows",
-    content: "\\rightarrow",
+    content: "\\rightarrow"
   },
 
   Rightarrow: {
     type: "Arrows",
-    content: "\\Rightarrow",
+    content: "\\Rightarrow"
   },
 
   rightarrowtail: {
     type: "Arrows",
-    content: "\\rightarrowtail",
+    content: "\\rightarrowtail"
   },
 
   rightharpoondown: {
     type: "Arrows",
-    content: "\\rightharpoondown",
+    content: "\\rightharpoondown"
   },
 
   rightharpoonup: {
     type: "Arrows",
-    content: "\\rightharpoonup",
+    content: "\\rightharpoonup"
   },
 
   rightleftarrows: {
     type: "Arrows",
-    content: "\\rightleftarrows",
+    content: "\\rightleftarrows"
   },
 
   rightleftharpoons: {
     type: "Arrows",
-    content: "\\rightleftharpoons",
+    content: "\\rightleftharpoons"
   },
 
   rightrightarrows: {
     type: "Arrows",
-    content: "\\rightrightarrows",
+    content: "\\rightrightarrows"
   },
 
   rightsquigarrow: {
     type: "Arrows",
-    content: "\\rightsquigarrow",
+    content: "\\rightsquigarrow"
   },
 
   Rrightarrow: {
     type: "Arrows",
-    content: "\\Rrightarrow",
+    content: "\\Rrightarrow"
   },
 
   Rsh: {
     type: "Arrows",
-    content: "\\Rsh",
+    content: "\\Rsh"
   },
 
   searrow: {
     type: "Arrows",
-    content: "\\searrow",
+    content: "\\searrow"
   },
 
   swarrow: {
     type: "Arrows",
-    content: "\\swarrow",
+    content: "\\swarrow"
   },
 
   to: {
     type: "Arrows",
-    content: "\\to",
+    content: "\\to"
   },
 
   twoheadleftarrow: {
     type: "Arrows",
-    content: "\\twoheadleftarrow",
+    content: "\\twoheadleftarrow"
   },
 
   twoheadrightarrow: {
     type: "Arrows",
-    content: "\\twoheadrightarrow",
+    content: "\\twoheadrightarrow"
   },
 
   uparrow: {
     type: "Arrows",
-    content: "\\uparrow",
+    content: "\\uparrow"
   },
 
   Uparrow: {
     type: "Arrows",
-    content: "\\Uparrow",
+    content: "\\Uparrow"
   },
 
   updownarrow: {
     type: "Arrows",
-    content: "\\updownarrow",
+    content: "\\updownarrow"
   },
 
   Updownarrow: {
     type: "Arrows",
-    content: "\\Updownarrow",
+    content: "\\Updownarrow"
   },
 
   upharpoonleft: {
     type: "Arrows",
-    content: "\\upharpoonleft",
+    content: "\\upharpoonleft"
   },
 
   upharpoonright: {
     type: "Arrows",
-    content: "\\upharpoonright",
+    content: "\\upharpoonright"
   },
 
   upuparrows: {
     type: "Arrows",
-    content: "\\upuparrows",
-  },
+    content: "\\upuparrows"
+  }
 };

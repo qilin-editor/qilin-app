@@ -1,7 +1,14 @@
 {
   "parser": "babel-eslint",
-  "extends": ["eslint:recommended", "plugin:react/recommended", "google"],
-  "plugins": ["react", "import"],
+  "extends": [
+    "standard",
+    "prettier",
+    "prettier/react",
+    "prettier/flowtype",
+    "prettier/standard",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react", "flowtype", "standard", "prettier", "jsx-a11y"],
 
   "env": {
     "node": true,
@@ -24,23 +31,25 @@
   },
 
   "rules": {
-    "no-console": [0],
-    "no-invalid-this": [0],
-    "no-param-reassign": [0],
-
+    "quotes": [1, "double"],
     "indent": [2, 2],
-    "quotes": [2, "double"],
-    "space-in-parens": [2, "never"],
+
+    "no-console": [0],
+    "no-param-reassign": [0],
+    "no-else-return": 0,
+    "no-confusing-arrow": 0,
+    "no-prototype-builtins": 0,
 
     "require-jsdoc": [0],
 
     "react/sort-comp": [0],
     "react/no-danger": [0],
-    "react/no-array-index-key": [0],
-    "react/require-default-props": [0],
-    "react/prefer-stateless-function": [0],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
 
-    "global-require": [0],
+    "prettier/prettier": 2,
+
     "import/first": [0],
     "import/prefer-default-export": [0],
     "import/no-extraneous-dependencies": [0]

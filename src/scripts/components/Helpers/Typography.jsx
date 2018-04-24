@@ -1,12 +1,12 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Typography from "typography";
 import githubTheme from "typography-theme-github";
 
 class Typo extends Component {
   static propTypes = {
-    children: PropTypes.node,
-  }
+    children: PropTypes.node
+  };
 
   typography = new Typography(githubTheme);
 
@@ -23,10 +23,13 @@ class Typo extends Component {
 
   render() {
     return [
-      <style key="typo" dangerouslySetInnerHTML={{
-        __html: this.getStyles(),
-      }} />,
-      this.props.children,
+      <style
+        key="typo"
+        dangerouslySetInnerHTML={{
+          __html: this.getStyles()
+        }}
+      />,
+      this.props.children
     ];
   }
 }

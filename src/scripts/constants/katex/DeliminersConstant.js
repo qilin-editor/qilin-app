@@ -2,110 +2,110 @@ export default {
   lrgroup: {
     type: "Deliminers",
     content: "( )",
-    alias: ["\\lgroup", "\\rgroup"],
+    alias: ["\\lgroup", "\\rgroup"]
   },
 
   lrbrack: {
     type: "Deliminers",
     content: "[ ]",
-    alias: ["\\lbrack", "\\rbrack"],
+    alias: ["\\lbrack", "\\rbrack"]
   },
 
   lrbrace: {
     type: "Deliminers",
     content: "\\{ \\}",
-    alias: ["\\lbrace", "\\rbrace"],
+    alias: ["\\lbrace", "\\rbrace"]
   },
 
   backslash: {
     type: "Deliminers",
-    content: "\\backslash",
+    content: "\\backslash"
   },
 
   vert: {
     type: "Deliminers",
     content: "|",
-    alias: ["\\vert"],
+    alias: ["\\vert"]
   },
 
   Vert: {
     type: "Deliminers",
     content: "\\|",
-    alias: ["\\Vert"],
+    alias: ["\\Vert"]
   },
 
   lrvert: {
     type: "Deliminers",
-    content: "\\lvert \\rvert",
+    content: "\\lvert \\rvert"
   },
 
   lrVert: {
     type: "Deliminers",
-    content: "\\lVert \\rVert",
+    content: "\\lVert \\rVert"
   },
 
   lrangle: {
     type: "Deliminers",
-    content: "\\langle \\rangle",
+    content: "\\langle \\rangle"
   },
 
   lrt: {
     type: "Deliminers",
-    content: "\\lt \\gt",
+    content: "\\lt \\gt"
   },
 
   lrceil: {
     type: "Deliminers",
-    content: "\\lceil \\rceil",
+    content: "\\lceil \\rceil"
   },
 
   lrfloor: {
     type: "Deliminers",
-    content: "\\lfloor \\rfloor",
+    content: "\\lfloor \\rfloor"
   },
 
   ulrcorner: {
     type: "Deliminers",
-    content: "\\ulcorner \\urcorner",
+    content: "\\ulcorner \\urcorner"
   },
 
   llrcorner: {
     type: "Deliminers",
-    content: "\\llcorner \\lrcorner",
+    content: "\\llcorner \\lrcorner"
   },
 
   lrmoustache: {
     type: "Deliminers",
-    content: "\\lmoustache \\rmoustache",
+    content: "\\lmoustache \\rmoustache"
   },
 
   uparrow: {
     type: "Deliminers",
-    content: "\\uparrow",
+    content: "\\uparrow"
   },
 
   downarrow: {
     type: "Deliminers",
-    content: "\\downarrow",
+    content: "\\downarrow"
   },
 
   updownarrow: {
     type: "Deliminers",
-    content: "\\updownarrow",
+    content: "\\updownarrow"
   },
 
   Uparrow: {
     type: "Deliminers",
-    content: "\\Uparrow",
+    content: "\\Uparrow"
   },
 
   Downarrow: {
     type: "Deliminers",
-    content: "\\Downarrow",
+    content: "\\Downarrow"
   },
 
   Updownarrow: {
     type: "Deliminers",
-    content: "\\Updownarrow",
-  },
+    content: "\\Updownarrow"
+  }
 };

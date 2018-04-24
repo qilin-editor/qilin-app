@@ -1,118 +1,118 @@
 export default {
   forall: {
     type: "Logic and Set Theory",
-    content: "\\forall",
+    content: "\\forall"
   },
 
   exists: {
     type: "Logic and Set Theory",
-    content: "\\exists",
+    content: "\\exists"
   },
 
   nexists: {
     type: "Logic and Set Theory",
-    content: "\\nexists",
+    content: "\\nexists"
   },
 
   in: {
     type: "Logic and Set Theory",
-    content: "\\in",
+    content: "\\in"
   },
 
   notin: {
     type: "Logic and Set Theory",
-    content: "\\notin",
+    content: "\\notin"
   },
 
   ni: {
     type: "Logic and Set Theory",
-    content: "\\ni",
+    content: "\\ni"
   },
 
   complement: {
     type: "Logic and Set Theory",
-    content: "\\complement",
+    content: "\\complement"
   },
 
   subset: {
     type: "Logic and Set Theory",
-    content: "\\subset",
+    content: "\\subset"
   },
 
   supset: {
     type: "Logic and Set Theory",
-    content: "\\supset",
+    content: "\\supset"
   },
 
   mid: {
     type: "Logic and Set Theory",
-    content: "\\mid",
+    content: "\\mid"
   },
 
   land: {
     type: "Logic and Set Theory",
-    content: "\\land",
+    content: "\\land"
   },
 
   lor: {
     type: "Logic and Set Theory",
-    content: "\\lor",
+    content: "\\lor"
   },
 
   therefore: {
     type: "Logic and Set Theory",
-    content: "\\therefore",
+    content: "\\therefore"
   },
 
   because: {
     type: "Logic and Set Theory",
-    content: "\\because",
+    content: "\\because"
   },
 
   mapsto: {
     type: "Logic and Set Theory",
-    content: "\\mapsto",
+    content: "\\mapsto"
   },
 
   to: {
     type: "Logic and Set Theory",
-    content: "\\to",
+    content: "\\to"
   },
 
   gets: {
     type: "Logic and Set Theory",
-    content: "\\gets",
+    content: "\\gets"
   },
 
   leftrightarrow: {
     type: "Logic and Set Theory",
-    content: "\\leftrightarrow",
+    content: "\\leftrightarrow"
   },
 
   neg: {
     type: "Logic and Set Theory",
     content: "\\neg",
-    aliast: ["\\lnot"],
+    aliast: ["\\lnot"]
   },
 
   emptyset: {
     type: "Logic and Set Theory",
     content: "\\emptyset",
-    aliast: ["\\varnothing"],
+    aliast: ["\\varnothing"]
   },
 
   implies: {
     type: "Logic and Set Theory",
-    content: "\\implies",
+    content: "\\implies"
   },
 
   impliedby: {
     type: "Logic and Set Theory",
-    content: "\\impliedby",
+    content: "\\impliedby"
   },
 
   iff: {
     type: "Logic and Set Theory",
-    content: "\\iff",
-  },
+    content: "\\iff"
+  }
 };

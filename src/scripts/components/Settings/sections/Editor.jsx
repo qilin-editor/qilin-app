@@ -1,12 +1,8 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class SettingsEditorSection extends Component {
   render() {
-    return (
-      <div>
-        Editor
-      </div>
-    );
+    return <div>Editor</div>;
   }
 }
 

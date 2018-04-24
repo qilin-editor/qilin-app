@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Route, Link} from "react-router-dom";
+import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
 import QilinManager from "qilin-manager";
 import Panel from "qilin-components/panel";
 import Section from "qilin-components/section";

@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import className from "classnames";
-import {getMarkdown} from "../../utils/MarkdownUtils";
+import { getMarkdown } from "../../utils/MarkdownUtils";
 
 class Markdown extends Component {
   static propTypes = {
@@ -9,19 +9,19 @@ class Markdown extends Component {
     onClick: PropTypes.func,
     className: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.string),
-      PropTypes.string,
-    ]),
-  }
+      PropTypes.string
+    ])
+  };
 
   static defaultProps = {
-    onClick: () => null,
-  }
+    onClick: () => null
+  };
 
   static renderer = getMarkdown({
     html: true,
     linkify: true,
-    typography: true,
-  })
+    typography: true
+  });
 
   render() {
     return (
@@ -29,7 +29,7 @@ class Markdown extends Component {
         onClick={this.props.onClick}
         className={className(this.props.className)}
         dangerouslySetInnerHTML={{
-          __html: Markdown.renderer.render(this.props.content),
+          __html: Markdown.renderer.render(this.props.content)
         }}
       />
     );
