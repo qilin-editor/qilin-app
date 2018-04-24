@@ -1,12 +1,13 @@
 <div align="center">
   <h1>
-    <a style="margin: 0 1rem 0 0; font-size: 14px" href="https://github.com/qilin-editor/qilin-manager">Qilin Manager ◀</a>
+    <sub><a href="https://github.com/qilin-editor/qilin-manager#readme">Qilin Manager ◀</a></sub>
     Qilin Editor
-    <a style="margin: 0 0 0 1rem; font-size: 14px" href="https://github.com/qilin-editor/qilin-components">▶ Qilin Components</a>
+    <sub><a href="https://github.com/qilin-editor/qilin-components#readme">▶ Qilin Components</a></sub>
   </h1>
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/qilin-editor/qilin-app.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/qilin-editor/qilin-app.svg)](https://travis-ci.org/qilin-editor/qilin-app/)
+[![License](https://img.shields.io/github/license/qilin-editor/qilin-app.svg)](LICENSE)
 [![Github Releases](https://img.shields.io/github/downloads/qilin-editor/qilin-app/latest/total.svg)](https://github.com/qilin-editor/qilin-app/releases)
   <br>
 
@@ -30,6 +31,10 @@
 ### License
 
 Qilin was created and developed by [Bartosz Łaniewski](https://github.com/Bartozzz). The full list of contributors can be found [here](https://github.com/qilin-editor/qilin-app/graphs/contributors). Qilin's code is [MIT licensed](https://github.com/qilin-editor/qilin-app/blob/master/LICENSE). We also provide an additional ["patent" grant](https://github.com/qilin-editor/qilin-app/blob/master/PATENTS).
+
+### Installation
+
+There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions. If you wonder how to use Qilin or have any other questions - check our [Wiki](https://github.com/qilin-editor/qilin-app/wiki).
 
 ### Development
 
@@ -58,10 +63,6 @@ $ npm run <command>
 | `eslint`      | Fixes ESLinter errors                             |
 | `stylelint`   | Fixes StyleLint errors                             |
 | `nw`          | Opens Qilin application                           |
-
-### Installation
-
-There are two ways to install Qilin. Please, refer to [INSTALL.md](INSTALL.md) file for more instructions. If you wonder how to use Qilin or have any other questions - check our [Wiki](https://github.com/qilin-editor/qilin-app/wiki).
 
 <div align="center">
   <h2>Screenshots</h2>
