@@ -1,9 +1,5 @@
 <div align="center">
-  <h1>
-    <sub><a href="https://github.com/qilin-editor/qilin-manager#readme">Qilin Manager ◀</a></sub>
-    Qilin Editor
-    <sub><a href="https://github.com/qilin-editor/qilin-components#readme">▶ Qilin Components</a></sub>
-  </h1>
+  <h1>Qilin Editor</h1>
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/qilin-editor/qilin-app.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/qilin-editor/qilin-app.svg)](https://travis-ci.org/qilin-editor/qilin-app/)
