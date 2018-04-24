@@ -1,5 +1,9 @@
 <div align="center">
-  <h1>Qilin Editor</h1>
+  <h1>
+    <a style="margin: 0 1rem 0 0; font-size: 14px" href="https://github.com/qilin-editor/qilin-manager">Qilin Manager ◀</a>
+    Qilin Editor
+    <a style="margin: 0 0 0 1rem; font-size: 14px" href="https://github.com/qilin-editor/qilin-components">▶ Qilin Components</a>
+  </h1>
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/qilin-editor/qilin-app.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/qilin-editor/qilin-app.svg)](https://travis-ci.org/qilin-editor/qilin-app/)
@@ -10,6 +14,8 @@
 
 ![Qilin editor](https://i.imgur.com/VOGLGv5.png)
 </div>
+
+>**Note**: Qilin Editor and all related repositories are still in development - it might not be suitable for daily, intensive usage. As the only active maintainer, I ([@Bartozzz](https://github.com/Bartozzz)) am not able to provide regular updates, so any help is more than welcome.
 
 <h2 align="center">Contributing</h2>
 
@@ -52,8 +58,6 @@ $ npm run <command>
 | `eslint`      | Fixes ESLinter errors                             |
 | `stylelint`   | Fixes StyleLint errors                             |
 | `nw`          | Opens Qilin application                           |
-
-> **Note:** In some cases, you might need to run those scripts with administrator privileges (`sudo`).
 
 ### Installation
 
