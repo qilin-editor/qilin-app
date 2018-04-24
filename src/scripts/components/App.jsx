@@ -57,7 +57,8 @@ class AppWindow extends Component {
 
           <section>
             <Button onClick={this.toggleSettings}>
-              <MaterialIcon icon="settings" color={colors.foreground} size={15} />
+              <MaterialIcon
+                icon="settings" color={colors.foreground} size={15} />
             </Button>
           </section>
         </Bar>
