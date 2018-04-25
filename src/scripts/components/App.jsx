@@ -19,6 +19,8 @@ class AppWindow extends Component {
     theme: MobxPropTypes.observableObject
   };
 
+  window = nw.Window.get();
+
   closeWindow = () => {
     this.window.close(true);
   };
