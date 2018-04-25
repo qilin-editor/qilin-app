@@ -1,6 +1,6 @@
 import fs from "fs";
 import shortcut from "keymage";
-import EditorStore from "../stores/EditorStore";
+import { editor } from "../stores";
 import { click } from "../utils/FileUtils";
 
 function openFile(path) {
@@ -8,9 +8,9 @@ function openFile(path) {
     if (error) {
       console.log(error);
     } else {
-      EditorStore.changePath(path);
-      EditorStore.changeContent(content);
-      EditorStore.saved = true;
+      editor.changePath(path);
+      editor.changeContent(content);
+      editor.saved = true;
     }
   });
 }
@@ -20,9 +20,9 @@ function saveFile(path, content) {
     if (error) {
       console.log(error);
     } else {
-      EditorStore.changePath(path);
-      EditorStore.changeContent(content);
-      EditorStore.saved = true;
+      editor.changePath(path);
+      editor.changeContent(content);
+      editor.saved = true;
     }
   });
 }
@@ -57,11 +57,11 @@ shortcut("defmod-s", event => {
   event.preventDefault();
   event.stopPropagation();
 
-  if (EditorStore.path) {
-    saveFile(EditorStore.path, EditorStore.content);
+  if (editor.path) {
+    saveFile(editor.path, editor.content);
   } else {
     click("#saveFile", e => {
-      saveFile(e.target.value, EditorStore.content);
+      saveFile(e.target.value, editor.content);
     });
   }
 
@@ -73,7 +73,7 @@ shortcut("defmod-shift-s", event => {
   event.stopPropagation();
 
   click("#saveFile", e => {
-    saveFile(e.target.value, EditorStore.content);
+    saveFile(e.target.value, editor.content);
   });
 
   return false;
