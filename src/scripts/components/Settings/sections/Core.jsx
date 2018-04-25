@@ -5,11 +5,13 @@ import Section from "qilin-components/section";
 class SettingsCoreSection extends Component {
   render() {
     return [
-      <Panel width="200px" border="0 1px 0 0">
+      <Panel key="core_submenu" width="200px" border="0 1px 0 0">
         Sub menu
       </Panel>,
 
-      <Section horizontal>Core</Section>
+      <Section key="core_section" horizontal>
+        Core
+      </Section>
     ];
   }
 }
