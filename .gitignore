@@ -2,6 +2,7 @@
 build
 cache
 qpm/src
+temp.html
 
 # Logs
 logs

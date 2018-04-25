@@ -5,7 +5,7 @@ import { Provider } from "mobx-react";
 import App from "./components/App";
 import stores from "./stores";
 
-import "./shortcuts/FileShortcuts";
+import "./shortcuts";
 
 render(
   <Provider {...stores}>
