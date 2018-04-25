@@ -29,13 +29,15 @@ export function openFile(event: Event, ctx: Object): void {
 }
 
 /**
- * Saves content to an already existing file.
+ * Saves content to its file. Prompts a "Save as" dialog if content is not
+ * assigned to a file. Content will be exported based on file extension.
  *
  * @param   {Event}   event
  * @param   {Object}  ctx
  * @return  {void}
+ * @async
  */
-export function saveFile(event: Event, ctx: Object): void {
+export async function saveFile(event: Event, ctx: Object): void {
   event.preventDefault();
   event.stopPropagation();
 
@@ -43,20 +45,24 @@ export function saveFile(event: Event, ctx: Object): void {
     return saveFileAs(event, ctx);
   }
 
-  const ext = path.extname(e.target.value);
-  const str = getContentByExtension(ext, editor.content);
+  try {
+    const ext = path.extname(editor.path);
+    const str = await getContentForExtension(ext, editor.content);
 
-  writeFile(editor.path, str)
-    .then(() => {
-      editor.saved = true;
-    })
-    .catch(err => {
-      console.error(err);
-    });
+    // If output is a boolean, that means that the file has already been saved
+    // by another method (i.e. Chromium internals when saving as PDF):
+    if (typeof str !== "boolean") {
+      await writeFile(editor.path, str);
+    }
+
+    editor.saved = true;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 /**
- * Saves content to a new file.
+ * Prompts a "Save as" dialog and saves content in the selected file.
  *
  * @param   {Event}   event
  * @param   {Object}  ctx
@@ -67,39 +73,45 @@ export function saveFileAs(event: Event, ctx: Object): void {
   event.stopPropagation();
 
   triggerButton("#saveFile", e => {
-    const ext = path.extname(e.target.value);
-    const str = getContentByExtension(ext, editor.content);
+    editor.changePath(e.target.value);
+    editor.changeContent(editor.content);
 
-    writeFile(e.target.value, str)
-      .then(() => {
-        editor.changePath(e.target.value);
-        editor.changeContent(editor.content);
-        editor.saved = true;
-      })
-      .catch(err => {
-        console.error(err);
-      });
+    saveFile(event, ctx);
   });
 }
 
-export function getContentByExtension(ext: string, content: string): string {
+/**
+ * Returns transformed content based on file extension.
+ *
+ * @param   {string}  ext               File extension
+ * @param   {string}  content           File content
+ * @return  {string|boolean}
+ */
+export function getContentForExtension(
+  ext: string,
+  content: string
+): Promise<string | boolean> {
   switch (ext) {
+    case ".pdf":
+      return exportAsPDF(content);
     case ".html":
-      return getAsHTML(content);
+      return exportAsHTML(content);
     default:
-      return getAsMarkdown(content);
+      return exportAsMarkdown(content);
   }
 }
 
 /**
- * Parses content and returns a valid markdown text.
+ * Parses file's content and returns a valid markdown text if possible.
  *
- * @todo    Parse HTML to markdown
+ * @todo    Parse HTML to Markdown
+ * @todo    Parse PDF to Markdown (if possible)
  *
  * @param   {string}  content
- * @return  {string}
+ * @return  {Promise<string>}
+ * @async
  */
-export function getAsMarkdown(content: string): string {
+export async function exportAsMarkdown(content: string): string {
   return editor.content;
 }
 
@@ -107,12 +119,13 @@ export function getAsMarkdown(content: string): string {
  * Parses content and returns a valid HTML text.
  *
  * @todo    Implement styles once ThemeStore ready
+ * @todo    Use local Normalize and KaTeX stylesheets (when offline or slow con)
  *
  * @param   {string}  content
- * @return  {string}
+ * @return  {Promise<string>}
+ * @async
  */
-export function getAsHTML(content: string): string {
-  const title = `Qilin – ${editor.path}`;
+export async function exportAsHTML(content: string): string {
   const style = "";
   const html = getMarkdown({
     html: true,
@@ -121,10 +134,12 @@ export function getAsHTML(content: string): string {
   }).render(content);
 
   return `
-    <DOCTYPE html>
+    <!DOCTYPE html>
     <html>
       <head>
-        <title>${title}</title>
+        <title>Qilin</title>
+
+        <meta charset="utf-8" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" />
@@ -141,5 +156,40 @@ export function getAsHTML(content: string): string {
         </div>
       </body>
     </html>
-  `;
+  `.trim();
+}
+
+/**
+ * Exports a file as PDF.
+ *
+ * @todo    Remove setTimeout, use something more optimal
+ *
+ * @param   {string}  content
+ * @return  {Promise<boolean>}
+ */
+export function exportAsPDF(content: string): Promise<boolean> {
+  return new Promise(async (resolve, reject) => {
+    const html = await exportAsHTML(content);
+    const opts = { show: false };
+
+    // Save file in a temporary location:
+    await writeFile("temp.html", html);
+
+    nw.Window.open("temp.html", opts, instance => {
+      const win = instance.window;
+      const doc = win.document;
+
+      doc.addEventListener("readystatechange", event => {
+        if (event.target.readyState === "complete") {
+          // NOTE: would be better if we knew when fonts are loaded
+          win.setTimeout(() => {
+            instance.print({ autoprint: true, pdf_path: editor.path });
+            win.close();
+
+            resolve(true);
+          }, 1000);
+        }
+      });
+    });
+  });
 }
