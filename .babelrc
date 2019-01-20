@@ -1,21 +1,23 @@
 {
-  "presets" : [
-    "react",
+  "presets": [
+    "@babel/flow",
+    "@babel/react",
     [
-      "env", {
+      "@babel/env",
+      {
         "targets": {
           "node": "current",
-          "browser": "last Chrome version"
+          "chrome": "71"
         }
       }
     ]
   ],
 
-  "plugins" : [
+  "plugins": [
     "add-module-exports",
-    "transform-runtime",
-    "transform-decorators-legacy",
-    "transform-object-rest-spread",
-    "transform-class-properties",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-object-rest-spread",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
   ]
 }

@@ -69,8 +69,8 @@ class AppWindow extends Component {
         </Bar>
 
         <Switch>
-          <Route path="/" exact component={require("./Editor")} />
-          <Route path="/settings" component={require("./Settings")} />
+          <Route path="/" exact component={require("./Editor").default} />
+          <Route path="/settings" component={require("./Settings").default} />
         </Switch>
 
         <Bar footer>…</Bar>

@@ -1,5 +1,6 @@
 {
   "parser": "babel-eslint",
+
   "extends": [
     "standard",
     "prettier",
@@ -8,21 +9,27 @@
     "prettier/standard",
     "plugin:react/recommended"
   ],
+
   "plugins": ["react", "flowtype", "standard", "prettier", "jsx-a11y"],
 
   "env": {
+    "es6": true,
     "node": true,
-    "browser": true,
-    "shared-node-browser": true
+    "browser": true
   },
 
   "parserOptions": {
-    "impliedStrict": true,
     "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "experimentalObjectRestSpread": true
+    }
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
     }
   },
 
@@ -32,21 +39,14 @@
 
   "rules": {
     "quotes": [1, "double"],
-    "indent": [2, 2, {"SwitchCase": 1}],
+    "indent": [2, 2, { "SwitchCase": 1 }],
 
     "no-console": [0],
     "no-param-reassign": [0],
-    "no-else-return": 0,
-    "no-confusing-arrow": 0,
-    "no-prototype-builtins": 0,
-
-    "require-jsdoc": [0],
 
     "react/sort-comp": [0],
     "react/no-danger": [0],
-    "react/jsx-indent": [2, 2],
-    "react/jsx-indent-props": [2, 2],
-    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 
     "prettier/prettier": 2,
 

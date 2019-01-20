@@ -1,7 +1,7 @@
 const path = require("path");
 const Webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 console.log(`Running in ${process.env.NODE_ENV || "production"} mode`);
 
@@ -10,15 +10,15 @@ const config = {
 
   output: {
     path: path.resolve(__dirname, "./qpm/src"),
-    filename: "index.min.js",
+    filename: "index.min.js"
   },
 
   resolve: {
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".jsx", ".json"]
   },
 
   externals: {
-    "qilin-manager": "require('../node_modules/qilin-manager')",
+    "qilin-manager": "require('../node_modules/qilin-manager')"
   },
 
   watchOptions: {
@@ -28,8 +28,8 @@ const config = {
       path.resolve(__dirname, "./build"),
       path.resolve(__dirname, "./cache"),
       path.resolve(__dirname, "./qpm"),
-      path.resolve(__dirname, "./bin"),
-    ],
+      path.resolve(__dirname, "./bin")
+    ]
   },
 
   devtool: "source-map",
@@ -40,52 +40,61 @@ const config = {
     rules: [
       {
         test: /\.(jpg|jpeg|png)$/,
-        use: "url-loader?limit=1000",
+        use: ["url-loader?limit=1000"]
       },
       {
         test: /\.(woff|woff2|eot|otf|ttf|svg)$/,
-        use: "file-loader",
+        use: ["file-loader"]
       },
       {
         test: /\.(js|jsx)$/,
-        use: "babel-loader",
-        exclude: /(node_modules|bower_components)/,
+        use: ["babel-loader"],
+        exclude: /(node_modules|bower_components)/
       },
       {
         test: /\.(scss|css)$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {loader: "css-loader", options: {sourceMap: true}},
-            {loader: "resolve-url-loader", options: {sourceMap: true}},
-            {loader: "postcss-loader", options: {sourceMap: true}},
-            {loader: "sass-loader", options: {sourceMap: true}},
-          ],
-        }),
-      },
-    ],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "resolve-url-loader",
+          "postcss-loader",
+          "sass-loader"
+        ]
+      }
+    ]
   },
 
   plugins: [
     new Webpack.LoaderOptionsPlugin({
       options: {
-        postcss: [
-          require("autoprefixer"),
-        ],
+        postcss: [require("autoprefixer")],
         devServer: {
-          inline: true,
-        },
-      },
+          inline: true
+        }
+      }
     }),
 
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/index.html"
     }),
 
-    new ExtractTextPlugin({
-      filename: "./index.min.css",
-      allChunks: true,
-    }),
+    new MiniCssExtractPlugin({
+      filename: "./index.min.css"
+    })
   ],
+
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.css$/,
+          chunks: "all",
+          enforce: true
+        }
+      }
+    }
+  }
 };
 
 if (process.env.NODE_ENV === "development") {
