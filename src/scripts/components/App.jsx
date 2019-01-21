@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { inject, observer, PropTypes as MobxPropTypes } from "mobx-react";
 import { Switch, Route, withRouter } from "react-router-dom";
-import MaterialIcon from "material-icons-react";
+import Icon from "qilin-components/icon";
 import App from "qilin-components/app";
 import Bar from "qilin-components/bar";
 import Button from "qilin-components/form/button";
@@ -59,11 +59,7 @@ class AppWindow extends Component {
 
           <section>
             <Button onClick={this.toggleSettings}>
-              <MaterialIcon
-                icon="settings"
-                color={colors.foreground}
-                size={15}
-              />
+              <Icon icon="settings" color={colors.foreground} size={15} />
             </Button>
           </section>
         </Bar>

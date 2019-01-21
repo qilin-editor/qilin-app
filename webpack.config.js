@@ -1,7 +1,6 @@
 const path = require("path");
 const Webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 console.log(`Running in ${process.env.NODE_ENV || "production"} mode`);
 
@@ -54,11 +53,16 @@ const config = {
       {
         test: /\.(scss|css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          "style-loader",
           "css-loader",
           "resolve-url-loader",
-          "postcss-loader",
-          "sass-loader"
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+              sourceMapContents: false
+            }
+          }
         ]
       }
     ]
@@ -76,25 +80,8 @@ const config = {
 
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    }),
-
-    new MiniCssExtractPlugin({
-      filename: "./index.min.css"
     })
-  ],
-
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: "styles",
-          test: /\.css$/,
-          chunks: "all",
-          enforce: true
-        }
-      }
-    }
-  }
+  ]
 };
 
 if (process.env.NODE_ENV === "development") {

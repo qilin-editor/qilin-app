@@ -34,7 +34,6 @@
     "markdown-it-sup": "^1.0.0",
     "markdown-it-table-of-contents": "^0.4.3",
     "markdown-it-task-lists": "^2.1.1",
-    "material-icons-react": "1.0.4",
     "mobx": "5.8.0",
     "mobx-react": "5.4.3",
     "opn": "5.4.0",
@@ -45,8 +44,7 @@
     "react-router-dom": "4.3.1",
     "react-split-pane": "0.1.85",
     "typography": "0.16.18",
-    "typography-theme-github": "^0.16.18",
-    "wireframe-framework": "latest"
+    "typography-theme-github": "^0.16.18"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -77,14 +75,14 @@
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-standard": "^4.0.0",
     "file-loader": "^3.0.1",
+    "flow-bin": "0.91.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "23.6.0",
     "json-loader": "^0.5.4",
-    "mini-css-extract-plugin": "0.5.0",
     "node-sass": "4.11.0",
     "nw": "0.35.5",
     "nw-builder": "3.5.7",
     "nw-dev": "^3.0.1",
-    "postcss-loader": "3.0.0",
     "precss": "^4.0.0",
     "prettier": "1.16.0",
     "resolve-url-loader": "3.0.0",
@@ -99,15 +97,20 @@
     "webpack-dev-server": "3.1.14"
   },
   "scripts": {
-    "prepare-qpm": "cd qpm && npm install",
-    "prepare": "export NODE_ENV=production && npm run eslint && npm run stylelint && npx webpack --progress && npm run prepare-qpm",
-    "watch": "export NODE_ENV=development && npx webpack --progress --watch & npm run nw",
-    "start": "npm run prepare && npm run nw",
-    "build": "npm run prepare && node bin/compile",
-    "eslint": "npx eslint --ext .js --ext .jsx src --fix",
-    "stylelint": "npx stylelint 'src/styles/**/*.scss' --fix",
+    "nw": "npx nw . --nwjs_build_type=sdk",
     "clear": "rimraf build cache qpm/node_modules qpm/src",
-    "nw": "npx nw . --nwjs_build_type=sdk"
+    "build:prod": "export NODE_ENV=production && npx webpack && npm run build:qpm",
+    "build:dev": "export NODE_ENV=development && npx webpack --watch",
+    "build:qpm": "cd qpm && npm install",
+    "build": "npm run clear && npm run build:prod && node bin/compile",
+    "start": "npm run clear && npm run build:prod && npm run nw",
+    "watch": "npm run clear && npm run build:dev & npm run nw",
+    "lint:scripts": "npx eslint --ext .js --ext .jsx --fix ./src",
+    "lint:styles": "npx stylelint 'src/styles/**/*.scss' --fix",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "test:jest": "npx jest",
+    "test:flow": "npx flow",
+    "test": "npm run test:flow && npm run lint"
   },
   "maintainers": [
     {
