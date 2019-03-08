@@ -44,7 +44,7 @@
     "react-router-dom": "4.3.1",
     "react-split-pane": "0.1.85",
     "typography": "0.16.18",
-    "typography-theme-github": "^0.16.18"
+    "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
