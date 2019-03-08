@@ -43,7 +43,7 @@
     "react-dom": "16.7.0",
     "react-router-dom": "4.3.1",
     "react-split-pane": "0.1.85",
-    "typography": "0.16.18",
+    "typography": "0.16.19",
     "typography-theme-github": "^0.16.18"
   },
   "devDependencies": {
