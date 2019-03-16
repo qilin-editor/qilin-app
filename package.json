@@ -36,7 +36,7 @@
     "markdown-it-task-lists": "^2.1.1",
     "mobx": "5.8.0",
     "mobx-react": "5.4.3",
-    "opn": "5.4.0",
+    "opn": "5.5.0",
     "prop-types": "15.6.2",
     "qilin-components": "0.0.133",
     "react": "16.7.0",
